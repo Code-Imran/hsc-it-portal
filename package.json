@@ -1,0 +1,19 @@
+{
+  "name": "it-portal",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^14.3.3",
+    "astro": "^7.3.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "tailwindcss": "^4.0.0"
+  }
+}

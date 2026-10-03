@@ -1,0 +1,55 @@
+{
+  "chapter_id": 5,
+  "chapter_name": "Database Concepts using LibreOffice Base",
+  "subject_stream": ["commerce"],
+  "source": "Maharashtra State Board HSC IT Commerce Curriculum",
+  "q1_fill_in_the_blanks": [
+    { "id": "comm-ch5-fb-01", "question": "In LibreOffice Base, a _____ uniquely identifies each record in a database table.", "answer": "primary key" },
+    { "id": "comm-ch5-fb-02", "question": "RDBMS stands for Relational Database _____ System.", "answer": "Management" },
+    { "id": "comm-ch5-fb-03", "question": "A row in a database table is also called a _____ or record.", "answer": "tuple" },
+    { "id": "comm-ch5-fb-04", "question": "A column in a database table is also called an attribute or _____.", "answer": "field" },
+    { "id": "comm-ch5-fb-05", "question": "In SQL, the _____ clause is used to filter records according to specified conditions.", "answer": "WHERE" },
+    { "id": "comm-ch5-fb-06", "question": "In SQL, the _____ clause is used to sort the result-set in ascending or descending order.", "answer": "ORDER BY" },
+    { "id": "comm-ch5-fb-07", "question": "The four main database objects in LibreOffice Base are Tables, Queries, Forms, and _____.", "answer": "Reports" },
+    { "id": "comm-ch5-fb-08", "question": "A _____ in LibreOffice Base provides a user-friendly interface for data entry and viewing.", "answer": "Form" },
+    { "id": "comm-ch5-fb-09", "question": "A _____ is used to present data from a table or query in a formatted, printable layout.", "answer": "Report" },
+    { "id": "comm-ch5-fb-10", "question": "In SQL, the _____ command is used to fetch or retrieve data from a database.", "answer": "SELECT" }
+  ],
+  "q2_true_false": [
+    { "id": "comm-ch5-tf-01", "statement": "A Primary Key can accept duplicate or NULL values in a table.", "answer": false },
+    { "id": "comm-ch5-tf-02", "statement": "In LibreOffice Base, Table Design View allows you to define field names and data types.", "answer": true },
+    { "id": "comm-ch5-tf-03", "statement": "The SQL SELECT statement is used to insert new records into a table.", "answer": false },
+    { "id": "comm-ch5-tf-04", "statement": "A Foreign Key is a field in one table that links to the Primary Key in another table.", "answer": true },
+    { "id": "comm-ch5-tf-05", "statement": "The ORDER BY clause sorts retrieved rows in ascending order by default.", "answer": true },
+    { "id": "comm-ch5-tf-06", "statement": "Reports in LibreOffice Base can be used directly for entering new data records.", "answer": false },
+    { "id": "comm-ch5-tf-07", "statement": "A table can contain more than one Primary Key column.", "answer": false },
+    { "id": "comm-ch5-tf-08", "statement": "Queries are used to retrieve specific subsets of data meeting defined criteria.", "answer": true }
+  ],
+  "q3_mcq_single": [
+    { "id": "comm-ch5-mcq1-01", "question": "Which of the following database objects is used to display printable formatted output?", "options": ["Table", "Form", "Query", "Report"], "answer": "Report" },
+    { "id": "comm-ch5-mcq1-02", "question": "Which SQL clause is used to filter records based on specific criteria?", "options": ["ORDER BY", "WHERE", "GROUP BY", "SELECT"], "answer": "WHERE" },
+    { "id": "comm-ch5-mcq1-03", "question": "Which data type is appropriate for storing phone numbers or student names?", "options": ["Text [VARCHAR]", "Date [DATE]", "Boolean [YES/NO]", "Number [NUMERIC]"], "answer": "Text [VARCHAR]" },
+    { "id": "comm-ch5-mcq1-04", "question": "Which key uniquely identifies each record and prevents NULL entries?", "options": ["Foreign Key", "Candidate Key", "Primary Key", "Alternate Key"], "answer": "Primary Key" },
+    { "id": "comm-ch5-mcq1-05", "question": "Which clause in SQL sorts retrieved records?", "options": ["SORT BY", "ORDER BY", "FILTER BY", "ARRANGE BY"], "answer": "ORDER BY" }
+  ],
+  "q4_mcq_two_correct": [
+    { "id": "comm-ch5-mcq2-01", "question": "Select TWO primary SQL Data Manipulation statements:", "options": ["SELECT", "INSERT INTO", "BOOT", "EXECUTE", "START"], "answer": ["SELECT", "INSERT INTO"] },
+    { "id": "comm-ch5-mcq2-02", "question": "Select TWO essential properties of a Primary Key:", "options": ["Must contain unique values", "Cannot be NULL", "Can accept duplicate entries", "Automatically deletes records", "Must be text only"], "answer": ["Must contain unique values", "Cannot be NULL"] },
+    { "id": "comm-ch5-mcq2-03", "question": "Select TWO methods for creating tables in LibreOffice Base:", "options": ["Create Table in Design View", "Use Wizard to Create Table", "Export Table to CSS", "Compile Table to HTML", "Audio Table View"], "answer": ["Create Table in Design View", "Use Wizard to Create Table"] }
+  ],
+  "q5_mcq_three_correct": [
+    { "id": "comm-ch5-mcq3-01", "question": "Select THREE valid database objects in LibreOffice Base:", "options": ["Tables", "Queries", "Forms", "Stylesheets", "Hyperlinks", "Audio Players"], "answer": ["Tables", "Queries", "Forms"] },
+    { "id": "comm-ch5-mcq3-02", "question": "Select THREE valid data types in LibreOffice Base:", "options": ["Text [VARCHAR]", "Number [NUMERIC]", "Date [DATE]", "Audio [MP3]", "Markup [HTML]", "Code [PHP]"], "answer": ["Text [VARCHAR]", "Number [NUMERIC]", "Date [DATE]"] }
+  ],
+  "q6_match_following": [
+    {
+      "id": "comm-ch5-match-01",
+      "pairs": [
+        { "left": "Primary Key", "right": "Uniquely identifies table record" },
+        { "left": "WHERE clause", "right": "Filters query rows" },
+        { "left": "ORDER BY", "right": "Sorts results in asc or desc order" },
+        { "left": "Report", "right": "Formatted printable summary" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,770 @@
+---
+import PortalLayout from "../../layouts/PortalLayout.astro";
+
+const syllabusSops = [
+  { group: "Group A: Web Designing (Ch. 1)", title: "SOP 1: Two-page website linking with CSS formatting & enrolment form" },
+  { group: "Group A: Web Designing (Ch. 1)", title: "SOP 2: Multi-section layout with CSS Flexbox & navigation bars" },
+  { group: "Group A: Web Designing (Ch. 1)", title: "SOP 3: Travel reservation system (Two-page form & unordered list itinerary)" },
+  { group: "Group A: Web Designing (Ch. 1)", title: "SOP 4: Semantic webpage structuring (<header>, <nav>, <section>, <article>, <aside>, <footer>)" },
+  { group: "Group A: Web Designing (Ch. 1)", title: "SOP 5: Embedding audio (<audio> and <source> with controls, loop)" },
+  { group: "Group A: Web Designing (Ch. 1)", title: "SOP 6: Embedding video (<video> with width, height, poster, controls)" },
+  { group: "Group A: Web Designing (Ch. 1)", title: "SOP 7: Client-side image mapping (<map>, <area> with rect, circle, poly)" },
+  { group: "Group B: JavaScript (Ch. 3)", title: "SOP 1: Dynamic background color switcher (onclick, onmouseover)" },
+  { group: "Group B: JavaScript (Ch. 3)", title: "SOP 2: Form validation (Name, 10-digit mobile, Email regex/indexOf)" },
+  { group: "Group B: JavaScript (Ch. 3)", title: "SOP 3: Vowel counter in user-entered string" },
+  { group: "Group B: JavaScript (Ch. 3)", title: "SOP 4: Dynamic temperature converter (Celsius ↔ Fahrenheit)" },
+  { group: "Group B: JavaScript (Ch. 3)", title: "SOP 5: String/number palindrome verification" },
+  { group: "Group B: JavaScript (Ch. 3)", title: "SOP 6: Student aggregate marks, percentage, and grade ladder" },
+  { group: "Group B: PHP Scripting (Ch. 5)", title: "SOP 1: Voting eligibility checker (Age >= 18 function)" },
+  { group: "Group B: PHP Scripting (Ch. 5)", title: "SOP 2: Vowel counter using PHP string functions" },
+  { group: "Group B: PHP Scripting (Ch. 5)", title: "SOP 3: Student marks & percentage using associative arrays" }
+];
+
+const practicalCards = [
+  {
+    id: "practical-group-a",
+    badge: "Group A • 15 Marks",
+    category: "Chapter 1: Advanced Web Designing",
+    title: "SOP 5 & 7: Audio, Video & Client-Side Image Mapping",
+    tabTitle: "HSC IT Science - Group A Media & Image Mapping",
+    filename: "media_mapping.html",
+    fileUrl: "file:///C:/HSC_IT_2027/media_mapping.html",
+    videoUrl: "#",
+    aim: "Create an HTML5 web page embedding audio with controls and loop attributes, video with player controls and poster, and implement client-side image mapping (<map>, <area>, usemap) with rectangular and circular clickable hotspot regions.",
+    code: `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HSC IT Science - Group A Media & Image Mapping</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f7fafc; color: #2d3748; }
+        header { background-color: #059669; color: white; padding: 15px; text-align: center; border-radius: 6px; }
+        .section-box { background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; margin-top: 15px; }
+        h2 { color: #059669; border-bottom: 2px solid #edf2f7; padding-bottom: 5px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Skill Oriented Practical: Group A</h1>
+        <p>HTML5 Multimedia & Client-Side Image Mapping</p>
+    </header>
+
+    <!-- Audio & Video Integration -->
+    <div class="section-box">
+        <h2>1. HTML5 Audio & Video Controls</h2>
+        
+        <h3>Audio Player</h3>
+        <audio controls loop>
+            <source src="sample.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <h3>Video Player</h3>
+        <video width="320" height="240" controls poster="poster.jpg">
+            <source src="sample.mp4" type="video/mp4">
+            Your browser does not support the video element.
+        </video>
+    </div>
+
+    <!-- Client-Side Image Mapping -->
+    <div class="section-box">
+        <h2>2. Client-Side Image Mapping</h2>
+        <p>Click on the designated regions of the image below:</p>
+        
+        <img src="shapes.png" alt="Geometric Navigation Map" usemap="#geomap" width="400" height="200">
+        
+        <map name="geomap">
+            <area shape="rect" coords="20,20,120,120" href="https://www.google.com" alt="Google Search" target="_blank">
+            <area shape="circle" coords="220,70,50" href="https://www.wikipedia.org" alt="Wikipedia" target="_blank">
+        </map>
+    </div>
+
+</body>
+</html>`,
+    outputSummary: "Demonstrates audio playback with loop support, responsive video rendering with preview poster, and client-side geometric hotspots linked to destination URLs."
+  },
+  {
+    id: "practical-group-b-js",
+    badge: "Group B • Option 1 • 15 Marks",
+    category: "Chapter 3: Advanced JavaScript",
+    title: "SOP 3 & 5: JavaScript Vowel Counter & String Palindrome Checker",
+    tabTitle: "HSC IT Science - Group B JavaScript",
+    filename: "js_practical.html",
+    fileUrl: "file:///C:/HSC_IT_2027/js_practical.html",
+    videoUrl: "#",
+    aim: "Write event-driven JavaScript functions to: (1) calculate the total count of vowels (a, e, i, o, u) in a user-provided string using string indexing, and (2) verify whether a given string or number is a Palindrome through string reversal logic.",
+    code: `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HSC IT Science - Group B JavaScript</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; background-color: #edf2f7; }
+        .card { background: white; padding: 20px; border-radius: 8px; width: 380px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        input[type="text"] { width: 90%; padding: 8px; margin: 8px 0; border: 1px solid #cbd5e0; border-radius: 4px; }
+        button { padding: 8px 16px; background-color: #059669; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; }
+        button:hover { background-color: #047857; }
+        .result { margin-top: 10px; font-weight: bold; color: #2d3748; }
+    </style>
+    <script>
+        function countVowels() {
+            var str = document.getElementById("vowelInput").value.toLowerCase();
+            var count = 0;
+            var vowels = "aeiou";
+
+            for (var i = 0; i < str.length; i++) {
+                if (vowels.indexOf(str[i]) !== -1) {
+                    count++;
+                }
+            }
+            document.getElementById("vowelResult").innerHTML = "Total Vowels: " + count;
+        }
+
+        function checkPalindrome() {
+            var inputStr = document.getElementById("palInput").value.trim().toLowerCase();
+            if (inputStr === "") {
+                alert("Please enter a string/number.");
+                return;
+            }
+            var reversed = inputStr.split("").reverse().join("");
+            var resBox = document.getElementById("palResult");
+
+            if (inputStr === reversed) {
+                resBox.innerHTML = "<span style='color: #059669;'>'" + inputStr + "' is a Palindrome!</span>";
+            } else {
+                resBox.innerHTML = "<span style='color: #dc2626;'>'" + inputStr + "' is NOT a Palindrome.</span>";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="card">
+        <h3>SOP 3: Count Total Vowels</h3>
+        <input type="text" id="vowelInput" placeholder="Enter a sentence or word">
+        <br>
+        <button onclick="countVowels()">Calculate Vowels</button>
+        <div id="vowelResult" class="result"></div>
+    </div>
+
+    <div class="card">
+        <h3>SOP 5: Palindrome Verification</h3>
+        <input type="text" id="palInput" placeholder="e.g. radar or 12321">
+        <br>
+        <button onclick="checkPalindrome()">Verify Palindrome</button>
+        <div id="palResult" class="result"></div>
+    </div>
+
+</body>
+</html>`,
+    outputSummary: "Calculates total vowel frequency across user strings and verifies string palindromes via array reverse and split/join string manipulation."
+  },
+  {
+    id: "practical-group-b-php",
+    badge: "Group B • Option 2 • 15 Marks",
+    category: "Chapter 5: Server-Side Scripting (PHP)",
+    title: "SOP 1 & 3: PHP Voting Eligibility Function & Associative Array Marks Sheet",
+    tabTitle: "HSC IT Science - PHP SOP 1 & SOP 3",
+    filename: "science_php.php",
+    fileUrl: "http://localhost/hsc_it/science_php.php",
+    videoUrl: "#",
+    aim: "Write a server-side PHP script with: (1) a user-defined function to determine voting eligibility (Age >= 18) via POST processing, and (2) an associative array storing 5 science subject marks to compute the grand total and aggregate percentage.",
+    code: `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HSC IT Science - PHP SOP 1 & SOP 3</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; background: #fafafa; }
+        .box { background: white; padding: 20px; border: 1px solid #ddd; width: 420px; border-radius: 6px; margin-bottom: 20px; }
+        input[type="number"], input[type="text"] { width: 90%; padding: 6px; margin-bottom: 10px; }
+        input[type="submit"] { background: #059669; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <!-- PHP SOP 1: Check Voting Eligibility -->
+    <div class="box">
+        <h3>SOP 1: Voting Eligibility Checker</h3>
+        <form method="post" action="">
+            <label>Enter Person's Age:</label><br>
+            <input type="number" name="age" required min="1" max="120" placeholder="e.g. 19">
+            <br>
+            <input type="submit" name="check_vote" value="Check Eligibility">
+        </form>
+
+        <?php
+        function checkEligibility($age) {
+            if ($age >= 18) {
+                return "<p style='color:#059669; font-weight:bold;'>Eligible to Vote (Age: $age years).</p>";
+            } else {
+                $rem = 18 - $age;
+                return "<p style='color:#dc2626; font-weight:bold;'>Not Eligible to Vote. Wait $rem more year(s).</p>";
+            }
+        }
+
+        if (isset($_POST['check_vote'])) {
+            $userAge = intval($_POST['age']);
+            echo checkEligibility($userAge);
+        }
+        ?>
+    </div>
+
+    <!-- PHP SOP 3: Array Total & Percentage Calculation -->
+    <div class="box">
+        <h3>SOP 3: Student Marks Using Array</h3>
+        <?php
+        $marks = array(
+            "Physics" => 78,
+            "Chemistry" => 85,
+            "Mathematics" => 92,
+            "Information Technology" => 96,
+            "English" => 81
+        );
+
+        $totalMarks = 0;
+        $numSubjects = count($marks);
+
+        echo "<ul>";
+        foreach ($marks as $subject => $score) {
+            echo "<li><strong>$subject:</strong> $score / 100</li>";
+            $totalMarks += $score;
+        }
+        echo "</ul>";
+
+        $percentage = $totalMarks / $numSubjects;
+
+        echo "<p><strong>Total Marks Obtained:</strong> $totalMarks / " . ($numSubjects * 100) . "</p>";
+        echo "<p><strong>Calculated Percentage:</strong> " . number_format($percentage, 2) . "%</p>";
+        ?>
+    </div>
+
+</body>
+</html>`,
+    outputSummary: "Processes server-side form submissions through $_POST, applies user-defined boolean validation, iterates associative arrays using foreach loops, and calculates aggregate percentages."
+  }
+];
+
+const vivaQuestions = [
+  {
+    num: "01",
+    q: "Why is the 'usemap' attribute prefixed with a hash (#) symbol in HTML5?",
+    a: "The '#' symbol indicates that the map name refers to an internal client-side anchor element (<map name='...'>) defined within the same HTML document, distinguishing it from an external URL file."
+  },
+  {
+    num: "02",
+    q: "What are the geometric shapes supported by the <area> tag and their required coordinates?",
+    a: "1) rect (shape='rect', coords='x1, y1, x2, y2' - top-left & bottom-right corners), 2) circle (shape='circle', coords='center_x, center_y, radius'), and 3) poly (shape='poly', coords='x1, y1, x2, y2, x3, y3...' - all vertex coordinates)."
+  },
+  {
+    num: "03",
+    q: "What is the fundamental difference between Client-Side Scripting and Server-Side Scripting?",
+    a: "Client-side scripts (JavaScript) execute locally inside the user's web browser, saving server bandwidth and providing instantaneous feedback. Server-side scripts (PHP) execute entirely on the web server before returning pure HTML to the client, providing database connectivity and securing sensitive business logic."
+  },
+  {
+    num: "04",
+    q: "What is the difference between $_GET and $_POST methods in PHP?",
+    a: "$_GET sends data appended directly to the URL query string (visible in the address bar with an 8 KB limit; not suitable for passwords). $_POST transmits parameters within the HTTP request body invisibly, has no strict URL size limitations, and is secure for authentication."
+  },
+  {
+    num: "05",
+    q: "When does the JavaScript function isNaN() return false?",
+    a: "isNaN() stands for 'is Not a Number'. It returns false when the argument is a valid numeric value (e.g., isNaN(123) is false; isNaN('123') is false). It returns true when the value cannot be parsed as a number."
+  },
+  {
+    num: "06",
+    q: "What is the difference between innerHTML and textContent / value in JavaScript DOM?",
+    a: "'value' is used to get or set data typed into form inputs (<input>, <textarea>). 'innerHTML' gets or renders HTML tags and markup inside container elements (<div>, <p>). 'textContent' parses and returns purely raw text without rendering any HTML tags."
+  },
+  {
+    num: "07",
+    q: "Name four new HTML5 form input types and their validation benefits.",
+    a: "1) type='email' (enforces RFC email format with '@' and domain), 2) type='tel' (works with 'pattern' attribute for 10-digit mobile numbers), 3) type='date' (displays interactive calendar picker), 4) type='number' (restricts input to digits with 'min' and 'max')."
+  },
+  {
+    num: "08",
+    q: "What is the role of 'autofocus' and 'required' attributes in HTML5 forms?",
+    a: "'autofocus' automatically places the cursor inside the specified input field as soon as the page loads. 'required' prevents form submission if the input field is left empty by the student."
+  },
+  {
+    num: "09",
+    q: "How does an indexed array differ from an associative array in PHP?",
+    a: "An indexed array uses automatic zero-based numeric keys ($arr[0], $arr[1]). An associative array uses custom named string keys mapped to values ($arr = array('Physics' => 78, 'Chemistry' => 85))."
+  },
+  {
+    num: "10",
+    q: "Which PHP built-in function is used to calculate the length of a string, and how does it differ from str_word_count()?",
+    a: "'strlen($str)' counts the total number of characters including spaces and punctuation. 'str_word_count($str)' parses the sentence and returns only the total count of recognized words."
+  },
+  {
+    num: "11",
+    q: "What is On-Page SEO vs Off-Page SEO in Chapter 2?",
+    a: "On-Page SEO involves optimizing website elements directly under the creator's control (meta tags, title tags, heading hierarchy <h1>-<h6>, image alt text, clean URLs). Off-Page SEO involves external reputation building (backlinks, social media sharing, domain authority)."
+  },
+  {
+    num: "12",
+    q: "Under the Information Technology Act 2000, what is Section 66?",
+    a: "Section 66 deals with computer-related offenses, hacking, identity theft, unauthorized data access, and fraud, providing penalties of up to 3 years imprisonment and/or fines up to ₹5 lakh."
+  }
+];
+---
+
+<PortalLayout title="Class 12 Science IT SOP Practicals">
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 py-12">
+    
+    <!-- Header Banner -->
+    <div class="mb-10 text-center max-w-3xl mx-auto">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/20 text-emerald-800 dark:text-emerald-300 text-xs font-mono font-bold tracking-tight mb-4">
+        <span>🧪</span> Maharashtra Board Class 12 Science (Code 97)
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+        Science Skill Oriented Practicals (SOP)
+      </h1>
+      <p class="text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+        Official Balbharati Class 12 Science IT practical curriculum: Complete syllabus breakdown across Chapter 1 (Web Designing), Chapter 3 (JavaScript), and Chapter 5 (Server-Side PHP) with working source code, browser output specimens, and external viva preparation.
+      </p>
+    </div>
+
+    <!-- Official HSC Practical Exam Mark Scheme Callout -->
+    <div class="rounded-2xl border border-emerald-200 dark:border-emerald-500/30 bg-emerald-50/60 dark:bg-emerald-950/20 p-5 sm:p-6 mb-10 shadow-sm">
+      <div class="flex items-center justify-between mb-3">
+        <span class="text-xs font-mono font-bold uppercase tracking-wider text-emerald-800 dark:text-emerald-300">
+          Official Practical Slip Distribution (Total: 50 Marks)
+        </span>
+        <span class="text-xs font-mono font-bold bg-emerald-600 text-white px-2.5 py-0.5 rounded-full">
+          HSC Board Standard
+        </span>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+        <div class="bg-white dark:bg-slate-900 p-3 rounded-xl border border-slate-200 dark:border-slate-800">
+          <p class="text-slate-400 font-mono text-[10px]">GROUP A QUESTION</p>
+          <p class="font-bold text-slate-900 dark:text-white text-base mt-0.5">15 Marks</p>
+          <span class="text-[11px] text-slate-500">Advanced Web Designing</span>
+        </div>
+        <div class="bg-white dark:bg-slate-900 p-3 rounded-xl border border-slate-200 dark:border-slate-800">
+          <p class="text-slate-400 font-mono text-[10px]">GROUP B QUESTION</p>
+          <p class="font-bold text-slate-900 dark:text-white text-base mt-0.5">15 Marks</p>
+          <span class="text-[11px] text-slate-500">JavaScript OR PHP Script</span>
+        </div>
+        <div class="bg-white dark:bg-slate-900 p-3 rounded-xl border border-slate-200 dark:border-slate-800">
+          <p class="text-slate-400 font-mono text-[10px]">CERTIFIED JOURNAL</p>
+          <p class="font-bold text-slate-900 dark:text-white text-base mt-0.5">10 Marks</p>
+          <span class="text-[11px] text-slate-500">Signed Science Workbook</span>
+        </div>
+        <div class="bg-white dark:bg-slate-900 p-3 rounded-xl border border-slate-200 dark:border-slate-800">
+          <p class="text-slate-400 font-mono text-[10px]">ORAL VIVA VOCE</p>
+          <p class="font-bold text-slate-900 dark:text-white text-base mt-0.5">10 Marks</p>
+          <span class="text-[11px] text-slate-500">External Examiner</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Complete Balbharati Science SOP Index Table -->
+    <div class="p-5 sm:p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 mb-12 shadow-sm">
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <h2 class="text-base font-bold text-slate-900 dark:text-white">Official Balbharati Syllabus SOP Checklist</h2>
+          <p class="text-xs text-slate-500 dark:text-slate-400">All 16 practical tasks prescribed across Chapters 1, 3, and 5.</p>
+        </div>
+        <span class="text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400">Code 97</span>
+      </div>
+
+      <div class="space-y-2 text-xs">
+        {syllabusSops.map((item, idx) => (
+          <div class="p-2.5 rounded-lg border border-slate-100 dark:border-slate-800/80 bg-slate-50/50 dark:bg-slate-950/40 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div class="flex items-center gap-2">
+              <span class="font-mono text-slate-400 text-[11px] w-6">{(idx + 1).toString().padStart(2, '0')}.</span>
+              <span class="font-medium text-slate-800 dark:text-slate-200">{item.title}</span>
+            </div>
+            <span class="text-[10px] font-mono font-bold text-emerald-700 dark:text-emerald-300 px-2 py-0.5 rounded bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/20 shrink-0">
+              {item.group}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Section Heading for Working Solutions -->
+    <div class="mb-8">
+      <span class="text-xs font-mono font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Board Exam Slips & Solutions</span>
+      <h2 class="text-2xl font-extrabold text-slate-900 dark:text-white mt-1">Most Repeated XII Science Practicals: Code & Windows Chrome Outputs</h2>
+      <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Ready-to-print browser snapshots simulating an authentic Google Chrome session on Windows 11 lab PCs.</p>
+    </div>
+
+    <!-- Practical Solution Cards -->
+    <div class="space-y-16">
+      {practicalCards.map((card) => (
+        <article id={card.id} class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-md overflow-hidden transition-all">
+          
+          <!-- Card Header with Action Buttons -->
+          <div class="p-6 border-b border-slate-100 dark:border-slate-800/80 bg-slate-50/60 dark:bg-slate-950/40 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400 uppercase">
+                  {card.category}
+                </span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-500/10 text-emerald-800 dark:text-emerald-300 font-bold">
+                  {card.badge}
+                </span>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white mt-1">
+                {card.title}
+              </h3>
+            </div>
+            
+            <!-- Button Group: Video Tutorial + Copy Solution -->
+            <div class="flex items-center gap-2.5 flex-wrap">
+              <a 
+                href={card.videoUrl} 
+                target={card.videoUrl !== '#' ? "_blank" : undefined}
+                rel={card.videoUrl !== '#' ? "noopener noreferrer" : undefined}
+                class="video-btn px-3.5 py-2 rounded-lg border border-rose-200 dark:border-rose-900/40 bg-rose-50 dark:bg-rose-950/30 hover:bg-rose-100 dark:hover:bg-rose-900/50 text-rose-700 dark:text-rose-300 font-semibold text-xs transition shadow-sm flex items-center justify-center gap-1.5 cursor-pointer shrink-0 group"
+                title={card.videoUrl === '#' ? "Video tutorial being recorded" : "Watch tutorial"}
+              >
+                <svg class="w-4 h-4 text-rose-600 dark:text-rose-400 transition group-hover:scale-110" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+                <span>Watch Video Tutorial</span>
+              </a>
+
+              <button 
+                type="button" 
+                class="copy-btn px-3.5 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs transition shadow-sm flex items-center justify-center gap-1.5 cursor-pointer shrink-0"
+                data-code={card.code}
+              >
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                </svg>
+                <span>Copy Solution Code</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="p-6 space-y-6">
+            <div>
+              <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-400 mb-1">Practical Aim & Objective</h4>
+              <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed font-medium bg-slate-50 dark:bg-slate-950/60 p-3.5 rounded-xl border border-slate-200/80 dark:border-slate-800">
+                {card.aim}
+              </p>
+            </div>
+
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-mono font-bold uppercase tracking-wider text-slate-400">
+                  Save as: <strong class="text-slate-700 dark:text-slate-200">{card.filename}</strong>
+                </span>
+                <span class="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 font-bold">Standard UTF-8</span>
+              </div>
+              <div class="rounded-xl bg-slate-950 p-4 border border-slate-800 overflow-x-auto shadow-inner">
+                <pre class="text-xs font-mono text-emerald-400 leading-relaxed"><code>{card.code}</code></pre>
+              </div>
+            </div>
+
+            <!-- BROWSER OUTPUT SNAPSHOT CONTAINER -->
+            <div>
+              <div class="flex items-center justify-between mb-2.5">
+                <div class="flex items-center gap-2">
+                  <span class="text-xs font-mono font-bold uppercase tracking-wider text-slate-900 dark:text-white">
+                    Program Output Snapshot (Board Journal Submission)
+                  </span>
+                  <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-blue-50 dark:bg-blue-500/10 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-500/20 font-bold">
+                    Windows 11 • Google Chrome
+                  </span>
+                </div>
+                <span class="text-[11px] font-mono text-slate-400">Print Specimen Copy</span>
+              </div>
+
+              <!-- Chrome Window Simulation Container -->
+              <div class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-2xl overflow-hidden font-sans">
+                
+                <div class="bg-[#dfe1e5] dark:bg-[#202124] pt-2 px-2 flex items-center justify-between border-b border-[#dadce0] dark:border-[#3c4043] select-none">
+                  <div class="flex items-center">
+                    <div class="h-9 px-3.5 bg-white dark:bg-[#292a2d] rounded-t-lg flex items-center gap-2 shadow-sm border-t border-x border-[#dadce0] dark:border-[#3c4043] max-w-xs text-xs font-medium text-slate-700 dark:text-slate-200">
+                      <svg class="w-3.5 h-3.5 text-blue-500 shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                      </svg>
+                      <span class="truncate">{card.tabTitle}</span>
+                      <span class="text-slate-400 hover:text-slate-600 dark:hover:text-white cursor-pointer ml-1 text-xs">✕</span>
+                    </div>
+
+                    <div class="w-6 h-6 rounded-full flex items-center justify-center text-slate-500 hover:bg-slate-300/60 dark:hover:bg-slate-700 ml-1 cursor-pointer text-xs">
+                      +
+                    </div>
+                  </div>
+
+                  <div class="flex items-center -mt-1 text-slate-600 dark:text-slate-400">
+                    <div class="w-10 h-7 flex items-center justify-center hover:bg-slate-300/60 dark:hover:bg-slate-700 cursor-pointer text-xs">─</div>
+                    <div class="w-10 h-7 flex items-center justify-center hover:bg-slate-300/60 dark:hover:bg-slate-700 cursor-pointer text-[10px]">□</div>
+                    <div class="w-10 h-7 flex items-center justify-center hover:bg-rose-500 hover:text-white cursor-pointer text-xs">✕</div>
+                  </div>
+                </div>
+
+                <div class="bg-white dark:bg-[#292a2d] px-3 py-2 flex items-center gap-2 border-b border-[#e8eaed] dark:border-[#3c4043]">
+                  <div class="flex items-center gap-1 text-slate-500 dark:text-slate-400">
+                    <button class="w-7 h-7 rounded-full flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 text-xs disabled:opacity-40">←</button>
+                    <button class="w-7 h-7 rounded-full flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 text-xs disabled:opacity-40">→</button>
+                    <button class="w-7 h-7 rounded-full flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 text-xs">⟳</button>
+                  </div>
+
+                  <div class="flex-1 bg-[#f1f3f4] dark:bg-[#202124] rounded-full h-7 px-3 flex items-center justify-between text-xs text-slate-700 dark:text-slate-300 border border-transparent">
+                    <div class="flex items-center gap-2 truncate">
+                      <svg class="w-3.5 h-3.5 text-slate-500 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+                      </svg>
+                      <span class="font-mono text-[11px] truncate">{card.fileUrl}</span>
+                    </div>
+                    <span class="text-slate-400 text-xs">★</span>
+                  </div>
+
+                  <div class="flex items-center gap-1 text-slate-500">
+                    <div class="w-6 h-6 rounded-full bg-emerald-600 text-white flex items-center justify-center text-[10px] font-bold">IT</div>
+                  </div>
+                </div>
+
+                <div class="p-6 bg-white text-slate-800 font-sans min-h-[300px]">
+                  {card.id === 'practical-group-a' && (
+                    <div class="space-y-5 max-w-xl mx-auto border border-slate-300 p-5 rounded-lg bg-[#f7fafc]">
+                      <div class="bg-[#059669] text-white p-3.5 rounded text-center shadow-sm">
+                        <h4 class="font-bold text-sm">Skill Oriented Practical: Group A</h4>
+                        <p class="text-xs opacity-90 mt-0.5">HTML5 Multimedia &amp; Client-Side Image Mapping</p>
+                      </div>
+
+                      <div class="p-4 bg-white border border-slate-200 rounded-lg space-y-4 shadow-sm">
+                        <h5 class="text-xs font-bold text-[#059669] border-b pb-1">1. HTML5 Audio &amp; Video Controls</h5>
+                        
+                        <div>
+                          <p class="text-xs font-bold text-slate-700">Audio Player</p>
+                          <div class="bg-[#f1f3f4] border border-[#dadce0] rounded-full px-4 py-2 flex items-center justify-between text-xs max-w-md mt-1.5 shadow-inner">
+                            <div class="flex items-center gap-3">
+                              <span class="w-6 h-6 rounded-full bg-slate-300 flex items-center justify-center text-[10px]">▶</span>
+                              <span class="text-[11px] font-mono text-slate-600">0:00 / 2:45</span>
+                            </div>
+                            <div class="w-32 h-1 bg-slate-300 rounded-full mx-2 relative">
+                              <div class="w-8 h-1 bg-[#059669] rounded-full"></div>
+                              <div class="w-2.5 h-2.5 rounded-full bg-[#059669] absolute -top-0.5 left-7"></div>
+                            </div>
+                            <span class="text-slate-500">🔊</span>
+                          </div>
+                        </div>
+
+                        <div>
+                          <p class="text-xs font-bold text-slate-700">Video Player</p>
+                          <div class="w-80 h-44 bg-black rounded-lg flex flex-col justify-between p-2.5 text-white text-xs mt-1.5 relative border border-slate-800 shadow-md">
+                            <div class="flex justify-between items-start">
+                              <span class="text-[10px] bg-black/60 px-2 py-0.5 rounded font-mono">poster.jpg</span>
+                              <span class="text-[10px] bg-black/60 px-2 py-0.5 rounded font-mono">320x240</span>
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                              <span class="h-12 w-12 rounded-full bg-black/70 border border-white/40 flex items-center justify-center text-white text-lg">▶</span>
+                            </div>
+                            <div class="bg-black/80 rounded-md p-1.5 flex items-center justify-between text-[10px] gap-2">
+                              <span>▶</span>
+                              <div class="h-1 bg-slate-600 rounded-full flex-1">
+                                <div class="h-1 bg-[#059669] w-1/3 rounded-full"></div>
+                              </div>
+                              <span class="font-mono">00:42 / 03:15</span>
+                              <span>🔊</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="p-4 bg-white border border-slate-200 rounded-lg space-y-2 shadow-sm">
+                        <h5 class="text-xs font-bold text-[#059669] border-b pb-1">2. Client-Side Image Mapping</h5>
+                        <p class="text-xs text-slate-600">Click on the designated regions of the image below:</p>
+                        
+                        <div class="relative w-96 h-48 bg-[#e2e8f0] border-2 border-[#059669] rounded-lg flex items-center justify-center overflow-hidden shadow-inner">
+                          <span class="text-xs font-mono text-slate-500">shapes.png (400x200 Image Map)</span>
+                          <div class="absolute top-4 left-4 w-24 h-24 border-2 border-dashed border-[#059669] bg-[#059669]/20 flex flex-col items-center justify-center p-1">
+                            <span class="text-[10px] font-bold text-[#059669]">rect</span>
+                            <span class="text-[9px] text-slate-600 font-mono">Google</span>
+                          </div>
+                          <div class="absolute top-8 right-12 w-24 h-24 rounded-full border-2 border-dashed border-[#059669] bg-[#059669]/20 flex flex-col items-center justify-center p-1">
+                            <span class="text-[10px] font-bold text-[#059669]">circle</span>
+                            <span class="text-[9px] text-slate-600 font-mono">Wikipedia</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {card.id === 'practical-group-b-js' && (
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-2xl mx-auto py-2">
+                      <div class="p-5 bg-white border border-slate-300 rounded-lg shadow-md space-y-3">
+                        <h5 class="text-sm font-bold text-slate-800 border-b pb-1.5">SOP 3: Count Total Vowels</h5>
+                        <div>
+                          <label class="text-[11px] font-medium text-slate-600 block mb-1">Enter a sentence or word:</label>
+                          <input type="text" value="Maharashtra State Board Examination 2027" class="w-full text-xs p-2 border border-slate-300 rounded bg-[#f8fafc] font-medium text-slate-800" readonly />
+                        </div>
+                        <button class="px-4 py-1.5 bg-[#059669] text-white rounded text-xs font-bold cursor-default shadow-sm">Calculate Vowels</button>
+                        <div class="p-2.5 bg-[#ecfdf5] border border-[#a7f3d0] rounded text-xs font-bold text-[#065f46]">
+                          Total Vowels: 15
+                        </div>
+                      </div>
+
+                      <div class="p-5 bg-white border border-slate-300 rounded-lg shadow-md space-y-3">
+                        <h5 class="text-sm font-bold text-slate-800 border-b pb-1.5">SOP 5: Palindrome Verification</h5>
+                        <div>
+                          <label class="text-[11px] font-medium text-slate-600 block mb-1">Enter string or number:</label>
+                          <input type="text" value="madam" class="w-full text-xs p-2 border border-slate-300 rounded bg-[#f8fafc] font-medium text-slate-800" readonly />
+                        </div>
+                        <button class="px-4 py-1.5 bg-[#059669] text-white rounded text-xs font-bold cursor-default shadow-sm">Verify Palindrome</button>
+                        <div class="p-2.5 bg-[#ecfdf5] border border-[#a7f3d0] rounded text-xs font-bold text-[#059669]">
+                          'madam' is a Palindrome!
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {card.id === 'practical-group-b-php' && (
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-2xl mx-auto py-2">
+                      <div class="p-5 bg-white border border-slate-300 rounded-lg shadow-md space-y-3">
+                        <h5 class="text-sm font-bold text-slate-800 border-b pb-1.5">SOP 1: Voting Eligibility Checker</h5>
+                        <div class="space-y-1">
+                          <label class="text-xs text-slate-700 font-medium">Enter Person's Age:</label>
+                          <input type="number" value="19" class="w-full text-xs p-2 border border-slate-300 rounded bg-[#f8fafc]" readonly />
+                        </div>
+                        <button class="px-4 py-1.5 bg-[#059669] text-white rounded text-xs font-bold cursor-default shadow-sm">Check Eligibility</button>
+                        <div class="p-2.5 bg-[#ecfdf5] border border-[#a7f3d0] rounded text-xs font-bold text-[#059669]">
+                          Eligible to Vote (Age: 19 years).
+                        </div>
+                      </div>
+
+                      <div class="p-5 bg-white border border-slate-300 rounded-lg shadow-md space-y-2 text-xs">
+                        <h5 class="text-sm font-bold text-slate-800 border-b pb-1.5">SOP 3: Student Marks Using Array</h5>
+                        <ul class="list-disc pl-5 space-y-1 text-slate-700 text-xs mt-2">
+                          <li><strong>Physics:</strong> 78 / 100</li>
+                          <li><strong>Chemistry:</strong> 85 / 100</li>
+                          <li><strong>Mathematics:</strong> 92 / 100</li>
+                          <li><strong>Information Technology:</strong> 96 / 100</li>
+                          <li><strong>English:</strong> 81 / 100</li>
+                        </ul>
+                        <div class="pt-3 border-t border-slate-200 text-xs text-slate-800 space-y-1 font-semibold">
+                          <p>Total Marks Obtained: 432 / 500</p>
+                          <p class="text-[#059669] font-bold text-sm">Calculated Percentage: 86.40%</p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                </div>
+
+                <div class="px-4 py-2.5 bg-[#f8fafc] dark:bg-[#1a1b1e] border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 font-mono gap-1 select-none">
+                  <div class="flex items-center gap-2">
+                    <span class="inline-block w-2 h-2 rounded-full bg-emerald-500"></span>
+                    <span>Printed Output Certified by Internal Examiner</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <span class="text-slate-400">Date of Exam: March 2027</span>
+                    <span class="font-bold text-emerald-600 dark:text-emerald-400">Scale: 15 / 15 Marks</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-slate-100 dark:border-slate-800">
+              <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-400 mb-1.5">Output Verification &amp; Submission Checklist</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                {card.outputSummary} Print this browser snapshot window alongside your source code to fulfill Maharashtra State Board external evaluation requirements.
+              </p>
+            </div>
+          </div>
+
+        </article>
+      ))}
+    </div>
+
+    <!-- STYLED ACCORDION: HSC IT PRACTICAL EXAM, ORAL QUESTIONS AND ANSWERS FOR VIVA -->
+    <section id="viva" class="mt-20 pt-12 border-t-2 border-slate-200 dark:border-slate-800">
+      <div class="mb-10 text-center max-w-3xl mx-auto">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-300 dark:border-emerald-500/30 text-emerald-800 dark:text-emerald-300 text-xs font-mono font-bold tracking-tight mb-3 shadow-sm">
+          <span class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span>10-MARK ORAL EVALUATION • SCIENCE CODE 97</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          HSC IT PRACTICAL EXAM, ORAL QUESTIONS AND ANSWERS FOR VIVA
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+          Standard questions asked by Maharashtra Board external examiners during practical journal submission and code verification. Click each question to expand the board-certified model answer.
+        </p>
+      </div>
+
+      <!-- FAQ Container -->
+      <div class="space-y-4 max-w-4xl mx-auto">
+        {vivaQuestions.map((item) => (
+          <details class="faq-card group rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/90 shadow-sm transition-all duration-200 hover:border-emerald-500/60 dark:hover:border-emerald-500/50 hover:shadow-md [&_summary::-webkit-details-marker]:hidden open:border-emerald-500 dark:open:border-emerald-500 open:shadow-md open:shadow-emerald-500/5">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 p-5 sm:p-6 font-bold text-slate-900 dark:text-white text-sm sm:text-base select-none">
+              <div class="flex items-center gap-3.5 sm:gap-4 text-left">
+                <span class="h-7 w-7 rounded-lg bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/20 text-emerald-700 dark:text-emerald-400 font-mono text-xs font-bold flex items-center justify-center shrink-0">
+                  {item.num}
+                </span>
+                <span class="group-hover:text-emerald-700 dark:group-hover:text-emerald-400 transition-colors">
+                  {item.q}
+                </span>
+              </div>
+              
+              <!-- Circular Animated Emerald Dropdown Arrow Badge -->
+              <span class="h-8 w-8 rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 flex items-center justify-center shrink-0 text-slate-500 dark:text-slate-400 transition-all duration-200 group-hover:border-emerald-400 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 group-open:bg-emerald-600 group-open:border-emerald-600 group-open:text-white group-open:rotate-180 shadow-sm">
+                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </summary>
+            
+            <!-- Answer Body with Left Green Border Accent -->
+            <div class="px-5 sm:px-6 pb-5 sm:pb-6 pt-1 text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+              <div class="p-4 rounded-xl bg-slate-50/80 dark:bg-slate-950/60 border border-slate-200/80 dark:border-slate-800 border-l-4 border-l-emerald-500 dark:border-l-emerald-400 shadow-inner">
+                <div class="flex items-center gap-2 mb-1.5 text-emerald-700 dark:text-emerald-400 font-mono font-bold text-xs uppercase tracking-wide">
+                  <span>✔</span> Model Answer for Examiner:
+                </div>
+                <p class="font-normal text-slate-700 dark:text-slate-300 leading-relaxed">
+                  {item.a}
+                </p>
+              </div>
+            </div>
+          </details>
+        ))}
+      </div>
+    </section>
+
+  </section>
+
+  <!-- Interactive Copy & Video Prompt Script -->
+  <script is:inline>
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const code = btn.getAttribute('data-code');
+        if (!code) return;
+
+        try {
+          await navigator.clipboard.writeText(code);
+          const originalText = btn.innerHTML;
+          btn.innerHTML = `
+            <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Copied to Clipboard!</span>
+          `;
+          btn.classList.add('bg-teal-600');
+          setTimeout(() => {
+            btn.innerHTML = originalText;
+            btn.classList.remove('bg-teal-600');
+          }, 2000);
+        } catch (err) {
+          console.error("Clipboard copy failed: ", err);
+        }
+      });
+    });
+
+    document.querySelectorAll('.video-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        if (btn.getAttribute('href') === '#') {
+          e.preventDefault();
+          alert("Science video tutorial is being recorded and will be published shortly!");
+        }
+      });
+    });
+  </script>
+</PortalLayout>

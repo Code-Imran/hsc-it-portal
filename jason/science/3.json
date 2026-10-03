@@ -1,0 +1,479 @@
+{
+  "chapter_id": 3,
+  "chapter_name": "Advanced Javascript",
+  "subject": "Information Technology (Science)",
+  "standard": "Standard 12 (HSC Maharashtra State Board)",
+  "questions": [
+    {
+      "id": "IT-C03-FIB-001",
+      "chapter_id": 3,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "______ script resides on server computer.",
+      "options": [],
+      "server_only": {
+        "answer": ["Server-side", "server-side", "server side"],
+        "explanation": "Server-side scripts execute on the remote host server before returning plain output to the client browser.",
+        "source_reference": "Balbharati Ex Q1.1, Page 51",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2022"]
+      }
+    },
+    {
+      "id": "IT-C03-FIB-002",
+      "chapter_id": 3,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "______ statement is used to jump out of loop.",
+      "options": [],
+      "server_only": {
+        "answer": ["break"],
+        "explanation": "The 'break' keyword immediately terminates the enclosing loop or switch construct.",
+        "source_reference": "Balbharati Ex Q1.2, Page 51",
+        "board_exam_appeared": true,
+        "board_exam_years": ["July 2022", "March 2024"]
+      }
+    },
+    {
+      "id": "IT-C03-FIB-003",
+      "chapter_id": 3,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "______ defines logical structure of document.",
+      "options": [],
+      "server_only": {
+        "answer": ["DOM", "Document Object Model"],
+        "explanation": "DOM represents HTML documents as an object hierarchy allowing programmatic manipulation.",
+        "source_reference": "Balbharati Ex Q1.3, Page 51",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2023"]
+      }
+    },
+    {
+      "id": "IT-C03-FIB-004",
+      "chapter_id": 3,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "hard",
+      "question": "______ property of window object returns Boolean value indicating whether window is closed or not.",
+      "options": [],
+      "server_only": {
+        "answer": ["closed"],
+        "explanation": "The window.closed property evaluates to true if the designated window reference is shut.",
+        "source_reference": "Balbharati Ex Q1.4, Page 51",
+        "board_exam_appeared": false,
+        "board_exam_years": []
+      }
+    },
+    {
+      "id": "IT-C03-FIB-005",
+      "chapter_id": 3,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "______ event occurs when an element loses its focus.",
+      "options": [],
+      "server_only": {
+        "answer": ["onblur"],
+        "explanation": "The onblur event fires when focus leaves an active element.",
+        "source_reference": "Balbharati Ex Q1.5, Page 51",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2022", "February 2024"]
+      }
+    },
+    {
+      "id": "IT-C03-FIB-008",
+      "chapter_id": 3,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "The ______ method in JavaScript is used to register an event handler on a specified element without overwriting existing handlers.",
+      "options": [],
+      "server_only": {
+        "answer": ["addEventListener()", "addEventListener"],
+        "explanation": "addEventListener() attaches an event handler without overriding existing event handlers.",
+        "source_reference": "State Board Syllabus Sec 3.4, Page 48",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2023"]
+      }
+    },
+    {
+      "id": "IT-C03-FIB-009",
+      "chapter_id": 3,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "The ______ property of String object returns the total number of characters in a string.",
+      "options": [],
+      "server_only": {
+        "answer": ["length"],
+        "explanation": "The length property stores the total character count of a JavaScript string.",
+        "source_reference": "Balbharati Ex Q1, Page 51",
+        "board_exam_appeared": true,
+        "board_exam_years": ["July 2022"]
+      }
+    },
+    {
+      "id": "IT-C03-TF-001",
+      "chapter_id": 3,
+      "exam_section": "Q2",
+      "type": "true_false",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "JavaScript is case sensitive language.",
+      "options": ["True", "False"],
+      "server_only": {
+        "answer": 0,
+        "explanation": "JavaScript strictly distinguishes between uppercase and lowercase characters in variables, function names, and keywords.",
+        "source_reference": "Balbharati Ex Q2.1, Page 51",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2020", "March 2023"]
+      }
+    },
+    {
+      "id": "IT-C03-TF-002",
+      "chapter_id": 3,
+      "exam_section": "Q2",
+      "type": "true_false",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "Math.ceil() function is used to return the nearest integer less than or equal to given number.",
+      "options": ["True", "False"],
+      "server_only": {
+        "answer": 1,
+        "explanation": "Math.ceil() rounds up to the next highest integer; Math.floor() returns the integer less than or equal to the number.",
+        "source_reference": "Balbharati Ex Q2.2, Page 51",
+        "board_exam_appeared": true,
+        "board_exam_years": ["July 2022"]
+      }
+    },
+    {
+      "id": "IT-C03-TF-003",
+      "chapter_id": 3,
+      "exam_section": "Q2",
+      "type": "true_false",
+      "marks": 1,
+      "difficulty": "hard",
+      "question": "MAX_VALUE property of number object returns smallest possible value.",
+      "options": ["True", "False"],
+      "server_only": {
+        "answer": 1,
+        "explanation": "Number.MAX_VALUE returns the highest representable numeric value, whereas Number.MIN_VALUE returns the lowest positive value.",
+        "source_reference": "Balbharati Ex Q2.3, Page 51",
+        "board_exam_appeared": false,
+        "board_exam_years": []
+      }
+    },
+    {
+      "id": "IT-C03-TF-004",
+      "chapter_id": 3,
+      "exam_section": "Q2",
+      "type": "true_false",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "getDay() method of Date object returns month in number.",
+      "options": ["True", "False"],
+      "server_only": {
+        "answer": 1,
+        "explanation": "getDay() returns the day of the week (0 to 6). getMonth() returns the month index (0 to 11).",
+        "source_reference": "Balbharati Ex Q2.4, Page 51",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2024"]
+      }
+    },
+    {
+      "id": "IT-C03-TF-005",
+      "chapter_id": 3,
+      "exam_section": "Q2",
+      "type": "true_false",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "onKeydown event occurs when user moves mouse pointer.",
+      "options": ["True", "False"],
+      "server_only": {
+        "answer": 1,
+        "explanation": "onkeydown is triggered by a keypress on the physical keyboard. Mouse movement triggers onmousemove.",
+        "source_reference": "Balbharati Ex Q2.5, Page 51",
+        "board_exam_appeared": false,
+        "board_exam_years": []
+      }
+    },
+    {
+      "id": "IT-C03-TF-007",
+      "chapter_id": 3,
+      "exam_section": "Q2",
+      "type": "true_false",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "The getElementById() method returns a collection of multiple elements that share the same tag name.",
+      "options": ["True", "False"],
+      "server_only": {
+        "answer": 1,
+        "explanation": "getElementById() returns exactly one unique element matching the specified ID.",
+        "source_reference": "State Board Syllabus Sec 3.4, Page 47",
+        "board_exam_appeared": false,
+        "board_exam_years": []
+      }
+    },
+    {
+      "id": "IT-C03-TF-008",
+      "chapter_id": 3,
+      "exam_section": "Q2",
+      "type": "true_false",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "The toLowerCase() method alters the original string in place without returning a new string.",
+      "options": ["True", "False"],
+      "server_only": {
+        "answer": 1,
+        "explanation": "JavaScript strings are immutable; methods like toLowerCase() return a new transformed string.",
+        "source_reference": "State Board Syllabus Sec 3.3, Page 43",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2020"]
+      }
+    },
+    {
+      "id": "IT-C03-MCQ1-001",
+      "chapter_id": 3,
+      "exam_section": "Q3",
+      "type": "MCQ_correct1",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "JavaScript is ______ language.",
+      "options": ["Compiled", "Interpreted", "Both Compiled and Interpreted", "None of the above"],
+      "server_only": {
+        "answer": 1,
+        "explanation": "Under the Maharashtra State Board syllabus definition, JavaScript is characterized as an interpreted client-side scripting language.",
+        "source_reference": "Balbharati Ex Q3.1, Page 51",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2022"]
+      }
+    },
+    {
+      "id": "IT-C03-MCQ1-002",
+      "chapter_id": 3,
+      "exam_section": "Q3",
+      "type": "MCQ_correct1",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "Select correct method name of String object ______.",
+      "options": ["charAt()", "characterAt()", "valueAt()", "lengthAt()"],
+      "server_only": {
+        "answer": 0,
+        "explanation": "charAt(index) returns the character stored at the specified zero-based index of a string.",
+        "source_reference": "Balbharati Ex Q3.2, Page 51",
+        "board_exam_appeared": true,
+        "board_exam_years": ["July 2023"]
+      }
+    },
+    {
+      "id": "IT-C03-MCQ1-003",
+      "chapter_id": 3,
+      "exam_section": "Q3",
+      "type": "MCQ_correct1",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "______ method displays message box with Ok and Cancel button.",
+      "options": ["Confirm()", "Alert()", "both Confirm() and Alert()", "None of these"],
+      "server_only": {
+        "answer": 0,
+        "explanation": "window.confirm() produces a modal dialog with OK and Cancel buttons, returning true or false.",
+        "source_reference": "Balbharati Ex Q3.3, Page 51",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2020", "March 2024"]
+      }
+    },
+    {
+      "id": "IT-C03-MCQ1-004",
+      "chapter_id": 3,
+      "exam_section": "Q3",
+      "type": "MCQ_correct1",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "We can declare all types of variables using keyword ______.",
+      "options": ["var", "dim", "variable", "declare"],
+      "server_only": {
+        "answer": 0,
+        "explanation": "The 'var' keyword historically declares dynamically typed variables in standard JavaScript.",
+        "source_reference": "Balbharati Ex Q3.4, Page 51",
+        "board_exam_appeared": false,
+        "board_exam_years": []
+      }
+    },
+    {
+      "id": "IT-C03-MCQ1-005",
+      "chapter_id": 3,
+      "exam_section": "Q3",
+      "type": "MCQ_correct1",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "Trace output of following JavaScript code: var str=\"Information Technology\"; document.write(str.lastIndexOf(\"o\"));",
+      "options": ["18", "19", "20", "21"],
+      "server_only": {
+        "answer": 1,
+        "explanation": "Indices in JavaScript strings are zero-based (0 to length - 1). In the string 'Information Technology', the character 'o' appears at index 3, 11, and last at index 19. Hence, lastIndexOf('o') returns 19.",
+        "source_reference": "Balbharati Ex Q3.5, Page 51",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2023"]
+      }
+    },
+    {
+      "id": "IT-C03-MCQ1-007",
+      "chapter_id": 3,
+      "exam_section": "Q3",
+      "type": "MCQ_correct1",
+      "marks": 1,
+      "difficulty": "hard",
+      "question": "What is the trace output of following JavaScript statement: document.write(\"10\" + 20);",
+      "options": ["30", "1020", "NaN", "Error"],
+      "server_only": {
+        "answer": 1,
+        "explanation": "When one operand is a string, the + operator concatenates both values, producing '1020'.",
+        "source_reference": "State Board Model Paper Q3",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2024"]
+      }
+    },
+    {
+      "id": "IT-C03-MCQ2-001",
+      "chapter_id": 3,
+      "exam_section": "Q4",
+      "type": "MCQ_correct2",
+      "marks": 2,
+      "difficulty": "medium",
+      "question": "Which TWO properties belong to the JavaScript 'window' object?",
+      "options": ["location", "document", "color", "background", "border"],
+      "server_only": {
+        "answer": [0, 1],
+        "explanation": "The global Window object directly contains the 'document' and 'location' properties.",
+        "source_reference": "State Board Supplementary Bank",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2022"]
+      }
+    },
+    {
+      "id": "IT-C03-MCQ2-002",
+      "chapter_id": 3,
+      "exam_section": "Q4",
+      "type": "MCQ_correct2",
+      "marks": 2,
+      "difficulty": "medium",
+      "question": "Which TWO methods are used to convert values to numeric types in JavaScript?",
+      "options": ["parseInt()", "parseFloat()", "toNumber()", "makeInt()", "convertNum()"],
+      "server_only": {
+        "answer": [0, 1],
+        "explanation": "parseInt() and parseFloat() are native global methods used to convert string inputs into numbers.",
+        "source_reference": "State Board Supplementary Bank",
+        "board_exam_appeared": true,
+        "board_exam_years": ["July 2023"]
+      }
+    },
+    {
+      "id": "IT-C03-MCQ2-004",
+      "chapter_id": 3,
+      "exam_section": "Q4",
+      "type": "MCQ_correct2",
+      "marks": 2,
+      "difficulty": "medium",
+      "question": "Which TWO methods belong to the browser 'history' object in JavaScript?",
+      "options": ["back()", "forward()", "write()", "alert()", "split()"],
+      "server_only": {
+        "answer": [0, 1],
+        "explanation": "The history object controls session navigation through back(), forward(), and go().",
+        "source_reference": "State Board Syllabus Sec 3.4, Page 49",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2022"]
+      }
+    },
+    {
+      "id": "IT-C03-MCQ3-001",
+      "chapter_id": 3,
+      "exam_section": "Q5",
+      "type": "MCQ_correct3",
+      "marks": 3,
+      "difficulty": "hard",
+      "question": "JavaScript features are ______, ______ and ______.",
+      "options": [
+        "supports event based facilities",
+        "is platform dependent language",
+        "case insensitive scripting language",
+        "provide inbuilt objects",
+        "can handle date and time effectively",
+        "requires special compiler to run"
+      ],
+      "server_only": {
+        "answer": [0, 3, 4],
+        "explanation": "JavaScript is platform-independent, case-sensitive, supports event handling, has built-in objects, and can handle dates/times.",
+        "source_reference": "Balbharati Ex Q5.1, Page 52",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2022", "March 2024"]
+      }
+    },
+    {
+      "id": "IT-C03-MCQ3-002",
+      "chapter_id": 3,
+      "exam_section": "Q5",
+      "type": "MCQ_correct3",
+      "marks": 3,
+      "difficulty": "medium",
+      "question": "Which THREE of the following are valid Math object methods in JavaScript?",
+      "options": ["Math.ceil()", "Math.floor()", "Math.round()", "Math.square()", "Math.add()", "Math.equal()"],
+      "server_only": {
+        "answer": [0, 1, 2],
+        "explanation": "Math.ceil(), Math.floor(), and Math.round() are built-in methods of JavaScript's Math object.",
+        "source_reference": "State Board Supplementary Bank",
+        "board_exam_appeared": false,
+        "board_exam_years": []
+      }
+    },
+    {
+      "id": "IT-C03-MCQ3-003",
+      "chapter_id": 3,
+      "exam_section": "Q5",
+      "type": "MCQ_correct3",
+      "marks": 3,
+      "difficulty": "hard",
+      "question": "Which THREE of the following are valid dialog box methods of the window object?",
+      "options": ["alert()", "confirm()", "prompt()", "popup()", "notify()", "input()"],
+      "server_only": {
+        "answer": [0, 1, 2],
+        "explanation": "window.alert(), window.confirm(), and window.prompt() are standard interactive dialog boxes.",
+        "source_reference": "State Board Syllabus Sec 3.2, Page 40",
+        "board_exam_appeared": true,
+        "board_exam_years": ["July 2023"]
+      }
+    },
+    {
+      "id": "IT-C03-MTP-001",
+      "chapter_id": 3,
+      "exam_section": "Q6",
+      "type": "match_the_pair",
+      "marks": 4,
+      "difficulty": "medium",
+      "question": "Match the JavaScript function or method in Column A with its correct description in Column B.",
+      "options": [],
+      "server_only": {
+        "answer": [
+          { "column_a": "ceil()", "column_b": "Returns next integer greater than or equal to given number" },
+          { "column_a": "floor()", "column_b": "Returns the next integer less than or equal to given number" },
+          { "column_a": "write()", "column_b": "Writes HTML expression or JavaScript code to a document" },
+          { "column_a": "trim()", "column_b": "Removes white spaces from both sides of string" }
+        ],
+        "explanation": "Correct built-in methods of Math, Document, and String objects.",
+        "source_reference": "Balbharati Ex Q6, Page 52",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2023"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,305 @@
+---
+import PortalLayout from "../layouts/PortalLayout.astro";
+
+// --- SCIENCE SYLLABUS (CODE 97) ---
+const scienceChapters = [
+  { no: "Chapter 1", title: "Advanced Web Designing", marks: "20 - 25 Marks", topics: "HTML5 Form controls, CSS3 styling, Flexbox layout, Audio/Video tags, Client-side Image maps (<map>, <area>).", tag: "Theory + SOP" },
+  { no: "Chapter 2", title: "Digital Marketing & SEO", marks: "10 - 12 Marks", topics: "On-Page SEO, Off-Page SEO, Page Rank, Audit Tools, Meta tags, White Hat vs Black Hat strategies.", tag: "Theory Only" },
+  { no: "Chapter 3", title: "Advanced JavaScript", marks: "15 - 20 Marks", topics: "Event handling (onsubmit, onchange), DOM manipulation, Form validation, Built-in String/Math/Date objects.", tag: "Theory + SOP" },
+  { no: "Chapter 4", title: "Emerging Technologies", marks: "8 - 10 Marks", topics: "IoT architecture, Cloud Computing models (IaaS, PaaS, SaaS), Artificial Intelligence, 5G wireless networks.", tag: "Theory Only" },
+  { no: "Chapter 5", title: "Server-Side Scripting (PHP)", marks: "12 - 15 Marks", topics: "PHP syntax, form processing via POST/GET, Associative arrays, User-defined functions, Form security.", tag: "Theory + SOP" },
+  { no: "Chapter 6", title: "E-Commerce & E-Governance", marks: "8 - 10 Marks", topics: "E-Commerce models (B2B, B2C, C2C), Payment gateways, Security, EDI, E-Governance models (G2C, G2B, G2G).", tag: "Theory Only" },
+];
+
+// --- COMMERCE SYLLABUS (CODE 99) ---
+const commerceChapters = [
+  { no: "Chapter 1", title: "Advanced Web Designing", marks: "20 - 25 Marks", topics: "HTML5 Form controls, CSS3 page layout, Responsive styling, Audio/Video embeds, Client-side forms.", tag: "Theory + SOP" },
+  { no: "Chapter 2", title: "Digital Marketing & SEO", marks: "10 - 12 Marks", topics: "Search Engine Optimization, Keywords, Page rank metrics, Website audit tools, Business meta tags.", tag: "Theory Only" },
+  { no: "Chapter 3", title: "Advanced JavaScript", marks: "15 - 20 Marks", topics: "Event handling (onsubmit, onclick), Form calculation & validation, String & Math methods.", tag: "Theory + SOP" },
+  { no: "Chapter 4", title: "Emerging Technologies", marks: "8 - 10 Marks", topics: "Cloud services for commerce, IoT ecosystem, AI applications in enterprise, High-speed networks.", tag: "Theory Only" },
+  { no: "Chapter 5", title: "Database Concepts (RDBMS)", marks: "15 - 18 Marks", topics: "Database design, Tables, Primary keys, Foreign keys, SQL queries (CREATE, INSERT, SELECT), Normalization.", tag: "Theory + SOP" },
+  { no: "Chapter 6", title: "E-Commerce & E-Governance", marks: "10 - 12 Marks", topics: "B2B/B2C/C2C architectures, Electronic Data Interchange (EDI), Cyber laws, Digital signatures, Payment gateways.", tag: "Theory Only" },
+];
+
+const boardPattern = [
+  { q: "Q1", format: "Fill in the Blanks", questions: "10 Questions", marksEach: "1 Mark", total: "10 Marks" },
+  { q: "Q2", format: "State True or False", questions: "10 Questions", marksEach: "1 Mark", total: "10 Marks" },
+  { q: "Q3", format: "Multiple Choice (1 Correct Answer)", questions: "10 Questions", marksEach: "1 Mark", total: "10 Marks" },
+  { q: "Q4", format: "Multiple Choice (2 Correct Answers)", questions: "5 Questions", marksEach: "2 Marks", total: "10 Marks" },
+  { q: "Q5", format: "Multiple Choice (3 Correct Answers)", questions: "2 Questions", marksEach: "3 Marks", total: "6 Marks" },
+  { q: "Q6", format: "Match the Following Pairs", questions: "4 Questions", marksEach: "1 Mark", total: "4 Marks" },
+  { q: "Q7", format: "Answer in Brief (Any 5 out of 8)", questions: "5 of 8 Questions", marksEach: "2 Marks", total: "10 Marks" },
+  { q: "Q8", format: "Write Programs / SOP Tasks (Any 2 of 4)", questions: "2 of 4 Tasks", marksEach: "10 Marks", total: "20 Marks" },
+];
+---
+
+<PortalLayout title="Home">
+  <!-- Hero Section -->
+  <section class="border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 py-12 sm:py-16 md:py-20 px-4 sm:px-6 transition-colors">
+    <div class="max-w-4xl mx-auto text-center space-y-5 sm:space-y-6">
+      
+      <!-- Dynamic Stream Badge -->
+      <div class="inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/20 text-emerald-800 dark:text-emerald-300 text-[11px] sm:text-xs font-mono font-bold tracking-tight shadow-sm">
+        <span class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span id="hero-stream-label">MAHARASHTRA STATE BOARD • SCIENCE (CODE 97)</span>
+      </div>
+      
+      <h1 class="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.2]">
+        HSC INFORMATION TECHNOLOGY PORTAL
+      </h1>
+
+      <p class="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
+        Your complete toolkit for Maharashtra Board Class 12: solved <strong>Balbharati chapter exercises</strong>, topic-wise <strong>IT MCQs</strong>, and ready-to-use <strong>SOP practicals & journal specimens</strong>. Experience the official test format through our live <strong>80-mark computerized online mock exam</strong>.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+        <a href="/simulator" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm transition shadow-lg shadow-emerald-600/30 flex items-center justify-center gap-2">
+          Start Online Mock Exam (80 Marks)
+          <span>→</span>
+        </a>
+        <a href="#pattern" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-semibold text-sm transition border border-slate-200 dark:border-slate-700 text-center">
+          View Paper Pattern (Q1–Q8)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metric Badges -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 -mt-6 sm:-mt-8">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+      <div class="p-4 sm:p-5 rounded-xl sm:rounded-2xl border border-slate-200/90 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-md">
+        <p class="text-[11px] sm:text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Total Weightage</p>
+        <p class="text-xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">100 Marks</p>
+        <span class="text-[11px] sm:text-xs text-emerald-600 dark:text-emerald-400 font-bold mt-1 inline-block">80 Theory + 20 Practical</span>
+      </div>
+      <div class="p-4 sm:p-5 rounded-xl sm:rounded-2xl border border-slate-200/90 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-md">
+        <p class="text-[11px] sm:text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Online Duration</p>
+        <p class="text-xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">2.5 Hours</p>
+        <span class="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium mt-1 inline-block">Computerized Online Exam</span>
+      </div>
+      <div class="p-4 sm:p-5 rounded-xl sm:rounded-2xl border border-slate-200/90 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-md">
+        <p class="text-[11px] sm:text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Balbharati Keys</p>
+        <p class="text-xl sm:text-3xl font-extrabold text-emerald-600 dark:text-emerald-400 mt-1">100%</p>
+        <span class="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium mt-1 inline-block">Chapters 1 to 6 Solved</span>
+      </div>
+      <div class="p-4 sm:p-5 rounded-xl sm:rounded-2xl border border-slate-200/90 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-md">
+        <p class="text-[11px] sm:text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">SOP Labs</p>
+        <p class="text-xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">12 Labs</p>
+        <span id="metric-sop-tag" class="text-[11px] sm:text-xs text-emerald-600 dark:text-emerald-400 font-bold mt-1 inline-block">HTML5, JS & PHP</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chapters Grid Section -->
+  <section id="syllabus" class="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+      <div>
+        <div class="text-xs font-mono font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 mb-1">Textbook Syllabus & Notes</div>
+        <h2 id="syllabus-heading" class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+          Class 12 IT Units (Science Code 97)
+        </h2>
+        <p id="syllabus-subheading" class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
+          Maharashtra State Board chapter-wise distribution for Science stream.
+        </p>
+      </div>
+      <span class="text-xs font-mono font-bold text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-500/30 bg-emerald-50 dark:bg-emerald-500/10 px-3.5 py-1.5 rounded-lg w-fit">
+        Total Theory: 80 Marks
+      </span>
+    </div>
+
+    <!-- Science Chapter Cards Container -->
+    <div id="grid-science" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+      {scienceChapters.map((ch) => (
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-5 sm:p-6 flex flex-col justify-between shadow-sm hover:shadow-md hover:border-emerald-500/40 dark:hover:border-slate-700 transition duration-150">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-xs font-mono font-bold text-emerald-700 dark:text-emerald-400 tracking-tight bg-emerald-50 dark:bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-200 dark:border-emerald-500/20">
+                {ch.no}
+              </span>
+              <span class="text-xs font-mono font-bold text-slate-900 dark:text-white bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-700">
+                {ch.marks}
+              </span>
+            </div>
+
+            <h3 class="font-bold text-slate-900 dark:text-white text-base leading-snug mb-2">
+              {ch.title}
+            </h3>
+
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+              {ch.topics}
+            </p>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs">
+            <span class="text-slate-500 dark:text-slate-400 font-medium text-[11px]">{ch.tag}</span>
+            <a href="/simulator" class="text-emerald-600 dark:text-emerald-400 font-bold hover:text-emerald-700 dark:hover:text-emerald-300 flex items-center gap-1 transition">
+              Topic based MCQ Test →
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Commerce Chapter Cards Container -->
+    <div id="grid-commerce" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+      {commerceChapters.map((ch) => (
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-5 sm:p-6 flex flex-col justify-between shadow-sm hover:shadow-md hover:border-emerald-500/40 dark:hover:border-slate-700 transition duration-150">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-xs font-mono font-bold text-emerald-700 dark:text-emerald-400 tracking-tight bg-emerald-50 dark:bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-200 dark:border-emerald-500/20">
+                {ch.no}
+              </span>
+              <span class="text-xs font-mono font-bold text-slate-900 dark:text-white bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-700">
+                {ch.marks}
+              </span>
+            </div>
+
+            <h3 class="font-bold text-slate-900 dark:text-white text-base leading-snug mb-2">
+              {ch.title}
+            </h3>
+
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+              {ch.topics}
+            </p>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs">
+            <span class="text-slate-500 dark:text-slate-400 font-medium text-[11px]">{ch.tag}</span>
+            <a href="/simulator" class="text-emerald-600 dark:text-emerald-400 font-bold hover:text-emerald-700 dark:hover:text-emerald-300 flex items-center gap-1 transition">
+              Topic based MCQ Test →
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Paper Pattern Section -->
+  <section id="pattern" class="max-w-7xl mx-auto px-4 sm:px-6 pb-20">
+    <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-5 sm:p-8 shadow-sm">
+      <div class="mb-6">
+        <span class="text-xs font-mono font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Board Evaluation Blueprint</span>
+        <h2 id="pattern-title" class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white mt-1">
+          HSC IT Exam Paper Pattern for Science (Subject Code 97)
+        </h2>
+        <p id="pattern-tagline" class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+          Official Maharashtra Board Online Exam March 2027 Q1 to Q8 pattern with marks.
+        </p>
+      </div>
+
+      <!-- Mobile Friendly Cards -->
+      <div class="block md:hidden space-y-3">
+        {boardPattern.map((row) => (
+          <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-950/60 flex flex-col justify-between gap-3">
+            <div class="flex items-center justify-between">
+              <span class="font-mono font-bold text-xs px-2.5 py-0.5 rounded bg-emerald-100 dark:bg-emerald-500/10 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-500/20">
+                {row.q}
+              </span>
+              <span class="font-mono font-bold text-sm text-slate-900 dark:text-white">
+                {row.total}
+              </span>
+            </div>
+
+            <div>
+              <p class="font-semibold text-slate-900 dark:text-slate-100 text-sm">{row.format}</p>
+              <div class="flex items-center gap-3 mt-1.5 text-xs text-slate-500 dark:text-slate-400 font-mono">
+                <span>{row.questions}</span>
+                <span>•</span>
+                <span>{row.marksEach} each</span>
+              </div>
+            </div>
+          </div>
+        ))}
+
+        <div class="p-4 rounded-xl border-2 border-emerald-500/40 bg-emerald-50/80 dark:bg-emerald-950/30 flex items-center justify-between font-bold">
+          <div>
+            <p class="text-xs text-emerald-900 dark:text-emerald-300">Total Online Exam</p>
+            <p class="text-[11px] text-emerald-700 dark:text-emerald-400 font-normal">March 2027 Final Evaluation</p>
+          </div>
+          <span class="font-mono text-emerald-800 dark:text-emerald-300 text-lg">80 Marks</span>
+        </div>
+      </div>
+
+      <!-- Desktop Table -->
+      <div class="hidden md:block overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800">
+        <table class="w-full text-left text-xs">
+          <thead class="bg-slate-50 dark:bg-slate-950 text-[11px] uppercase tracking-wider text-slate-700 dark:text-slate-400 border-b border-slate-200 dark:border-slate-800">
+            <tr>
+              <th class="px-5 py-3.5 font-bold">Section</th>
+              <th class="px-5 py-3.5 font-bold">Question Format</th>
+              <th class="px-5 py-3.5 font-bold">Total Items</th>
+              <th class="px-5 py-3.5 font-bold">Marks / Item</th>
+              <th class="px-5 py-3.5 font-bold text-right">Section Weightage</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 dark:divide-slate-800/80 bg-white dark:bg-slate-900/50">
+            {boardPattern.map((row) => (
+              <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40 transition">
+                <td class="px-5 py-3.5 font-mono font-bold text-emerald-700 dark:text-emerald-400">{row.q}</td>
+                <td class="px-5 py-3.5 font-semibold text-slate-900 dark:text-slate-100">{row.format}</td>
+                <td class="px-5 py-3.5 text-slate-600 dark:text-slate-300 font-medium">{row.questions}</td>
+                <td class="px-5 py-3.5 font-mono text-slate-600 dark:text-slate-400">{row.marksEach}</td>
+                <td class="px-5 py-3.5 font-mono font-bold text-right text-slate-900 dark:text-white">{row.total}</td>
+              </tr>
+            ))}
+            <tr class="bg-emerald-50/80 dark:bg-emerald-950/30 border-t-2 border-emerald-500/40 font-bold">
+              <td colspan="4" class="px-5 py-4 text-emerald-900 dark:text-emerald-300 text-sm">
+                Total Marks for Information Technology Online Exam March 2027
+              </td>
+              <td class="px-5 py-4 font-mono text-right text-emerald-800 dark:text-emerald-300 text-base">
+                80 Marks
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Client-side Stream Filtering Script -->
+  <script is:inline>
+    function updateHomepageStream(stream) {
+      const heroLabel = document.getElementById('hero-stream-label');
+      const sopTag = document.getElementById('metric-sop-tag');
+      const syllabusHeading = document.getElementById('syllabus-heading');
+      const syllabusSubheading = document.getElementById('syllabus-subheading');
+      const patternTitle = document.getElementById('pattern-title');
+      const patternTagline = document.getElementById('pattern-tagline');
+      
+      const gridSci = document.getElementById('grid-science');
+      const gridComm = document.getElementById('grid-commerce');
+
+      if (stream === 'commerce') {
+        if (heroLabel) heroLabel.textContent = 'MAHARASHTRA STATE BOARD • COMMERCE (CODE 99)';
+        if (sopTag) sopTag.textContent = 'HTML5, JS & Database';
+        if (syllabusHeading) syllabusHeading.textContent = 'Class 12 IT Units (Commerce Code 99)';
+        if (syllabusSubheading) syllabusSubheading.textContent = 'Maharashtra State Board chapter-wise distribution for Commerce stream.';
+        if (patternTitle) patternTitle.textContent = 'HSC IT Exam Paper Pattern for Commerce (Subject Code 99)';
+        if (patternTagline) patternTagline.textContent = 'Official Maharashtra Board Online Exam March 2027 Commerce Q1 to Q8 blueprint.';
+
+        gridSci?.classList.add('hidden');
+        gridComm?.classList.remove('hidden');
+      } else {
+        if (heroLabel) heroLabel.textContent = 'MAHARASHTRA STATE BOARD • SCIENCE (CODE 97)';
+        if (sopTag) sopTag.textContent = 'HTML5, JS & PHP';
+        if (syllabusHeading) syllabusHeading.textContent = 'Class 12 IT Units (Science Code 97)';
+        if (syllabusSubheading) syllabusSubheading.textContent = 'Maharashtra State Board chapter-wise distribution for Science stream.';
+        if (patternTitle) patternTitle.textContent = 'HSC IT Exam Paper Pattern for Science (Subject Code 97)';
+        if (patternTagline) patternTagline.textContent = 'Official Maharashtra Board Online Exam March 2027 Q1 to Q8 pattern with marks.';
+
+        gridComm?.classList.add('hidden');
+        gridSci?.classList.remove('hidden');
+      }
+    }
+
+    // Listen to stream switch events fired by the header
+    window.addEventListener('streamChange', (e) => {
+      updateHomepageStream(e.detail.stream);
+    });
+
+    // Initial check on page load
+    const currentStream = localStorage.getItem('selected_stream') || 'science';
+    updateHomepageStream(currentStream);
+  </script>
+</PortalLayout>

@@ -1,0 +1,106 @@
+{
+  "chapter_id": 1,
+  "chapter_name": "Advanced Web Designing",
+  "subject_stream": ["science", "commerce"],
+  "source": "TPS Notes - 12th IT",
+  "q1_fill_in_the_blanks": [
+    { "id": "tps-ch1-fb-01", "question": "HTML stands for _____.", "answer": "Hyper Text Markup Language" },
+    { "id": "tps-ch1-fb-02", "question": "<input type=\"_____\"> defines a color picker.", "answer": "color" },
+    { "id": "tps-ch1-fb-03", "question": "<input type=\"_____\"> defines a field for entering a number.", "answer": "number" },
+    { "id": "tps-ch1-fb-04", "question": "<input type=\"_____\"> defines an image as a submit button.", "answer": "image" },
+    { "id": "tps-ch1-fb-05", "question": "<input type=\"_____\"> defines a month and year control in format 'YYYY-MM'.", "answer": "month" },
+    { "id": "tps-ch1-fb-06", "question": "<input type=\"_____\"> defines the range control.", "answer": "range" },
+    { "id": "tps-ch1-fb-07", "question": "<input type=\"_____\"> defines a field select and a 'Browse' button for file uploads.", "answer": "file" },
+    { "id": "tps-ch1-fb-08", "question": "<input type=\"_____\"> is used to define input fields that should contain a telephone number.", "answer": "tel" },
+    { "id": "tps-ch1-fb-09", "question": "The _____ attribute of <input> tag specifies a regular expression to check input values.", "answer": "pattern" },
+    { "id": "tps-ch1-fb-10", "question": "The _____ attribute of <input> tag acts as a temporary label showing the purpose of a field.", "answer": "placeholder" },
+    { "id": "tps-ch1-fb-11", "question": "The _____ attribute of <input> tag specifies that the input field should automatically get focus on page load.", "answer": "autofocus" },
+    { "id": "tps-ch1-fb-12", "question": "The _____ tag is used by search engines to search information provided with the webpage.", "answer": "meta" },
+    { "id": "tps-ch1-fb-13", "question": "CSS stands for _____.", "answer": "Cascading Style Sheets" },
+    { "id": "tps-ch1-fb-14", "question": "External style sheets must be saved with the _____ extension.", "answer": ".css" },
+    { "id": "tps-ch1-fb-15", "question": "The _____ selector selects the id attribute of an HTML element and is written with a hash (#) character.", "answer": "id" },
+    { "id": "tps-ch1-fb-16", "question": "The _____ selector matches every single element on the page and is denoted by an asterisk (*).", "answer": "universal" },
+    { "id": "tps-ch1-fb-17", "question": "The default positioning for HTML elements is _____.", "answer": "static" },
+    { "id": "tps-ch1-fb-18", "question": "The clickable regions of an image map are called _____.", "answer": "hotspots" },
+    { "id": "tps-ch1-fb-19", "question": "To create a client-side image map, the _____ attribute of the <img> tag is used.", "answer": "usemap" },
+    { "id": "tps-ch1-fb-20", "question": "The value of usemap attribute must be preceded with a _____ symbol.", "answer": "#" },
+    { "id": "tps-ch1-fb-21", "question": "The _____ tag is used to specify multiple media resources for media elements like <audio> and <video>.", "answer": "source" },
+    { "id": "tps-ch1-fb-22", "question": "The _____ element creates an inline frame in HTML5.", "answer": "iframe" }
+  ],
+  "q2_true_false": [
+    { "id": "tps-ch1-tf-01", "statement": "<input type=\"color\"> defines a color picker.", "answer": true },
+    { "id": "tps-ch1-tf-02", "statement": "<input type=\"number\"> defines a field for entering a URL.", "answer": false },
+    { "id": "tps-ch1-tf-03", "statement": "Default range of range control is 100 to 200.", "answer": false },
+    { "id": "tps-ch1-tf-04", "statement": "Pattern attribute specifies a regular expression to check input values.", "answer": true },
+    { "id": "tps-ch1-tf-05", "statement": "Autofocus attribute specifies that the input field should automatically get focus on page load.", "answer": true },
+    { "id": "tps-ch1-tf-06", "statement": "<meta> tag is a paired tag.", "answer": false },
+    { "id": "tps-ch1-tf-07", "statement": "Metadata will not be displayed on the web page.", "answer": true },
+    { "id": "tps-ch1-tf-08", "statement": "CSS rule set contains a selector and a declaration block.", "answer": true },
+    { "id": "tps-ch1-tf-09", "statement": "Internal CSS is written inside <style> tag within the head section.", "answer": true },
+    { "id": "tps-ch1-tf-10", "statement": "External CSS uses <link> tag placed inside the head section.", "answer": true },
+    { "id": "tps-ch1-tf-11", "statement": "ID selector is written with a hash (#) character followed by the id name.", "answer": true },
+    { "id": "tps-ch1-tf-12", "statement": "Class name in CSS can start with a number.", "answer": false },
+    { "id": "tps-ch1-tf-13", "statement": "Static positioning is the default position for HTML elements.", "answer": true },
+    { "id": "tps-ch1-tf-14", "statement": "The fixed element will move when the page is scrolled.", "answer": false },
+    { "id": "tps-ch1-tf-15", "statement": "Clickable regions in an image map are called hotspots.", "answer": true },
+    { "id": "tps-ch1-tf-16", "statement": "Circle shape in <area> tag requires four coordinates.", "answer": false },
+    { "id": "tps-ch1-tf-17", "statement": "The <iframe_> element creates an inline frame.", "answer": true },
+    { "id": "tps-ch1-tf-18", "statement": "Shared hosting gives a free domain name and is the most expensive hosting.", "answer": false }
+  ],
+  "q3_mcq_single": [
+    { "id": "tps-ch1-mcq1-01", "question": "<input type=\"_____\"> defines a color picker.", "options": ["number", "url", "color", "date"], "answer": "color" },
+    { "id": "tps-ch1-mcq1-02", "question": "The default range of range control is _____.", "options": ["0 to 100", "100 to 150", "90 to 100", "200 to 300"], "answer": "0 to 100" },
+    { "id": "tps-ch1-mcq1-03", "question": "The _____ attribute specifies a regular expression to validate form input.", "options": ["required", "multiple", "pattern", "max"], "answer": "pattern" },
+    { "id": "tps-ch1-mcq1-04", "question": "The _____ attribute of <meta> tag specifies the character encoding used by the document.", "options": ["metadata", "name", "content", "charset"], "answer": "charset" },
+    { "id": "tps-ch1-mcq1-05", "question": "Internal CSS is also known as _____ CSS.", "options": ["embedded", "inline", "inbuilt", "external"], "answer": "embedded" },
+    { "id": "tps-ch1-mcq1-06", "question": "The ID selector is written with the _____ character followed by the id name.", "options": [".", "*", "#", "@"], "answer": "#" },
+    { "id": "tps-ch1-mcq1-07", "question": "Which of the following is the default position for HTML elements in CSS?", "options": ["static", "fixed", "relative", "absolute"], "answer": "static" },
+    { "id": "tps-ch1-mcq1-08", "question": "The clickable regions in an image map are known as _____.", "options": ["hotspots", "image map", "hyperlinks", "links"], "answer": "hotspots" },
+    { "id": "tps-ch1-mcq1-09", "question": "To create a client-side image map, the _____ attribute of the <img> tag is used.", "options": ["ismap", "nomap", "usemap", "mymap"], "answer": "usemap" },
+    { "id": "tps-ch1-mcq1-10", "question": "The _____ tag is used to create an inline frame.", "options": ["<frame>", "<body>", "<link>", "<iframe>"], "answer": "<iframe>" }
+  ],
+  "q4_mcq_two_correct": [
+    { "id": "tps-ch1-mcq2-01", "question": "The attributes of <input> tag used to specify minimum and maximum numerical values are _____ and _____.", "options": ["min", "disabled", "multiple", "max", "value"], "answer": ["min", "max"] },
+    { "id": "tps-ch1-mcq2-02", "question": "The 'multiple' attribute of <input> tag works with input types _____ and _____.", "options": ["email", "file", "week", "month", "number"], "answer": ["email", "file"] },
+    { "id": "tps-ch1-mcq2-03", "question": "A CSS rule set contains _____ and _____.", "options": ["value", "selector", "declaration block", "property", "attribute"], "answer": ["selector", "declaration block"] },
+    { "id": "tps-ch1-mcq2-04", "question": "Types of positioning in CSS include _____ and _____.", "options": ["form", "constant", "fixed", "static", "default"], "answer": ["fixed", "static"] },
+    { "id": "tps-ch1-mcq2-05", "question": "Tags used to define a Client-Side Image Map are _____ and _____.", "options": ["<img>", "<link>", "<map>", "<area>", "<a>"], "answer": ["<img>", "<map>"] },
+    { "id": "tps-ch1-mcq2-06", "question": "Attributes of <iframe> tag include _____ and _____.", "options": ["src", "href", "loop", "srcdoc", "coords"], "answer": ["src", "srcdoc"] }
+  ],
+  "q5_mcq_three_correct": [
+    { "id": "tps-ch1-mcq3-01", "question": "Following are valid values of the 'type' attribute of <input> tag: _____.", "options": ["date", "email", "file", "link", "list", "shirt"], "answer": ["date", "email", "file"] },
+    { "id": "tps-ch1-mcq3-02", "question": "Following are valid attributes of the <meta> tag: _____.", "options": ["content", "charset", "name", "min", "max", "href"], "answer": ["content", "charset", "name"] },
+    { "id": "tps-ch1-mcq3-03", "question": "Following are valid methods/types of CSS: _____.", "options": ["inline", "internal", "external", "object", "multiple", "multilevel"], "answer": ["inline", "internal", "external"] },
+    { "id": "tps-ch1-mcq3-04", "question": "Following are valid attributes of the <audio> tag: _____.", "options": ["controls", "loop", "muted", "width", "height", "href"], "answer": ["controls", "loop", "muted"] },
+    { "id": "tps-ch1-mcq3-05", "question": "Shape attribute of <area> tag can have the values: _____.", "options": ["rect", "circle", "poly", "square", "star", "triangle"], "answer": ["rect", "circle", "poly"] }
+  ],
+  "q6_match_following": [
+    {
+      "id": "tps-ch1-match-01",
+      "pairs": [
+        { "left": "<input type='color'>", "right": "Defines color picker" },
+        { "left": "<input type='number'>", "right": "Defines field for entering number" },
+        { "left": "<input type='url'>", "right": "Defines field for entering URL" },
+        { "left": "<input type='image'>", "right": "Defines image as submit button" }
+      ]
+    },
+    {
+      "id": "tps-ch1-match-02",
+      "pairs": [
+        { "left": "disabled", "right": "Specifies input field is disabled" },
+        { "left": "pattern", "right": "Specifies regular expression to check input" },
+        { "left": "placeholder", "right": "Acts as temporary label" },
+        { "left": "required", "right": "Specifies input field is mandatory" }
+      ]
+    },
+    {
+      "id": "tps-ch1-match-03",
+      "pairs": [
+        { "left": "<img>", "right": "Inserts image on webpage" },
+        { "left": "<map>", "right": "Defines image map with name attribute" },
+        { "left": "<area>", "right": "Defines clickable hotspot regions" },
+        { "left": "usemap", "right": "Pointer attribute preceded by # symbol" }
+      ]
+    }
+  ]
+}

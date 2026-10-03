@@ -1,0 +1,55 @@
+{
+  "chapter_id": 2,
+  "chapter_name": "Digital Marketing",
+  "subject_stream": ["commerce"],
+  "source": "Maharashtra State Board HSC IT Commerce Curriculum",
+  "q1_fill_in_the_blanks": [
+    { "id": "comm-ch2-fb-01", "question": "Digital Marketing is also termed as _____ marketing.", "answer": "online" },
+    { "id": "comm-ch2-fb-02", "question": "SEM stands for Search Engine _____.", "answer": "Marketing" },
+    { "id": "comm-ch2-fb-03", "question": "_____ marketing involves promoting products or services through social media platforms.", "answer": "Social Media" },
+    { "id": "comm-ch2-fb-04", "question": "SERP stands for Search Engine _____ Page.", "answer": "Results" },
+    { "id": "comm-ch2-fb-05", "question": "PPC stands for Pay Per _____.", "answer": "Click" },
+    { "id": "comm-ch2-fb-06", "question": "_____ marketing focuses on attracting customers through relevant and helpful content.", "answer": "Inbound" },
+    { "id": "comm-ch2-fb-07", "question": "Sending commercial messages to a group of people via email is called _____ marketing.", "answer": "Email" },
+    { "id": "comm-ch2-fb-08", "question": "SMO stands for Social Media _____.", "answer": "Optimization" },
+    { "id": "comm-ch2-fb-09", "question": "In digital advertising, CPC stands for Cost Per _____.", "answer": "Click" },
+    { "id": "comm-ch2-fb-10", "question": "_____ marketing is a performance-based marketing where a business rewards affiliates for visitors brought by their efforts.", "answer": "Affiliate" }
+  ],
+  "q2_true_false": [
+    { "id": "comm-ch2-tf-01", "statement": "Digital marketing allows businesses to reach a global audience with measurable results.", "answer": true },
+    { "id": "comm-ch2-tf-02", "statement": "SEO results are paid advertisements on search engines.", "answer": false },
+    { "id": "comm-ch2-tf-03", "statement": "Inbound marketing pulls interested customers rather than interrupting them with cold ads.", "answer": true },
+    { "id": "comm-ch2-tf-04", "statement": "PPC stands for Pay Per Call.", "answer": false },
+    { "id": "comm-ch2-tf-05", "statement": "Social Media Marketing includes platforms such as LinkedIn, Instagram, and Facebook.", "answer": true },
+    { "id": "comm-ch2-tf-06", "statement": "Organic traffic requires paying search engines for each click.", "answer": false },
+    { "id": "comm-ch2-tf-07", "statement": "Email marketing is one of the most cost-effective digital marketing channels.", "answer": true },
+    { "id": "comm-ch2-tf-08", "statement": "SERP displays both organic search listings and paid ads.", "answer": true }
+  ],
+  "q3_mcq_single": [
+    { "id": "comm-ch2-mcq1-01", "question": "PPC stands for _____ in digital advertising.", "options": ["Pay Per Click", "Pay Per Call", "Page Per Click", "Payment Per Channel"], "answer": "Pay Per Click" },
+    { "id": "comm-ch2-mcq1-02", "question": "Which of the following is an unpaid, organic method of gaining search traffic?", "options": ["Search Engine Optimization (SEO)", "Search Engine Marketing (SEM)", "Google Search Ads", "Display Banner Ads"], "answer": "Search Engine Optimization (SEO)" },
+    { "id": "comm-ch2-mcq1-03", "question": "SERP stands for _____.", "options": ["Search Engine Results Page", "Search Engine Routing Protocol", "Social Engine Results Page", "Standard Electronic Resource Plan"], "answer": "Search Engine Results Page" },
+    { "id": "comm-ch2-mcq1-04", "question": "Promoting products through commissioned third-party publishers is known as _____ marketing.", "options": ["Affiliate", "Outbound", "Traditional", "Broadcast"], "answer": "Affiliate" },
+    { "id": "comm-ch2-mcq1-05", "question": "SMO stands for _____.", "options": ["Social Media Optimization", "Search Media Organization", "Server Media Operation", "Single Mail Option"], "answer": "Social Media Optimization" }
+  ],
+  "q4_mcq_two_correct": [
+    { "id": "comm-ch2-mcq2-01", "question": "Select TWO primary forms of Search Marketing:", "options": ["SEO (Organic)", "SEM (Paid)", "FTP Sharing", "Offline Radio", "Print Classifieds"], "answer": ["SEO (Organic)", "SEM (Paid)"] },
+    { "id": "comm-ch2-mcq2-02", "question": "Select TWO popular channels used for Social Media Marketing (SMM):", "options": ["Instagram", "LinkedIn", "Command Prompt", "Localhost Server", "MS-DOS"], "answer": ["Instagram", "LinkedIn"] },
+    { "id": "comm-ch2-mcq2-03", "question": "Select TWO key metrics used in digital advertising campaigns:", "options": ["Cost Per Click (CPC)", "Click Through Rate (CTR)", "RAM Usage", "Clock Speed", "Screen Resolution"], "answer": ["Cost Per Click (CPC)", "Click Through Rate (CTR)"] }
+  ],
+  "q5_mcq_three_correct": [
+    { "id": "comm-ch2-mcq3-01", "question": "Select THREE valid digital marketing channels:", "options": ["Search Engine Optimization (SEO)", "Email Marketing", "Content Marketing", "Handbill Pamphlets", "Door-to-Door Sales", "Cold Calling"], "answer": ["Search Engine Optimization (SEO)", "Email Marketing", "Content Marketing"] },
+    { "id": "comm-ch2-mcq3-02", "question": "Select THREE advantages of Digital Marketing over traditional marketing:", "options": ["Global Reach", "Measurable Analytics & ROI", "Real-Time Tracking", "High Printing Paper Cost", "Physical Travel Needed", "Limited Business Hours"], "answer": ["Global Reach", "Measurable Analytics & ROI", "Real-Time Tracking"] }
+  ],
+  "q6_match_following": [
+    {
+      "id": "comm-ch2-match-01",
+      "pairs": [
+        { "left": "SEO", "right": "Organic search ranking" },
+        { "left": "PPC", "right": "Paid search advertising" },
+        { "left": "SMM", "right": "Social media promotions" },
+        { "left": "SERP", "right": "Search results display page" }
+      ]
+    }
+  ]
+}

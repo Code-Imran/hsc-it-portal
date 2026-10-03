@@ -1,0 +1,596 @@
+---
+import PortalLayout from "../layouts/PortalLayout.astro";
+import { getExamData } from "../data/questions/index.js";
+
+const scienceExam = getExamData("science");
+const commerceExam = getExamData("commerce");
+---
+
+<PortalLayout title="HSC IT Online Examination Client (Official Simulator)">
+  <div class="max-w-[1440px] mx-auto px-2 sm:px-4 py-3 select-none" id="examClientRoot">
+    
+    <!-- Top System Header Bar (Matches Board Exam Client) -->
+    <header class="bg-[#1e293b] text-white rounded-xl p-3 mb-3 border border-slate-700 shadow-md flex flex-wrap items-center justify-between gap-3 text-xs">
+      
+      <!-- Candidate & Exam Info -->
+      <div class="flex items-center gap-4 flex-wrap">
+        <div class="flex items-center gap-2">
+          <span class="h-7 w-7 rounded-lg bg-emerald-600 flex items-center justify-center font-bold font-mono">HSC</span>
+          <div>
+            <span class="text-[10px] text-slate-400 font-mono block">EXAMINATION PORTAL</span>
+            <span class="font-bold text-white tracking-wide">EXAMINFO.HSC.AC.IN</span>
+          </div>
+        </div>
+
+        <div class="hidden sm:block h-6 w-px bg-slate-700"></div>
+
+        <div class="flex items-center gap-3">
+          <div>
+            <span class="text-[10px] text-slate-400 block">Seat Number:</span>
+            <span class="font-mono font-bold text-emerald-400">M027891</span>
+          </div>
+          <div>
+            <span class="text-[10px] text-slate-400 block">Stream & Code:</span>
+            <div class="inline-flex bg-slate-800 rounded p-0.5 border border-slate-700">
+              <button type="button" class="stream-btn px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-600 text-white" data-stream="science">Science (97)</button>
+              <button type="button" class="stream-btn px-2 py-0.5 rounded text-[11px] font-bold text-slate-400 hover:text-white" data-stream="commerce">Commerce (99)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Clock & End Exam Action -->
+      <div class="flex items-center gap-3 ml-auto">
+        <div class="bg-slate-900 border border-slate-700 px-3 py-1.5 rounded-lg flex items-center gap-2 text-rose-400 font-mono font-bold text-sm">
+          <span class="h-2 w-2 rounded-full bg-rose-500 animate-pulse"></span>
+          <span>Time Left: </span>
+          <span id="timerClock">02:30:00</span>
+        </div>
+
+        <button type="button" id="endExamPromptBtn" class="bg-rose-700 hover:bg-rose-600 text-white font-bold px-3.5 py-1.5 rounded-lg shadow transition text-xs">
+          Give up Exam (Finish Exam)
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Client Shell: Left Sidebar (Question Selector) + Right Canvas (Test Arena) -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-3 items-start">
+      
+      <!-- LEFT SIDEBAR: Fully Visible, No Scrollbar, No Legend -->
+      <aside class="lg:col-span-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-2.5 shadow-sm space-y-1.5">
+        <div class="space-y-1.5" id="leftQuestionTree">
+          <!-- Injected via JavaScript (Q.1 down to Q.8) -->
+        </div>
+      </aside>
+
+      <!-- RIGHT CANVAS: Working Test Question Area -->
+      <main class="lg:col-span-9 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 sm:p-6 shadow-sm min-h-[580px] flex flex-col justify-between">
+        
+        <div>
+          <!-- Section Banner -->
+          <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3 mb-4">
+            <div>
+              <span class="text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400 uppercase" id="sectionMarksBadge">10 Marks</span>
+              <h2 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white" id="sectionTitle">Q. 1 - Fill in the blanks</h2>
+              <p class="text-xs text-slate-500" id="sectionSubtitle">Note: Answers are case-insensitive. Avoid leading/trailing spaces or punctuation.</p>
+            </div>
+            <div class="text-right">
+              <span class="text-xs font-mono bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded text-slate-600 dark:text-slate-300 font-bold" id="sectionProgressTag">0/10 Saved</span>
+            </div>
+          </div>
+
+          <!-- Active Question List Canvas -->
+          <div id="questionsCanvas" class="space-y-5">
+            <!-- Questions dynamically rendered here -->
+          </div>
+        </div>
+
+        <!-- Section Bottom Action Strip (Save / Submit Current Question Block) -->
+        <div class="border-t border-slate-200 dark:border-slate-800 pt-4 mt-6 flex flex-wrap items-center justify-between gap-3">
+          <div class="text-xs text-slate-500">
+            Clicking <strong>"Submit / Save Section"</strong> commits answers (turns indicator boxes green).
+          </div>
+
+          <div class="flex items-center gap-2">
+            <button type="button" id="clearSectionBtn" class="px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold text-slate-600 dark:text-slate-300 transition">
+              Clear Section
+            </button>
+            <button type="button" id="saveSectionBtn" class="px-5 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow transition flex items-center gap-1.5">
+              <span>💾</span> Submit / Save Section
+            </button>
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+    <!-- Invigilator Password Modal ("End Exam" Dialog) -->
+    <div id="invigilatorModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-3 hidden">
+      <div class="bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-800 rounded-2xl max-w-md w-full p-6 shadow-2xl space-y-4">
+        
+        <div class="text-center space-y-1">
+          <div class="h-10 w-10 rounded-full bg-rose-100 dark:bg-rose-950/60 text-rose-600 flex items-center justify-center mx-auto text-lg font-bold">
+            🔒
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white">Exam Invigilator Verification</h3>
+          <p class="text-xs text-slate-500">
+            To terminate and submit your online paper, teacher invigilator confirmation is required.
+          </p>
+        </div>
+
+        <div class="space-y-2">
+          <label class="text-xs font-bold text-slate-700 dark:text-slate-300 block">Invigilator End-Exam Password:</label>
+          <input 
+            type="password" 
+            id="invigilatorPassInput" 
+            class="w-full p-2.5 text-xs rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-white font-mono" 
+            placeholder="Enter password (demo: 1234)"
+          />
+          <p class="text-[11px] text-slate-400">Demo password: <code class="text-emerald-500">1234</code></p>
+          <p id="invigilatorErr" class="text-xs text-rose-600 font-bold hidden">Invalid invigilator password. Please try again.</p>
+        </div>
+
+        <div class="flex items-center justify-end gap-2 pt-2">
+          <button type="button" id="cancelEndExamBtn" class="px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 text-xs font-bold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">
+            Return to Exam
+          </button>
+          <button type="button" id="confirmEndExamBtn" class="px-4 py-2 rounded-lg bg-rose-600 hover:bg-rose-500 text-white text-xs font-bold">
+            Confirm &amp; Final Submit
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Official Performance Report Modal -->
+    <div id="resultModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-3 hidden">
+      <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl max-w-xl w-full p-6 shadow-2xl space-y-5 max-h-[90vh] overflow-y-auto">
+        <div class="text-center space-y-1">
+          <span class="px-2.5 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 text-xs font-mono font-bold">
+            EXAMINATION RECORD CERTIFIED
+          </span>
+          <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white mt-1">Official Result Card</h3>
+          <p class="text-xs text-slate-500">Seat No: M027891 • Maharashtra State Board HSC IT 2027</p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center text-xs">
+          <div class="p-3 bg-emerald-50 dark:bg-emerald-950/30 rounded-xl border border-emerald-200 dark:border-emerald-500/20">
+            <span class="text-[10px] font-mono text-emerald-700 dark:text-emerald-400 block font-bold">OBJECTIVE</span>
+            <span class="text-xl font-black text-emerald-600 dark:text-emerald-400" id="finalObjScore">0 / 50</span>
+          </div>
+          <div class="p-3 bg-blue-50 dark:bg-blue-950/30 rounded-xl border border-blue-200 dark:border-blue-500/20">
+            <span class="text-[10px] font-mono text-blue-700 dark:text-blue-400 block font-bold">ACCURACY</span>
+            <span class="text-xl font-black text-blue-600 dark:text-blue-400" id="finalAccuracy">0%</span>
+          </div>
+          <div class="p-3 bg-slate-100 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700">
+            <span class="text-[10px] font-mono text-slate-500 block">Q7 BRIEF</span>
+            <span class="text-base font-bold text-slate-800 dark:text-slate-200">10 Marks</span>
+          </div>
+          <div class="p-3 bg-slate-100 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700">
+            <span class="text-[10px] font-mono text-slate-500 block">Q8 CODE</span>
+            <span class="text-base font-bold text-slate-800 dark:text-slate-200">20 Marks</span>
+          </div>
+        </div>
+
+        <div class="pt-3 border-t border-slate-200 dark:border-slate-800 flex justify-end gap-2">
+          <button type="button" id="reviewReportBtn" class="px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 text-xs font-bold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">
+            Review Submitted Paper
+          </button>
+          <a href="/simulator" class="px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold">
+            Retake Exam
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Store build-time generated exam datasets -->
+  <div id="examServerPayload" class="hidden" 
+       data-science={JSON.stringify(scienceExam)} 
+       data-commerce={JSON.stringify(commerceExam)}>
+  </div>
+
+  <!-- Unified HSC Client Script Engine -->
+  <script is:inline>
+    // Read payload injected by Astro build
+    const payloadEl = document.getElementById("examServerPayload");
+    const examData = {
+      science: JSON.parse(payloadEl.dataset.science),
+      commerce: JSON.parse(payloadEl.dataset.commerce)
+    };
+
+    // Client State
+    let currentStream = "science";
+    let activeSecKey = "q1";
+    let draftAnswers = {};
+    let submittedAnswers = {};
+    let secondsLeft = 150 * 60; // 2 hours 30 mins
+    let timerId = null;
+
+    // DOM Elements
+    const leftQuestionTree = document.getElementById("leftQuestionTree");
+    const questionsCanvas = document.getElementById("questionsCanvas");
+    const sectionTitle = document.getElementById("sectionTitle");
+    const sectionSubtitle = document.getElementById("sectionSubtitle");
+    const sectionMarksBadge = document.getElementById("sectionMarksBadge");
+    const sectionProgressTag = document.getElementById("sectionProgressTag");
+    const saveSectionBtn = document.getElementById("saveSectionBtn");
+    const clearSectionBtn = document.getElementById("clearSectionBtn");
+    const timerClock = document.getElementById("timerClock");
+    const endExamPromptBtn = document.getElementById("endExamPromptBtn");
+    const invigilatorModal = document.getElementById("invigilatorModal");
+    const cancelEndExamBtn = document.getElementById("cancelEndExamBtn");
+    const confirmEndExamBtn = document.getElementById("confirmEndExamBtn");
+    const invigilatorPassInput = document.getElementById("invigilatorPassInput");
+    const invigilatorErr = document.getElementById("invigilatorErr");
+    const resultModal = document.getElementById("resultModal");
+
+    function startTimer() {
+      if (timerId) clearInterval(timerId);
+      timerId = setInterval(() => {
+        if (secondsLeft <= 0) {
+          clearInterval(timerId);
+          alert("Time's Up! The paper is being submitted.");
+          evaluateExam();
+          return;
+        }
+        secondsLeft--;
+        const h = Math.floor(secondsLeft / 3600);
+        const m = Math.floor((secondsLeft % 3600) / 60);
+        const s = secondsLeft % 60;
+        timerClock.textContent = 
+          String(h).padStart(2, '0') + ":" + 
+          String(m).padStart(2, '0') + ":" + 
+          String(s).padStart(2, '0');
+      }, 1000);
+    }
+
+    function isSubmitted(qid) {
+      const val = submittedAnswers[qid];
+      if (val === undefined || val === null || val === "") return false;
+      if (Array.isArray(val)) return val.length > 0;
+      return true;
+    }
+
+    function renderLeftTree() {
+      leftQuestionTree.innerHTML = "";
+      const streamObj = examData[currentStream];
+
+      streamObj.sections.forEach(sec => {
+        const secWrap = document.createElement("div");
+        secWrap.className = `p-1.5 rounded-lg border transition cursor-pointer ${
+          sec.key === activeSecKey 
+            ? 'bg-slate-100 dark:bg-slate-800 border-emerald-500 shadow-sm' 
+            : 'border-slate-200 dark:border-slate-800 hover:border-slate-300'
+        }`;
+
+        secWrap.addEventListener("click", () => {
+          if (activeSecKey !== sec.key) {
+            activeSecKey = sec.key;
+            renderLeftTree();
+            renderActiveSection();
+          }
+        });
+
+        const headerDiv = document.createElement("div");
+        headerDiv.className = "flex items-center justify-between text-[11px] font-bold text-slate-800 dark:text-slate-200 mb-1";
+        headerDiv.innerHTML = `
+          <span class="truncate pr-1">${sec.label}</span>
+          <span class="text-[9px] font-mono text-emerald-600 dark:text-emerald-400 shrink-0">${sec.marks}</span>
+        `;
+        secWrap.appendChild(headerDiv);
+
+        const gridDiv = document.createElement("div");
+        gridDiv.className = "flex flex-wrap gap-1";
+
+        sec.items.forEach((item, idx) => {
+          const submitted = isSubmitted(item.id);
+          const badge = document.createElement("span");
+          badge.className = `h-4 min-w-[18px] px-0.5 rounded text-[9px] font-mono font-bold flex items-center justify-center text-white ${
+            submitted ? 'bg-emerald-600' : 'bg-rose-600'
+          }`;
+          badge.textContent = idx + 1;
+          badge.title = `Sub-Q ${idx + 1}: ${submitted ? 'Submitted' : 'Pending'}`;
+          gridDiv.appendChild(badge);
+        });
+
+        secWrap.appendChild(gridDiv);
+        leftQuestionTree.appendChild(secWrap);
+      });
+    }
+
+    function renderActiveSection() {
+      const streamObj = examData[currentStream];
+      const sec = streamObj.sections.find(s => s.key === activeSecKey);
+      if (!sec) return;
+
+      sectionTitle.textContent = sec.label;
+      sectionSubtitle.textContent = sec.sub;
+      sectionMarksBadge.textContent = sec.marks;
+
+      let savedCount = 0;
+      sec.items.forEach(item => {
+        if (isSubmitted(item.id)) savedCount++;
+      });
+      sectionProgressTag.textContent = `${savedCount}/${sec.items.length} Saved`;
+
+      questionsCanvas.innerHTML = "";
+
+      sec.items.forEach((item, idx) => {
+        const itemBox = document.createElement("div");
+        itemBox.id = `qbox-${item.id}`;
+        itemBox.className = "p-3.5 sm:p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/40 space-y-2.5";
+
+        const submitted = isSubmitted(item.id);
+        const statusBadge = `
+          <div class="flex items-center justify-between text-xs border-b border-slate-200 dark:border-slate-800/80 pb-2">
+            <span class="font-bold text-slate-600 dark:text-slate-400 font-mono text-[11px]">Question ${idx + 1}</span>
+            <span class="text-[9px] font-mono font-bold px-2 py-0.5 rounded text-white ${
+              submitted ? 'bg-emerald-600' : 'bg-rose-600'
+            }">
+              ${submitted ? '● SUBMITTED' : '○ UNANSWERED / UNSAVED'}
+            </span>
+          </div>
+        `;
+
+        if (sec.key === "q1") {
+          const curVal = draftAnswers[item.id] || "";
+          itemBox.innerHTML = `
+            ${statusBadge}
+            <p class="text-xs sm:text-sm font-medium text-slate-800 dark:text-slate-200 leading-relaxed">${item.q}</p>
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-mono text-slate-400">Answer:</span>
+              <input type="text" class="q-inp flex-1 sm:max-w-xs p-2 text-xs rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 font-mono" data-id="${item.id}" value="${curVal}" placeholder="Type keyword...">
+            </div>
+          `;
+        } else if (sec.key === "q2") {
+          const curVal = draftAnswers[item.id];
+          itemBox.innerHTML = `
+            ${statusBadge}
+            <p class="text-xs sm:text-sm font-medium text-slate-800 dark:text-slate-200 leading-relaxed">${item.q}</p>
+            <div class="flex items-center gap-4 text-xs font-bold pt-1">
+              <label class="flex items-center gap-2 cursor-pointer px-3.5 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 hover:border-emerald-500">
+                <input type="radio" name="r-${item.id}" value="true" class="q-radio" data-id="${item.id}" ${curVal === true ? 'checked' : ''}> True
+              </label>
+              <label class="flex items-center gap-2 cursor-pointer px-3.5 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 hover:border-emerald-500">
+                <input type="radio" name="r-${item.id}" value="false" class="q-radio" data-id="${item.id}" ${curVal === false ? 'checked' : ''}> False
+              </label>
+            </div>
+          `;
+        } else if (sec.key === "q3") {
+          const curVal = draftAnswers[item.id] || "";
+          const opts = item.opts.map(opt => `
+            <label class="flex items-center gap-2 p-2 rounded-lg border border-slate-200 dark:border-slate-800 hover:border-emerald-500 text-xs font-medium cursor-pointer">
+              <input type="radio" name="r-${item.id}" value="${opt}" class="q-radio" data-id="${item.id}" ${curVal === opt ? 'checked' : ''}>
+              <span>${opt}</span>
+            </label>
+          `).join('');
+          itemBox.innerHTML = `
+            ${statusBadge}
+            <p class="text-xs sm:text-sm font-medium text-slate-800 dark:text-slate-200 leading-relaxed">${item.q}</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">${opts}</div>
+          `;
+        } else if (sec.key === "q4" || sec.key === "q5") {
+          const curVal = draftAnswers[item.id] || [];
+          const opts = item.opts.map(opt => `
+            <label class="flex items-center gap-2 p-2 rounded-lg border border-slate-200 dark:border-slate-800 hover:border-emerald-500 text-xs font-medium cursor-pointer">
+              <input type="checkbox" name="c-${item.id}" value="${opt}" class="q-chk" data-id="${item.id}" ${curVal.includes(opt) ? 'checked' : ''}>
+              <span>${opt}</span>
+            </label>
+          `).join('');
+          itemBox.innerHTML = `
+            ${statusBadge}
+            <p class="text-xs sm:text-sm font-medium text-slate-800 dark:text-slate-200 leading-relaxed">${item.q}</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">${opts}</div>
+          `;
+        } else if (sec.key === "q6") {
+          const curVal = draftAnswers[item.id] || "";
+          const opts = item.opts.map(opt => `<option value="${opt}" ${curVal === opt ? 'selected' : ''}>${opt}</option>`).join('');
+          itemBox.innerHTML = `
+            ${statusBadge}
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+              <span class="font-bold text-slate-800 dark:text-slate-200 sm:w-1/3">${item.left}</span>
+              <select class="q-sel flex-1 p-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 font-medium" data-id="${item.id}">
+                <option value="">-- Select Match --</option>
+                ${opts}
+              </select>
+            </div>
+          `;
+        } else if (sec.key === "q7") {
+          const curVal = draftAnswers[item.id] || "";
+          itemBox.innerHTML = `
+            ${statusBadge}
+            <p class="text-xs sm:text-sm font-bold text-slate-900 dark:text-white leading-relaxed">${item.q}</p>
+            <textarea class="q-txt w-full p-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-mono" rows="3" placeholder="Draft brief answer..." data-id="${item.id}">${curVal}</textarea>
+          `;
+        } else if (sec.key === "q8") {
+          const curVal = draftAnswers[item.id] || "";
+          itemBox.innerHTML = `
+            ${statusBadge}
+            <h4 class="font-bold text-slate-900 dark:text-white text-xs sm:text-sm">${item.title}</h4>
+            <p class="text-xs text-slate-600 dark:text-slate-400">${item.q}</p>
+            <textarea class="q-txt w-full p-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-950 text-emerald-400 font-mono text-xs" rows="8" placeholder="<!DOCTYPE html>\n<html>\n  <body>...</body>\n</html>" data-id="${item.id}">${curVal}</textarea>
+          `;
+        }
+
+        questionsCanvas.appendChild(itemBox);
+      });
+
+      attachInputListeners();
+    }
+
+    function attachInputListeners() {
+      document.querySelectorAll('.q-inp').forEach(inp => {
+        inp.addEventListener('input', (e) => {
+          draftAnswers[e.target.dataset.id] = e.target.value.trim().toLowerCase();
+        });
+      });
+
+      document.querySelectorAll('.q-radio').forEach(r => {
+        r.addEventListener('change', (e) => {
+          const qid = e.target.dataset.id;
+          draftAnswers[qid] = e.target.value === "true" ? true : e.target.value === "false" ? false : e.target.value;
+        });
+      });
+
+      document.querySelectorAll('.q-chk').forEach(c => {
+        c.addEventListener('change', (e) => {
+          const qid = e.target.dataset.id;
+          if (!draftAnswers[qid]) draftAnswers[qid] = [];
+          if (e.target.checked) {
+            draftAnswers[qid].push(e.target.value);
+          } else {
+            draftAnswers[qid] = draftAnswers[qid].filter(v => v !== e.target.value);
+          }
+        });
+      });
+
+      document.querySelectorAll('.q-sel').forEach(s => {
+        s.addEventListener('change', (e) => {
+          draftAnswers[e.target.dataset.id] = e.target.value;
+        });
+      });
+
+      document.querySelectorAll('.q-txt').forEach(t => {
+        t.addEventListener('input', (e) => {
+          draftAnswers[e.target.dataset.id] = e.target.value.trim();
+        });
+      });
+    }
+
+    saveSectionBtn.addEventListener('click', () => {
+      const streamObj = examData[currentStream];
+      const sec = streamObj.sections.find(s => s.key === activeSecKey);
+      if (!sec) return;
+
+      let savedThisTurn = 0;
+      sec.items.forEach(item => {
+        if (draftAnswers[item.id] !== undefined && draftAnswers[item.id] !== "") {
+          submittedAnswers[item.id] = draftAnswers[item.id];
+          savedThisTurn++;
+        }
+      });
+
+      renderLeftTree();
+      renderActiveSection();
+      alert(`Section ${activeSecKey.toUpperCase()} saved. Answered questions marked GREEN.`);
+    });
+
+    clearSectionBtn.addEventListener('click', () => {
+      if (!confirm(`Are you sure you want to clear answers for section ${activeSecKey.toUpperCase()}?`)) return;
+      const streamObj = examData[currentStream];
+      const sec = streamObj.sections.find(s => s.key === activeSecKey);
+      if (!sec) return;
+
+      sec.items.forEach(item => {
+        delete draftAnswers[item.id];
+        delete submittedAnswers[item.id];
+      });
+
+      renderLeftTree();
+      renderActiveSection();
+    });
+
+    endExamPromptBtn.addEventListener('click', () => {
+      invigilatorErr.classList.add('hidden');
+      invigilatorPassInput.value = "";
+      invigilatorModal.classList.remove('hidden');
+    });
+
+    cancelEndExamBtn.addEventListener('click', () => {
+      invigilatorModal.classList.add('hidden');
+    });
+
+    confirmEndExamBtn.addEventListener('click', () => {
+      const enteredPass = invigilatorPassInput.value.trim();
+      if (enteredPass === "1234") {
+        invigilatorModal.classList.add('hidden');
+        evaluateExam();
+      } else {
+        invigilatorErr.classList.remove('hidden');
+      }
+    });
+
+    function evaluateExam() {
+      clearInterval(timerId);
+      const streamObj = examData[currentStream];
+      let score = 0;
+      const maxObj = 50;
+
+      const q1 = streamObj.sections.find(s => s.key === "q1");
+      q1.items.forEach(item => {
+        const u = submittedAnswers[item.id] || draftAnswers[item.id] || "";
+        if (u === item.ans.toLowerCase()) score += 1;
+      });
+
+      const q2 = streamObj.sections.find(s => s.key === "q2");
+      q2.items.forEach(item => {
+        const u = submittedAnswers[item.id] !== undefined ? submittedAnswers[item.id] : draftAnswers[item.id];
+        if (u === item.ans) score += 1;
+      });
+
+      const q3 = streamObj.sections.find(s => s.key === "q3");
+      q3.items.forEach(item => {
+        const u = submittedAnswers[item.id] || draftAnswers[item.id] || "";
+        if (u === item.ans) score += 1;
+      });
+
+      const q4 = streamObj.sections.find(s => s.key === "q4");
+      q4.items.forEach(item => {
+        const u = submittedAnswers[item.id] || draftAnswers[item.id] || [];
+        if (u.length === item.ans.length && item.ans.every(a => u.includes(a))) score += 2;
+      });
+
+      const q5 = streamObj.sections.find(s => s.key === "q5");
+      q5.items.forEach(item => {
+        const u = submittedAnswers[item.id] || draftAnswers[item.id] || [];
+        if (u.length === item.ans.length && item.ans.every(a => u.includes(a))) score += 3;
+      });
+
+      const q6 = streamObj.sections.find(s => s.key === "q6");
+      q6.items.forEach(item => {
+        const u = submittedAnswers[item.id] || draftAnswers[item.id] || "";
+        if (u === item.ans) score += 1;
+      });
+
+      document.getElementById("finalObjScore").textContent = `${score} / ${maxObj}`;
+      const pct = Math.round((score / maxObj) * 100);
+      document.getElementById("finalAccuracy").textContent = `${pct}%`;
+
+      resultModal.classList.remove('hidden');
+    }
+
+    document.getElementById("reviewReportBtn")?.addEventListener('click', () => {
+      resultModal.classList.add('hidden');
+    });
+
+    document.querySelectorAll('.stream-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const st = btn.dataset.stream;
+        if (st === currentStream) return;
+        currentStream = st;
+        activeSecKey = "q1";
+        draftAnswers = {};
+        submittedAnswers = {};
+
+        document.querySelectorAll('.stream-btn').forEach(b => {
+          if (b.dataset.stream === st) {
+            b.className = "stream-btn px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-600 text-white";
+          } else {
+            b.className = "stream-btn px-2 py-0.5 rounded text-[11px] font-bold text-slate-400 hover:text-white";
+          }
+        });
+
+        renderLeftTree();
+        renderActiveSection();
+      });
+    });
+
+    // Boot
+    renderLeftTree();
+    renderActiveSection();
+    startTimer();
+  </script>
+</PortalLayout>

@@ -1,0 +1,575 @@
+{
+  "chapter_id": 1,
+  "chapter_name": "Advanced Web Designing",
+  "subject": "Information Technology (Science)",
+  "standard": "Standard 12 (HSC Maharashtra State Board)",
+  "questions": [
+    {
+      "id": "IT-C01-FIB-001",
+      "chapter_id": 1,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "The ______ element is a starting element in an HTML, it indicates that document type definition being used by the document.",
+      "options": [],
+      "server_only": {
+        "answer": ["<!DOCTYPE html>", "<!doctype html>"],
+        "explanation": "<!DOCTYPE html> is the document type declaration placed at the very top of an HTML5 document to inform the browser about the document specification.",
+        "source_reference": "Balbharati Ex Q1.1, Page 24",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2022"]
+      }
+    },
+    {
+      "id": "IT-C01-FIB-002",
+      "chapter_id": 1,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "The ______ is a tag in HTML that describes some aspects of the contents of a webpage.",
+      "options": [],
+      "server_only": {
+        "answer": ["<meta>", "meta"],
+        "explanation": "The <meta> tag placed in the <head> block defines metadata like character encoding, author, description, and keywords.",
+        "source_reference": "Balbharati Ex Q1.2, Page 24",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2023"]
+      }
+    },
+    {
+      "id": "IT-C01-FIB-003",
+      "chapter_id": 1,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "The <ol> tag defines an ______.",
+      "options": [],
+      "server_only": {
+        "answer": ["ordered list"],
+        "explanation": "The <ol> tag defines an ordered (numbered or alphabetized) list.",
+        "source_reference": "Balbharati Ex Q1.3, Page 24",
+        "board_exam_appeared": false,
+        "board_exam_years": []
+      }
+    },
+    {
+      "id": "IT-C01-FIB-004",
+      "chapter_id": 1,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "An unordered list was created using the ______ tag.",
+      "options": [],
+      "server_only": {
+        "answer": ["<ul>", "ul"],
+        "explanation": "The <ul> element defines an unordered (bulleted) list.",
+        "source_reference": "Balbharati Ex Q1.4, Page 24",
+        "board_exam_appeared": false,
+        "board_exam_years": []
+      }
+    },
+    {
+      "id": "IT-C01-FIB-005",
+      "chapter_id": 1,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "The ______ element creates an inline frame.",
+      "options": [],
+      "server_only": {
+        "answer": ["<iframe>", "iframe"],
+        "explanation": "The <iframe> element embeds another HTML document or external webpage inside the current document.",
+        "source_reference": "Balbharati Ex Q1.5, Page 24",
+        "board_exam_appeared": true,
+        "board_exam_years": ["July 2022", "March 2024"]
+      }
+    },
+    {
+      "id": "IT-C01-FIB-006",
+      "chapter_id": 1,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "______ tag is used to specify video on an HTML document.",
+      "options": [],
+      "server_only": {
+        "answer": ["<video>", "video"],
+        "explanation": "HTML5 introduced the native <video> element to play videos without requiring external media plugins.",
+        "source_reference": "Balbharati Ex Q1.6, Page 24",
+        "board_exam_appeared": false,
+        "board_exam_years": []
+      }
+    },
+    {
+      "id": "IT-C01-FIB-007",
+      "chapter_id": 1,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "If a web developer wants to add the description to an image he must use the ______ attribute of <img> tag.",
+      "options": [],
+      "server_only": {
+        "answer": ["alt"],
+        "explanation": "The 'alt' (alternate text) attribute provides alternative descriptive text if the image fails to load and is indexed by search crawlers.",
+        "source_reference": "Balbharati Ex Q1.7, Page 24",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2020", "March 2023"]
+      }
+    },
+    {
+      "id": "IT-C01-FIB-008",
+      "chapter_id": 1,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "The ______ property is used to set position for an element.",
+      "options": [],
+      "server_only": {
+        "answer": ["position"],
+        "explanation": "The CSS 'position' property determines the positioning scheme used for an element (static, relative, absolute, fixed, or sticky).",
+        "source_reference": "Balbharati Ex Q1.8, Page 24",
+        "board_exam_appeared": false,
+        "board_exam_years": []
+      }
+    },
+    {
+      "id": "IT-C01-FIB-009",
+      "chapter_id": 1,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "The float property defines the ______ of content.",
+      "options": [],
+      "server_only": {
+        "answer": ["flow"],
+        "explanation": "The CSS 'float' property specifies how an element should float, thereby governing the flow of text and sibling elements around it.",
+        "source_reference": "Balbharati Ex Q1.9, Page 24",
+        "board_exam_appeared": false,
+        "board_exam_years": []
+      }
+    },
+    {
+      "id": "IT-C01-FIB-010",
+      "chapter_id": 1,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "hard",
+      "question": "______ is used with elements that overlap with each other.",
+      "options": [],
+      "server_only": {
+        "answer": ["z-index"],
+        "explanation": "The z-index property specifies the stack order of positioned elements along the z-axis when they overlap.",
+        "source_reference": "Balbharati Ex Q1.10, Page 24",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2022"]
+      }
+    },
+    {
+      "id": "IT-C01-TF-001",
+      "chapter_id": 1,
+      "exam_section": "Q2",
+      "type": "true_false",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "HTML is an Object Oriented Programming Language.",
+      "options": ["True", "False"],
+      "server_only": {
+        "answer": 1,
+        "explanation": "HTML is a declarative markup language used to structure content on the web, not an Object-Oriented Programming (OOP) language.",
+        "source_reference": "Balbharati Ex Q2.1, Page 24",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2022", "March 2024"]
+      }
+    },
+    {
+      "id": "IT-C01-TF-002",
+      "chapter_id": 1,
+      "exam_section": "Q2",
+      "type": "true_false",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "Charset is used for character encoding declaration.",
+      "options": ["True", "False"],
+      "server_only": {
+        "answer": 0,
+        "explanation": "The charset attribute inside <meta charset='utf-8'> explicitly declares the document character encoding.",
+        "source_reference": "Balbharati Ex Q2.2, Page 24",
+        "board_exam_appeared": false,
+        "board_exam_years": []
+      }
+    },
+    {
+      "id": "IT-C01-TF-003",
+      "chapter_id": 1,
+      "exam_section": "Q2",
+      "type": "true_false",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "An unordered list can be numerical or alphabetical.",
+      "options": ["True", "False"],
+      "server_only": {
+        "answer": 1,
+        "explanation": "Unordered lists (<ul>) display items using bullets. Numerical or alphabetical lists require an ordered list (<ol>).",
+        "source_reference": "Balbharati Ex Q2.3, Page 24",
+        "board_exam_appeared": true,
+        "board_exam_years": ["July 2022"]
+      }
+    },
+    {
+      "id": "IT-C01-TF-004",
+      "chapter_id": 1,
+      "exam_section": "Q2",
+      "type": "true_false",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "A multilevel list can be created in HTML5.",
+      "options": ["True", "False"],
+      "server_only": {
+        "answer": 0,
+        "explanation": "A multilevel list is formed by nesting one list (ordered or unordered) inside another list item in HTML5.",
+        "source_reference": "Balbharati Ex Q2.4, Page 24",
+        "board_exam_appeared": false,
+        "board_exam_years": []
+      }
+    },
+    {
+      "id": "IT-C01-TF-005",
+      "chapter_id": 1,
+      "exam_section": "Q2",
+      "type": "true_false",
+      "marks": 1,
+      "difficulty": "hard",
+      "question": "Srccode specifies the HTML content of the page to show in the <iframe>.",
+      "options": ["True", "False"],
+      "server_only": {
+        "answer": 1,
+        "explanation": "The valid HTML5 attribute is 'srcdoc', not 'srccode'.",
+        "source_reference": "Balbharati Ex Q2.5, Page 24",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2023"]
+      }
+    },
+    {
+      "id": "IT-C01-TF-006",
+      "chapter_id": 1,
+      "exam_section": "Q2",
+      "type": "true_false",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "The 'controls' attribute is not used to add play, pause, and volume.",
+      "options": ["True", "False"],
+      "server_only": {
+        "answer": 1,
+        "explanation": "The boolean attribute 'controls' is explicitly used to display native user controls like play, pause, seek, and volume on <audio> and <video> tags.",
+        "source_reference": "Balbharati Ex Q2.6, Page 24",
+        "board_exam_appeared": false,
+        "board_exam_years": []
+      }
+    },
+    {
+      "id": "IT-C01-TF-007",
+      "chapter_id": 1,
+      "exam_section": "Q2",
+      "type": "true_false",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": ".cs is the extension of CSS file.",
+      "options": ["True", "False"],
+      "server_only": {
+        "answer": 1,
+        "explanation": "Cascading Style Sheets use the '.css' file extension. ('.cs' is used for C# source code files).",
+        "source_reference": "Balbharati Ex Q2.7, Page 24",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2020", "March 2024"]
+      }
+    },
+    {
+      "id": "IT-C01-MCQ1-001",
+      "chapter_id": 1,
+      "exam_section": "Q3",
+      "type": "MCQ_correct1",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "______ element used to create a linking image.",
+      "options": ["<img>", "<td>", "<map>", "<usemap>"],
+      "server_only": {
+        "answer": 2,
+        "explanation": "The <map> tag defines an image map containing clickable geometrical hyperlink zones.",
+        "source_reference": "Balbharati Ex Q3.1, Page 24",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2022"]
+      }
+    },
+    {
+      "id": "IT-C01-MCQ1-002",
+      "chapter_id": 1,
+      "exam_section": "Q3",
+      "type": "MCQ_correct1",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "The ______ tag is used to embed audio files on Webpages.",
+      "options": ["<sound>", "<audio>", "<video>", "<embeded>"],
+      "server_only": {
+        "answer": 1,
+        "explanation": "HTML5 introduced the standard <audio> tag for native sound playback.",
+        "source_reference": "Balbharati Ex Q3.2, Page 24",
+        "board_exam_appeared": true,
+        "board_exam_years": ["July 2023"]
+      }
+    },
+    {
+      "id": "IT-C01-MCQ1-003",
+      "chapter_id": 1,
+      "exam_section": "Q3",
+      "type": "MCQ_correct1",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "A programmer wants to define range for age between 18 to 50, he will use a form with following appropriate control.",
+      "options": ["number", "compare", "range", "Textboxes"],
+      "server_only": {
+        "answer": 2,
+        "explanation": "<input type='range' min='18' max='50'> renders a slider control to select values within specified boundary limits.",
+        "source_reference": "Balbharati Ex Q3.3, Page 25",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2023"]
+      }
+    },
+    {
+      "id": "IT-C01-MCQ1-004",
+      "chapter_id": 1,
+      "exam_section": "Q3",
+      "type": "MCQ_correct1",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "______ character is used to create id in CSS.",
+      "options": ["%", "$", "@", "#"],
+      "server_only": {
+        "answer": 3,
+        "explanation": "CSS ID selectors are prefixed with a hash (#), whereas class selectors use a dot (.).",
+        "source_reference": "Balbharati Ex Q3.4, Page 25",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2020", "March 2024"]
+      }
+    },
+    {
+      "id": "IT-C01-MCQ2-001",
+      "chapter_id": 1,
+      "exam_section": "Q4",
+      "type": "MCQ_correct2",
+      "marks": 2,
+      "difficulty": "medium",
+      "question": "List within another list either ______ list or ______ list is called nested list.",
+      "options": ["multilevel", "order", "unordered", "general", "cascading"],
+      "server_only": {
+        "answer": [1, 2],
+        "explanation": "Nested lists can contain an ordered (<ol>) or unordered (<ul>) list embedded inside another list item.",
+        "source_reference": "Balbharati Ex Q4.1, Page 25",
+        "board_exam_appeared": false,
+        "board_exam_years": []
+      }
+    },
+    {
+      "id": "IT-C01-MCQ2-002",
+      "chapter_id": 1,
+      "exam_section": "Q4",
+      "type": "MCQ_correct2",
+      "marks": 2,
+      "difficulty": "medium",
+      "question": "Image maps are of two types ______ and ______.",
+      "options": ["Network side", "Client side", "Computer side", "Server side", "n-computing"],
+      "server_only": {
+        "answer": [1, 3],
+        "explanation": "The two primary classifications of image maps are client-side (<map> and <area>) and server-side.",
+        "source_reference": "Balbharati Ex Q4.2, Page 25",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2022", "March 2024"]
+      }
+    },
+    {
+      "id": "IT-C01-MCQ2-003",
+      "chapter_id": 1,
+      "exam_section": "Q4",
+      "type": "MCQ_correct2",
+      "marks": 2,
+      "difficulty": "easy",
+      "question": "A CSS rule set contains ______ and ______.",
+      "options": ["Set", "selector", "post", "declaration block", "< >"],
+      "server_only": {
+        "answer": [1, 3],
+        "explanation": "A complete CSS rule consists of a selector pointing to the HTML element and an enclosed declaration block containing property-value pairs.",
+        "source_reference": "Balbharati Ex Q4.3, Page 25",
+        "board_exam_appeared": true,
+        "board_exam_years": ["July 2023"]
+      }
+    },
+    {
+      "id": "IT-C01-MCQ2-004",
+      "chapter_id": 1,
+      "exam_section": "Q4",
+      "type": "MCQ_correct2",
+      "marks": 2,
+      "difficulty": "medium",
+      "question": "Client-side image map can be created using two elements ______ and ______.",
+      "options": ["<area>", "<image>", "<usemap>", "<map>", "<server>"],
+      "server_only": {
+        "answer": [0, 3],
+        "explanation": "A client-side image map is constructed using the <map> container and nested <area> tags referencing specific clickable shapes.",
+        "source_reference": "Balbharati Ex Q4.4, Page 25",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2023"]
+      }
+    },
+    {
+      "id": "IT-C01-MCQ3-001",
+      "chapter_id": 1,
+      "exam_section": "Q5",
+      "type": "MCQ_correct3",
+      "marks": 3,
+      "difficulty": "hard",
+      "question": "Attributes of <area> tag is ______.",
+      "options": ["href", "src", "coords", "data", "alt", "usemap"],
+      "server_only": {
+        "answer": [0, 2, 4],
+        "explanation": "The <area> tag accepts attributes such as href, coords, alt, shape, and target.",
+        "source_reference": "Balbharati Ex Q5.1, Page 25",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2022"]
+      }
+    },
+    {
+      "id": "IT-C01-MCQ3-002",
+      "chapter_id": 1,
+      "exam_section": "Q5",
+      "type": "MCQ_correct3",
+      "marks": 3,
+      "difficulty": "medium",
+      "question": "Attributes used with iframe are ______.",
+      "options": ["srcdoc", "name", "att", "src", "href", "loop"],
+      "server_only": {
+        "answer": [0, 1, 3],
+        "explanation": "Standard iframe attributes include src, srcdoc, name, height, and width.",
+        "source_reference": "Balbharati Ex Q5.2, Page 25",
+        "board_exam_appeared": true,
+        "board_exam_years": ["July 2022"]
+      }
+    },
+    {
+      "id": "IT-C01-MCQ3-003",
+      "chapter_id": 1,
+      "exam_section": "Q5",
+      "type": "MCQ_correct3",
+      "marks": 3,
+      "difficulty": "easy",
+      "question": "Following are the Form controls:",
+      "options": ["email", "search", "label", "video", "tel", "audio"],
+      "server_only": {
+        "answer": [0, 1, 4],
+        "explanation": "email, search, and tel are input control types in HTML5 forms.",
+        "source_reference": "Balbharati Ex Q5.3, Page 25",
+        "board_exam_appeared": false,
+        "board_exam_years": []
+      }
+    },
+    {
+      "id": "IT-C01-MCQ3-004",
+      "chapter_id": 1,
+      "exam_section": "Q5",
+      "type": "MCQ_correct3",
+      "marks": 3,
+      "difficulty": "medium",
+      "question": "Attributes used with <audio> tag:",
+      "options": ["autoplay", "href", "controls", "cntrl", "loop", "bgsound"],
+      "server_only": {
+        "answer": [0, 2, 4],
+        "explanation": "The <audio> element supports autoplay, controls, loop, and muted.",
+        "source_reference": "Balbharati Ex Q5.4, Page 25",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2023", "March 2024"]
+      }
+    },
+    {
+      "id": "IT-C01-MCQ3-005",
+      "chapter_id": 1,
+      "exam_section": "Q5",
+      "type": "MCQ_correct3",
+      "marks": 3,
+      "difficulty": "easy",
+      "question": "CSS types are ______, ______ and ______.",
+      "options": ["internal", "external", "control", "inline", "loop", "style"],
+      "server_only": {
+        "answer": [0, 1, 3],
+        "explanation": "The three standard implementations of CSS are Inline, Internal, and External.",
+        "source_reference": "Balbharati Ex Q5.5, Page 26",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2020", "March 2022"]
+      }
+    },
+    {
+      "id": "IT-C01-MCQ3-006",
+      "chapter_id": 1,
+      "exam_section": "Q5",
+      "type": "MCQ_correct3",
+      "marks": 3,
+      "difficulty": "medium",
+      "question": "Positioning types in CSS are ______.",
+      "options": ["Static", "fixed", "absolute", "position", "dynamic", "nested"],
+      "server_only": {
+        "answer": [0, 1, 2],
+        "explanation": "CSS position values include static, fixed, absolute, relative, and sticky.",
+        "source_reference": "Balbharati Ex Q5.6, Page 26",
+        "board_exam_appeared": false,
+        "board_exam_years": []
+      }
+    },
+    {
+      "id": "IT-C01-MCQ3-007",
+      "chapter_id": 1,
+      "exam_section": "Q5",
+      "type": "MCQ_correct3",
+      "marks": 3,
+      "difficulty": "medium",
+      "question": "Types of floating properties are ______, ______, ______.",
+      "options": ["left", "zero", "right", "all", "none", "dock"],
+      "server_only": {
+        "answer": [0, 2, 4],
+        "explanation": "The CSS 'float' property accepts values: left, right, none, or inherit.",
+        "source_reference": "Balbharati Ex Q5.7, Page 26",
+        "board_exam_appeared": true,
+        "board_exam_years": ["July 2023"]
+      }
+    },
+    {
+      "id": "IT-C01-MTP-001",
+      "chapter_id": 1,
+      "exam_section": "Q6",
+      "type": "match_the_pair",
+      "marks": 5,
+      "difficulty": "medium",
+      "question": "Match the items from Column A with their corresponding items in Column B.",
+      "options": [],
+      "server_only": {
+        "answer": [
+          { "column_a": "<ul>", "column_b": "bulleted list" },
+          { "column_a": "usemap", "column_b": "Client side image map" },
+          { "column_a": "color", "column_b": "CSS Property" },
+          { "column_a": "<img>", "column_b": "inserts an image" },
+          { "column_a": "<input type = image>", "column_b": "Image as a submit button" }
+        ],
+        "explanation": "Correct HTML element and CSS property associations.",
+        "source_reference": "Balbharati Ex Q6, Page 26",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2022", "March 2024"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,428 @@
+{
+  "chapter_id": 5,
+  "chapter_name": "Server-Side Scripting (PHP)",
+  "subject": "Information Technology (Science)",
+  "standard": "Standard 12 (HSC Maharashtra State Board)",
+  "questions": [
+    {
+      "id": "IT-C05-FIB-001",
+      "chapter_id": 5,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "PHP stands for Hypertext ______.",
+      "options": [],
+      "server_only": {
+        "answer": ["Preprocessor", "preprocessor"],
+        "explanation": "PHP is a recursive acronym that stands for Hypertext Preprocessor.",
+        "source_reference": "Balbharati Ex Q1.1, Page 83",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2022"]
+      }
+    },
+    {
+      "id": "IT-C05-FIB-002",
+      "chapter_id": 5,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "PHP script begins with ______ tag.",
+      "options": [],
+      "server_only": {
+        "answer": ["<?php", "<?php "],
+        "explanation": "Standard PHP execution blocks open with the '<?php' delimiter tag.",
+        "source_reference": "Balbharati Ex Q1.2, Page 83",
+        "board_exam_appeared": true,
+        "board_exam_years": ["July 2022", "March 2024"]
+      }
+    },
+    {
+      "id": "IT-C05-FIB-003",
+      "chapter_id": 5,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "All variables in PHP start with a ______ symbol.",
+      "options": [],
+      "server_only": {
+        "answer": ["$", "dollar"],
+        "explanation": "In PHP, variable identifiers must be prefixed with the dollar sign ($).",
+        "source_reference": "Balbharati Ex Q1.3, Page 83",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2020", "March 2023"]
+      }
+    },
+    {
+      "id": "IT-C05-FIB-004",
+      "chapter_id": 5,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "The ______ statement in PHP is used to output text or variable values to the browser.",
+      "options": [],
+      "server_only": {
+        "answer": ["echo", "print"],
+        "explanation": "'echo' (or 'print') is a language construct used to output one or more strings to the webpage.",
+        "source_reference": "Balbharati Ex Q1.4, Page 83",
+        "board_exam_appeared": false,
+        "board_exam_years": []
+      }
+    },
+    {
+      "id": "IT-C05-FIB-005",
+      "chapter_id": 5,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "An ______ in PHP is a special variable which can hold more than one value at a time.",
+      "options": [],
+      "server_only": {
+        "answer": ["array", "Array"],
+        "explanation": "An array is a data structure capable of holding multiple items under a single variable name.",
+        "source_reference": "Balbharati Ex Q1.5, Page 83",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2022"]
+      }
+    },
+    {
+      "id": "IT-C05-FIB-008",
+      "chapter_id": 5,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "The ______ function in PHP breaks a string into an array based on a designated delimiter.",
+      "options": [],
+      "server_only": {
+        "answer": ["explode()", "explode"],
+        "explanation": "explode(separator, string) splits a string into an indexed array using the provided separator.",
+        "source_reference": "State Board Syllabus Sec 5.3, Page 75",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2022"]
+      }
+    },
+    {
+      "id": "IT-C05-TF-001",
+      "chapter_id": 5,
+      "exam_section": "Q2",
+      "type": "true_false",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "PHP files have a default file extension of .html.",
+      "options": ["True", "False"],
+      "server_only": {
+        "answer": 1,
+        "explanation": "PHP script files must be saved with the '.php' extension so the server engine parses the embedded code.",
+        "source_reference": "Balbharati Ex Q2.1, Page 83",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2022", "March 2024"]
+      }
+    },
+    {
+      "id": "IT-C05-TF-002",
+      "chapter_id": 5,
+      "exam_section": "Q2",
+      "type": "true_false",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "PHP is a server-side scripting language.",
+      "options": ["True", "False"],
+      "server_only": {
+        "answer": 0,
+        "explanation": "PHP executes on the web server, generating plain HTML before sending it down to the client's browser.",
+        "source_reference": "Balbharati Ex Q2.2, Page 83",
+        "board_exam_appeared": false,
+        "board_exam_years": []
+      }
+    },
+    {
+      "id": "IT-C05-TF-003",
+      "chapter_id": 5,
+      "exam_section": "Q2",
+      "type": "true_false",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "Variable names in PHP are case-insensitive.",
+      "options": ["True", "False"],
+      "server_only": {
+        "answer": 1,
+        "explanation": "In PHP, variable names are case-sensitive ($color is treated as completely different from $Color).",
+        "source_reference": "Balbharati Ex Q2.3, Page 83",
+        "board_exam_appeared": true,
+        "board_exam_years": ["July 2023"]
+      }
+    },
+    {
+      "id": "IT-C05-TF-004",
+      "chapter_id": 5,
+      "exam_section": "Q2",
+      "type": "true_false",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "Each statement in PHP must end with a semicolon (;).",
+      "options": ["True", "False"],
+      "server_only": {
+        "answer": 0,
+        "explanation": "Statements in PHP are terminated by a semicolon (;); omitting it produces a parse error.",
+        "source_reference": "Balbharati Ex Q2.4, Page 83",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2020"]
+      }
+    },
+    {
+      "id": "IT-C05-TF-005",
+      "chapter_id": 5,
+      "exam_section": "Q2",
+      "type": "true_false",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "Indexed arrays use named keys assigned to elements.",
+      "options": ["True", "False"],
+      "server_only": {
+        "answer": 1,
+        "explanation": "Indexed arrays use numeric indices (0, 1, 2...). Arrays that use named keys are called Associative arrays.",
+        "source_reference": "Balbharati Ex Q2.5, Page 83",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2023"]
+      }
+    },
+    {
+      "id": "IT-C05-TF-007",
+      "chapter_id": 5,
+      "exam_section": "Q2",
+      "type": "true_false",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "A PHP session is destroyed completely when the session_destroy() function executes.",
+      "options": ["True", "False"],
+      "server_only": {
+        "answer": 0,
+        "explanation": "session_destroy() clears all stored server-side session variables registered to the active session id.",
+        "source_reference": "State Board Syllabus Sec 5.5, Page 80",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2024"]
+      }
+    },
+    {
+      "id": "IT-C05-MCQ1-001",
+      "chapter_id": 5,
+      "exam_section": "Q3",
+      "type": "MCQ_correct1",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "Which of the following is the closing tag for a PHP script block?",
+      "options": ["</php>", "?>", "%>", "</script>"],
+      "server_only": {
+        "answer": 1,
+        "explanation": "The closing delimiter for a standard PHP code section is '?>'.",
+        "source_reference": "Balbharati Ex Q3.1, Page 83",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2022"]
+      }
+    },
+    {
+      "id": "IT-C05-MCQ1-002",
+      "chapter_id": 5,
+      "exam_section": "Q3",
+      "type": "MCQ_correct1",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "Which superglobal array collects form data sent via the HTTP 'POST' method?",
+      "options": ["$_GET", "$_POST", "$_REQUEST_POST", "$_SUBMIT"],
+      "server_only": {
+        "answer": 1,
+        "explanation": "$_POST is the built-in superglobal array used to collect values submitted from an HTML form using method='post'.",
+        "source_reference": "Balbharati Ex Q3.2, Page 83",
+        "board_exam_appeared": true,
+        "board_exam_years": ["July 2022", "March 2024"]
+      }
+    },
+    {
+      "id": "IT-C05-MCQ1-003",
+      "chapter_id": 5,
+      "exam_section": "Q3",
+      "type": "MCQ_correct1",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "Which loop structure in PHP is specifically designed to loop through block elements of an array?",
+      "options": ["for", "while", "foreach", "do-while"],
+      "server_only": {
+        "answer": 2,
+        "explanation": "The 'foreach' loop works exclusively on arrays and objects to iterate over each key/value pair.",
+        "source_reference": "Balbharati Ex Q3.3, Page 84",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2023"]
+      }
+    },
+    {
+      "id": "IT-C05-MCQ1-004",
+      "chapter_id": 5,
+      "exam_section": "Q3",
+      "type": "MCQ_correct1",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "Which string concatenation operator is used in PHP to combine two string variables?",
+      "options": ["+", ".", "&", "*"],
+      "server_only": {
+        "answer": 1,
+        "explanation": "In PHP, the period character (.) is the string concatenation operator ($a . $b).",
+        "source_reference": "Balbharati Ex Q3.4, Page 84",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2020", "March 2024"]
+      }
+    },
+    {
+      "id": "IT-C05-MCQ1-006",
+      "chapter_id": 5,
+      "exam_section": "Q3",
+      "type": "MCQ_correct1",
+      "marks": 1,
+      "difficulty": "hard",
+      "question": "What is the trace output of following PHP code: $a = 15; $b = 4; echo $a % $b;",
+      "options": ["3", "3.75", "1", "0"],
+      "server_only": {
+        "answer": 0,
+        "explanation": "The modulus operator (%) calculates the remainder after integer division (15 % 4 = 3).",
+        "source_reference": "State Board Model Paper Q3",
+        "board_exam_appeared": true,
+        "board_exam_years": ["July 2022"]
+      }
+    },
+    {
+      "id": "IT-C05-MCQ2-001",
+      "chapter_id": 5,
+      "exam_section": "Q4",
+      "type": "MCQ_correct2",
+      "marks": 2,
+      "difficulty": "easy",
+      "question": "Which TWO statements or keywords can be used to output data to the screen in PHP?",
+      "options": ["echo", "print", "display", "write", "output"],
+      "server_only": {
+        "answer": [0, 1],
+        "explanation": "'echo' and 'print' are the two primary language constructs used to display output in PHP.",
+        "source_reference": "Balbharati Ex Q4.1, Page 84",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2022"]
+      }
+    },
+    {
+      "id": "IT-C05-MCQ2-002",
+      "chapter_id": 5,
+      "exam_section": "Q4",
+      "type": "MCQ_correct2",
+      "marks": 2,
+      "difficulty": "medium",
+      "question": "Which TWO of the following are valid array types supported in PHP according to the textbook?",
+      "options": ["Indexed array", "Associative array", "Vector array", "Sequential array", "Virtual array"],
+      "server_only": {
+        "answer": [0, 1],
+        "explanation": "PHP categorizes arrays primarily into Indexed arrays, Associative arrays, and Multidimensional arrays.",
+        "source_reference": "Balbharati Ex Q4.2, Page 84",
+        "board_exam_appeared": true,
+        "board_exam_years": ["July 2023"]
+      }
+    },
+    {
+      "id": "IT-C05-MCQ2-003",
+      "chapter_id": 5,
+      "exam_section": "Q4",
+      "type": "MCQ_correct2",
+      "marks": 2,
+      "difficulty": "medium",
+      "question": "Which TWO methods are used by HTML forms to pass data to a PHP script?",
+      "options": ["GET", "POST", "FETCH", "SUBMIT", "SEND"],
+      "server_only": {
+        "answer": [0, 1],
+        "explanation": "Standard HTML forms pass payload data using HTTP GET or POST methods.",
+        "source_reference": "Balbharati Ex Q4.3, Page 84",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2023", "March 2024"]
+      }
+    },
+    {
+      "id": "IT-C05-MCQ2-005",
+      "chapter_id": 5,
+      "exam_section": "Q4",
+      "type": "MCQ_correct2",
+      "marks": 2,
+      "difficulty": "medium",
+      "question": "Which TWO statements correctly describe associative arrays in PHP?",
+      "options": ["They use named keys to access elements", "Keys can be string identifiers", "Elements can only be retrieved using integers 0, 1, 2", "Arrays cannot contain string values", "They cannot be iterated using foreach"],
+      "server_only": {
+        "answer": [0, 1],
+        "explanation": "Associative arrays assign named alphanumeric keys to values, rather than incremental integer indices.",
+        "source_reference": "State Board Syllabus Sec 5.4, Page 77",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2023"]
+      }
+    },
+    {
+      "id": "IT-C05-MCQ3-001",
+      "chapter_id": 5,
+      "exam_section": "Q5",
+      "type": "MCQ_correct3",
+      "marks": 3,
+      "difficulty": "medium",
+      "question": "Which THREE data types are scalar (single-value) primitive types in PHP?",
+      "options": ["Integer", "Float", "Boolean", "Array", "Object", "Resource"],
+      "server_only": {
+        "answer": [0, 1, 2],
+        "explanation": "Integer, Float, Boolean, and String are scalar types in PHP. Arrays and Objects are compound types.",
+        "source_reference": "Balbharati Ex Q5.1, Page 84",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2022"]
+      }
+    },
+    {
+      "id": "IT-C05-MCQ3-002",
+      "chapter_id": 5,
+      "exam_section": "Q5",
+      "type": "MCQ_correct3",
+      "marks": 3,
+      "difficulty": "hard",
+      "question": "Which THREE rules are mandatory for declaring variable names in PHP?",
+      "options": [
+        "Must start with a dollar sign ($)",
+        "Must start with a letter or an underscore",
+        "Cannot start with a number",
+        "Can contain spaces and punctuation marks",
+        "Are case-insensitive across all systems",
+        "Must end with an exclamation mark"
+      ],
+      "server_only": {
+        "answer": [0, 1, 2],
+        "explanation": "PHP variables require a leading $, must start with a letter or underscore, cannot begin with a number, and cannot contain whitespace.",
+        "source_reference": "Balbharati Ex Q5.2, Page 84",
+        "board_exam_appeared": false,
+        "board_exam_years": []
+      }
+    },
+    {
+      "id": "IT-C05-MTP-001",
+      "chapter_id": 5,
+      "exam_section": "Q6",
+      "type": "match_the_pair",
+      "marks": 4,
+      "difficulty": "medium",
+      "question": "Match the PHP syntax components in Column A with their functional roles in Column B.",
+      "options": [],
+      "server_only": {
+        "answer": [
+          { "column_a": "$_GET", "column_b": "Data visible in URL address bar" },
+          { "column_a": "$_POST", "column_b": "Data sent invisibly in HTTP request body" },
+          { "column_a": "count()", "column_b": "Returns the number of elements in an array" },
+          { "column_a": "strlen()", "column_b": "Returns the length of a string" }
+        ],
+        "explanation": "Mappings between PHP superglobals, form transmission modes, and built-in utility functions.",
+        "source_reference": "Balbharati Ex Q6, Page 84",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2023", "March 2024"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,439 @@
+{
+  "chapter_id": 6,
+  "chapter_name": "E-Commerce and E-Governance",
+  "subject": "Information Technology (Science)",
+  "standard": "Standard 12 (HSC Maharashtra State Board)",
+  "questions": [
+    {
+      "id": "IT-C06-FIB-001",
+      "chapter_id": 6,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "E-Commerce stands for ______ Commerce.",
+      "options": [],
+      "server_only": {
+        "answer": ["Electronic", "electronic"],
+        "explanation": "E-Commerce refers to Electronic Commerce, which is the buying and selling of goods or services using the Internet.",
+        "source_reference": "Balbharati Ex Q1.1, Page 102",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2022"]
+      }
+    },
+    {
+      "id": "IT-C06-FIB-002",
+      "chapter_id": 6,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "The trade cycle consists of pre-sales, execution, settlement, and ______.",
+      "options": [],
+      "server_only": {
+        "answer": ["after sales", "After Sales", "after-sales"],
+        "explanation": "A complete trade cycle has four distinct sequential phases: Pre-sales, Execution, Settlement, and After-sales.",
+        "source_reference": "Balbharati Ex Q1.2, Page 102",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2020", "March 2023"]
+      }
+    },
+    {
+      "id": "IT-C06-FIB-003",
+      "chapter_id": 6,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "In E-Commerce, EDI stands for Electronic Data ______.",
+      "options": [],
+      "server_only": {
+        "answer": ["Interchange", "interchange"],
+        "explanation": "EDI stands for Electronic Data Interchange, the computer-to-computer exchange of structured standard business documents.",
+        "source_reference": "Balbharati Ex Q1.3, Page 102",
+        "board_exam_appeared": true,
+        "board_exam_years": ["July 2022", "March 2024"]
+      }
+    },
+    {
+      "id": "IT-C06-FIB-004",
+      "chapter_id": 6,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "The digital form of government service delivery to citizens is called E-______.",
+      "options": [],
+      "server_only": {
+        "answer": ["Governance", "governance"],
+        "explanation": "E-Governance is the application of information and communication technology (ICT) for delivering government services to citizens, businesses, and employees.",
+        "source_reference": "Balbharati Ex Q1.4, Page 102",
+        "board_exam_appeared": false,
+        "board_exam_years": []
+      }
+    },
+    {
+      "id": "IT-C06-FIB-005",
+      "chapter_id": 6,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "hard",
+      "question": "______ is a security protocol that encrypts communication between a web browser and a server.",
+      "options": [],
+      "server_only": {
+        "answer": ["SSL", "TLS", "HTTPS"],
+        "explanation": "Secure Sockets Layer (SSL) / Transport Layer Security (TLS) encrypts web traffic to guarantee confidentiality and data integrity.",
+        "source_reference": "Balbharati Ex Q1.5, Page 102",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2023"]
+      }
+    },
+    {
+      "id": "IT-C06-FIB-009",
+      "chapter_id": 6,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "A ______ is a security system that monitors and controls incoming and outgoing network traffic based on predetermined rules.",
+      "options": [],
+      "server_only": {
+        "answer": ["firewall", "Firewall"],
+        "explanation": "Firewalls act as network barriers preventing unauthorized intrusions between internal systems and public networks.",
+        "source_reference": "State Board Syllabus Sec 6.4, Page 100",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2022", "March 2024"]
+      }
+    },
+    {
+      "id": "IT-C06-TF-001",
+      "chapter_id": 6,
+      "exam_section": "Q2",
+      "type": "true_false",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "E-Commerce allows business transactions to occur 24x7 worldwide.",
+      "options": ["True", "False"],
+      "server_only": {
+        "answer": 0,
+        "explanation": "Online platforms operate without geographical boundaries or store opening/closing hours.",
+        "source_reference": "Balbharati Ex Q2.1, Page 102",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2022"]
+      }
+    },
+    {
+      "id": "IT-C06-TF-002",
+      "chapter_id": 6,
+      "exam_section": "Q2",
+      "type": "true_false",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "B2C stands for Business to Company.",
+      "options": ["True", "False"],
+      "server_only": {
+        "answer": 1,
+        "explanation": "B2C stands for Business to Consumer.",
+        "source_reference": "Balbharati Ex Q2.2, Page 102",
+        "board_exam_appeared": true,
+        "board_exam_years": ["July 2023"]
+      }
+    },
+    {
+      "id": "IT-C06-TF-003",
+      "chapter_id": 6,
+      "exam_section": "Q2",
+      "type": "true_false",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "Online auction sites like eBay and OLX are typical examples of C2C E-Commerce.",
+      "options": ["True", "False"],
+      "server_only": {
+        "answer": 0,
+        "explanation": "C2C (Consumer to Consumer) enables individual users to sell directly to other individual buyers through an online platform.",
+        "source_reference": "Balbharati Ex Q2.3, Page 102",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2020", "March 2024"]
+      }
+    },
+    {
+      "id": "IT-C06-TF-004",
+      "chapter_id": 6,
+      "exam_section": "Q2",
+      "type": "true_false",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "G2C model facilitates communication between Government and Citizens.",
+      "options": ["True", "False"],
+      "server_only": {
+        "answer": 0,
+        "explanation": "G2C (Government to Citizen) provides public utilities, birth certificates, land records, and tax payments directly to citizens online.",
+        "source_reference": "Balbharati Ex Q2.4, Page 102",
+        "board_exam_appeared": false,
+        "board_exam_years": []
+      }
+    },
+    {
+      "id": "IT-C06-TF-005",
+      "chapter_id": 6,
+      "exam_section": "Q2",
+      "type": "true_false",
+      "marks": 1,
+      "difficulty": "hard",
+      "question": "Digital signatures cannot provide non-repudiation in electronic transactions.",
+      "options": ["True", "False"],
+      "server_only": {
+        "answer": 1,
+        "explanation": "Digital signatures guarantee non-repudiation; the signer cannot deny sending the signed document.",
+        "source_reference": "Balbharati Ex Q2.5, Page 102",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2023"]
+      }
+    },
+    {
+      "id": "IT-C06-TF-008",
+      "chapter_id": 6,
+      "exam_section": "Q2",
+      "type": "true_false",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "Unified Payments Interface (UPI) permits instant round-the-clock money transfer between bank accounts via mobile phones.",
+      "options": ["True", "False"],
+      "server_only": {
+        "answer": 0,
+        "explanation": "UPI, operated by NPCI, provides 24/7/365 real-time peer-to-peer and merchant payments via virtual payment addresses.",
+        "source_reference": "State Board Syllabus Sec 6.3, Page 97",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2023"]
+      }
+    },
+    {
+      "id": "IT-C06-MCQ1-001",
+      "chapter_id": 6,
+      "exam_section": "Q3",
+      "type": "MCQ_correct1",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "Which of the following is NOT an advantage of E-Commerce?",
+      "options": [
+        "Global reach",
+        "Direct physical product inspection before delivery",
+        "Lower transaction cost",
+        "24/7 availability"
+      ],
+      "server_only": {
+        "answer": 1,
+        "explanation": "Inability to touch or physically test products prior to shipping is a disadvantage, not an advantage.",
+        "source_reference": "Balbharati Ex Q3.1, Page 102",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2022"]
+      }
+    },
+    {
+      "id": "IT-C06-MCQ1-002",
+      "chapter_id": 6,
+      "exam_section": "Q3",
+      "type": "MCQ_correct1",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "Paying property tax online through a municipal corporation portal is an example of which E-Governance model?",
+      "options": ["G2C", "G2B", "G2G", "B2B"],
+      "server_only": {
+        "answer": 0,
+        "explanation": "Services rendered by governmental bodies directly to citizens belong to the Government to Citizen (G2C) classification.",
+        "source_reference": "Balbharati Ex Q3.2, Page 102",
+        "board_exam_appeared": true,
+        "board_exam_years": ["July 2023", "March 2024"]
+      }
+    },
+    {
+      "id": "IT-C06-MCQ1-003",
+      "chapter_id": 6,
+      "exam_section": "Q3",
+      "type": "MCQ_correct1",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "Which phase of the trade cycle involves finding suppliers and inquiring about product prices?",
+      "options": ["Execution", "Settlement", "Pre-sales", "After-sales"],
+      "server_only": {
+        "answer": 2,
+        "explanation": "Pre-sales consists of two main activities: Search (finding suppliers) and Negotiation (agreeing on price and terms).",
+        "source_reference": "Balbharati Ex Q3.3, Page 103",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2020"]
+      }
+    },
+    {
+      "id": "IT-C06-MCQ1-004",
+      "chapter_id": 6,
+      "exam_section": "Q3",
+      "type": "MCQ_correct1",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "Which of the following ensures that data cannot be modified or tampered with during transit?",
+      "options": ["Confidentiality", "Integrity", "Availability", "Redundancy"],
+      "server_only": {
+        "answer": 1,
+        "explanation": "Integrity guarantees that the message delivered to the recipient is authentic and has not been altered in transit.",
+        "source_reference": "Balbharati Ex Q3.4, Page 103",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2023"]
+      }
+    },
+    {
+      "id": "IT-C06-MCQ1-006",
+      "chapter_id": 6,
+      "exam_section": "Q3",
+      "type": "MCQ_correct1",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "The Information Technology Act that provides legal recognition to electronic transactions in India was established in the year ______.",
+      "options": ["1995", "2000", "2005", "2010"],
+      "server_only": {
+        "answer": 1,
+        "explanation": "The Information Technology Act, 2000 provides the primary legal infrastructure for e-commerce and cyber law in India.",
+        "source_reference": "State Board Syllabus Sec 6.5, Page 101",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2020", "March 2024"]
+      }
+    },
+    {
+      "id": "IT-C06-MCQ2-001",
+      "chapter_id": 6,
+      "exam_section": "Q4",
+      "type": "MCQ_correct2",
+      "marks": 2,
+      "difficulty": "easy",
+      "question": "Which TWO of the following are classic E-Commerce business models?",
+      "options": ["B2B", "C2C", "P2P", "D2D", "X2Y"],
+      "server_only": {
+        "answer": [0, 1],
+        "explanation": "B2B (Business to Business) and C2C (Consumer to Consumer) are core recognized E-Commerce models.",
+        "source_reference": "Balbharati Ex Q4.1, Page 103",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2022", "March 2024"]
+      }
+    },
+    {
+      "id": "IT-C06-MCQ2-002",
+      "chapter_id": 6,
+      "exam_section": "Q4",
+      "type": "MCQ_correct2",
+      "marks": 2,
+      "difficulty": "medium",
+      "question": "Which TWO phases of the trade cycle involve order placement and final invoice delivery?",
+      "options": ["Execution", "Settlement", "Pre-sales", "Planning", "Evaluation"],
+      "server_only": {
+        "answer": [0, 1],
+        "explanation": "Execution covers order placement and delivery; Settlement covers invoicing and payment processing.",
+        "source_reference": "Balbharati Ex Q4.2, Page 103",
+        "board_exam_appeared": true,
+        "board_exam_years": ["July 2022"]
+      }
+    },
+    {
+      "id": "IT-C06-MCQ2-003",
+      "chapter_id": 6,
+      "exam_section": "Q4",
+      "type": "MCQ_correct2",
+      "marks": 2,
+      "difficulty": "medium",
+      "question": "Which TWO payment methods are common electronic payment systems in E-Commerce?",
+      "options": [
+        "Credit Card",
+        "E-Wallet",
+        "Postal Money Order",
+        "Physical Demand Draft",
+        "Cash on Delivery via Barter"
+      ],
+      "server_only": {
+        "answer": [0, 1],
+        "explanation": "Credit Cards, Debit Cards, and E-Wallets are standard electronic payment systems (EPS).",
+        "source_reference": "Balbharati Ex Q4.3, Page 103",
+        "board_exam_appeared": false,
+        "board_exam_years": []
+      }
+    },
+    {
+      "id": "IT-C06-MCQ2-005",
+      "chapter_id": 6,
+      "exam_section": "Q4",
+      "type": "MCQ_correct2",
+      "marks": 2,
+      "difficulty": "medium",
+      "question": "Which TWO advantages are offered by E-Governance implementation?",
+      "options": ["Increased administrative transparency", "Faster processing of civic permits", "Increased physical paperwork volume", "Requirement of long in-person queues", "Higher carbon emissions from transport"],
+      "server_only": {
+        "answer": [0, 1],
+        "explanation": "E-Governance streamlines civic service delivery, eliminates physical lines, and enhances operational transparency.",
+        "source_reference": "State Board Syllabus Sec 6.6, Page 101",
+        "board_exam_appeared": true,
+        "board_exam_years": ["July 2022"]
+      }
+    },
+    {
+      "id": "IT-C06-MCQ3-001",
+      "chapter_id": 6,
+      "exam_section": "Q5",
+      "type": "MCQ_correct3",
+      "marks": 3,
+      "difficulty": "medium",
+      "question": "Which THREE of the following are recognized security pillars in E-Commerce transactions?",
+      "options": [
+        "Confidentiality",
+        "Integrity",
+        "Non-Repudiation",
+        "Manual Ledger Stacking",
+        "Physical Cash Storing",
+        "Paper Stamping"
+      ],
+      "server_only": {
+        "answer": [0, 1, 2],
+        "explanation": "Confidentiality, Integrity, Authentication, and Non-repudiation form the four fundamental pillars of E-Commerce security.",
+        "source_reference": "Balbharati Ex Q5.1, Page 103",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2022", "March 2024"]
+      }
+    },
+    {
+      "id": "IT-C06-MCQ3-002",
+      "chapter_id": 6,
+      "exam_section": "Q5",
+      "type": "MCQ_correct3",
+      "marks": 3,
+      "difficulty": "hard",
+      "question": "Which THREE models belong strictly to E-Governance sectors?",
+      "options": ["G2C", "G2B", "G2G", "B2M", "C2E", "Z2Z"],
+      "server_only": {
+        "answer": [0, 1, 2],
+        "explanation": "E-Governance models comprise Government to Citizen (G2C), Government to Business (G2B), Government to Government (G2G), and Government to Employee (G2E).",
+        "source_reference": "Balbharati Ex Q5.2, Page 103",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2023"]
+      }
+    },
+    {
+      "id": "IT-C06-MTP-001",
+      "chapter_id": 6,
+      "exam_section": "Q6",
+      "type": "match_the_pair",
+      "marks": 4,
+      "difficulty": "medium",
+      "question": "Match the E-Commerce/E-Governance concepts in Column A with their correct descriptions in Column B.",
+      "options": [],
+      "server_only": {
+        "answer": [
+          { "column_a": "B2B", "column_b": "Transactions between manufacturer and wholesaler" },
+          { "column_a": "G2E", "column_b": "Government services provided to public employees" },
+          { "column_a": "EDI", "column_b": "Paperless exchange of standard business documents" },
+          { "column_a": "Encryption", "column_b": "Converting readable text into unreadable ciphertext" }
+        ],
+        "explanation": "Accurate pairings of commercial relationships, governance channels, data transmission standards, and cryptographic defenses.",
+        "source_reference": "Balbharati Ex Q6, Page 103",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2023", "March 2024"]
+      }
+    }
+  ]
+}

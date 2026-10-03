@@ -1,0 +1,127 @@
+[
+  {
+    "id": "IT-C01-Q1-001",
+    "chapter_id": 1,
+    "exam_section": "Q1",
+    "type": "FILL_BLANKS",
+    "marks": 1,
+    "difficulty": "easy",
+    "question": "The ______ tag is used to embed audio files in HTML5.",
+    "options": [],
+    "server_only": {
+      "answer": "audio",
+      "accepted_variants": ["<audio>", "audio"],
+      "explanation": "The <audio> element is standard in HTML5 for playing audio files without plugins.",
+      "source_reference": "Balbharati Class 12 IT, Ch 1, Page 11",
+      "board_exam_appeared": true,
+      "board_exam_years": ["March 2022"]
+    }
+  },
+  {
+    "id": "IT-C02-Q2-001",
+    "chapter_id": 2,
+    "exam_section": "Q2",
+    "type": "TRUE_FALSE",
+    "marks": 1,
+    "difficulty": "easy",
+    "question": "SEO stands for Search Engine Optimization.",
+    "options": ["True", "False"],
+    "server_only": {
+      "answer": true,
+      "explanation": "SEO is the practice of optimizing web pages to increase organic visibility on search engines.",
+      "source_reference": "Balbharati Class 12 IT, Ch 2, Page 31",
+      "board_exam_appeared": true,
+      "board_exam_years": ["July 2023", "Feb 2024"]
+    }
+  },
+  {
+    "id": "IT-C01-Q3-001",
+    "chapter_id": 1,
+    "exam_section": "Q3",
+    "type": "MCQ_correct1",
+    "marks": 1,
+    "difficulty": "medium",
+    "question": "______ element is used to create a linking image map area.",
+    "options": ["<img>", "<td>", "<area>", "<map>"],
+    "server_only": {
+      "answer": 2,
+      "explanation": "The <area> tag defines clickable areas inside an image map (<map>).",
+      "source_reference": "Balbharati Class 12 IT, Ch 1, Page 8",
+      "board_exam_appeared": true,
+      "board_exam_years": ["March 2022", "Feb 2024"]
+    }
+  },
+  {
+    "id": "IT-C03-Q4-001",
+    "chapter_id": 3,
+    "exam_section": "Q4",
+    "type": "MCQ_correct2",
+    "marks": 2,
+    "difficulty": "medium",
+    "question": "Select TWO valid form-related event handlers in JavaScript.",
+    "options": ["onsubmit", "onchange", "onhover", "onpress", "onfocusout"],
+    "server_only": {
+      "answer": [0, 1],
+      "explanation": "onsubmit triggers when a form is submitted; onchange triggers when an input element loses focus after its value is modified.",
+      "source_reference": "Balbharati Class 12 IT, Ch 3, Page 58",
+      "board_exam_appeared": true,
+      "board_exam_years": ["March 2023", "July 2024"]
+    }
+  },
+  {
+    "id": "IT-C01-Q5-001",
+    "chapter_id": 1,
+    "exam_section": "Q5",
+    "type": "MCQ_correct3",
+    "marks": 3,
+    "difficulty": "hard",
+    "question": "Select THREE valid new input type attributes introduced in HTML5.",
+    "options": ["color", "date", "tel", "textbox", "dropdown", "hyperlink"],
+    "server_only": {
+      "answer": [0, 1, 2],
+      "explanation": "color, date, and tel are standardized HTML5 form input types. textbox and dropdown are informal terms.",
+      "source_reference": "Balbharati Class 12 IT, Ch 1, Page 3",
+      "board_exam_appeared": true,
+      "board_exam_years": ["March 2022", "Feb 2023"]
+    }
+  },
+  {
+    "id": "IT-C06-Q6-001",
+    "chapter_id": 6,
+    "exam_section": "Q6",
+    "type": "MATCH_PAIRS",
+    "marks": 4,
+    "difficulty": "medium",
+    "question": "Match the E-Commerce categories with their correct descriptions:",
+    "pairs": [
+      { "premise": "B2B", "options": ["Transaction between two businesses", "Consumer selling to Consumer", "Government to citizen services", "Business selling to customer"] },
+      { "premise": "C2C", "options": ["Consumer selling to Consumer", "Transaction between two businesses", "Government to citizen services", "Business selling to customer"] },
+      { "premise": "G2C", "options": ["Government to citizen services", "Consumer selling to Consumer", "Transaction between two businesses", "Business selling to customer"] },
+      { "premise": "B2C", "options": ["Business selling to customer", "Consumer selling to Consumer", "Transaction between two businesses", "Government to citizen services"] }
+    ],
+    "server_only": {
+      "answer": [0, 0, 0, 0],
+      "explanation": "B2B = Business-to-Business, C2C = Consumer-to-Consumer (e.g. OLX), G2C = e-Governance, B2C = Retail online shopping.",
+      "source_reference": "Balbharati Class 12 IT, Ch 6, Page 92",
+      "board_exam_appeared": true,
+      "board_exam_years": ["March 2023"]
+    }
+  },
+  {
+    "id": "IT-C08-Q8A-001",
+    "chapter_id": 1,
+    "exam_section": "Q8",
+    "type": "CODE_WRITING",
+    "marks": 5,
+    "difficulty": "hard",
+    "question": "Write an HTML5 program to design a student registration form containing: (a) Student Name, (b) Date of Birth, (c) Email, (d) Submit Button. Apply internal CSS to set the background color of the form to lightblue.",
+    "server_only": {
+      "keywords_required": ["<form", "type=\"date\"", "type=\"email\"", "<style", "background-color"],
+      "model_solution": "<!DOCTYPE html>\n<html>\n<head>\n<style>\n  form { background-color: lightblue; padding: 20px; }\n</style>\n</head>\n<body>\n  <form>\n    Name: <input type=\"text\" name=\"sname\"><br>\n    DOB: <input type=\"date\" name=\"dob\"><br>\n    Email: <input type=\"email\" name=\"email\"><br>\n    <input type=\"submit\" value=\"Submit\">\n  </form>\n</body>\n</html>",
+      "explanation": "Requires HTML5 date & email inputs, valid form wrapper, and internal CSS stylesheet.",
+      "source_reference": "Balbharati Class 12 IT, SOP 1, Page 104",
+      "board_exam_appeared": true,
+      "board_exam_years": ["March 2022", "Feb 2024"]
+    }
+  }
+]

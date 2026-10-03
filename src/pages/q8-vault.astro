@@ -1,0 +1,522 @@
+---
+import PortalLayout from "../layouts/PortalLayout.astro";
+
+const q8Problems = [
+  {
+    id: "slip-01",
+    category: "html5",
+    categoryLabel: "HTML5 Forms",
+    marks: "10 Marks",
+    title: "Slip 1: Hotel Reservation Form with Date & Member Constraints",
+    examOrigin: "Maharashtra Board March 2023 / July 2024 Exam Slip",
+    question: "Write an HTML5 code with CSS to design a hotel reservation form. Accept Guest Name, Email ID, Telephone Number (10 digits), Date of Check-in, and Number of Persons (between 1 and 5). Provide Submit and Reset buttons. Guest Name and Telephone Number must be mandatory fields.",
+    tagsEvaluated: ["type='tel' with pattern='[0-9]{10}'", "required attribute on name and phone", "type='date'", "type='number' with min='1' max='5'"],
+    code: `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hotel Reservation</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f8fafc; padding: 20px; }
+    form { max-width: 420px; margin: auto; background: white; padding: 25px; border-radius: 10px; border: 1px solid #cbd5e1; }
+    h2 { color: #059669; text-align: center; margin-top: 0; }
+    label { display: block; margin-top: 10px; font-weight: bold; font-size: 13px; }
+    input { width: 100%; padding: 8px; margin-top: 4px; box-sizing: border-box; }
+    .btn-group { display: flex; gap: 10px; margin-top: 18px; }
+    input[type="submit"] { background: #059669; color: white; border: none; font-weight: bold; cursor: pointer; }
+    input[type="reset"] { background: #e2e8f0; color: #334155; border: none; font-weight: bold; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <form action="#" method="post">
+    <h2>Hotel Royal Grand Booking</h2>
+    <label>Guest Name:</label>
+    <input type="text" name="guest_name" required autofocus placeholder="Enter full name">
+
+    <label>Email Address:</label>
+    <input type="email" name="guest_email" placeholder="guest@example.com">
+
+    <label>Contact Number (10 digits):</label>
+    <input type="tel" name="guest_phone" pattern="[0-9]{10}" required placeholder="10-digit mobile number">
+
+    <label>Check-in Date:</label>
+    <input type="date" name="checkin_date" required>
+
+    <label>Number of Persons (1-5):</label>
+    <input type="number" name="persons" min="1" max="5" value="2" required>
+
+    <div class="btn-group">
+      <input type="submit" value="Book Room">
+      <input type="reset" value="Clear">
+    </div>
+  </form>
+</body>
+</html>`
+  },
+  {
+    id: "slip-02",
+    category: "javascript",
+    categoryLabel: "JavaScript Events",
+    marks: "10 Marks",
+    title: "Slip 2: Parallelogram Perimeter & Area on Button Click",
+    examOrigin: "Maharashtra Board March 2024 Exam Slip",
+    question: "Write an HTML code with JavaScript to accept the base and height of a parallelogram in two textboxes. On clicking a button 'Calculate', compute and display its Area (Base * Height) and Perimeter (2 * (Base + Height)) in separate span/paragraph elements.",
+    tagsEvaluated: ["document.getElementById()", "parseFloat() / Number()", "onclick event listener", "innerHTML / textContent rendering"],
+    code: `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Parallelogram Calculator</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 25px; background: #f8fafc; }
+    .box { max-width: 380px; margin: auto; padding: 20px; background: white; border: 1px solid #cbd5e1; border-radius: 8px; }
+    input[type="number"] { width: 100%; padding: 8px; margin: 6px 0 12px; box-sizing: border-box; }
+    button { width: 100%; padding: 10px; background: #059669; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; }
+    .output { margin-top: 15px; padding: 10px; background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 6px; font-size: 13px; }
+  </style>
+  <script>
+    function computeParallelogram() {
+      let b = parseFloat(document.getElementById("baseVal").value);
+      let h = parseFloat(document.getElementById("heightVal").value);
+      let out = document.getElementById("resBox");
+
+      if (isNaN(b) || isNaN(h) || b <= 0 || h <= 0) {
+        out.innerHTML = "<span style='color:red;'>Please enter valid positive dimensions.</span>";
+        return;
+      }
+
+      let area = b * h;
+      let perimeter = 2 * (b + h);
+
+      out.innerHTML = "<strong>Area:</strong> " + area.toFixed(2) + " sq. units<br>" +
+                      "<strong>Perimeter:</strong> " + perimeter.toFixed(2) + " units";
+    }
+  </script>
+</head>
+<body>
+  <div class="box">
+    <h3 style="color:#059669; text-align:center;">Parallelogram Solver</h3>
+    <label>Base Length:</label>
+    <input type="number" id="baseVal" placeholder="Enter base">
+
+    <label>Height / Slant Side:</label>
+    <input type="number" id="heightVal" placeholder="Enter height">
+
+    <button onclick="computeParallelogram()">Calculate</button>
+    <div id="resBox" class="output">Results will appear here.</div>
+  </div>
+</body>
+</html>`
+  },
+  {
+    id: "slip-03",
+    category: "javascript",
+    categoryLabel: "JavaScript Events",
+    marks: "10 Marks",
+    title: "Slip 3: Calculate Cube of a Number on Mouse Hover (onmouseover)",
+    examOrigin: "Maharashtra Board Repeated Slip (March 2022 & July 2023)",
+    question: "Write an HTML and JavaScript code to accept a number from the user in a textbox. When the mouse pointer moves over a button (onmouseover event), compute the cube of the number and display it in an alert box or on the web page.",
+    tagsEvaluated: ["onmouseover event attribute", "Math.pow() or n * n * n", "input parsing via isNaN()", "DOM result update"],
+    code: `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Number Cube Calculator</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 30px; background: #f8fafc; }
+    .card { max-width: 360px; margin: auto; padding: 22px; background: white; border: 1px solid #cbd5e1; border-radius: 8px; text-align: center; }
+    input { width: 90%; padding: 8px; margin: 10px 0; }
+    button { padding: 10px 18px; background: #059669; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; }
+    p { margin-top: 15px; font-weight: bold; color: #059669; font-size: 15px; }
+  </style>
+  <script>
+    function findCube() {
+      let num = parseFloat(document.getElementById("numInput").value);
+      let res = document.getElementById("cubeDisplay");
+
+      if (isNaN(num)) {
+        res.innerHTML = "<span style='color:red;'>Enter a valid number!</span>";
+        return;
+      }
+      let cube = num * num * num;
+      res.textContent = "Cube of " + num + " is: " + cube;
+    }
+  </script>
+</head>
+<body>
+  <div class="card">
+    <h3>Cube Generator</h3>
+    <label>Enter any number:</label>
+    <input type="number" id="numInput" placeholder="e.g. 5">
+    <br>
+    <!-- Evaluation target: onmouseover attribute -->
+    <button onmouseover="findCube()">Hover over me for Cube</button>
+    <p id="cubeDisplay"></p>
+  </div>
+</body>
+</html>`
+  },
+  {
+    id: "slip-04",
+    category: "html5",
+    categoryLabel: "HTML5 Forms",
+    marks: "10 Marks",
+    title: "Slip 4: Hospital Patient Admission Form with Radio Groups",
+    examOrigin: "Maharashtra Board March 2025 Board Examination",
+    question: "Design an HTML5 webpage to register patients for a hospital. Collect Patient Name, Age (between 1 and 100), Gender (Radio buttons: Male, Female, Other), Ward Type (Select dropdown: General, Semi-Private, Deluxe), and Emergency Contact Number. Apply internal CSS to style borders and labels.",
+    tagsEvaluated: ["type='radio' with identical name attribute", "<select> and <option> tags", "type='number' with min/max bounds", "Internal <style> element"],
+    code: `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Patient Admission</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f1f5f9; padding: 20px; }
+    .hospital-form { max-width: 440px; margin: auto; background: white; padding: 24px; border-radius: 10px; border: 1px solid #cbd5e1; }
+    h2 { color: #059669; text-align: center; margin-top: 0; }
+    label { display: block; margin-top: 10px; font-weight: bold; font-size: 13px; }
+    input[type="text"], input[type="number"], input[type="tel"], select {
+      width: 100%; padding: 8px; margin-top: 4px; box-sizing: border-box; border: 1px solid #cbd5e1; border-radius: 5px;
+    }
+    .radio-box { display: flex; gap: 15px; margin-top: 6px; font-weight: normal; font-size: 13px; }
+    .btn-submit { width: 100%; margin-top: 18px; padding: 10px; background: #059669; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div class="hospital-form">
+    <h2>Apex Hospital Admission</h2>
+    <form action="#" method="post">
+      <label>Patient Full Name:</label>
+      <input type="text" name="pname" required placeholder="Full Name">
+
+      <label>Patient Age:</label>
+      <input type="number" name="page" min="1" max="100" required placeholder="1 - 100">
+
+      <label>Gender:</label>
+      <div class="radio-box">
+        <label><input type="radio" name="gender" value="Male" required> Male</label>
+        <label><input type="radio" name="gender" value="Female"> Female</label>
+        <label><input type="radio" name="gender" value="Other"> Other</label>
+      </div>
+
+      <label>Ward Selection:</label>
+      <select name="ward_type" required>
+        <option value="">-- Select Ward --</option>
+        <option value="General">General Ward</option>
+        <option value="Semi-Private">Semi-Private Room</option>
+        <option value="Deluxe">Deluxe Suite</option>
+      </select>
+
+      <label>Emergency Contact (10 Digits):</label>
+      <input type="tel" name="emergency_phone" pattern="[0-9]{10}" required placeholder="10-digit number">
+
+      <button type="submit" class="btn-submit">Register Patient</button>
+    </form>
+  </div>
+</body>
+</html>`
+  },
+  {
+    id: "slip-05",
+    category: "javascript",
+    categoryLabel: "JavaScript Events",
+    marks: "10 Marks",
+    title: "Slip 5: Sum of First 10 Even Numbers (For Loop)",
+    examOrigin: "Maharashtra Board July 2024 Exam Slip",
+    question: "Write an HTML program with JavaScript to calculate and display the sum of the first 10 even numbers (2 + 4 + 6 + ... + 20) on clicking a button 'Calculate Even Sum'. Display the series and final sum on the web page.",
+    tagsEvaluated: ["For loop with i += 2 or modulo check (i % 2 === 0)", "Accumulator sum variable", "onclick trigger", "Clean DOM output"],
+    code: `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Even Numbers Sum</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 25px; background: #f8fafc; }
+    .box { max-width: 380px; margin: auto; padding: 20px; background: white; border: 1px solid #cbd5e1; border-radius: 8px; text-align: center; }
+    button { padding: 10px 16px; background: #059669; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; }
+    .res { margin-top: 15px; padding: 12px; background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 6px; text-align: left; font-size: 13px; }
+  </style>
+  <script>
+    function generateEvenSum() {
+      let sum = 0;
+      let series = [];
+      let count = 0;
+      let num = 2;
+
+      while (count < 10) {
+        series.push(num);
+        sum += num;
+        num += 2;
+        count++;
+      }
+
+      document.getElementById("output").innerHTML = 
+        "<strong>Series:</strong> " + series.join(" + ") + "<br>" +
+        "<strong style='color:#059669; font-size:15px;'>Grand Sum: " + sum + "</strong>";
+    }
+  </script>
+</head>
+<body>
+  <div class="box">
+    <h3 style="color:#059669;">First 10 Even Numbers Sum</h3>
+    <p style="font-size:13px; color:#64748b;">Click the button below to execute the loop:</p>
+    <button onclick="generateEvenSum()">Calculate Even Sum</button>
+    <div id="output" class="res">Output will appear here.</div>
+  </div>
+</body>
+</html>`
+  },
+  {
+    id: "slip-06",
+    category: "php",
+    categoryLabel: "PHP Scripting (Science)",
+    marks: "10 Marks",
+    title: "Slip 6: String Length, Word Count & Reverse Processor",
+    examOrigin: "Maharashtra Board March 2023 Science Slip",
+    question: "Write a PHP script to accept a sentence from the user via HTML form POST method. On submit, display the original sentence, its character length using strlen(), total word count using str_word_count(), and the reversed sentence using strrev().",
+    tagsEvaluated: ["$_SERVER['REQUEST_METHOD'] == 'POST'", "strlen() function", "str_word_count() function", "strrev() function"],
+    code: `<?php
+$output = "";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $text = htmlspecialchars($_POST["user_sentence"]);
+    $len = strlen($text);
+    $words = str_word_count($text);
+    $rev = strrev($text);
+
+    $output = "<strong>Original Text:</strong> $text <br>" .
+              "<strong>Character Count (strlen):</strong> $len <br>" .
+              "<strong>Total Words (str_word_count):</strong> $words <br>" .
+              "<strong>Reversed String (strrev):</strong> $rev";
+}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PHP String Analysis</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 25px; background: #f8fafc; }
+    .box { max-width: 420px; margin: auto; padding: 20px; background: white; border: 1px solid #cbd5e1; border-radius: 8px; }
+    textarea { width: 100%; height: 70px; padding: 8px; margin: 8px 0; box-sizing: border-box; }
+    input[type="submit"] { width: 100%; padding: 10px; background: #059669; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; }
+    .result { margin-top: 15px; padding: 12px; background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 6px; font-size: 13px; line-height: 1.6; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h3 style="color:#059669; text-align:center;">String Function Processor</h3>
+    <form method="post" action="">
+      <label>Enter a sentence:</label>
+      <textarea name="user_sentence" required placeholder="Type something here..."></textarea>
+      <input type="submit" value="Analyze String">
+    </form>
+    <?php if (!empty($output)): ?>
+      <div class="result"><?php echo $output; ?></div>
+    <?php endif; ?>
+  </div>
+</body>
+</html>`
+  }
+];
+---
+
+<PortalLayout title="How to Secure Maximum Marks in Board's Online Exam Question no. 8? (Q8 is for 20 Marks!)">
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 py-12">
+    
+    <!-- Hero Banner -->
+    <div class="mb-10 text-center max-w-3xl mx-auto">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-300 dark:border-emerald-500/30 text-emerald-800 dark:text-emerald-300 text-xs font-mono font-bold tracking-tight mb-3 shadow-sm">
+        <span class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span>HSC ONLINE EXAM • QUESTION 8 (20 MARKS)</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+        How to Secure Maximum Marks in Board's Online Exam Question no. 8? (Q8 is for 20 Marks!)
+      </h1>
+      <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+        Real 10-mark programming problem slips from official Maharashtra State Board online examination batches (2022–2026). Each slip includes clean model code and the exact HTML5 &amp; JavaScript tags examiners check for full marks.
+      </p>
+    </div>
+
+    <!-- Exam Strategy Callout -->
+    <div class="rounded-2xl border border-emerald-200 dark:border-emerald-500/30 bg-emerald-50/60 dark:bg-emerald-950/20 p-5 sm:p-6 mb-10 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div>
+        <span class="text-xs font-mono font-bold uppercase tracking-wider text-emerald-800 dark:text-emerald-300">
+          Official Examination Format (Q8)
+        </span>
+        <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-0.5">Attempt Any 2 Out of 4 Programming Slips</h3>
+        <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">
+          Two questions are typically HTML5 &amp; CSS form designs (Q8 A &amp; B) and two are JavaScript DOM/PHP event programs (Q8 C &amp; D).
+        </p>
+      </div>
+      <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-3.5 rounded-xl shrink-0 text-center w-full md:w-auto">
+        <span class="text-[10px] font-mono text-slate-400 uppercase block">Total Weightage</span>
+        <span class="text-2xl font-extrabold text-emerald-600 dark:text-emerald-400">20 / 80 Marks</span>
+      </div>
+    </div>
+
+    <!-- Interactive Category Filter Tabs -->
+    <div class="flex items-center gap-2 mb-8 overflow-x-auto pb-2 text-xs font-bold select-none">
+      <button 
+        type="button" 
+        class="filter-tab px-4 py-2 rounded-xl bg-emerald-600 text-white shadow-sm transition cursor-pointer"
+        data-category="all"
+      >
+        All Problems (6 Slips)
+      </button>
+      <button 
+        type="button" 
+        class="filter-tab px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:border-emerald-500 transition cursor-pointer"
+        data-category="html5"
+      >
+        HTML5 &amp; CSS Forms
+      </button>
+      <button 
+        type="button" 
+        class="filter-tab px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:border-emerald-500 transition cursor-pointer"
+        data-category="javascript"
+      >
+        JavaScript Events &amp; DOM
+      </button>
+      <button 
+        type="button" 
+        class="filter-tab px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:border-emerald-500 transition cursor-pointer"
+        data-category="php"
+      >
+        PHP Scripts (Science)
+      </button>
+    </div>
+
+    <!-- Problem Slips List -->
+    <div class="space-y-12">
+      {q8Problems.map((slip) => (
+        <article class="q8-card rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-md overflow-hidden transition-all duration-200 hover:shadow-lg" data-category={slip.category}>
+          
+          <!-- Card Header -->
+          <div class="p-6 border-b border-slate-100 dark:border-slate-800/80 bg-slate-50/60 dark:bg-slate-950/40 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400 uppercase">
+                  {slip.categoryLabel}
+                </span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-500/10 text-emerald-800 dark:text-emerald-300 font-bold">
+                  {slip.marks}
+                </span>
+                <span class="text-[10px] font-mono text-slate-400">
+                  {slip.examOrigin}
+                </span>
+              </div>
+              <h2 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white mt-1">
+                {slip.title}
+              </h2>
+            </div>
+            
+            <button 
+              type="button" 
+              class="copy-btn px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs transition shadow-sm flex items-center justify-center gap-1.5 cursor-pointer shrink-0"
+              data-code={slip.code}
+            >
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>
+              <span>Copy Solution Code</span>
+            </button>
+          </div>
+
+          <div class="p-6 space-y-6">
+            <!-- Exact Question Phrasing -->
+            <div>
+              <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-400 mb-1">Board Question Paper Statement</h4>
+              <p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed font-medium bg-slate-50 dark:bg-slate-950/60 p-4 rounded-xl border border-slate-200/80 dark:border-slate-800">
+                {slip.question}
+              </p>
+            </div>
+
+            <!-- Tags & Attributes Tested -->
+            <div>
+              <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 mb-2">Examiner Marking Checklist (Tags Evaluated for 10/10)</h4>
+              <div class="flex flex-wrap gap-2">
+                {slip.tagsEvaluated.map((tag) => (
+                  <span class="text-xs font-mono px-3 py-1 rounded-lg bg-emerald-50 dark:bg-emerald-500/10 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-500/20 font-medium">
+                    ✔ {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <!-- Clean Model Solution -->
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-mono font-bold uppercase tracking-wider text-slate-400">
+                  Minimal High-Scoring Board Solution
+                </span>
+                <span class="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 font-bold">Standard UTF-8</span>
+              </div>
+              <div class="rounded-xl bg-slate-950 p-4 border border-slate-800 overflow-x-auto shadow-inner">
+                <pre class="text-xs font-mono text-emerald-400 leading-relaxed"><code>{slip.code}</code></pre>
+              </div>
+            </div>
+          </div>
+
+        </article>
+      ))}
+    </div>
+
+  </section>
+
+  <!-- Interactive Filter & Copy Script -->
+  <script is:inline>
+    // 1. Category Filtering
+    const tabs = document.querySelectorAll('.filter-tab');
+    const cards = document.querySelectorAll('.q8-card');
+
+    const activeClasses = ['bg-emerald-600', 'text-white', 'shadow-sm'];
+    const inactiveClasses = ['border', 'border-slate-200', 'dark:border-slate-800', 'bg-white', 'dark:bg-slate-900', 'text-slate-700', 'dark:text-slate-300'];
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const cat = tab.getAttribute('data-category');
+
+        tabs.forEach(t => {
+          t.classList.remove(...activeClasses);
+          t.classList.add(...inactiveClasses);
+        });
+
+        tab.classList.remove(...inactiveClasses);
+        tab.classList.add(...activeClasses);
+
+        cards.forEach(card => {
+          if (cat === 'all' || card.getAttribute('data-category') === cat) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    // 2. Clipboard Copy Functionality
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const code = btn.getAttribute('data-code');
+        if (!code) return;
+
+        try {
+          await navigator.clipboard.writeText(code);
+          const originalText = btn.innerHTML;
+          btn.innerHTML = `
+            <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Copied to Clipboard!</span>
+          `;
+          btn.classList.add('bg-teal-600');
+          setTimeout(() => {
+            btn.innerHTML = originalText;
+            btn.classList.remove('bg-teal-600');
+          }, 2000);
+        } catch (err) {
+          console.error("Clipboard copy failed: ", err);
+        }
+      });
+    });
+  </script>
+</PortalLayout>

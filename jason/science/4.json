@@ -1,0 +1,435 @@
+{
+  "chapter_id": 4,
+  "chapter_name": "Emerging Technologies (IoT, Cloud Computing, AI, 5G)",
+  "subject": "Information Technology (Science)",
+  "standard": "Standard 12 (HSC Maharashtra State Board)",
+  "questions": [
+    {
+      "id": "IT-C04-FIB-001",
+      "chapter_id": 4,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "The network of physical devices embedded with electronics, software, sensors, and network connectivity is called ______.",
+      "options": [],
+      "server_only": {
+        "answer": ["Internet of Things", "IoT", "internet of things"],
+        "explanation": "Internet of Things (IoT) connects physical everyday objects to the internet, enabling them to collect and exchange data.",
+        "source_reference": "Balbharati Ex Q1.1, Page 63",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2022", "March 2024"]
+      }
+    },
+    {
+      "id": "IT-C04-FIB-002",
+      "chapter_id": 4,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "PaaS stands for Platform as a ______.",
+      "options": [],
+      "server_only": {
+        "answer": ["Service", "service"],
+        "explanation": "PaaS stands for Platform as a Service, offering development environments and tools over the cloud.",
+        "source_reference": "Balbharati Ex Q1.2, Page 63",
+        "board_exam_appeared": true,
+        "board_exam_years": ["July 2022"]
+      }
+    },
+    {
+      "id": "IT-C04-FIB-003",
+      "chapter_id": 4,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "______ is a branch of computer science dealing with the simulation of intelligent behavior in computers.",
+      "options": [],
+      "server_only": {
+        "answer": ["Artificial Intelligence", "AI", "artificial intelligence"],
+        "explanation": "Artificial Intelligence involves designing machines capable of performing tasks that normally require human intelligence.",
+        "source_reference": "Balbharati Ex Q1.3, Page 63",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2023"]
+      }
+    },
+    {
+      "id": "IT-C04-FIB-004",
+      "chapter_id": 4,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "______ generation wireless technology provides higher speeds and lower latency compared to 4G.",
+      "options": [],
+      "server_only": {
+        "answer": ["5G", "Fifth", "fifth"],
+        "explanation": "5G is the fifth generation mobile broadband standard delivering multi-Gbps peak data speeds and ultra-low latency.",
+        "source_reference": "Balbharati Ex Q1.4, Page 63",
+        "board_exam_appeared": false,
+        "board_exam_years": []
+      }
+    },
+    {
+      "id": "IT-C04-FIB-005",
+      "chapter_id": 4,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "hard",
+      "question": "In cloud computing, when services are accessible to the general public over the internet, it is called a ______ cloud.",
+      "options": [],
+      "server_only": {
+        "answer": ["Public", "public"],
+        "explanation": "A public cloud delivers computing infrastructure and services openly across the public internet.",
+        "source_reference": "Balbharati Ex Q1.5, Page 63",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2020"]
+      }
+    },
+    {
+      "id": "IT-C04-FIB-007",
+      "chapter_id": 4,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "In an IoT system, a ______ converts raw sensory data into digital signals that can be transmitted across networks.",
+      "options": [],
+      "server_only": {
+        "answer": ["sensor", "transducer"],
+        "explanation": "Sensors and transducers detect environmental shifts and convert them into measurable electronic signals.",
+        "source_reference": "State Board Syllabus Sec 4.1, Page 54",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2022"]
+      }
+    },
+    {
+      "id": "IT-C04-TF-001",
+      "chapter_id": 4,
+      "exam_section": "Q2",
+      "type": "true_false",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "Cloud computing eliminates the need for expensive on-premise hardware infrastructure.",
+      "options": ["True", "False"],
+      "server_only": {
+        "answer": 0,
+        "explanation": "Cloud computing allows users and businesses to access computing resources on demand without managing physical on-premise servers.",
+        "source_reference": "Balbharati Ex Q2.1, Page 63",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2022"]
+      }
+    },
+    {
+      "id": "IT-C04-TF-002",
+      "chapter_id": 4,
+      "exam_section": "Q2",
+      "type": "true_false",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "Smart home appliances like automated thermostats are examples of IoT devices.",
+      "options": ["True", "False"],
+      "server_only": {
+        "answer": 0,
+        "explanation": "Automated home appliances contain sensors and network connectivity to interact remotely, fitting the IoT definition.",
+        "source_reference": "Balbharati Ex Q2.2, Page 63",
+        "board_exam_appeared": true,
+        "board_exam_years": ["July 2023"]
+      }
+    },
+    {
+      "id": "IT-C04-TF-003",
+      "chapter_id": 4,
+      "exam_section": "Q2",
+      "type": "true_false",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "5G technology has higher network latency than 4G technology.",
+      "options": ["True", "False"],
+      "server_only": {
+        "answer": 1,
+        "explanation": "5G significantly reduces latency (delay) down to 1 millisecond compared to 4G's 20-50 milliseconds.",
+        "source_reference": "Balbharati Ex Q2.3, Page 63",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2024"]
+      }
+    },
+    {
+      "id": "IT-C04-TF-004",
+      "chapter_id": 4,
+      "exam_section": "Q2",
+      "type": "true_false",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "A hybrid cloud environment strictly permits access only to government entities.",
+      "options": ["True", "False"],
+      "server_only": {
+        "answer": 1,
+        "explanation": "A hybrid cloud combines public and private cloud models; it is not restricted to government entities.",
+        "source_reference": "Balbharati Ex Q2.4, Page 63",
+        "board_exam_appeared": false,
+        "board_exam_years": []
+      }
+    },
+    {
+      "id": "IT-C04-TF-005",
+      "chapter_id": 4,
+      "exam_section": "Q2",
+      "type": "true_false",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "Machine learning is a subset of Artificial Intelligence.",
+      "options": ["True", "False"],
+      "server_only": {
+        "answer": 0,
+        "explanation": "Machine learning is a core field and branch within Artificial Intelligence that trains algorithms on data.",
+        "source_reference": "Balbharati Ex Q2.5, Page 63",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2023"]
+      }
+    },
+    {
+      "id": "IT-C04-TF-007",
+      "chapter_id": 4,
+      "exam_section": "Q2",
+      "type": "true_false",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "In cloud computing, multi-tenancy refers to multiple customers sharing the same physical pool of hardware resources.",
+      "options": ["True", "False"],
+      "server_only": {
+        "answer": 0,
+        "explanation": "Multi-tenancy allows cloud vendors to serve different customers securely from pooled computing infrastructure.",
+        "source_reference": "State Board Syllabus Sec 4.2, Page 56",
+        "board_exam_appeared": false,
+        "board_exam_years": []
+      }
+    },
+    {
+      "id": "IT-C04-MCQ1-001",
+      "chapter_id": 4,
+      "exam_section": "Q3",
+      "type": "MCQ_correct1",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "Google Drive and Microsoft OneDrive are examples of which cloud computing service model?",
+      "options": ["IaaS", "SaaS", "PaaS", "CaaS"],
+      "server_only": {
+        "answer": 1,
+        "explanation": "Cloud storage applications accessed directly by end-users via browsers or apps are Software as a Service (SaaS).",
+        "source_reference": "Balbharati Ex Q3.1, Page 63",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2022"]
+      }
+    },
+    {
+      "id": "IT-C04-MCQ1-002",
+      "chapter_id": 4,
+      "exam_section": "Q3",
+      "type": "MCQ_correct1",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "Which of the following devices is essential in an IoT ecosystem to measure physical conditions like temperature or pressure?",
+      "options": ["Actuator", "Sensor", "Monitor", "Plotter"],
+      "server_only": {
+        "answer": 1,
+        "explanation": "Sensors capture raw environmental data (light, temperature, sound, pressure) in an IoT system.",
+        "source_reference": "Balbharati Ex Q3.2, Page 63",
+        "board_exam_appeared": true,
+        "board_exam_years": ["July 2023"]
+      }
+    },
+    {
+      "id": "IT-C04-MCQ1-003",
+      "chapter_id": 4,
+      "exam_section": "Q3",
+      "type": "MCQ_correct1",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "In which cloud deployment model is infrastructure provisioned solely for exclusive use by a single organization?",
+      "options": ["Public Cloud", "Private Cloud", "Community Cloud", "Universal Cloud"],
+      "server_only": {
+        "answer": 1,
+        "explanation": "A private cloud is provisioned for exclusive use by one single entity, providing maximum control and security.",
+        "source_reference": "Balbharati Ex Q3.3, Page 63",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2020", "March 2024"]
+      }
+    },
+    {
+      "id": "IT-C04-MCQ1-004",
+      "chapter_id": 4,
+      "exam_section": "Q3",
+      "type": "MCQ_correct1",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "Which AI application focuses on understanding and processing human spoken or written language?",
+      "options": ["Natural Language Processing (NLP)", "Computer Vision", "Robotics", "Biometrics"],
+      "server_only": {
+        "answer": 0,
+        "explanation": "Natural Language Processing (NLP) enables machines to comprehend, interpret, and generate human language.",
+        "source_reference": "Balbharati Ex Q3.4, Page 64",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2023"]
+      }
+    },
+    {
+      "id": "IT-C04-MCQ1-006",
+      "chapter_id": 4,
+      "exam_section": "Q3",
+      "type": "MCQ_correct1",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "Which 5G technology capability uses multiple physical antennas to simultaneously send and receive separate data streams?",
+      "options": ["Massive MIMO", "Frequency Division", "Analog Modulator", "Baseband Dialing"],
+      "server_only": {
+        "answer": 0,
+        "explanation": "Massive MIMO clusters multiple antenna elements on base stations to expand capacity.",
+        "source_reference": "State Board Syllabus Sec 4.4, Page 61",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2024"]
+      }
+    },
+    {
+      "id": "IT-C04-MCQ2-001",
+      "chapter_id": 4,
+      "exam_section": "Q4",
+      "type": "MCQ_correct2",
+      "marks": 2,
+      "difficulty": "easy",
+      "question": "Which TWO of the following are standard Cloud Service Models?",
+      "options": ["SaaS", "PaaS", "DaaS", "HaaS", "WaaS"],
+      "server_only": {
+        "answer": [0, 1],
+        "explanation": "The core cloud service models are IaaS, PaaS, and SaaS (Software as a Service and Platform as a Service).",
+        "source_reference": "Balbharati Ex Q4.1, Page 64",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2022", "March 2024"]
+      }
+    },
+    {
+      "id": "IT-C04-MCQ2-002",
+      "chapter_id": 4,
+      "exam_section": "Q4",
+      "type": "MCQ_correct2",
+      "marks": 2,
+      "difficulty": "medium",
+      "question": "Which TWO hardware components are primary building blocks of an IoT architecture?",
+      "options": ["Sensors", "Actuators", "Cathode Ray Tubes", "Dot Matrix Printers", "Floppy Drives"],
+      "server_only": {
+        "answer": [0, 1],
+        "explanation": "IoT hardware relies on sensors (to gather environmental inputs) and actuators (to trigger physical mechanical actions).",
+        "source_reference": "Balbharati Ex Q4.2, Page 64",
+        "board_exam_appeared": true,
+        "board_exam_years": ["July 2022"]
+      }
+    },
+    {
+      "id": "IT-C04-MCQ2-003",
+      "chapter_id": 4,
+      "exam_section": "Q4",
+      "type": "MCQ_correct2",
+      "marks": 2,
+      "difficulty": "medium",
+      "question": "Which TWO deployment models are standard classifications in Cloud Computing?",
+      "options": ["Public Cloud", "Private Cloud", "Solar Cloud", "Static Cloud", "Linear Cloud"],
+      "server_only": {
+        "answer": [0, 1],
+        "explanation": "Standard cloud deployment models include Public, Private, Hybrid, and Community clouds.",
+        "source_reference": "Balbharati Ex Q4.3, Page 64",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2023"]
+      }
+    },
+    {
+      "id": "IT-C04-MCQ2-005",
+      "chapter_id": 4,
+      "exam_section": "Q4",
+      "type": "MCQ_correct2",
+      "marks": 2,
+      "difficulty": "medium",
+      "question": "Which TWO technologies form the operational backbone of autonomous self-driving automobiles?",
+      "options": ["Computer Vision", "Machine Learning", "Dot Matrix printing", "Manual Clutch systems", "Cathode Displays"],
+      "server_only": {
+        "answer": [0, 1],
+        "explanation": "Autonomous driving systems rely on computer vision for perception and machine learning models for navigation.",
+        "source_reference": "State Board Syllabus Sec 4.3, Page 60",
+        "board_exam_appeared": true,
+        "board_exam_years": ["July 2023"]
+      }
+    },
+    {
+      "id": "IT-C04-MCQ3-001",
+      "chapter_id": 4,
+      "exam_section": "Q5",
+      "type": "MCQ_correct3",
+      "marks": 3,
+      "difficulty": "medium",
+      "question": "Which THREE of the following are prominent advantages of 5G wireless technology?",
+      "options": [
+        "Ultra-low latency",
+        "High data transmission speeds",
+        "Massive device connectivity",
+        "Requires analog telephone landlines",
+        "Works only in vacuum chambers",
+        "Zero radio frequency usage"
+      ],
+      "server_only": {
+        "answer": [0, 1, 2],
+        "explanation": "5G delivers low latency (down to 1ms), multi-gigabit speeds, and massive machine-type communication.",
+        "source_reference": "Balbharati Ex Q5.1, Page 64",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2022", "March 2024"]
+      }
+    },
+    {
+      "id": "IT-C04-MCQ3-002",
+      "chapter_id": 4,
+      "exam_section": "Q5",
+      "type": "MCQ_correct3",
+      "marks": 3,
+      "difficulty": "hard",
+      "question": "Which THREE domains are practical applications of Artificial Intelligence (AI)?",
+      "options": [
+        "Speech recognition and virtual assistants",
+        "Autonomous driving vehicles",
+        "Medical diagnosis systems",
+        "Manual typewriter ribbon winding",
+        "Physical paper filing in cabinets",
+        "Hand-drawn telegraph communication"
+      ],
+      "server_only": {
+        "answer": [0, 1, 2],
+        "explanation": "AI is implemented in speech recognition (Siri, Alexa), autonomous driving (Tesla), and computer-assisted diagnostic tools.",
+        "source_reference": "Balbharati Ex Q5.2, Page 64",
+        "board_exam_appeared": false,
+        "board_exam_years": []
+      }
+    },
+    {
+      "id": "IT-C04-MTP-001",
+      "chapter_id": 4,
+      "exam_section": "Q6",
+      "type": "match_the_pair",
+      "marks": 4,
+      "difficulty": "medium",
+      "question": "Match the emerging technology concepts in Column A with their appropriate definitions in Column B.",
+      "options": [],
+      "server_only": {
+        "answer": [
+          { "column_a": "IaaS", "column_b": "Virtual machines and server storage infrastructure" },
+          { "column_a": "SaaS", "column_b": "Applications delivered over the web browser" },
+          { "column_a": "Actuator", "column_b": "Converts electrical signals into physical movement" },
+          { "column_a": "5G", "column_b": "Next generation wireless communication standard" }
+        ],
+        "explanation": "Core associations connecting cloud service classifications, IoT components, and telecommunication standards.",
+        "source_reference": "Balbharati Ex Q6, Page 64",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2023", "March 2024"]
+      }
+    }
+  ]
+}

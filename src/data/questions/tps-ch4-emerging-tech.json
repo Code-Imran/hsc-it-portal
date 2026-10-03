@@ -1,0 +1,81 @@
+{
+  "chapter_id": 4,
+  "chapter_name": "Emerging Technologies",
+  "subject_stream": ["science", "commerce", "arts"],
+  "source": "TPS Notes - 12th IT",
+  "q1_fill_in_the_blanks": [
+    { "id": "tps-ch4-fb-01", "question": "IoT stands for _____.", "answer": "Internet of Things" },
+    { "id": "tps-ch4-fb-02", "question": "The Internet of Things is the network of physical devices embedded with electronics, software, sensors and _____.", "answer": "actuators" },
+    { "id": "tps-ch4-fb-03", "question": "IoT helps to _____ human efforts.", "answer": "reduce" },
+    { "id": "tps-ch4-fb-04", "question": "_____ allow users to schedule, monitor and remotely control home temperatures.", "answer": "Smart thermostats" },
+    { "id": "tps-ch4-fb-05", "question": "SaaS stands for _____.", "answer": "Software as a Service" },
+    { "id": "tps-ch4-fb-06", "question": "IaaS stands for _____.", "answer": "Infrastructure as a Service" },
+    { "id": "tps-ch4-fb-07", "question": "PaaS stands for _____.", "answer": "Platform as a Service" },
+    { "id": "tps-ch4-fb-08", "question": "_____ gives users access to storage, networking, servers and other computing resources via cloud.", "answer": "IaaS" },
+    { "id": "tps-ch4-fb-09", "question": "Amazon Web Services (AWS) is an example of _____.", "answer": "IaaS" },
+    { "id": "tps-ch4-fb-10", "question": "_____ enables organizations to focus on development without worrying about underlying infrastructure.", "answer": "PaaS" },
+    { "id": "tps-ch4-fb-11", "question": "In SaaS, users access applications through a web browser or an _____.", "answer": "API" },
+    { "id": "tps-ch4-fb-12", "question": "In _____ cloud, all data is protected behind the firewall.", "answer": "private" },
+    { "id": "tps-ch4-fb-13", "question": "_____ cloud environment combines both public and private cloud elements.", "answer": "Hybrid" },
+    { "id": "tps-ch4-fb-14", "question": "AI stands for _____.", "answer": "Artificial Intelligence" },
+    { "id": "tps-ch4-fb-15", "question": "_____ imitate the brain's array of interconnected neurons.", "answer": "Neural networks" },
+    { "id": "tps-ch4-fb-16", "question": "_____ employs pattern recognition and deep learning to understand the content of pictures and videos.", "answer": "Computer Vision" },
+    { "id": "tps-ch4-fb-17", "question": "Chatbots are an example of _____.", "answer": "Digital Assistance" },
+    { "id": "tps-ch4-fb-18", "question": "5G stands for _____ generation of cellular network technology.", "answer": "fifth" },
+    { "id": "tps-ch4-fb-19", "question": "LTE stands for _____.", "answer": "Long Term Evolution" }
+  ],
+  "q2_true_false": [
+    { "id": "tps-ch4-tf-01", "statement": "The internet of things is the network of physical devices only.", "answer": false },
+    { "id": "tps-ch4-tf-02", "statement": "IoT helps to minimize human effort.", "answer": true },
+    { "id": "tps-ch4-tf-03", "statement": "In IaaS, enterprises save the cost of buying and maintaining their own hardware.", "answer": true },
+    { "id": "tps-ch4-tf-04", "statement": "PaaS vendors provide users with software and applications via a subscription model.", "answer": false },
+    { "id": "tps-ch4-tf-05", "statement": "In private cloud, all data is protected behind the firewall.", "answer": true },
+    { "id": "tps-ch4-tf-06", "statement": "Public cloud is more expensive than private cloud.", "answer": false },
+    { "id": "tps-ch4-tf-07", "statement": "Hybrid cloud allows greater flexibility.", "answer": true },
+    { "id": "tps-ch4-tf-08", "statement": "Chatbots are an example of Digital Assistance.", "answer": true },
+    { "id": "tps-ch4-tf-09", "statement": "AI helps in reducing human error.", "answer": true },
+    { "id": "tps-ch4-tf-10", "statement": "High cost of creation and unemployment are disadvantages of AI.", "answer": true },
+    { "id": "tps-ch4-tf-11", "statement": "5G is expected to provide Internet connections multiple times faster than 4G LTE.", "answer": true }
+  ],
+  "q3_mcq_single": [
+    { "id": "tps-ch4-mcq1-01", "question": "IoT helps to _____ human efforts.", "options": ["remove", "reduce", "increase", "stop"], "answer": "reduce" },
+    { "id": "tps-ch4-mcq1-02", "question": "PaaS stands for _____.", "options": ["Platform as a Service", "Platform as a Self", "Platform as Secure", "Platform as a Section"], "answer": "Platform as a Service" },
+    { "id": "tps-ch4-mcq1-03", "question": "In _____ cloud, all data is protected behind the firewall.", "options": ["public", "private", "secure", "hybrid"], "answer": "private" },
+    { "id": "tps-ch4-mcq1-04", "question": "_____ imitate the brain's array of interconnected neurons.", "options": ["Machine learning", "Neural network", "Deep learning", "Computer vision"], "answer": "Neural network" },
+    { "id": "tps-ch4-mcq1-05", "question": "_____ computing is about creating a 'natural, human-like interaction'.", "options": ["Machine learning", "Cognitive computing", "Neural network", "Computer vision"], "answer": "Cognitive computing" },
+    { "id": "tps-ch4-mcq1-06", "question": "LTE stands for _____.", "options": ["Long Term Evolution", "Long Term Evolve", "Large Term Evolution", "Long Test Evolution"], "answer": "Long Term Evolution" }
+  ],
+  "q4_mcq_two_correct": [
+    { "id": "tps-ch4-mcq2-01", "question": "Primary service models of cloud computing are _____ and _____.", "options": ["SaaS", "PaaS", "FaaS", "DaaS", "CaaS"], "answer": ["SaaS", "PaaS"] },
+    { "id": "tps-ch4-mcq2-02", "question": "Examples of SaaS applications are _____ and _____.", "options": ["GitHub", "Dropbox", "AWS", "Microsoft Azure VM", "Google Compute Engine"], "answer": ["GitHub", "Dropbox"] },
+    { "id": "tps-ch4-mcq2-03", "question": "Types of cloud deployments are _____ and _____.", "options": ["Public Cloud", "Private Cloud", "Personal Cloud", "Secure Cloud", "Local Cloud"], "answer": ["Public Cloud", "Private Cloud"] },
+    { "id": "tps-ch4-mcq2-04", "question": "Disadvantages of AI are _____ and _____.", "options": ["Digital Assistance", "Faster Decisions", "Cost of creation", "Unemployment", "Daily application"], "answer": ["Cost of creation", "Unemployment"] }
+  ],
+  "q5_mcq_three_correct": [
+    { "id": "tps-ch4-mcq3-01", "question": "Advantages of IoT include _____.", "options": ["Time saving", "Enhance data collection", "Improve security", "Privacy issues", "Complexity", "High bandwidth requirement"], "answer": ["Time saving", "Enhance data collection", "Improve security"] },
+    { "id": "tps-ch4-mcq3-02", "question": "The three primary service models of cloud computing are _____.", "options": ["SaaS", "PaaS", "IaaS", "FaaS", "DaaS", "CaaS"], "answer": ["SaaS", "PaaS", "IaaS"] },
+    { "id": "tps-ch4-mcq3-03", "question": "Types of cloud deployment are _____.", "options": ["Public Cloud", "Private Cloud", "Hybrid Cloud", "Personal Cloud", "Secure Cloud", "Static Cloud"], "answer": ["Public Cloud", "Private Cloud", "Hybrid Cloud"] },
+    { "id": "tps-ch4-mcq3-04", "question": "Applications of 5G cellular technology include _____.", "options": ["Online 5G Games", "Automated Vehicles", "Virtual Classroom", "Floppy Disk Storage", "Dial-up Networking", "Analog TV"], "answer": ["Online 5G Games", "Automated Vehicles", "Virtual Classroom"] }
+  ],
+  "q6_match_following": [
+    {
+      "id": "tps-ch4-match-01",
+      "pairs": [
+        { "left": "IaaS", "right": "Infrastructure as a Service" },
+        { "left": "PaaS", "right": "Platform as a Service" },
+        { "left": "SaaS", "right": "Software as a Service" },
+        { "left": "Private Cloud", "right": "Data protected behind firewall" },
+        { "left": "Hybrid Cloud", "right": "Combines public and private cloud" }
+      ]
+    },
+    {
+      "id": "tps-ch4-match-02",
+      "pairs": [
+        { "left": "Neural Network", "right": "Imitates brain interconnected neurons" },
+        { "left": "Deep Learning", "right": "Image and speech recognition" },
+        { "left": "Cognitive Computing", "right": "Natural human-like interaction" },
+        { "left": "Computer Vision", "right": "Understanding content of pictures and videos" }
+      ]
+    }
+  ]
+}

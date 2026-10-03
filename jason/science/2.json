@@ -1,0 +1,387 @@
+{
+  "chapter_id": 2,
+  "chapter_name": "Introduction to SEO (Search Engine Optimization)",
+  "subject": "Information Technology (Science)",
+  "standard": "Standard 12 (HSC Maharashtra State Board)",
+  "questions": [
+    {
+      "id": "IT-C02-FIB-001",
+      "chapter_id": 2,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "SEO stands for Search Engine ______.",
+      "options": [],
+      "server_only": {
+        "answer": ["Optimization", "optimization"],
+        "explanation": "SEO stands for Search Engine Optimization, the process of improving site traffic from search engines.",
+        "source_reference": "Balbharati Ex Q1.1, Page 34",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2022"]
+      }
+    },
+    {
+      "id": "IT-C02-FIB-002",
+      "chapter_id": 2,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "The two main types of SEO are On-Page SEO and ______ SEO.",
+      "options": [],
+      "server_only": {
+        "answer": ["Off-Page", "off-page", "Off Page", "off page"],
+        "explanation": "Search engine optimization strategies are divided into on-page and off-page optimization.",
+        "source_reference": "Balbharati Ex Q1.2, Page 34",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2023"]
+      }
+    },
+    {
+      "id": "IT-C02-FIB-003",
+      "chapter_id": 2,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "External links coming from other websites to our website are called ______.",
+      "options": [],
+      "server_only": {
+        "answer": ["backlinks", "Backlinks"],
+        "explanation": "Backlinks (inbound links) represent another site's endorsement of your webpage content.",
+        "source_reference": "Balbharati Ex Q1.3, Page 34",
+        "board_exam_appeared": true,
+        "board_exam_years": ["July 2022", "March 2024"]
+      }
+    },
+    {
+      "id": "IT-C02-FIB-004",
+      "chapter_id": 2,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "The text file that tells web robots which pages to crawl or avoid is named ______.",
+      "options": [],
+      "server_only": {
+        "answer": ["robots.txt"],
+        "explanation": "robots.txt placed in the root directory controls the crawling behavior of search spiders.",
+        "source_reference": "Balbharati Ex Q1.4, Page 34",
+        "board_exam_appeared": false,
+        "board_exam_years": []
+      }
+    },
+    {
+      "id": "IT-C02-FIB-007",
+      "chapter_id": 2,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "The ______ tag is used in HTML to indicate the preferred or master URL for duplicate content pages.",
+      "options": [],
+      "server_only": {
+        "answer": ["canonical", "link rel=\"canonical\""],
+        "explanation": "Canonical tags resolve duplicate content issues by explicitly declaring the authoritative URL version to search crawlers.",
+        "source_reference": "State Board Syllabus Sec 2.3, Page 31",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2022"]
+      }
+    },
+    {
+      "id": "IT-C02-FIB-008",
+      "chapter_id": 2,
+      "exam_section": "Q1",
+      "type": "fill_in_the_blanks",
+      "marks": 1,
+      "difficulty": "hard",
+      "question": "HTTP status code ______ is used by webmasters to signal a permanent redirect to search engines.",
+      "options": [],
+      "server_only": {
+        "answer": ["301"],
+        "explanation": "A 301 redirect passes full link equity to the new destination URL permanently.",
+        "source_reference": "State Board Syllabus Sec 2.4, Page 32",
+        "board_exam_appeared": true,
+        "board_exam_years": ["July 2023"]
+      }
+    },
+    {
+      "id": "IT-C02-TF-001",
+      "chapter_id": 2,
+      "exam_section": "Q2",
+      "type": "true_false",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "SEO helps to increase the number of visitors to a website.",
+      "options": ["True", "False"],
+      "server_only": {
+        "answer": 0,
+        "explanation": "Improving search engine ranking visibility directly increases organic site visitors.",
+        "source_reference": "Balbharati Ex Q2.1, Page 34",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2022"]
+      }
+    },
+    {
+      "id": "IT-C02-TF-002",
+      "chapter_id": 2,
+      "exam_section": "Q2",
+      "type": "true_false",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "Black Hat SEO tactics strictly follow search engine quality guidelines.",
+      "options": ["True", "False"],
+      "server_only": {
+        "answer": 1,
+        "explanation": "White Hat SEO adheres to guidelines; Black Hat SEO utilizes deceptive strategies that risk site penalties.",
+        "source_reference": "Balbharati Ex Q2.2, Page 34",
+        "board_exam_appeared": true,
+        "board_exam_years": ["July 2023"]
+      }
+    },
+    {
+      "id": "IT-C02-TF-003",
+      "chapter_id": 2,
+      "exam_section": "Q2",
+      "type": "true_false",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "Meta description tags should ideally be between 70 to 160 characters.",
+      "options": ["True", "False"],
+      "server_only": {
+        "answer": 0,
+        "explanation": "Search engines typically truncate snippets past 160 characters; keeping descriptions within 70-160 characters ensures full display.",
+        "source_reference": "Balbharati Ex Q2.3, Page 34",
+        "board_exam_appeared": false,
+        "board_exam_years": []
+      }
+    },
+    {
+      "id": "IT-C02-TF-004",
+      "chapter_id": 2,
+      "exam_section": "Q2",
+      "type": "true_false",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "Page title tags have zero impact on search engine rankings.",
+      "options": ["True", "False"],
+      "server_only": {
+        "answer": 1,
+        "explanation": "The <title> tag is one of the single most influential on-page SEO signals for relevance.",
+        "source_reference": "Balbharati Ex Q2.4, Page 34",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2024"]
+      }
+    },
+    {
+      "id": "IT-C02-TF-006",
+      "chapter_id": 2,
+      "exam_section": "Q2",
+      "type": "true_false",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "Google indexes mobile versions of web pages primarily under its mobile-first indexing policy.",
+      "options": ["True", "False"],
+      "server_only": {
+        "answer": 0,
+        "explanation": "Mobile-first indexing uses the mobile version of the content for indexing and ranking across search results.",
+        "source_reference": "State Board Syllabus Sec 2.4, Page 33",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2024"]
+      }
+    },
+    {
+      "id": "IT-C02-TF-007",
+      "chapter_id": 2,
+      "exam_section": "Q2",
+      "type": "true_false",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "Keywords meta tags are currently the most heavily weighted ranking factor in modern search engines.",
+      "options": ["True", "False"],
+      "server_only": {
+        "answer": 1,
+        "explanation": "Major search engines largely ignore meta keywords due to historical keyword stuffing and manipulation.",
+        "source_reference": "State Board Syllabus Sec 2.2, Page 29",
+        "board_exam_appeared": false,
+        "board_exam_years": []
+      }
+    },
+    {
+      "id": "IT-C02-MCQ1-001",
+      "chapter_id": 2,
+      "exam_section": "Q3",
+      "type": "MCQ_correct1",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "Which of the following is an example of an on-page SEO factor?",
+      "options": ["Backlink generation", "Social media engagement", "Image alt attributes", "Guest blogging"],
+      "server_only": {
+        "answer": 2,
+        "explanation": "Adding alt attributes to images is implemented directly in page markup (On-Page SEO).",
+        "source_reference": "Balbharati Ex Q3.1, Page 34",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2023"]
+      }
+    },
+    {
+      "id": "IT-C02-MCQ1-002",
+      "chapter_id": 2,
+      "exam_section": "Q3",
+      "type": "MCQ_correct1",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "The ethical technique that focuses on a human audience is known as ______.",
+      "options": ["Black Hat SEO", "Grey Hat SEO", "White Hat SEO", "Red Hat SEO"],
+      "server_only": {
+        "answer": 2,
+        "explanation": "White Hat SEO focuses on delivering quality user experience in accordance with search engine policies.",
+        "source_reference": "Balbharati Ex Q3.2, Page 34",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2022", "March 2024"]
+      }
+    },
+    {
+      "id": "IT-C02-MCQ1-003",
+      "chapter_id": 2,
+      "exam_section": "Q3",
+      "type": "MCQ_correct1",
+      "marks": 1,
+      "difficulty": "medium",
+      "question": "Which Google tool helps monitor and maintain a website's presence in search engine results?",
+      "options": ["Google Analytics", "Google Search Console", "Google Trends", "Google Ads"],
+      "server_only": {
+        "answer": 1,
+        "explanation": "Google Search Console allows webmasters to review indexing status and resolve crawling issues.",
+        "source_reference": "Balbharati Ex Q3.3, Page 34",
+        "board_exam_appeared": false,
+        "board_exam_years": []
+      }
+    },
+    {
+      "id": "IT-C02-MCQ1-005",
+      "chapter_id": 2,
+      "exam_section": "Q3",
+      "type": "MCQ_correct1",
+      "marks": 1,
+      "difficulty": "easy",
+      "question": "What is the recommended maximum character limit for the <title> tag in search snippets?",
+      "options": ["30 characters", "60 characters", "160 characters", "250 characters"],
+      "server_only": {
+        "answer": 1,
+        "explanation": "Search engines typically display the first 50-60 characters of a page title before truncating.",
+        "source_reference": "State Board Syllabus Sec 2.2, Page 28",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2020"]
+      }
+    },
+    {
+      "id": "IT-C02-MCQ2-001",
+      "chapter_id": 2,
+      "exam_section": "Q4",
+      "type": "MCQ_correct2",
+      "marks": 2,
+      "difficulty": "medium",
+      "question": "Which TWO of the following are classified as Black Hat SEO techniques?",
+      "options": ["Keyword stuffing", "Quality content creation", "Doorway pages", "Mobile-friendly design", "Internal linking"],
+      "server_only": {
+        "answer": [0, 2],
+        "explanation": "Keyword stuffing and doorway pages attempt to manipulate rankings deceptively and violate search guidelines.",
+        "source_reference": "Balbharati Ex Q4.1, Page 35",
+        "board_exam_appeared": true,
+        "board_exam_years": ["July 2022", "March 2024"]
+      }
+    },
+    {
+      "id": "IT-C02-MCQ2-002",
+      "chapter_id": 2,
+      "exam_section": "Q4",
+      "type": "MCQ_correct2",
+      "marks": 2,
+      "difficulty": "medium",
+      "question": "Which TWO elements inside the HTML <head> section are primary factors for on-page SEO?",
+      "options": ["<title>", "<div>", "<meta>", "<span>", "<header>"],
+      "server_only": {
+        "answer": [0, 2],
+        "explanation": "<title> and <meta> tags reside in the document head and provide critical indexing metadata.",
+        "source_reference": "Balbharati Ex Q4.2, Page 35",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2023"]
+      }
+    },
+    {
+      "id": "IT-C02-MCQ2-004",
+      "chapter_id": 2,
+      "exam_section": "Q4",
+      "type": "MCQ_correct2",
+      "marks": 2,
+      "difficulty": "medium",
+      "question": "Which TWO of the following are legitimate Off-Page SEO practices?",
+      "options": ["Guest blogging on authoritative domains", "Social media brand promotion", "Modifying meta viewport tags", "Adding alt text to local images", "Optimizing URL slugs"],
+      "server_only": {
+        "answer": [0, 1],
+        "explanation": "Guest blogging and social media promotion occur off-site, building external authority.",
+        "source_reference": "State Board Syllabus Sec 2.1, Page 27",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2023"]
+      }
+    },
+    {
+      "id": "IT-C02-MCQ3-001",
+      "chapter_id": 2,
+      "exam_section": "Q5",
+      "type": "MCQ_correct3",
+      "marks": 3,
+      "difficulty": "medium",
+      "question": "Which THREE factors are standard metrics assessed during a Technical SEO audit?",
+      "options": ["Page speed", "Mobile responsiveness", "SSL certificate (HTTPS)", "RAM size of server", "Monitor resolution", "Color of CPU cabinet"],
+      "server_only": {
+        "answer": [0, 1, 2],
+        "explanation": "Technical SEO evaluates page loading performance, responsive formatting, and secure protocol implementation (HTTPS).",
+        "source_reference": "Balbharati Ex Q5.1, Page 35",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2022"]
+      }
+    },
+    {
+      "id": "IT-C02-MCQ3-002",
+      "chapter_id": 2,
+      "exam_section": "Q5",
+      "type": "MCQ_correct3",
+      "marks": 3,
+      "difficulty": "hard",
+      "question": "Which THREE factors are standard on-page technical metrics measured by SEOptimer?",
+      "options": ["Mobile usability and viewport responsiveness", "Page loading speed performance", "HTTPS security configuration", "Physical room temperature of the data center", "Printer spooler status", "Keyboard polling frequency"],
+      "server_only": {
+        "answer": [0, 1, 2],
+        "explanation": "Audit tools evaluate usability, speed, and transport-layer security.",
+        "source_reference": "State Board Syllabus Sec 2.4, Page 33",
+        "board_exam_appeared": true,
+        "board_exam_years": ["July 2022", "March 2024"]
+      }
+    },
+    {
+      "id": "IT-C02-MTP-001",
+      "chapter_id": 2,
+      "exam_section": "Q6",
+      "type": "match_the_pair",
+      "marks": 4,
+      "difficulty": "medium",
+      "question": "Match the SEO concepts in Column A with their correct descriptions in Column B.",
+      "options": [],
+      "server_only": {
+        "answer": [
+          { "column_a": "White Hat SEO", "column_b": "Follows search engine guidelines" },
+          { "column_a": "Black Hat SEO", "column_b": "Deceptive keyword stuffing and cloaking" },
+          { "column_a": "Backlinks", "column_b": "Inbound links from external domains" },
+          { "column_a": "robots.txt", "column_b": "Crawling directives for web spiders" }
+        ],
+        "explanation": "Standard definitions of optimization classifications, link dynamics, and crawler instructions.",
+        "source_reference": "Balbharati Ex Q6, Page 35",
+        "board_exam_appeared": true,
+        "board_exam_years": ["March 2023", "March 2024"]
+      }
+    }
+  ]
+}

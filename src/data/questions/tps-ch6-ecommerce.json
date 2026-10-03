@@ -1,0 +1,95 @@
+{
+  "chapter_id": 6,
+  "chapter_name": "E-Commerce and E-Governance",
+  "subject_stream": ["science", "commerce", "arts"],
+  "source": "TPS Notes - 12th IT",
+  "q1_fill_in_the_blanks": [
+    { "id": "tps-ch6-fb-01", "question": "E-Commerce stands for _____.", "answer": "Electronic Commerce" },
+    { "id": "tps-ch6-fb-02", "question": "In E-Commerce, trading activities are online and the scope is _____.", "answer": "global" },
+    { "id": "tps-ch6-fb-03", "question": "In the _____ model, business sells its products directly to the customer.", "answer": "B2C" },
+    { "id": "tps-ch6-fb-04", "question": "In the _____ model, business sells products to an intermediate buyer who then sells to the final customer.", "answer": "B2B" },
+    { "id": "tps-ch6-fb-05", "question": "Online auction sites like OLX and Quikr are examples of the _____ model.", "answer": "C2C" },
+    { "id": "tps-ch6-fb-06", "question": "The _____ phase of the Trade Cycle consists of search and negotiate.", "answer": "Pre-sales" },
+    { "id": "tps-ch6-fb-07", "question": "The _____ phase of the Trade Cycle consists of order and delivery.", "answer": "Execution" },
+    { "id": "tps-ch6-fb-08", "question": "The _____ phase of the Trade Cycle consists of invoice and payment.", "answer": "Settlement" },
+    { "id": "tps-ch6-fb-09", "question": "The _____ phase of the Trade Cycle consists of warranty and after-sale services.", "answer": "After-sales" },
+    { "id": "tps-ch6-fb-10", "question": "E-wallet is a type of _____ account in which a user can store money for future transactions.", "answer": "prepaid" },
+    { "id": "tps-ch6-fb-11", "question": "Buying and selling goods through handheld devices like smartphones and tablets is called _____.", "answer": "M-Commerce" },
+    { "id": "tps-ch6-fb-12", "question": "EDI stands for Electronic _____ Interchange.", "answer": "Data" },
+    { "id": "tps-ch6-fb-13", "question": "Business entities conducting business electronically through EDI are called _____.", "answer": "Trading Partners" },
+    { "id": "tps-ch6-fb-14", "question": "E-Governance delivers _____ governance (Simple, Moral, Accessible, Responsive, Transparent).", "answer": "SMART" },
+    { "id": "tps-ch6-fb-15", "question": "License renewals and paying taxes online are examples of the _____ model of E-Governance.", "answer": "G2C" },
+    { "id": "tps-ch6-fb-16", "question": "Applying for leave and checking holiday balance online by staff is an example of the _____ model.", "answer": "G2E" },
+    { "id": "tps-ch6-fb-17", "question": "The process of converting plain text into cipher text is called _____.", "answer": "encryption" },
+    { "id": "tps-ch6-fb-18", "question": "The process of converting cipher text back into plain text is called _____.", "answer": "decryption" },
+    { "id": "tps-ch6-fb-19", "question": "A _____ guarantees the authenticity of an electronic document and is also known as an electronic signature.", "answer": "Digital Signature" },
+    { "id": "tps-ch6-fb-20", "question": "PKI stands for Public Key _____.", "answer": "Infrastructure" }
+  ],
+  "q2_true_false": [
+    { "id": "tps-ch6-tf-01", "statement": "Traditional commerce is limited to business hours, whereas E-Commerce is 24x7.", "answer": true },
+    { "id": "tps-ch6-tf-02", "statement": "Traditional commerce has a global scope.", "answer": false },
+    { "id": "tps-ch6-tf-03", "statement": "In the B2C model, business sells directly to consumers.", "answer": true },
+    { "id": "tps-ch6-tf-04", "statement": "OLX and Quikr are examples of B2B e-commerce model.", "answer": false },
+    { "id": "tps-ch6-tf-05", "statement": "Execution phase of the trade cycle consists of order and delivery.", "answer": true },
+    { "id": "tps-ch6-tf-06", "statement": "Settlement phase of the trade cycle consists of search and negotiate.", "answer": false },
+    { "id": "tps-ch6-tf-07", "statement": "E-wallet is a type of post-paid account.", "answer": false },
+    { "id": "tps-ch6-tf-08", "statement": "EDI is the electronic interchange of business information using a standardized format.", "answer": true },
+    { "id": "tps-ch6-tf-09", "statement": "G2E is an internal part of the G2G sector of E-Governance.", "answer": true },
+    { "id": "tps-ch6-tf-10", "statement": "Conversion of plain text into cipher text is called decryption.", "answer": false },
+    { "id": "tps-ch6-tf-11", "statement": "Encryption is of two types: Symmetric and Asymmetric.", "answer": true }
+  ],
+  "q3_mcq_single": [
+    { "id": "tps-ch6-mcq1-01", "question": "In which model does a business sell its products directly to a customer?", "options": ["C2B", "B2C", "B2B", "C2C"], "answer": "B2C" },
+    { "id": "tps-ch6-mcq1-02", "question": "Online auction is an example of which E-Commerce model?", "options": ["C2B", "B2C", "B2B", "C2C"], "answer": "C2C" },
+    { "id": "tps-ch6-mcq1-03", "question": "Invoice and Payment are parts of which phase of the Trade Cycle?", "options": ["Pre-sales", "Execution", "Settlement", "After-sales"], "answer": "Settlement" },
+    { "id": "tps-ch6-mcq1-04", "question": "Buying and selling through handheld devices like smartphones and tablets is called _____.", "options": ["Trade Cycle", "M-Commerce", "Social Commerce", "EDI"], "answer": "M-Commerce" },
+    { "id": "tps-ch6-mcq1-05", "question": "EDI stands for _____.", "options": ["Easy Data Interchange", "Economic Data Interchange", "Electronic Data Interchange", "Enable Data Interchange"], "answer": "Electronic Data Interchange" },
+    { "id": "tps-ch6-mcq1-06", "question": "License renewal and paying tax online are examples of which E-Governance service?", "options": ["G2E", "G2C", "G2B", "G2G"], "answer": "G2C" },
+    { "id": "tps-ch6-mcq1-07", "question": "The conversion of plain text into cipher text is called _____.", "options": ["decryption", "encryption", "digital signature", "digital certificate"], "answer": "encryption" },
+    { "id": "tps-ch6-mcq1-08", "question": "PKI stands for _____.", "options": ["Public Key Infrastructure", "Personal Key Certificate", "Publish Key Certificate", "Person Key Certificate"], "answer": "Public Key Infrastructure" }
+  ],
+  "q4_mcq_two_correct": [
+    { "id": "tps-ch6-mcq2-01", "question": "The pre-sales phase of the Trade Cycle consists of _____ and _____.", "options": ["Order", "Delivery", "Search", "Negotiate", "Invoice"], "answer": ["Search", "Negotiate"] },
+    { "id": "tps-ch6-mcq2-02", "question": "The execution phase of the Trade Cycle consists of _____ and _____.", "options": ["Order", "Delivery", "Search", "Payment", "Warranty"], "answer": ["Order", "Delivery"] },
+    { "id": "tps-ch6-mcq2-03", "question": "The settlement phase of the Trade Cycle consists of _____ and _____.", "options": ["Search", "Invoice", "Negotiate", "Payment", "Delivery"], "answer": ["Invoice", "Payment"] },
+    { "id": "tps-ch6-mcq2-04", "question": "Two common documents exchanged using EDI are _____ and _____.", "options": ["Purchase orders", "Word documents", "Invoices", "Flyers", "Spreadsheets"], "answer": ["Purchase orders", "Invoices"] },
+    { "id": "tps-ch6-mcq2-05", "question": "Encryption consists of two opposite processes: _____ and _____.", "options": ["EDI", "Encryption", "Decryption", "Signature", "Trade Cycle"], "answer": ["Encryption", "Decryption"] },
+    { "id": "tps-ch6-mcq2-06", "question": "Social Commerce utilizes social networks like _____ and _____ to sell products.", "options": ["Facebook", "Twitter", "Gmail", "Google Docs", "Notepad"], "answer": ["Facebook", "Twitter"] }
+  ],
+  "q5_mcq_three_correct": [
+    { "id": "tps-ch6-mcq3-01", "question": "Advantages of E-Commerce include _____.", "options": ["Global scope", "Cost saving", "Anytime shopping", "High setup cost", "Delivery delays", "Lack of physical touch"], "answer": ["Global scope", "Cost saving", "Anytime shopping"] },
+    { "id": "tps-ch6-mcq3-02", "question": "Phases of the E-Commerce Trade Cycle include _____.", "options": ["Pre-sales", "Execution", "Settlement", "C2B", "B2C", "C2C"], "answer": ["Pre-sales", "Execution", "Settlement"] },
+    { "id": "tps-ch6-mcq3-03", "question": "Popular electronic modes of payment include _____.", "options": ["Mobile payments", "Bank transfer", "E-wallets", "Postal money order", "Barter exchange", "Promissory note"], "answer": ["Mobile payments", "Bank transfer", "E-wallets"] },
+    { "id": "tps-ch6-mcq3-04", "question": "Types of E-Governance models are _____.", "options": ["G2C", "G2G", "G2E", "C2B", "B2B", "C2C"], "answer": ["G2C", "G2G", "G2E"] },
+    { "id": "tps-ch6-mcq3-05", "question": "Primary security measures in E-Commerce include _____.", "options": ["Encryption", "Digital Signature", "Digital Certificate", "EDI", "Trade Cycle", "B2C"], "answer": ["Encryption", "Digital Signature", "Digital Certificate"] }
+  ],
+  "q6_match_following": [
+    {
+      "id": "tps-ch6-match-01",
+      "pairs": [
+        { "left": "Pre-sales", "right": "Search and Negotiate" },
+        { "left": "Execution", "right": "Order and Delivery" },
+        { "left": "Settlement", "right": "Invoice and Payment" },
+        { "left": "After-sales", "right": "Warranty and Services" }
+      ]
+    },
+    {
+      "id": "tps-ch6-match-02",
+      "pairs": [
+        { "left": "G2C", "right": "Citizen public services like tax & license" },
+        { "left": "G2B", "right": "Services between govt and businesses" },
+        { "left": "G2G", "right": "Agencies sharing same database" },
+        { "left": "G2E", "right": "Online facility for employee leaves & salary" }
+      ]
+    },
+    {
+      "id": "tps-ch6-match-03",
+      "pairs": [
+        { "left": "Encryption", "right": "Converts plain text into cipher text" },
+        { "left": "Decryption", "right": "Converts cipher text into plain text" },
+        { "left": "Digital Signature", "right": "Electronic signature for authentication" },
+        { "left": "Digital Certificate", "right": "Public key certificate using PKI" }
+      ]
+    }
+  ]
+}

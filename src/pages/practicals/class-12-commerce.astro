@@ -1,0 +1,991 @@
+---
+import PortalLayout from "../../layouts/PortalLayout.astro";
+
+const sops = [
+  {
+    id: "sop-1",
+    group: "Group A: Web Designing",
+    badge: "Group A • 15 Marks",
+    title: "SOP 1: Commercial Order & Feedback Form (HTML5 & CSS3)",
+    tabTitle: "Customer Order & Feedback Form",
+    filename: "order_form.html",
+    fileUrl: "file:///C:/HSC_IT_Commerce/order_form.html",
+    videoUrl: "#",
+    aim: "Design an online customer order and feedback form for an e-commerce platform using HTML5 semantic form controls: name, email, tel, date, color, range, url, submit and reset buttons. Apply CSS3 Flexbox and box-model properties for styling.",
+    code: `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Customer Order & Feedback Form</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f1f5f9;
+      padding: 20px;
+    }
+    .form-container {
+      max-width: 500px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border: 1px solid #e2e8f0;
+    }
+    h2 {
+      text-align: center;
+      color: #059669;
+      margin-bottom: 20px;
+    }
+    label {
+      font-weight: 600;
+      font-size: 13px;
+      color: #334155;
+      display: block;
+      margin-top: 12px;
+    }
+    input[type="text"], input[type="email"], input[type="tel"],
+    input[type="date"], input[type="url"], input[type="number"] {
+      width: 100%;
+      padding: 9px;
+      margin-top: 5px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      box-sizing: border-box;
+      font-size: 13px;
+    }
+    .range-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 5px;
+    }
+    .btn-group {
+      margin-top: 25px;
+      display: flex;
+      gap: 12px;
+    }
+    input[type="submit"], input[type="reset"] {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    input[type="submit"] {
+      background-color: #059669;
+      color: #ffffff;
+    }
+    input[type="reset"] {
+      background-color: #e2e8f0;
+      color: #475569;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>E-Shop Customer Feedback</h2>
+    <form action="#" method="post">
+      <label for="cname">Customer Name:</label>
+      <input type="text" id="cname" name="cname" required autofocus placeholder="Enter full name">
+
+      <label for="cemail">Email Address:</label>
+      <input type="email" id="cemail" name="cemail" required placeholder="customer@mail.com">
+
+      <label for="cphone">Mobile Number:</label>
+      <input type="tel" id="cphone" name="cphone" pattern="[0-9]{10}" required placeholder="10-digit mobile number">
+
+      <label for="pdate">Date of Purchase:</label>
+      <input type="date" id="pdate" name="pdate" required>
+
+      <label for="pqty">Quantity Purchased (Min 1, Max 10):</label>
+      <input type="number" id="pqty" name="pqty" min="1" max="10" required>
+
+      <label for="rating">Satisfaction Rating (1 to 5):</label>
+      <div class="range-box">
+        <span>1</span>
+        <input type="range" id="rating" name="rating" min="1" max="5" value="4">
+        <span>5</span>
+      </div>
+
+      <div class="btn-group">
+        <input type="submit" value="Submit Feedback">
+        <input type="reset" value="Clear Form">
+      </div>
+    </form>
+  </div>
+</body>
+</html>`,
+    outputSummary: "Generates an e-commerce order and customer review card with HTML5 client-side constraints (pattern for telephone, type=email, min/max for quantity, type=range) and CSS3 Flexbox button alignments."
+  },
+  {
+    id: "sop-2",
+    group: "Group A: Web Designing",
+    badge: "Group A • 15 Marks",
+    title: "SOP 2: Semantic Business Layout & Multimedia",
+    tabTitle: "Corporate E-Commerce Portal",
+    filename: "corporate_portal.html",
+    fileUrl: "file:///C:/HSC_IT_Commerce/corporate_portal.html",
+    videoUrl: "#",
+    aim: "Create a semantic corporate web page using HTML5 layout tags (<header>, <nav>, <section>, <article>, <aside>, <footer>) and integrate multimedia elements (<audio> and <video>) with CSS styling.",
+    code: `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Corporate E-Commerce Portal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8fafc;
+      color: #1e293b;
+    }
+    header {
+      background: #059669;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #0f172a;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: #94a3b8;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 13px;
+    }
+    nav a:hover {
+      color: #ffffff;
+    }
+    .main-wrapper {
+      display: flex;
+      max-width: 1000px;
+      margin: 20px auto;
+      gap: 20px;
+      padding: 0 15px;
+    }
+    section {
+      flex: 3;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+    }
+    aside {
+      flex: 1;
+      background: #ecfdf5;
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid #a7f3d0;
+    }
+    footer {
+      background: #0f172a;
+      color: #94a3b8;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Global Trade Services Ltd</h1>
+    <p>International Logistics & Commercial Solutions</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Services</a>
+    <a href="#">Products</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="main-wrapper">
+    <section>
+      <article>
+        <h2>Annual Trade Conference 2027</h2>
+        <p>Watch our corporate presentation overview below:</p>
+        <video width="100%" height="240" controls poster="poster.jpg">
+          <source src="trade-overview.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </article>
+
+      <article style="margin-top: 20px;">
+        <h3>Executive Audio Announcement</h3>
+        <audio controls>
+          <source src="announcement.mp3" type="audio/mpeg">
+          Your browser does not support the audio tag.
+        </audio>
+      </article>
+    </section>
+
+    <aside>
+      <h3>Latest Updates</h3>
+      <p>GST Council updates for digital service transactions are now in effect.</p>
+    </aside>
+  </div>
+
+  <footer>
+    <p>&copy; 2026-2027 Global Trade Services Ltd. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>`,
+    outputSummary: "Renders an accessible multi-column corporate page structured with modern HTML5 semantic elements and embedded media players with user playback controls."
+  },
+  {
+    id: "sop-3",
+    group: "Group B: JavaScript & Validation",
+    badge: "Group B • 15 Marks",
+    title: "SOP 3: Commercial Invoice & GST Calculator",
+    tabTitle: "Commercial Invoice Billing",
+    filename: "gst_invoice.html",
+    fileUrl: "file:///C:/HSC_IT_Commerce/gst_invoice.html",
+    videoUrl: "#",
+    aim: "Write a JavaScript program to compute a commercial invoice total with 18% GST (CGST 9% + SGST 9%) and apply form validation to verify numeric pricing and minimum order limits.",
+    code: `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Commercial Invoice Billing</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f8fafc; }
+    .invoice-card { max-width: 440px; margin: auto; padding: 25px; background: #fff; border-radius: 10px; border: 1px solid #cbd5e1; }
+    h3 { color: #059669; text-align: center; }
+    label { display: block; margin-top: 10px; font-weight: bold; font-size: 13px; }
+    input { width: 100%; padding: 8px; margin-top: 5px; box-sizing: border-box; }
+    button { width: 100%; margin-top: 15px; padding: 10px; background: #059669; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; }
+    .bill-summary { margin-top: 15px; padding: 12px; background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 6px; font-size: 13px; }
+    .error { color: #dc2626; font-size: 12px; margin-top: 5px; }
+  </style>
+  <script>
+    function calculateInvoice(event) {
+      event.preventDefault();
+      let itemName = document.getElementById("item_name").value.trim();
+      let price = parseFloat(document.getElementById("item_price").value);
+      let qty = parseInt(document.getElementById("item_qty").value);
+      let errDiv = document.getElementById("errBox");
+      let resDiv = document.getElementById("resultBox");
+
+      errDiv.textContent = "";
+      resDiv.innerHTML = "";
+
+      if (isNaN(price) || price <= 0) {
+        errDiv.textContent = "Error: Please enter a valid positive unit price.";
+        return false;
+      }
+      if (isNaN(qty) || qty <= 0) {
+        errDiv.textContent = "Error: Quantity must be at least 1 unit.";
+        return false;
+      }
+
+      let subtotal = price * qty;
+      let cgst = subtotal * 0.09;
+      let sgst = subtotal * 0.09;
+      let totalGst = cgst + sgst;
+      let finalBill = subtotal + totalGst;
+
+      resDiv.innerHTML = 
+        "<strong>Product:</strong> " + itemName + "<br>" +
+        "<strong>Subtotal:</strong> ₹" + subtotal.toFixed(2) + "<br>" +
+        "<strong>CGST (9%):</strong> ₹" + cgst.toFixed(2) + "<br>" +
+        "<strong>SGST (9%):</strong> ₹" + sgst.toFixed(2) + "<br>" +
+        "<strong>Total GST (18%):</strong> ₹" + totalGst.toFixed(2) + "<br>" +
+        "<hr style='border:0; border-top:1px solid #a7f3d0; margin:8px 0;'>" +
+        "<strong style='color:#059669; font-size:15px;'>Net Payable: ₹" + finalBill.toFixed(2) + "</strong>";
+
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <div class="invoice-card">
+    <h3>Tax Invoice Generator</h3>
+    <form onsubmit="return calculateInvoice(event)">
+      <label for="item_name">Item Description:</label>
+      <input type="text" id="item_name" required placeholder="e.g. Office Chair">
+
+      <label for="item_price">Unit Price (₹):</label>
+      <input type="number" id="item_price" step="0.01" required placeholder="0.00">
+
+      <label for="item_qty">Quantity:</label>
+      <input type="number" id="item_qty" required placeholder="1">
+
+      <div id="errBox" class="error"></div>
+      <button type="submit">Compute GST & Generate Bill</button>
+    </form>
+
+    <div id="resultBox" class="bill-summary">Bill summary will render here...</div>
+  </div>
+</body>
+</html>`,
+    outputSummary: "Evaluates user inputs via client-side DOM scripting, executes numeric validations (isNaN, boundaries), and calculates accurate commercial breakdowns (Subtotal, 9% CGST, 9% SGST, Net Payable Amount)."
+  },
+  {
+    id: "sop-4",
+    group: "Group B: Database (LibreOffice Base)",
+    badge: "Group B • 15 Marks",
+    title: "SOP 4: RDBMS Table Design & SQL Querying",
+    tabTitle: "LibreOffice Base 7.5 — CommerceDB.odb [Employee_Payroll]",
+    filename: "commerce_db.sql",
+    fileUrl: "base:///C:/HSC_IT_Commerce/CommerceDB.odb",
+    videoUrl: "#",
+    aim: "Create a database 'CommerceDB' in LibreOffice Base, design an 'Employee_Payroll' table with field types and Primary Key, insert records, and execute SQL queries to retrieve filtered records.",
+    code: `-- 1. Table Creation with Primary Key
+CREATE TABLE "Employee_Payroll" (
+    "Emp_ID" VARCHAR(10) PRIMARY KEY,
+    "Emp_Name" VARCHAR(50) NOT NULL,
+    "Department" VARCHAR(30),
+    "Designation" VARCHAR(30),
+    "Basic_Salary" DECIMAL(10,2),
+    "Joining_Date" DATE
+);
+
+-- 2. Insert Commercial Records
+INSERT INTO "Employee_Payroll" VALUES ('EMP01', 'Rahul Sharma', 'Accounts', 'Manager', 55000.00, '2023-01-15');
+INSERT INTO "Employee_Payroll" VALUES ('EMP02', 'Priya Deshmukh', 'Sales', 'Executive', 32000.00, '2023-04-10');
+INSERT INTO "Employee_Payroll" VALUES ('EMP03', 'Amit Kulkarni', 'Finance', 'Auditor', 48000.00, '2022-11-01');
+INSERT INTO "Employee_Payroll" VALUES ('EMP04', 'Sneha Patil', 'Accounts', 'Clerk', 28000.00, '2024-02-20');
+
+-- 3. Board Practical SQL Queries:
+
+-- Query A: Display all employees in the 'Accounts' department
+SELECT "Emp_ID", "Emp_Name", "Designation", "Basic_Salary" 
+FROM "Employee_Payroll" 
+WHERE "Department" = 'Accounts';
+
+-- Query B: List employees earning salary greater than 30,000 in descending order
+SELECT "Emp_Name", "Department", "Basic_Salary" 
+FROM "Employee_Payroll" 
+WHERE "Basic_Salary" > 30000 
+ORDER BY "Basic_Salary" DESC;`,
+    outputSummary: "Demonstrates RDBMS schema design using Design View / SQL View in LibreOffice Base, setting Primary Key, establishing valid Field Types, and querying table data using SELECT, WHERE, and ORDER BY."
+  },
+  {
+    id: "sop-5",
+    group: "Group B: Digital Accounting",
+    badge: "Group B • 15 Marks",
+    title: "SOP 5: Ledger Creation & Voucher Transactions with GST",
+    tabTitle: "Computerized Accounting Software — Day Book [Vikas Traders]",
+    filename: "accounting_vouchers.txt",
+    fileUrl: "tally:///Vikas_Traders/Day_Book_2026_27",
+    videoUrl: "#",
+    aim: "In an authorized Computerized Accounting software package, establish a new company 'Vikas Traders', set up Ledger accounts under appropriate Account Groups, and pass voucher entries for Payment, Receipt, Sales, and Purchase with GST.",
+    code: `/* ==========================================================
+   COMPUTERIZED ACCOUNTING PRACTICAL (MAHARASHTRA BOARD)
+   Company: Vikas Traders (Financial Year: 2026-2027)
+   ========================================================== */
+
+Step 1: Company Creation
+  - Company Name: M/s Vikas Traders
+  - State: Maharashtra | Currency: INR (₹)
+  - Accounts with Inventory: Yes
+
+Step 2: Ledger Setup & Account Groups
+  1. State Bank of India  --> Under: Bank Accounts
+  2. Capital Account      --> Under: Capital Account
+  3. M/s Zenith Supplies  --> Under: Sundry Creditors
+  4. M/s Apex Retailers   --> Under: Sundry Debtors
+  5. Purchase A/c         --> Under: Purchase Accounts
+  6. Sales A/c            --> Under: Sales Accounts
+  7. Input CGST (9%)      --> Under: Duties & Taxes (GST)
+  8. Input SGST (9%)      --> Under: Duties & Taxes (GST)
+  9. Output CGST (9%)     --> Under: Duties & Taxes (GST)
+  10. Output SGST (9%)    --> Under: Duties & Taxes (GST)
+
+Step 3: Journalizing & Passing Voucher Entries
+
+  Transaction 1: Business started with Cash ₹1,00,000 deposited in SBI.
+  Voucher: F4 (Contra Voucher)
+    Debit:  State Bank of India (₹1,00,000)
+    Credit: Cash Account        (₹1,00,000)
+
+  Transaction 2: Purchased merchandise on credit from M/s Zenith Supplies for ₹50,000 + 18% GST.
+  Voucher: F9 (Purchase Voucher)
+    Debit:  Purchase A/c         (₹50,000)
+    Debit:  Input CGST (9%)      (₹4,500)
+    Debit:  Input SGST (9%)      (₹4,500)
+    Credit: M/s Zenith Supplies  (₹59,000)
+
+  Transaction 3: Sold goods on credit to M/s Apex Retailers for ₹80,000 + 18% GST.
+  Voucher: F8 (Sales Voucher)
+    Debit:  M/s Apex Retailers   (₹94,400)
+    Credit: Sales A/c            (₹80,000)
+    Credit: Output CGST (9%)     (₹7,200)
+    Credit: Output SGST (9%)     (₹7,200)
+
+  Transaction 4: Received cheque from M/s Apex Retailers in settlement.
+  Voucher: F6 (Receipt Voucher)
+    Debit:  State Bank of India  (₹94,400)
+    Credit: M/s Apex Retailers   (₹94,400)
+
+  Transaction 5: Paid electricity bill via bank cheque ₹3,500.
+  Voucher: F5 (Payment Voucher)
+    Debit:  Electricity Expenses A/c (₹3,500)
+    Credit: State Bank of India      (₹3,500)`,
+    outputSummary: "Demonstrates step-by-step voucher preparation, mapping chart of accounts to correct primary groups, calculation of CGST/SGST duties, and recording accounting transactions through F4, F5, F6, F8, and F9 vouchers."
+  }
+];
+---
+
+<PortalLayout title="Class 12 Commerce IT SOP Practicals">
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 py-12">
+    
+    <!-- Header Banner -->
+    <div class="mb-10 text-center max-w-3xl mx-auto">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/20 text-emerald-800 dark:text-emerald-300 text-xs font-mono font-bold tracking-tight mb-4">
+        <span>📊</span> Maharashtra Board Class 12 Commerce (Code 99)
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+        Commerce Skill Oriented Practicals (SOP)
+      </h1>
+      <p class="text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+        Board-certified practical solutions for Web Designing, JavaScript validation, LibreOffice Base RDBMS, and Computerized Accounting with authentic Windows Chrome output snapshots.
+      </p>
+    </div>
+
+    <!-- Official HSC Practical Exam Mark Scheme Callout -->
+    <div class="rounded-2xl border border-emerald-200 dark:border-emerald-500/30 bg-emerald-50/60 dark:bg-emerald-950/20 p-5 sm:p-6 mb-10 shadow-sm">
+      <div class="flex items-center justify-between mb-3">
+        <span class="text-xs font-mono font-bold uppercase tracking-wider text-emerald-800 dark:text-emerald-300">
+          Official Practical Slip Distribution (Total: 50 Marks)
+        </span>
+        <span class="text-xs font-mono font-bold bg-emerald-600 text-white px-2.5 py-0.5 rounded-full">
+          HSC Board Standard
+        </span>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+        <div class="bg-white dark:bg-slate-900 p-3 rounded-xl border border-slate-200 dark:border-slate-800">
+          <p class="text-slate-400 font-mono text-[10px]">GROUP A QUESTION</p>
+          <p class="font-bold text-slate-900 dark:text-white text-base mt-0.5">15 Marks</p>
+          <span class="text-[11px] text-slate-500">HTML5 & CSS Layout</span>
+        </div>
+        <div class="bg-white dark:bg-slate-900 p-3 rounded-xl border border-slate-200 dark:border-slate-800">
+          <p class="text-slate-400 font-mono text-[10px]">GROUP B QUESTION</p>
+          <p class="font-bold text-slate-900 dark:text-white text-base mt-0.5">15 Marks</p>
+          <span class="text-[11px] text-slate-500">JS / Base / Accounting</span>
+        </div>
+        <div class="bg-white dark:bg-slate-900 p-3 rounded-xl border border-slate-200 dark:border-slate-800">
+          <p class="text-slate-400 font-mono text-[10px]">CERTIFIED JOURNAL</p>
+          <p class="font-bold text-slate-900 dark:text-white text-base mt-0.5">10 Marks</p>
+          <span class="text-[11px] text-slate-500">Signed Workbook</span>
+        </div>
+        <div class="bg-white dark:bg-slate-900 p-3 rounded-xl border border-slate-200 dark:border-slate-800">
+          <p class="text-slate-400 font-mono text-[10px]">ORAL VIVA VOCE</p>
+          <p class="font-bold text-slate-900 dark:text-white text-base mt-0.5">10 Marks</p>
+          <span class="text-[11px] text-slate-500">External Examiner</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Jump Table of Contents -->
+    <div class="p-5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 mb-10 shadow-sm">
+      <p class="text-xs font-mono font-bold uppercase tracking-wider text-slate-400 mb-3">Jump to Practical Exercise</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+        {sops.map((sop) => (
+          <a href={`#${sop.id}`} class="p-2.5 rounded-lg border border-slate-100 dark:border-slate-800 hover:border-emerald-500/50 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition flex items-center justify-between group">
+            <span class="font-medium text-slate-700 dark:text-slate-300 group-hover:text-emerald-600 dark:group-hover:text-emerald-400">{sop.title}</span>
+            <span class="text-[10px] font-mono text-slate-400 font-bold">Jump ↓</span>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <!-- SOP Solution Cards -->
+    <div class="space-y-16">
+      {sops.map((sop) => (
+        <article id={sop.id} class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-md overflow-hidden transition-all">
+          
+          <!-- Card Header with Action Buttons -->
+          <div class="p-6 border-b border-slate-100 dark:border-slate-800/80 bg-slate-50/60 dark:bg-slate-950/40 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400 uppercase">
+                  {sop.group}
+                </span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-500/10 text-emerald-800 dark:text-emerald-300 font-bold">
+                  {sop.badge}
+                </span>
+              </div>
+              <h2 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white mt-1">
+                {sop.title}
+              </h2>
+            </div>
+            
+            <!-- Button Group: Video Tutorial + Copy Solution -->
+            <div class="flex items-center gap-2.5 flex-wrap">
+              <a 
+                href={sop.videoUrl} 
+                target={sop.videoUrl !== '#' ? "_blank" : undefined}
+                rel={sop.videoUrl !== '#' ? "noopener noreferrer" : undefined}
+                class="video-btn px-3.5 py-2 rounded-lg border border-rose-200 dark:border-rose-900/40 bg-rose-50 dark:bg-rose-950/30 hover:bg-rose-100 dark:hover:bg-rose-900/50 text-rose-700 dark:text-rose-300 font-semibold text-xs transition shadow-sm flex items-center justify-center gap-1.5 cursor-pointer shrink-0 group"
+                title={sop.videoUrl === '#' ? "Video tutorial coming soon" : "Watch step-by-step video"}
+              >
+                <svg class="w-4 h-4 text-rose-600 dark:text-rose-400 transition group-hover:scale-110" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+                <span>Watch Video Tutorial</span>
+              </a>
+
+              <button 
+                type="button" 
+                class="copy-btn px-3.5 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs transition shadow-sm flex items-center justify-center gap-1.5 cursor-pointer shrink-0"
+                data-code={sop.code}
+              >
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                </svg>
+                <span>Copy Solution Code</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="p-6 space-y-6">
+            <!-- Aim & Specs -->
+            <div>
+              <h3 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-400 mb-1">Practical Aim & Task</h3>
+              <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed font-medium bg-slate-50 dark:bg-slate-950/60 p-3.5 rounded-xl border border-slate-200/80 dark:border-slate-800">
+                {sop.aim}
+              </p>
+            </div>
+
+            <!-- Code Block with Filename -->
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-mono font-bold uppercase tracking-wider text-slate-400">
+                  Save as: <strong class="text-slate-700 dark:text-slate-200">{sop.filename}</strong>
+                </span>
+                <span class="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 font-bold">Standard UTF-8</span>
+              </div>
+              <div class="rounded-xl bg-slate-950 p-4 border border-slate-800 overflow-x-auto shadow-inner">
+                <pre class="text-xs font-mono text-emerald-400 leading-relaxed"><code>{sop.code}</code></pre>
+              </div>
+            </div>
+
+            <!-- AUTHENTIC WINDOWS + GOOGLE CHROME OUTPUT SPECIMEN -->
+            <div>
+              <div class="flex items-center justify-between mb-2.5">
+                <div class="flex items-center gap-2">
+                  <span class="text-xs font-mono font-bold uppercase tracking-wider text-slate-900 dark:text-white">
+                    Program Output Snapshot (Board Journal Submission)
+                  </span>
+                  <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-blue-50 dark:bg-blue-500/10 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-500/20 font-bold">
+                    Windows 11 • Google Chrome
+                  </span>
+                </div>
+                <span class="text-[11px] font-mono text-slate-400">Print Specimen Copy</span>
+              </div>
+
+              <!-- Chrome Window Simulation Container -->
+              <div class="rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-2xl overflow-hidden font-sans">
+                
+                <!-- Chrome Tab Bar & Windows Controls -->
+                <div class="bg-[#dfe1e5] dark:bg-[#202124] pt-2 px-2 flex items-center justify-between border-b border-[#dadce0] dark:border-[#3c4043] select-none">
+                  
+                  <!-- Left: Active Chrome Tab -->
+                  <div class="flex items-center">
+                    <div class="h-9 px-3.5 bg-white dark:bg-[#292a2d] rounded-t-lg flex items-center gap-2 shadow-sm border-t border-x border-[#dadce0] dark:border-[#3c4043] max-w-xs text-xs font-medium text-slate-700 dark:text-slate-200">
+                      <svg class="w-3.5 h-3.5 text-blue-500 shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                      </svg>
+                      <span class="truncate">{sop.tabTitle}</span>
+                      <span class="text-slate-400 hover:text-slate-600 dark:hover:text-white cursor-pointer ml-1 text-xs">✕</span>
+                    </div>
+
+                    <div class="w-6 h-6 rounded-full flex items-center justify-center text-slate-500 hover:bg-slate-300/60 dark:hover:bg-slate-700 ml-1 cursor-pointer text-xs">
+                      +
+                    </div>
+                  </div>
+
+                  <!-- Right: Windows 11 Window Controls -->
+                  <div class="flex items-center -mt-1 text-slate-600 dark:text-slate-400">
+                    <div class="w-10 h-7 flex items-center justify-center hover:bg-slate-300/60 dark:hover:bg-slate-700 cursor-pointer text-xs">─</div>
+                    <div class="w-10 h-7 flex items-center justify-center hover:bg-slate-300/60 dark:hover:bg-slate-700 cursor-pointer text-[10px]">□</div>
+                    <div class="w-10 h-7 flex items-center justify-center hover:bg-rose-500 hover:text-white cursor-pointer text-xs">✕</div>
+                  </div>
+                </div>
+
+                <!-- Chrome Navigation Bar & Omnibox URL Bar -->
+                <div class="bg-white dark:bg-[#292a2d] px-3 py-2 flex items-center gap-2 border-b border-[#e8eaed] dark:border-[#3c4043]">
+                  <div class="flex items-center gap-1 text-slate-500 dark:text-slate-400">
+                    <button class="w-7 h-7 rounded-full flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 text-xs disabled:opacity-40">←</button>
+                    <button class="w-7 h-7 rounded-full flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 text-xs disabled:opacity-40">→</button>
+                    <button class="w-7 h-7 rounded-full flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 text-xs">⟳</button>
+                  </div>
+
+                  <div class="flex-1 bg-[#f1f3f4] dark:bg-[#202124] rounded-full h-7 px-3 flex items-center justify-between text-xs text-slate-700 dark:text-slate-300 border border-transparent focus-within:border-blue-500 focus-within:bg-white dark:focus-within:bg-slate-900 transition">
+                    <div class="flex items-center gap-2 truncate">
+                      <svg class="w-3.5 h-3.5 text-slate-500 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+                      </svg>
+                      <span class="font-mono text-[11px] truncate">{sop.fileUrl}</span>
+                    </div>
+                    <span class="text-slate-400 text-xs">★</span>
+                  </div>
+
+                  <div class="flex items-center gap-1 text-slate-500">
+                    <div class="w-6 h-6 rounded-full bg-emerald-600 text-white flex items-center justify-center text-[10px] font-bold">CM</div>
+                    <div class="w-6 h-6 flex flex-col items-center justify-center gap-0.5 hover:bg-slate-100 dark:hover:bg-slate-800 rounded cursor-pointer">
+                      <span class="w-0.5 h-0.5 bg-slate-600 rounded-full"></span>
+                      <span class="w-0.5 h-0.5 bg-slate-600 rounded-full"></span>
+                      <span class="w-0.5 h-0.5 bg-slate-600 rounded-full"></span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Chrome Bookmarks Bar Simulation -->
+                <div class="bg-white dark:bg-[#292a2d] px-3 py-1 flex items-center gap-4 text-[11px] text-slate-600 dark:text-slate-400 border-b border-[#e8eaed] dark:border-[#3c4043]">
+                  <span class="flex items-center gap-1 cursor-pointer hover:text-slate-900 dark:hover:text-white">📄 Maharashtra Board Commerce IT</span>
+                  <span class="flex items-center gap-1 cursor-pointer hover:text-slate-900 dark:hover:text-white">📁 Balbharati Code 99</span>
+                  <span class="flex items-center gap-1 cursor-pointer hover:text-slate-900 dark:hover:text-white">⚡ LibreOffice & Tally</span>
+                </div>
+
+                <!-- Web Page Rendered Viewport (Exact Browser Output) -->
+                <div class="p-6 bg-white text-slate-800 font-sans min-h-[300px]">
+                  
+                  {sop.id === 'sop-1' && (
+                    <div class="max-w-md mx-auto border border-slate-300 p-6 rounded-xl bg-white shadow-md">
+                      <h4 class="text-center text-[#059669] font-bold text-base mb-4">E-Shop Customer Feedback</h4>
+                      <div class="space-y-3 text-xs">
+                        <div>
+                          <label class="font-bold text-slate-700 block">Customer Name:</label>
+                          <input type="text" value="Rohit Verma" class="w-full p-2 border border-slate-300 rounded bg-[#f8fafc] text-slate-800 mt-1" readonly />
+                        </div>
+                        <div>
+                          <label class="font-bold text-slate-700 block">Email Address:</label>
+                          <input type="email" value="rohit.verma@gmail.com" class="w-full p-2 border border-slate-300 rounded bg-[#f8fafc] text-slate-800 mt-1" readonly />
+                        </div>
+                        <div>
+                          <label class="font-bold text-slate-700 block">Mobile Number:</label>
+                          <input type="tel" value="9823012345" class="w-full p-2 border border-slate-300 rounded bg-[#f8fafc] text-slate-800 mt-1" readonly />
+                        </div>
+                        <div class="grid grid-cols-2 gap-3">
+                          <div>
+                            <label class="font-bold text-slate-700 block">Purchase Date:</label>
+                            <input type="date" value="2027-02-18" class="w-full p-2 border border-slate-300 rounded bg-[#f8fafc] text-slate-800 mt-1" readonly />
+                          </div>
+                          <div>
+                            <label class="font-bold text-slate-700 block">Quantity (1-10):</label>
+                            <input type="number" value="3" class="w-full p-2 border border-slate-300 rounded bg-[#f8fafc] text-slate-800 mt-1" readonly />
+                          </div>
+                        </div>
+                        <div>
+                          <label class="font-bold text-slate-700 block">Satisfaction Rating (1 to 5):</label>
+                          <div class="flex items-center gap-2 mt-1">
+                            <span class="text-slate-500">1</span>
+                            <div class="flex-1 h-1 bg-slate-300 rounded relative">
+                              <div class="w-3/4 h-1 bg-[#059669] rounded"></div>
+                              <div class="w-3 h-3 bg-[#059669] rounded-full absolute -top-1 left-[72%]"></div>
+                            </div>
+                            <span class="text-slate-500">5</span>
+                            <span class="font-bold text-[#059669] ml-2">4 ★</span>
+                          </div>
+                        </div>
+                        <div class="flex gap-2 pt-3">
+                          <button class="flex-1 py-2 bg-[#059669] text-white rounded font-bold cursor-default shadow-sm">Submit Feedback</button>
+                          <button class="flex-1 py-2 bg-slate-200 text-slate-700 rounded font-bold cursor-default">Clear Form</button>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {sop.id === 'sop-2' && (
+                    <div class="max-w-2xl mx-auto border border-slate-300 rounded-lg overflow-hidden bg-[#f8fafc] shadow-md">
+                      <div class="bg-[#059669] text-white p-4 text-center">
+                        <h4 class="font-bold text-base">Global Trade Services Ltd</h4>
+                        <p class="text-xs opacity-90">International Logistics &amp; Commercial Solutions</p>
+                      </div>
+                      <div class="bg-[#0f172a] text-[#94a3b8] py-2 px-4 text-center text-xs flex justify-center gap-6 font-semibold">
+                        <span class="text-white">Home</span>
+                        <span>Services</span>
+                        <span>Products</span>
+                        <span>Contact</span>
+                      </div>
+                      <div class="p-5 flex flex-col md:flex-row gap-4">
+                        <div class="flex-1 bg-white p-4 rounded border border-slate-200 space-y-3">
+                          <h5 class="text-xs font-bold text-slate-800 border-b pb-1">Annual Trade Conference 2027</h5>
+                          <!-- Video Player Simulation -->
+                          <div class="w-full h-36 bg-black rounded flex flex-col justify-between p-2 text-white text-xs relative">
+                            <span class="text-[10px] bg-black/60 px-1.5 py-0.5 rounded w-fit font-mono">trade-overview.mp4</span>
+                            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                              <span class="h-10 w-10 rounded-full bg-black/70 border border-white/40 flex items-center justify-center text-white">▶</span>
+                            </div>
+                            <div class="bg-black/70 rounded p-1 flex items-center justify-between text-[10px]">
+                              <span>▶</span>
+                              <div class="h-1 bg-slate-600 rounded flex-1 mx-2">
+                                <div class="w-1/4 h-1 bg-[#059669] rounded"></div>
+                              </div>
+                              <span>01:15</span>
+                              <span>🔊</span>
+                            </div>
+                          </div>
+                          <!-- Audio Player Simulation -->
+                          <div>
+                            <p class="text-[11px] font-bold text-slate-700">Executive Audio Announcement</p>
+                            <div class="bg-[#f1f3f4] border border-[#dadce0] rounded-full px-3 py-1.5 flex items-center justify-between text-xs mt-1 shadow-inner">
+                              <span class="w-5 h-5 rounded-full bg-slate-300 flex items-center justify-center text-[9px]">▶</span>
+                              <div class="w-32 h-1 bg-slate-300 rounded-full mx-2">
+                                <div class="w-10 h-1 bg-[#059669] rounded-full"></div>
+                              </div>
+                              <span class="text-[10px] text-slate-500 font-mono">0:45 / 3:10</span>
+                              <span class="text-slate-500 text-[10px]">🔊</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="w-full md:w-48 bg-[#ecfdf5] border border-[#a7f3d0] p-3 rounded text-xs space-y-2">
+                          <h5 class="font-bold text-[#065f46]">Latest Updates</h5>
+                          <p class="text-[11px] text-slate-700 leading-relaxed">GST Council updates for digital service transactions are now in effect for all export accounts.</p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {sop.id === 'sop-3' && (
+                    <div class="max-w-md mx-auto border border-slate-300 p-6 rounded-xl bg-white shadow-md space-y-4">
+                      <h4 class="text-center text-[#059669] font-bold text-base">Tax Invoice Generator</h4>
+                      <div class="space-y-3 text-xs">
+                        <div>
+                          <label class="font-bold text-slate-700 block">Item Description:</label>
+                          <input type="text" value="Executive Ergonomic Chair" class="w-full p-2 border border-slate-300 rounded bg-[#f8fafc] text-slate-800 mt-1" readonly />
+                        </div>
+                        <div class="grid grid-cols-2 gap-3">
+                          <div>
+                            <label class="font-bold text-slate-700 block">Unit Price (₹):</label>
+                            <input type="text" value="4500.00" class="w-full p-2 border border-slate-300 rounded bg-[#f8fafc] text-slate-800 mt-1" readonly />
+                          </div>
+                          <div>
+                            <label class="font-bold text-slate-700 block">Quantity:</label>
+                            <input type="text" value="2" class="w-full p-2 border border-slate-300 rounded bg-[#f8fafc] text-slate-800 mt-1" readonly />
+                          </div>
+                        </div>
+                        <button class="w-full py-2 bg-[#059669] text-white rounded font-bold cursor-default shadow-sm mt-2">Compute GST &amp; Generate Bill</button>
+                        
+                        <!-- Computed Invoice Results Box -->
+                        <div class="p-3.5 bg-[#ecfdf5] border border-[#a7f3d0] rounded-lg text-xs space-y-1 mt-3">
+                          <p><strong>Product:</strong> Executive Ergonomic Chair</p>
+                          <p><strong>Subtotal (₹4500.00 × 2):</strong> ₹9,000.00</p>
+                          <p><strong>CGST (9%):</strong> ₹810.00</p>
+                          <p><strong>SGST (9%):</strong> ₹810.00</p>
+                          <p><strong>Total GST (18%):</strong> ₹1,620.00</p>
+                          <div class="border-t border-[#a7f3d0] pt-1.5 mt-1.5 flex justify-between items-center">
+                            <span class="font-bold text-slate-800">Net Payable Amount:</span>
+                            <span class="font-bold text-[#059669] text-sm">₹10,620.00</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {sop.id === 'sop-4' && (
+                    <div class="max-w-2xl mx-auto space-y-4">
+                      <!-- LibreOffice Base Query View Simulation -->
+                      <div class="border border-slate-300 rounded-lg overflow-hidden bg-white shadow-md text-xs">
+                        <div class="bg-[#2b6cb0] text-white p-2.5 flex items-center justify-between font-mono text-[11px]">
+                          <span>LibreOffice Base — Query: SELECT * WHERE "Department" = 'Accounts'</span>
+                          <span>2 Records Returned</span>
+                        </div>
+                        <table class="w-full text-left border-collapse">
+                          <thead class="bg-[#edf2f7] text-slate-700 border-b border-slate-300 font-bold">
+                            <tr>
+                              <th class="p-2 border-r border-slate-300">Emp_ID</th>
+                              <th class="p-2 border-r border-slate-300">Emp_Name</th>
+                              <th class="p-2 border-r border-slate-300">Designation</th>
+                              <th class="p-2 text-right">Basic_Salary (₹)</th>
+                            </tr>
+                          </thead>
+                          <tbody class="divide-y divide-slate-200 font-mono">
+                            <tr class="hover:bg-slate-50">
+                              <td class="p-2 border-r border-slate-200 font-bold text-blue-700">EMP01</td>
+                              <td class="p-2 border-r border-slate-200">Rahul Sharma</td>
+                              <td class="p-2 border-r border-slate-200">Manager</td>
+                              <td class="p-2 text-right font-bold">55,000.00</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                              <td class="p-2 border-r border-slate-200 font-bold text-blue-700">EMP04</td>
+                              <td class="p-2 border-r border-slate-200">Sneha Patil</td>
+                              <td class="p-2 border-r border-slate-200">Clerk</td>
+                              <td class="p-2 text-right font-bold">28,000.00</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+
+                      <!-- Second Query Result -->
+                      <div class="border border-slate-300 rounded-lg overflow-hidden bg-white shadow-md text-xs">
+                        <div class="bg-[#059669] text-white p-2.5 flex items-center justify-between font-mono text-[11px]">
+                          <span>Query B: WHERE "Basic_Salary" &gt; 30000 ORDER BY "Basic_Salary" DESC</span>
+                          <span>3 Records Returned</span>
+                        </div>
+                        <table class="w-full text-left border-collapse">
+                          <thead class="bg-[#edf2f7] text-slate-700 border-b border-slate-300 font-bold">
+                            <tr>
+                              <th class="p-2 border-r border-slate-300">Emp_Name</th>
+                              <th class="p-2 border-r border-slate-300">Department</th>
+                              <th class="p-2 text-right">Basic_Salary (₹)</th>
+                            </tr>
+                          </thead>
+                          <tbody class="divide-y divide-slate-200 font-mono">
+                            <tr class="hover:bg-slate-50">
+                              <td class="p-2 border-r border-slate-200 font-bold">Rahul Sharma</td>
+                              <td class="p-2 border-r border-slate-200">Accounts</td>
+                              <td class="p-2 text-right font-bold text-[#059669]">55,000.00</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                              <td class="p-2 border-r border-slate-200 font-bold">Amit Kulkarni</td>
+                              <td class="p-2 border-r border-slate-200">Finance</td>
+                              <td class="p-2 text-right font-bold text-[#059669]">48,000.00</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                              <td class="p-2 border-r border-slate-200 font-bold">Priya Deshmukh</td>
+                              <td class="p-2 border-r border-slate-200">Sales</td>
+                              <td class="p-2 text-right font-bold text-[#059669]">32,000.00</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  )}
+
+                  {sop.id === 'sop-5' && (
+                    <div class="max-w-2xl mx-auto border border-slate-300 rounded-lg overflow-hidden bg-white shadow-md text-xs">
+                      <div class="bg-[#0f172a] text-white p-3 flex items-center justify-between font-mono">
+                        <div>
+                          <p class="font-bold">M/s Vikas Traders — Day Book Register</p>
+                          <p class="text-[10px] text-slate-400">Financial Year: 1-Apr-2026 to 31-Mar-2027</p>
+                        </div>
+                        <span class="bg-emerald-600 text-white px-2 py-0.5 rounded text-[10px]">Tally ERP/Prime Mode</span>
+                      </div>
+                      <table class="w-full text-left border-collapse">
+                        <thead class="bg-[#edf2f7] text-slate-700 border-b border-slate-300 font-bold text-[11px]">
+                          <tr>
+                            <th class="p-2 border-r border-slate-300">Date</th>
+                            <th class="p-2 border-r border-slate-300">Particulars</th>
+                            <th class="p-2 border-r border-slate-300">Voucher Type</th>
+                            <th class="p-2 border-r border-slate-300">Vch No.</th>
+                            <th class="p-2 text-right">Debit (₹)</th>
+                            <th class="p-2 text-right">Credit (₹)</th>
+                          </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200 font-mono text-[11px]">
+                          <tr>
+                            <td class="p-2 border-r border-slate-200">01-Apr-2026</td>
+                            <td class="p-2 border-r border-slate-200 font-bold">State Bank of India (Contra)</td>
+                            <td class="p-2 border-r border-slate-200 text-blue-600 font-bold">F4: Contra</td>
+                            <td class="p-2 border-r border-slate-200">1</td>
+                            <td class="p-2 text-right font-bold">1,00,000.00</td>
+                            <td class="p-2 text-right">1,00,000.00</td>
+                          </tr>
+                          <tr>
+                            <td class="p-2 border-r border-slate-200">05-Apr-2026</td>
+                            <td class="p-2 border-r border-slate-200 font-bold">Purchase A/c + Input GST (18%)</td>
+                            <td class="p-2 border-r border-slate-200 text-amber-600 font-bold">F9: Purchase</td>
+                            <td class="p-2 border-r border-slate-200">1</td>
+                            <td class="p-2 text-right font-bold">59,000.00</td>
+                            <td class="p-2 text-right">59,000.00</td>
+                          </tr>
+                          <tr>
+                            <td class="p-2 border-r border-slate-200">12-Apr-2026</td>
+                            <td class="p-2 border-r border-slate-200 font-bold">M/s Apex Retailers (Sales + GST)</td>
+                            <td class="p-2 border-r border-slate-200 text-emerald-600 font-bold">F8: Sales</td>
+                            <td class="p-2 border-r border-slate-200">1</td>
+                            <td class="p-2 text-right font-bold">94,400.00</td>
+                            <td class="p-2 text-right">94,400.00</td>
+                          </tr>
+                          <tr>
+                            <td class="p-2 border-r border-slate-200">18-Apr-2026</td>
+                            <td class="p-2 border-r border-slate-200 font-bold">State Bank of India (Apex Cheque)</td>
+                            <td class="p-2 border-r border-slate-200 text-purple-600 font-bold">F6: Receipt</td>
+                            <td class="p-2 border-r border-slate-200">1</td>
+                            <td class="p-2 text-right font-bold">94,400.00</td>
+                            <td class="p-2 text-right">94,400.00</td>
+                          </tr>
+                          <tr>
+                            <td class="p-2 border-r border-slate-200">25-Apr-2026</td>
+                            <td class="p-2 border-r border-slate-200 font-bold">Electricity Expenses A/c</td>
+                            <td class="p-2 border-r border-slate-200 text-rose-600 font-bold">F5: Payment</td>
+                            <td class="p-2 border-r border-slate-200">1</td>
+                            <td class="p-2 text-right font-bold">3,500.00</td>
+                            <td class="p-2 text-right">3,500.00</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  )}
+
+                </div>
+
+                <!-- Windows Lab Print Watermark & Examiner Sign-off Banner -->
+                <div class="px-4 py-2.5 bg-[#f8fafc] dark:bg-[#1a1b1e] border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 font-mono gap-1 select-none">
+                  <div class="flex items-center gap-2">
+                    <span class="inline-block w-2 h-2 rounded-full bg-emerald-500"></span>
+                    <span>Commerce Practical Printed Output Certified by Internal Examiner</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <span class="text-slate-400">Date of Exam: March 2027</span>
+                    <span class="font-bold text-emerald-600 dark:text-emerald-400">Scale: 15 / 15 Marks</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Execution & Submission Checklist -->
+            <div class="pt-4 border-t border-slate-100 dark:border-slate-800">
+              <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-400 mb-1.5">Output Verification &amp; Submission Checklist</h4>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                {sop.outputSummary} Print this browser snapshot window alongside your source code to fulfill Maharashtra State Board external evaluation requirements.
+              </p>
+            </div>
+          </div>
+
+        </article>
+      ))}
+    </div>
+
+  </section>
+
+  <!-- Interactive Copy & Video Prompt Script -->
+  <script is:inline>
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const code = btn.getAttribute('data-code');
+        if (!code) return;
+
+        try {
+          await navigator.clipboard.writeText(code);
+          const originalText = btn.innerHTML;
+          btn.innerHTML = `
+            <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Copied to Clipboard!</span>
+          `;
+          btn.classList.add('bg-teal-600');
+          setTimeout(() => {
+            btn.innerHTML = originalText;
+            btn.classList.remove('bg-teal-600');
+          }, 2000);
+        } catch (err) {
+          console.error("Clipboard copy failed: ", err);
+        }
+      });
+    });
+
+    document.querySelectorAll('.video-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        if (btn.getAttribute('href') === '#') {
+          e.preventDefault();
+          alert("Commerce video tutorial is being recorded and will be published shortly!");
+        }
+      });
+    });
+  </script>
+</PortalLayout>

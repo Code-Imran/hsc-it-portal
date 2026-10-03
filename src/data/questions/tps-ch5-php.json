@@ -1,0 +1,89 @@
+{
+  "chapter_id": 5,
+  "chapter_name": "Server-Side Scripting (PHP)",
+  "subject_stream": ["science"],
+  "source": "TPS Notes - 12th IT",
+  "q1_fill_in_the_blanks": [
+    { "id": "tps-ch5-fb-01", "question": "The server-side environment that runs a scripting language is called a _____.", "answer": "web server" },
+    { "id": "tps-ch5-fb-02", "question": "PHP is a _____-side scripting language.", "answer": "server" },
+    { "id": "tps-ch5-fb-03", "question": "PHP is an _____ language, meaning there is no need for compilation.", "answer": "interpreted" },
+    { "id": "tps-ch5-fb-04", "question": "PHP files are saved with the _____ extension.", "answer": ".php" },
+    { "id": "tps-ch5-fb-05", "question": "The _____ keyword is used to display text on a webpage in PHP.", "answer": "echo" },
+    { "id": "tps-ch5-fb-06", "question": "In PHP, a variable starts with the _____ sign followed by the variable name.", "answer": "$" },
+    { "id": "tps-ch5-fb-07", "question": "A variable declared outside a function has a _____ scope.", "answer": "global" },
+    { "id": "tps-ch5-fb-08", "question": "A variable declared within a function has a _____ scope.", "answer": "local" },
+    { "id": "tps-ch5-fb-09", "question": "The _____ loop in PHP works only on arrays.", "answer": "foreach" },
+    { "id": "tps-ch5-fb-10", "question": "The built-in function _____ returns the length of a string in PHP.", "answer": "strlen" },
+    { "id": "tps-ch5-fb-11", "question": "The built-in function _____ counts the number of words in a string.", "answer": "str_word_count" },
+    { "id": "tps-ch5-fb-12", "question": "The built-in function _____ reverses a string in PHP.", "answer": "strrev" },
+    { "id": "tps-ch5-fb-13", "question": "The built-in function _____ searches for a specific text within a string and returns its position.", "answer": "strpos" },
+    { "id": "tps-ch5-fb-14", "question": "The built-in function _____ converts the first character of each word in a string to uppercase.", "answer": "ucwords" },
+    { "id": "tps-ch5-fb-15", "question": "The built-in function _____ removes whitespace and other predefined characters from both sides of a string.", "answer": "trim" },
+    { "id": "tps-ch5-fb-16", "question": "Arrays with numeric indexes are called _____ arrays.", "answer": "indexed" },
+    { "id": "tps-ch5-fb-17", "question": "Arrays with named keys are called _____ arrays.", "answer": "associative" },
+    { "id": "tps-ch5-fb-18", "question": "The superglobal _____ is an array of variables passed via URL parameters.", "answer": "$_GET" },
+    { "id": "tps-ch5-fb-19", "question": "The superglobal _____ is an array of variables passed via the HTTP POST method.", "answer": "$_POST" },
+    { "id": "tps-ch5-fb-20", "question": "The _____ function in PHP is used to check whether a variable has a value or not.", "answer": "isset" },
+    { "id": "tps-ch5-fb-21", "question": "A _____ is a small text file that the server sends on the user's computer to track activities.", "answer": "cookie" },
+    { "id": "tps-ch5-fb-22", "question": "A _____ is used to store user information on the server to track activities across multiple pages.", "answer": "session" }
+  ],
+  "q2_true_false": [
+    { "id": "tps-ch5-tf-01", "statement": "PHP is a client-side scripting language.", "answer": false },
+    { "id": "tps-ch5-tf-02", "statement": "PHP is an interpreted language with no need for compilation.", "answer": true },
+    { "id": "tps-ch5-tf-03", "statement": "PHP variable names can start with a number.", "answer": false },
+    { "id": "tps-ch5-tf-04", "statement": "PHP variable names are case-sensitive.", "answer": true },
+    { "id": "tps-ch5-tf-05", "statement": "A variable declared outside a function has a global scope.", "answer": true },
+    { "id": "tps-ch5-tf-06", "statement": "The foreach loop in PHP works only on arrays.", "answer": true },
+    { "id": "tps-ch5-tf-07", "statement": "strlen() function returns the total character length of a string.", "answer": true },
+    { "id": "tps-ch5-tf-08", "statement": "In PHP, array index numbers always start with 1.", "answer": false },
+    { "id": "tps-ch5-tf-09", "statement": "Information sent from a form using the GET method is visible to everyone in the URL.", "answer": true },
+    { "id": "tps-ch5-tf-10", "statement": "GET method should NEVER be used for sending passwords or sensitive information.", "answer": true },
+    { "id": "tps-ch5-tf-11", "statement": "POST method has strict limits on the amount of information sent.", "answer": false },
+    { "id": "tps-ch5-tf-12", "statement": "isset() method in PHP is used to check whether a variable has been initialized or has a value.", "answer": true }
+  ],
+  "q3_mcq_single": [
+    { "id": "tps-ch5-mcq1-01", "question": "PHP files are saved with the _____ extension.", "options": [".html", ".xml", ".js", ".php"], "answer": ".php" },
+    { "id": "tps-ch5-mcq1-02", "question": "The _____ keyword is used to display text on a webpage in PHP.", "options": ["echo", "print_line", "write", "cin"], "answer": "echo" },
+    { "id": "tps-ch5-mcq1-03", "question": "A variable in PHP starts with the _____ symbol followed by the variable name.", "options": ["#", "@", "=", "$"], "answer": "$" },
+    { "id": "tps-ch5-mcq1-04", "question": "Which loop in PHP works exclusively on arrays?", "options": ["for", "while", "do-while", "foreach"], "answer": "foreach" },
+    { "id": "tps-ch5-mcq1-05", "question": "The built-in function _____ returns the character length of a string in PHP.", "options": ["strlength()", "strlen()", "strrev()", "substr()"], "answer": "strlen()" },
+    { "id": "tps-ch5-mcq1-06", "question": "Which function counts the number of words in a string in PHP?", "options": ["strlen()", "str_word_count()", "substr()", "trim()"], "answer": "str_word_count()" },
+    { "id": "tps-ch5-mcq1-07", "question": "Arrays with named keys in PHP are known as _____ arrays.", "options": ["indexed", "associative", "multidimensional", "normal"], "answer": "associative" },
+    { "id": "tps-ch5-mcq1-08", "question": "Information sent from a form with the _____ method is visible to everyone in the browser address bar.", "options": ["POST", "GET", "HTTP", "FTP"], "answer": "GET" },
+    { "id": "tps-ch5-mcq1-09", "question": "Which PHP function checks whether a variable has a value or button is clicked?", "options": ["outset()", "inset()", "noset()", "isset()"], "answer": "isset()" },
+    { "id": "tps-ch5-mcq1-10", "question": "A _____ is a small text file that the server sends and stores on the user's computer.", "options": ["cookie", "session", "presentation", "method"], "answer": "cookie" }
+  ],
+  "q4_mcq_two_correct": [
+    { "id": "tps-ch5-mcq2-01", "question": "Valid data types in PHP include _____ and _____.", "options": ["boolean", "text", "number", "array", "varchar"], "answer": ["boolean", "array"] },
+    { "id": "tps-ch5-mcq2-02", "question": "Form data in HTML can be submitted to PHP using _____ or _____ method.", "options": ["GET", "POST", "RETURN", "FORWARD", "SUBMIT"], "answer": ["GET", "POST"] },
+    { "id": "tps-ch5-mcq2-03", "question": "The PHP superglobals used to collect submitted form data are _____ and _____.", "options": ["$_GET", "$POST", "$GET", "$_POST", "$_SERVER_POST"], "answer": ["$_GET", "$_POST"] },
+    { "id": "tps-ch5-mcq2-04", "question": "Single-line comments in PHP can be written using _____ or _____.", "options": ["//", "#", "/* and */", "<!-- -->", "$$"], "answer": ["//", "#"] },
+    { "id": "tps-ch5-mcq2-05", "question": "Built-in string manipulation functions in PHP include _____ and _____.", "options": ["trim()", "substr()", "length()", "strreverse()", "stringLen()"], "answer": ["trim()", "substr()"] }
+  ],
+  "q5_mcq_three_correct": [
+    { "id": "tps-ch5-mcq3-01", "question": "The three types of arrays supported in PHP are _____.", "options": ["indexed", "associative", "multidimensional", "simple", "complex", "general"], "answer": ["indexed", "associative", "multidimensional"] },
+    { "id": "tps-ch5-mcq3-02", "question": "The variable scopes available in PHP include _____.", "options": ["local", "global", "static", "universal", "final", "outside"], "answer": ["local", "global", "static"] },
+    { "id": "tps-ch5-mcq3-03", "question": "Predefined string functions in PHP include _____.", "options": ["strpos()", "substr()", "strlen()", "lower()", "upper()", "strlength()"], "answer": ["strpos()", "substr()", "strlen()"] },
+    { "id": "tps-ch5-mcq3-04", "question": "Key features of PHP include _____.", "options": ["simple", "open source", "platform independent", "difficult", "error creating", "requires compilation"], "answer": ["simple", "open source", "platform independent"] }
+  ],
+  "q6_match_following": [
+    {
+      "id": "tps-ch5-match-01",
+      "pairs": [
+        { "left": "strlen()", "right": "Returns length of a string" },
+        { "left": "str_word_count()", "right": "Counts number of words in a string" },
+        { "left": "strrev()", "right": "Reverses a string" },
+        { "left": "strpos()", "right": "Searches specific text position in string" }
+      ]
+    },
+    {
+      "id": "tps-ch5-match-02",
+      "pairs": [
+        { "left": "$_GET", "right": "Passed via URL parameters" },
+        { "left": "$_POST", "right": "Passed via HTTP POST body" },
+        { "left": "cookie", "right": "Stored on user computer" },
+        { "left": "session", "right": "Stored on server across pages" }
+      ]
+    }
+  ]
+}
