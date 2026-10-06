@@ -1,17 +1,13 @@
 ---
 import PortalLayout from "../layouts/PortalLayout.astro";
-import { getExamData } from "../data/questions/index.js";
-
-const scienceExam = getExamData("science");
-const commerceExam = getExamData("commerce");
 ---
 
-<PortalLayout title="HSC IT Online Examination Client (Official Simulator)">
+<PortalLayout title="HSC IT Mock Examination Practice">
   <div class="max-w-[1440px] mx-auto px-2 sm:px-4 py-3 select-none" id="examClientRoot">
-    
+
     <!-- Top System Header Bar (Matches Board Exam Client) -->
     <header class="bg-[#1e293b] text-white rounded-xl p-3 mb-3 border border-slate-700 shadow-md flex flex-wrap items-center justify-between gap-3 text-xs">
-      
+
       <!-- Candidate & Exam Info -->
       <div class="flex items-center gap-4 flex-wrap">
         <div class="flex items-center gap-2">
@@ -27,14 +23,11 @@ const commerceExam = getExamData("commerce");
         <div class="flex items-center gap-3">
           <div>
             <span class="text-[10px] text-slate-400 block">Seat Number:</span>
-            <span class="font-mono font-bold text-emerald-400">M027891</span>
+            <span id="candidateRollNo" class="font-mono font-bold text-emerald-400">—</span>
           </div>
           <div>
             <span class="text-[10px] text-slate-400 block">Stream & Code:</span>
-            <div class="inline-flex bg-slate-800 rounded p-0.5 border border-slate-700">
-              <button type="button" class="stream-btn px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-600 text-white" data-stream="science">Science (97)</button>
-              <button type="button" class="stream-btn px-2 py-0.5 rounded text-[11px] font-bold text-slate-400 hover:text-white" data-stream="commerce">Commerce (99)</button>
-            </div>
+            <span id="candidateStream" class="font-mono font-bold text-emerald-400">—</span>
           </div>
         </div>
       </div>
@@ -55,7 +48,7 @@ const commerceExam = getExamData("commerce");
 
     <!-- Main Client Shell: Left Sidebar (Question Selector) + Right Canvas (Test Arena) -->
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-3 items-start">
-      
+
       <!-- LEFT SIDEBAR: Fully Visible, No Scrollbar, No Legend -->
       <aside class="lg:col-span-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-2.5 shadow-sm space-y-1.5">
         <div class="space-y-1.5" id="leftQuestionTree">
@@ -65,8 +58,10 @@ const commerceExam = getExamData("commerce");
 
       <!-- RIGHT CANVAS: Working Test Question Area -->
       <main class="lg:col-span-9 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 sm:p-6 shadow-sm min-h-[580px] flex flex-col justify-between">
-        
+        <p class="mb-4 rounded-lg bg-sky-50 dark:bg-sky-950/30 border border-sky-200 dark:border-sky-900 px-3 py-2 text-xs text-sky-900 dark:text-sky-200">Practice only: answers are stored in this browser, and tab notices are not secure proctoring or tamper-proof protection.</p>
+
         <div>
+          <p id="tabActivityWarning" class="mb-4 rounded-lg bg-amber-50 dark:bg-amber-950/40 border border-amber-300 dark:border-amber-800 p-3 text-xs text-amber-900 dark:text-amber-200" role="status" aria-live="polite" hidden></p>
           <!-- Section Banner -->
           <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3 mb-4">
             <div>
@@ -76,6 +71,14 @@ const commerceExam = getExamData("commerce");
             </div>
             <div class="text-right">
               <span class="text-xs font-mono bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded text-slate-600 dark:text-slate-300 font-bold" id="sectionProgressTag">0/10 Saved</span>
+            </div>
+          </div>
+
+          <div id="tabLockModal" class="fixed inset-0 bg-slate-950/85 backdrop-blur-sm z-[70] flex items-center justify-center p-4 hidden" role="dialog" aria-modal="true" aria-labelledby="tabLockTitle">
+            <div class="max-w-md w-full bg-white dark:bg-slate-900 border border-rose-300 dark:border-rose-900 rounded-2xl p-6 shadow-2xl">
+              <h2 id="tabLockTitle" class="text-lg font-bold text-slate-900 dark:text-white">Exam tab locked</h2>
+              <p id="tabLockMessage" class="mt-2 text-sm text-slate-600 dark:text-slate-300"></p>
+              <a href="/exam/login" class="inline-flex mt-5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 text-sm font-bold">Return to login</a>
             </div>
           </div>
 
@@ -108,7 +111,7 @@ const commerceExam = getExamData("commerce");
     <!-- Invigilator Password Modal ("End Exam" Dialog) -->
     <div id="invigilatorModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-3 hidden">
       <div class="bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-800 rounded-2xl max-w-md w-full p-6 shadow-2xl space-y-4">
-        
+
         <div class="text-center space-y-1">
           <div class="h-10 w-10 rounded-full bg-rose-100 dark:bg-rose-950/60 text-rose-600 flex items-center justify-center mx-auto text-lg font-bold">
             🔒
@@ -121,10 +124,10 @@ const commerceExam = getExamData("commerce");
 
         <div class="space-y-2">
           <label class="text-xs font-bold text-slate-700 dark:text-slate-300 block">Invigilator End-Exam Password:</label>
-          <input 
-            type="password" 
-            id="invigilatorPassInput" 
-            class="w-full p-2.5 text-xs rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-white font-mono" 
+          <input
+            type="password"
+            id="invigilatorPassInput"
+            class="w-full p-2.5 text-xs rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-white font-mono"
             placeholder="Enter password (demo: 1234)"
           />
           <p class="text-[11px] text-slate-400">Demo password: <code class="text-emerald-500">1234</code></p>
@@ -148,10 +151,10 @@ const commerceExam = getExamData("commerce");
       <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl max-w-xl w-full p-6 shadow-2xl space-y-5 max-h-[90vh] overflow-y-auto">
         <div class="text-center space-y-1">
           <span class="px-2.5 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 text-xs font-mono font-bold">
-            EXAMINATION RECORD CERTIFIED
+            MOCK EXAM RESULT
           </span>
-          <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white mt-1">Official Result Card</h3>
-          <p class="text-xs text-slate-500">Seat No: M027891 • Maharashtra State Board HSC IT 2027</p>
+          <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white mt-1">Practice Result</h3>
+          <p class="text-xs text-slate-500">Seat No: <span id="resultRollNo">—</span> • Maharashtra State Board HSC IT 2027</p>
         </div>
 
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center text-xs">
@@ -177,7 +180,7 @@ const commerceExam = getExamData("commerce");
           <button type="button" id="reviewReportBtn" class="px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 text-xs font-bold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">
             Review Submitted Paper
           </button>
-          <a href="/simulator" class="px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold">
+          <a href="/exam/login" class="px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold">
             Retake Exam
           </a>
         </div>
@@ -186,28 +189,58 @@ const commerceExam = getExamData("commerce");
 
   </div>
 
-  <!-- Store build-time generated exam datasets -->
-  <div id="examServerPayload" class="hidden" 
-       data-science={JSON.stringify(scienceExam)} 
-       data-commerce={JSON.stringify(commerceExam)}>
-  </div>
-
   <!-- Unified HSC Client Script Engine -->
-  <script is:inline>
-    // Read payload injected by Astro build
-    const payloadEl = document.getElementById("examServerPayload");
-    const examData = {
-      science: JSON.parse(payloadEl.dataset.science),
-      commerce: JSON.parse(payloadEl.dataset.commerce)
-    };
+  <script>
+    import {
+      bindTabProtection,
+      completeSession,
+      getActiveSession,
+      resumeSession,
+      saveSessionProgress
+    } from "../lib/exam/sessionManager.js";
 
-    // Client State
-    let currentStream = "science";
-    let activeSecKey = "q1";
-    let draftAnswers = {};
-    let submittedAnswers = {};
-    let secondsLeft = 150 * 60; // 2 hours 30 mins
+    const activeSession = getActiveSession();
+    if (!activeSession) {
+      window.location.replace("/exam/login");
+    } else if (!activeSession.examStartedAt) {
+      window.location.replace("/exam/instructions");
+    } else {
+    resumeSession(activeSession.id);
+
+    let examData = {};
+    let currentStream = activeSession.student.stream;
+    let activeSecKey = activeSession.exam.activeSection || "q1";
+    let draftAnswers = { ...activeSession.answers.draft };
+    let submittedAnswers = { ...activeSession.answers.submitted };
+    const elapsedSeconds = activeSession.examStartedAt
+      ? Math.floor((Date.now() - Date.parse(activeSession.examStartedAt)) / 1000)
+      : 0;
+    let secondsLeft = Math.max(0, Math.min(
+      activeSession.exam.secondsRemaining,
+      activeSession.exam.durationSeconds - elapsedSeconds
+    ));
     let timerId = null;
+    let saveTimeoutId = null;
+    let isLockedOut = false;
+    let isSubmitting = false;
+
+    async function fetchExamData() {
+      const response = await fetch("/api/exam/start", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({ stream: currentStream, sessionId: activeSession.id })
+      });
+      let payload;
+      try {
+        payload = await response.json();
+      } catch {
+        throw new Error("The exam service returned an invalid response.");
+      }
+      if (!response.ok || !payload.success || !Array.isArray(payload.sections)) {
+        throw new Error(payload.error || "Exam questions could not be loaded.");
+      }
+      return payload;
+    }
 
     // DOM Elements
     const leftQuestionTree = document.getElementById("leftQuestionTree");
@@ -226,9 +259,73 @@ const commerceExam = getExamData("commerce");
     const invigilatorPassInput = document.getElementById("invigilatorPassInput");
     const invigilatorErr = document.getElementById("invigilatorErr");
     const resultModal = document.getElementById("resultModal");
+    const tabLockModal = document.getElementById("tabLockModal");
+    const tabLockMessage = document.getElementById("tabLockMessage");
+    const tabActivityWarning = document.getElementById("tabActivityWarning");
+
+    document.getElementById("candidateRollNo").textContent = activeSession.student.rollNo;
+    document.getElementById("candidateStream").textContent =
+      `${activeSession.student.stream === "science" ? "Science" : "Commerce"} (${activeSession.student.subjectCode})`;
+    document.getElementById("resultRollNo").textContent = activeSession.student.rollNo;
+
+    const tabProtectionCleanup = bindTabProtection({
+      onLockout(message) {
+        isLockedOut = true;
+        if (timerId) clearInterval(timerId);
+        tabLockMessage.textContent = message;
+        tabLockModal.classList.remove("hidden");
+      },
+      onActivityWarning(count) {
+        tabActivityWarning.textContent =
+          `Practice integrity notice: this tab lost focus ${count} time${count === 1 ? "" : "s"}.`;
+        tabActivityWarning.hidden = false;
+      }
+    });
+
+    function saveProgressNow() {
+      if (isLockedOut) return;
+      const progress = {
+        draft: { ...draftAnswers },
+        submitted: { ...submittedAnswers },
+        secondsRemaining: secondsLeft,
+        activeSection: activeSecKey,
+        paper: examData[currentStream]?.sections ?? activeSession.exam.paper
+      };
+      if (saveTimeoutId) clearTimeout(saveTimeoutId);
+      saveTimeoutId = null;
+      try {
+        saveSessionProgress(progress);
+        return true;
+      } catch (error) {
+        isLockedOut = true;
+        tabLockMessage.textContent = error instanceof Error
+          ? error.message
+          : "Unable to save exam progress in this browser.";
+        tabLockModal.classList.remove("hidden");
+        return false;
+      }
+    }
+
+    function persistProgress() {
+      if (isLockedOut) return;
+      if (saveTimeoutId) clearTimeout(saveTimeoutId);
+      saveTimeoutId = setTimeout(saveProgressNow, 250);
+    }
+
+    window.addEventListener("pagehide", () => {
+      saveProgressNow();
+      tabProtectionCleanup();
+    }, { once: true });
+
+    if (!isLockedOut) saveProgressNow();
 
     function startTimer() {
       if (timerId) clearInterval(timerId);
+      timerClock.textContent = [
+        String(Math.floor(secondsLeft / 3600)).padStart(2, '0'),
+        String(Math.floor((secondsLeft % 3600) / 60)).padStart(2, '0'),
+        String(secondsLeft % 60).padStart(2, '0')
+      ].join(":");
       timerId = setInterval(() => {
         if (secondsLeft <= 0) {
           clearInterval(timerId);
@@ -240,10 +337,11 @@ const commerceExam = getExamData("commerce");
         const h = Math.floor(secondsLeft / 3600);
         const m = Math.floor((secondsLeft % 3600) / 60);
         const s = secondsLeft % 60;
-        timerClock.textContent = 
-          String(h).padStart(2, '0') + ":" + 
-          String(m).padStart(2, '0') + ":" + 
+        timerClock.textContent =
+          String(h).padStart(2, '0') + ":" +
+          String(m).padStart(2, '0') + ":" +
           String(s).padStart(2, '0');
+        if (secondsLeft % 15 === 0) persistProgress();
       }, 1000);
     }
 
@@ -254,6 +352,15 @@ const commerceExam = getExamData("commerce");
       return true;
     }
 
+    function escapeHtml(value) {
+      return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#39;");
+    }
+
     function renderLeftTree() {
       leftQuestionTree.innerHTML = "";
       const streamObj = examData[currentStream];
@@ -261,8 +368,8 @@ const commerceExam = getExamData("commerce");
       streamObj.sections.forEach(sec => {
         const secWrap = document.createElement("div");
         secWrap.className = `p-1.5 rounded-lg border transition cursor-pointer ${
-          sec.key === activeSecKey 
-            ? 'bg-slate-100 dark:bg-slate-800 border-emerald-500 shadow-sm' 
+          sec.key === activeSecKey
+            ? 'bg-slate-100 dark:bg-slate-800 border-emerald-500 shadow-sm'
             : 'border-slate-200 dark:border-slate-800 hover:border-slate-300'
         }`;
 
@@ -277,8 +384,8 @@ const commerceExam = getExamData("commerce");
         const headerDiv = document.createElement("div");
         headerDiv.className = "flex items-center justify-between text-[11px] font-bold text-slate-800 dark:text-slate-200 mb-1";
         headerDiv.innerHTML = `
-          <span class="truncate pr-1">${sec.label}</span>
-          <span class="text-[9px] font-mono text-emerald-600 dark:text-emerald-400 shrink-0">${sec.marks}</span>
+          <span class="truncate pr-1">${escapeHtml(sec.label)}</span>
+          <span class="text-[9px] font-mono text-emerald-600 dark:text-emerald-400 shrink-0">${escapeHtml(sec.marks)}</span>
         `;
         secWrap.appendChild(headerDiv);
 
@@ -339,17 +446,17 @@ const commerceExam = getExamData("commerce");
           const curVal = draftAnswers[item.id] || "";
           itemBox.innerHTML = `
             ${statusBadge}
-            <p class="text-xs sm:text-sm font-medium text-slate-800 dark:text-slate-200 leading-relaxed">${item.q}</p>
+            <p class="text-xs sm:text-sm font-medium text-slate-800 dark:text-slate-200 leading-relaxed">${escapeHtml(item.q)}</p>
             <div class="flex items-center gap-2">
               <span class="text-xs font-mono text-slate-400">Answer:</span>
-              <input type="text" class="q-inp flex-1 sm:max-w-xs p-2 text-xs rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 font-mono" data-id="${item.id}" value="${curVal}" placeholder="Type keyword...">
+              <input type="text" class="q-inp flex-1 sm:max-w-xs p-2 text-xs rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 font-mono" data-id="${escapeHtml(item.id)}" value="${escapeHtml(curVal)}" placeholder="Type keyword...">
             </div>
           `;
         } else if (sec.key === "q2") {
           const curVal = draftAnswers[item.id];
           itemBox.innerHTML = `
             ${statusBadge}
-            <p class="text-xs sm:text-sm font-medium text-slate-800 dark:text-slate-200 leading-relaxed">${item.q}</p>
+            <p class="text-xs sm:text-sm font-medium text-slate-800 dark:text-slate-200 leading-relaxed">${escapeHtml(item.q)}</p>
             <div class="flex items-center gap-4 text-xs font-bold pt-1">
               <label class="flex items-center gap-2 cursor-pointer px-3.5 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 hover:border-emerald-500">
                 <input type="radio" name="r-${item.id}" value="true" class="q-radio" data-id="${item.id}" ${curVal === true ? 'checked' : ''}> True
@@ -363,36 +470,36 @@ const commerceExam = getExamData("commerce");
           const curVal = draftAnswers[item.id] || "";
           const opts = item.opts.map(opt => `
             <label class="flex items-center gap-2 p-2 rounded-lg border border-slate-200 dark:border-slate-800 hover:border-emerald-500 text-xs font-medium cursor-pointer">
-              <input type="radio" name="r-${item.id}" value="${opt}" class="q-radio" data-id="${item.id}" ${curVal === opt ? 'checked' : ''}>
-              <span>${opt}</span>
+              <input type="radio" name="r-${escapeHtml(item.id)}" value="${escapeHtml(opt)}" class="q-radio" data-id="${escapeHtml(item.id)}" ${curVal === opt ? 'checked' : ''}>
+              <span>${escapeHtml(opt)}</span>
             </label>
           `).join('');
           itemBox.innerHTML = `
             ${statusBadge}
-            <p class="text-xs sm:text-sm font-medium text-slate-800 dark:text-slate-200 leading-relaxed">${item.q}</p>
+            <p class="text-xs sm:text-sm font-medium text-slate-800 dark:text-slate-200 leading-relaxed">${escapeHtml(item.q)}</p>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">${opts}</div>
           `;
         } else if (sec.key === "q4" || sec.key === "q5") {
           const curVal = draftAnswers[item.id] || [];
           const opts = item.opts.map(opt => `
             <label class="flex items-center gap-2 p-2 rounded-lg border border-slate-200 dark:border-slate-800 hover:border-emerald-500 text-xs font-medium cursor-pointer">
-              <input type="checkbox" name="c-${item.id}" value="${opt}" class="q-chk" data-id="${item.id}" ${curVal.includes(opt) ? 'checked' : ''}>
-              <span>${opt}</span>
+              <input type="checkbox" name="c-${escapeHtml(item.id)}" value="${escapeHtml(opt)}" class="q-chk" data-id="${escapeHtml(item.id)}" ${curVal.includes(opt) ? 'checked' : ''}>
+              <span>${escapeHtml(opt)}</span>
             </label>
           `).join('');
           itemBox.innerHTML = `
             ${statusBadge}
-            <p class="text-xs sm:text-sm font-medium text-slate-800 dark:text-slate-200 leading-relaxed">${item.q}</p>
+            <p class="text-xs sm:text-sm font-medium text-slate-800 dark:text-slate-200 leading-relaxed">${escapeHtml(item.q)}</p>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">${opts}</div>
           `;
         } else if (sec.key === "q6") {
           const curVal = draftAnswers[item.id] || "";
-          const opts = item.opts.map(opt => `<option value="${opt}" ${curVal === opt ? 'selected' : ''}>${opt}</option>`).join('');
+          const opts = item.opts.map(opt => `<option value="${escapeHtml(opt)}" ${curVal === opt ? 'selected' : ''}>${escapeHtml(opt)}</option>`).join('');
           itemBox.innerHTML = `
             ${statusBadge}
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
-              <span class="font-bold text-slate-800 dark:text-slate-200 sm:w-1/3">${item.left}</span>
-              <select class="q-sel flex-1 p-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 font-medium" data-id="${item.id}">
+              <span class="font-bold text-slate-800 dark:text-slate-200 sm:w-1/3">${escapeHtml(item.left)}</span>
+              <select class="q-sel flex-1 p-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 font-medium" data-id="${escapeHtml(item.id)}">
                 <option value="">-- Select Match --</option>
                 ${opts}
               </select>
@@ -402,16 +509,16 @@ const commerceExam = getExamData("commerce");
           const curVal = draftAnswers[item.id] || "";
           itemBox.innerHTML = `
             ${statusBadge}
-            <p class="text-xs sm:text-sm font-bold text-slate-900 dark:text-white leading-relaxed">${item.q}</p>
-            <textarea class="q-txt w-full p-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-mono" rows="3" placeholder="Draft brief answer..." data-id="${item.id}">${curVal}</textarea>
+            <p class="text-xs sm:text-sm font-bold text-slate-900 dark:text-white leading-relaxed">${escapeHtml(item.q)}</p>
+            <textarea class="q-txt w-full p-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-mono" rows="3" placeholder="Draft brief answer..." data-id="${escapeHtml(item.id)}">${escapeHtml(curVal)}</textarea>
           `;
         } else if (sec.key === "q8") {
           const curVal = draftAnswers[item.id] || "";
           itemBox.innerHTML = `
             ${statusBadge}
-            <h4 class="font-bold text-slate-900 dark:text-white text-xs sm:text-sm">${item.title}</h4>
-            <p class="text-xs text-slate-600 dark:text-slate-400">${item.q}</p>
-            <textarea class="q-txt w-full p-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-950 text-emerald-400 font-mono text-xs" rows="8" placeholder="<!DOCTYPE html>\n<html>\n  <body>...</body>\n</html>" data-id="${item.id}">${curVal}</textarea>
+            <h4 class="font-bold text-slate-900 dark:text-white text-xs sm:text-sm">${escapeHtml(item.title)}</h4>
+            <p class="text-xs text-slate-600 dark:text-slate-400">${escapeHtml(item.q)}</p>
+            <textarea class="q-txt w-full p-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-950 text-emerald-400 font-mono text-xs" rows="8" placeholder="<!DOCTYPE html>\n<html>\n  <body>...</body>\n</html>" data-id="${escapeHtml(item.id)}">${escapeHtml(curVal)}</textarea>
           `;
         }
 
@@ -425,6 +532,7 @@ const commerceExam = getExamData("commerce");
       document.querySelectorAll('.q-inp').forEach(inp => {
         inp.addEventListener('input', (e) => {
           draftAnswers[e.target.dataset.id] = e.target.value.trim().toLowerCase();
+          persistProgress();
         });
       });
 
@@ -432,6 +540,7 @@ const commerceExam = getExamData("commerce");
         r.addEventListener('change', (e) => {
           const qid = e.target.dataset.id;
           draftAnswers[qid] = e.target.value === "true" ? true : e.target.value === "false" ? false : e.target.value;
+          persistProgress();
         });
       });
 
@@ -444,18 +553,21 @@ const commerceExam = getExamData("commerce");
           } else {
             draftAnswers[qid] = draftAnswers[qid].filter(v => v !== e.target.value);
           }
+          persistProgress();
         });
       });
 
       document.querySelectorAll('.q-sel').forEach(s => {
         s.addEventListener('change', (e) => {
           draftAnswers[e.target.dataset.id] = e.target.value;
+          persistProgress();
         });
       });
 
       document.querySelectorAll('.q-txt').forEach(t => {
         t.addEventListener('input', (e) => {
           draftAnswers[e.target.dataset.id] = e.target.value.trim();
+          persistProgress();
         });
       });
     }
@@ -475,6 +587,7 @@ const commerceExam = getExamData("commerce");
 
       renderLeftTree();
       renderActiveSection();
+      persistProgress();
       alert(`Section ${activeSecKey.toUpperCase()} saved. Answered questions marked GREEN.`);
     });
 
@@ -489,6 +602,7 @@ const commerceExam = getExamData("commerce");
         delete submittedAnswers[item.id];
       });
 
+      persistProgress();
       renderLeftTree();
       renderActiveSection();
     });
@@ -513,84 +627,86 @@ const commerceExam = getExamData("commerce");
       }
     });
 
-    function evaluateExam() {
+    async function evaluateExam() {
+      if (isLockedOut || isSubmitting || !examData[currentStream]) return;
       clearInterval(timerId);
-      const streamObj = examData[currentStream];
-      let score = 0;
-      const maxObj = 50;
+      isSubmitting = true;
+      confirmEndExamBtn.disabled = true;
+      confirmEndExamBtn.textContent = "Submitting...";
+      invigilatorErr.classList.add("hidden");
 
-      const q1 = streamObj.sections.find(s => s.key === "q1");
-      q1.items.forEach(item => {
-        const u = submittedAnswers[item.id] || draftAnswers[item.id] || "";
-        if (u === item.ans.toLowerCase()) score += 1;
-      });
+      const submissions = {};
+      examData[currentStream].sections
+        .filter((section) => ["q1", "q2", "q3", "q4", "q5", "q6"].includes(section.key))
+        .forEach((section) => section.items.forEach((item) => {
+          const answer = submittedAnswers[item.id] !== undefined
+            ? submittedAnswers[item.id]
+            : draftAnswers[item.id];
+          if (answer !== undefined && answer !== null && answer !== "" && (!Array.isArray(answer) || answer.length > 0)) {
+            submissions[item.id] = answer;
+          }
+        }));
 
-      const q2 = streamObj.sections.find(s => s.key === "q2");
-      q2.items.forEach(item => {
-        const u = submittedAnswers[item.id] !== undefined ? submittedAnswers[item.id] : draftAnswers[item.id];
-        if (u === item.ans) score += 1;
-      });
+      try {
+        if (!saveProgressNow()) throw new Error("Your exam progress could not be saved in this browser.");
+        const response = await fetch("/api/exam/submit", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify({ stream: currentStream, sessionId: activeSession.id, submissions })
+        });
+        let result;
+        try {
+          result = await response.json();
+        } catch {
+          throw new Error("The grading service returned an invalid response.");
+        }
+        if (!response.ok || !result.success) {
+          throw new Error(result.error || "Your answers could not be submitted.");
+        }
 
-      const q3 = streamObj.sections.find(s => s.key === "q3");
-      q3.items.forEach(item => {
-        const u = submittedAnswers[item.id] || draftAnswers[item.id] || "";
-        if (u === item.ans) score += 1;
-      });
-
-      const q4 = streamObj.sections.find(s => s.key === "q4");
-      q4.items.forEach(item => {
-        const u = submittedAnswers[item.id] || draftAnswers[item.id] || [];
-        if (u.length === item.ans.length && item.ans.every(a => u.includes(a))) score += 2;
-      });
-
-      const q5 = streamObj.sections.find(s => s.key === "q5");
-      q5.items.forEach(item => {
-        const u = submittedAnswers[item.id] || draftAnswers[item.id] || [];
-        if (u.length === item.ans.length && item.ans.every(a => u.includes(a))) score += 3;
-      });
-
-      const q6 = streamObj.sections.find(s => s.key === "q6");
-      q6.items.forEach(item => {
-        const u = submittedAnswers[item.id] || draftAnswers[item.id] || "";
-        if (u === item.ans) score += 1;
-      });
-
-      document.getElementById("finalObjScore").textContent = `${score} / ${maxObj}`;
-      const pct = Math.round((score / maxObj) * 100);
-      document.getElementById("finalAccuracy").textContent = `${pct}%`;
-
-      resultModal.classList.remove('hidden');
+        document.getElementById("finalObjScore").textContent = `${result.scoredMarks} / ${result.totalMarks}`;
+        document.getElementById("finalAccuracy").textContent = `${result.percentage}%`;
+        completeSession(result.scoredMarks);
+        tabProtectionCleanup();
+        isLockedOut = true;
+        invigilatorModal.classList.add("hidden");
+        resultModal.classList.remove("hidden");
+      } catch (error) {
+        console.error("Exam submission failed:", error);
+        invigilatorErr.textContent = error instanceof Error
+          ? `Submission failed: ${error.message}`
+          : "Submission failed. Please try again.";
+        invigilatorErr.classList.remove("hidden");
+        invigilatorModal.classList.remove("hidden");
+      } finally {
+        isSubmitting = false;
+        confirmEndExamBtn.disabled = false;
+        confirmEndExamBtn.textContent = "Confirm & Final Submit";
+      }
     }
 
     document.getElementById("reviewReportBtn")?.addEventListener('click', () => {
       resultModal.classList.add('hidden');
     });
 
-    document.querySelectorAll('.stream-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const st = btn.dataset.stream;
-        if (st === currentStream) return;
-        currentStream = st;
-        activeSecKey = "q1";
-        draftAnswers = {};
-        submittedAnswers = {};
-
-        document.querySelectorAll('.stream-btn').forEach(b => {
-          if (b.dataset.stream === st) {
-            b.className = "stream-btn px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-600 text-white";
-          } else {
-            b.className = "stream-btn px-2 py-0.5 rounded text-[11px] font-bold text-slate-400 hover:text-white";
-          }
-        });
-
+    async function initializeExam() {
+      try {
+        const payload = await fetchExamData();
+        examData[currentStream] = payload;
+        saveProgressNow();
         renderLeftTree();
         renderActiveSection();
-      });
-    });
+        startTimer();
+      } catch (error) {
+        console.error("Exam could not be initialized:", error);
+        tabActivityWarning.textContent = error instanceof Error
+          ? `The exam could not be loaded: ${error.message}`
+          : "The exam could not be loaded. Please return to login and try again.";
+        tabActivityWarning.hidden = false;
+      }
+    }
 
-    // Boot
-    renderLeftTree();
-    renderActiveSection();
-    startTimer();
+    void initializeExam();
+    }
   </script>
 </PortalLayout>

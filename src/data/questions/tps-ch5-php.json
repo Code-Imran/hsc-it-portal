@@ -1,89 +1,896 @@
-{
-  "chapter_id": 5,
-  "chapter_name": "Server-Side Scripting (PHP)",
-  "subject_stream": ["science"],
-  "source": "TPS Notes - 12th IT",
-  "q1_fill_in_the_blanks": [
-    { "id": "tps-ch5-fb-01", "question": "The server-side environment that runs a scripting language is called a _____.", "answer": "web server" },
-    { "id": "tps-ch5-fb-02", "question": "PHP is a _____-side scripting language.", "answer": "server" },
-    { "id": "tps-ch5-fb-03", "question": "PHP is an _____ language, meaning there is no need for compilation.", "answer": "interpreted" },
-    { "id": "tps-ch5-fb-04", "question": "PHP files are saved with the _____ extension.", "answer": ".php" },
-    { "id": "tps-ch5-fb-05", "question": "The _____ keyword is used to display text on a webpage in PHP.", "answer": "echo" },
-    { "id": "tps-ch5-fb-06", "question": "In PHP, a variable starts with the _____ sign followed by the variable name.", "answer": "$" },
-    { "id": "tps-ch5-fb-07", "question": "A variable declared outside a function has a _____ scope.", "answer": "global" },
-    { "id": "tps-ch5-fb-08", "question": "A variable declared within a function has a _____ scope.", "answer": "local" },
-    { "id": "tps-ch5-fb-09", "question": "The _____ loop in PHP works only on arrays.", "answer": "foreach" },
-    { "id": "tps-ch5-fb-10", "question": "The built-in function _____ returns the length of a string in PHP.", "answer": "strlen" },
-    { "id": "tps-ch5-fb-11", "question": "The built-in function _____ counts the number of words in a string.", "answer": "str_word_count" },
-    { "id": "tps-ch5-fb-12", "question": "The built-in function _____ reverses a string in PHP.", "answer": "strrev" },
-    { "id": "tps-ch5-fb-13", "question": "The built-in function _____ searches for a specific text within a string and returns its position.", "answer": "strpos" },
-    { "id": "tps-ch5-fb-14", "question": "The built-in function _____ converts the first character of each word in a string to uppercase.", "answer": "ucwords" },
-    { "id": "tps-ch5-fb-15", "question": "The built-in function _____ removes whitespace and other predefined characters from both sides of a string.", "answer": "trim" },
-    { "id": "tps-ch5-fb-16", "question": "Arrays with numeric indexes are called _____ arrays.", "answer": "indexed" },
-    { "id": "tps-ch5-fb-17", "question": "Arrays with named keys are called _____ arrays.", "answer": "associative" },
-    { "id": "tps-ch5-fb-18", "question": "The superglobal _____ is an array of variables passed via URL parameters.", "answer": "$_GET" },
-    { "id": "tps-ch5-fb-19", "question": "The superglobal _____ is an array of variables passed via the HTTP POST method.", "answer": "$_POST" },
-    { "id": "tps-ch5-fb-20", "question": "The _____ function in PHP is used to check whether a variable has a value or not.", "answer": "isset" },
-    { "id": "tps-ch5-fb-21", "question": "A _____ is a small text file that the server sends on the user's computer to track activities.", "answer": "cookie" },
-    { "id": "tps-ch5-fb-22", "question": "A _____ is used to store user information on the server to track activities across multiple pages.", "answer": "session" }
-  ],
-  "q2_true_false": [
-    { "id": "tps-ch5-tf-01", "statement": "PHP is a client-side scripting language.", "answer": false },
-    { "id": "tps-ch5-tf-02", "statement": "PHP is an interpreted language with no need for compilation.", "answer": true },
-    { "id": "tps-ch5-tf-03", "statement": "PHP variable names can start with a number.", "answer": false },
-    { "id": "tps-ch5-tf-04", "statement": "PHP variable names are case-sensitive.", "answer": true },
-    { "id": "tps-ch5-tf-05", "statement": "A variable declared outside a function has a global scope.", "answer": true },
-    { "id": "tps-ch5-tf-06", "statement": "The foreach loop in PHP works only on arrays.", "answer": true },
-    { "id": "tps-ch5-tf-07", "statement": "strlen() function returns the total character length of a string.", "answer": true },
-    { "id": "tps-ch5-tf-08", "statement": "In PHP, array index numbers always start with 1.", "answer": false },
-    { "id": "tps-ch5-tf-09", "statement": "Information sent from a form using the GET method is visible to everyone in the URL.", "answer": true },
-    { "id": "tps-ch5-tf-10", "statement": "GET method should NEVER be used for sending passwords or sensitive information.", "answer": true },
-    { "id": "tps-ch5-tf-11", "statement": "POST method has strict limits on the amount of information sent.", "answer": false },
-    { "id": "tps-ch5-tf-12", "statement": "isset() method in PHP is used to check whether a variable has been initialized or has a value.", "answer": true }
-  ],
-  "q3_mcq_single": [
-    { "id": "tps-ch5-mcq1-01", "question": "PHP files are saved with the _____ extension.", "options": [".html", ".xml", ".js", ".php"], "answer": ".php" },
-    { "id": "tps-ch5-mcq1-02", "question": "The _____ keyword is used to display text on a webpage in PHP.", "options": ["echo", "print_line", "write", "cin"], "answer": "echo" },
-    { "id": "tps-ch5-mcq1-03", "question": "A variable in PHP starts with the _____ symbol followed by the variable name.", "options": ["#", "@", "=", "$"], "answer": "$" },
-    { "id": "tps-ch5-mcq1-04", "question": "Which loop in PHP works exclusively on arrays?", "options": ["for", "while", "do-while", "foreach"], "answer": "foreach" },
-    { "id": "tps-ch5-mcq1-05", "question": "The built-in function _____ returns the character length of a string in PHP.", "options": ["strlength()", "strlen()", "strrev()", "substr()"], "answer": "strlen()" },
-    { "id": "tps-ch5-mcq1-06", "question": "Which function counts the number of words in a string in PHP?", "options": ["strlen()", "str_word_count()", "substr()", "trim()"], "answer": "str_word_count()" },
-    { "id": "tps-ch5-mcq1-07", "question": "Arrays with named keys in PHP are known as _____ arrays.", "options": ["indexed", "associative", "multidimensional", "normal"], "answer": "associative" },
-    { "id": "tps-ch5-mcq1-08", "question": "Information sent from a form with the _____ method is visible to everyone in the browser address bar.", "options": ["POST", "GET", "HTTP", "FTP"], "answer": "GET" },
-    { "id": "tps-ch5-mcq1-09", "question": "Which PHP function checks whether a variable has a value or button is clicked?", "options": ["outset()", "inset()", "noset()", "isset()"], "answer": "isset()" },
-    { "id": "tps-ch5-mcq1-10", "question": "A _____ is a small text file that the server sends and stores on the user's computer.", "options": ["cookie", "session", "presentation", "method"], "answer": "cookie" }
-  ],
-  "q4_mcq_two_correct": [
-    { "id": "tps-ch5-mcq2-01", "question": "Valid data types in PHP include _____ and _____.", "options": ["boolean", "text", "number", "array", "varchar"], "answer": ["boolean", "array"] },
-    { "id": "tps-ch5-mcq2-02", "question": "Form data in HTML can be submitted to PHP using _____ or _____ method.", "options": ["GET", "POST", "RETURN", "FORWARD", "SUBMIT"], "answer": ["GET", "POST"] },
-    { "id": "tps-ch5-mcq2-03", "question": "The PHP superglobals used to collect submitted form data are _____ and _____.", "options": ["$_GET", "$POST", "$GET", "$_POST", "$_SERVER_POST"], "answer": ["$_GET", "$_POST"] },
-    { "id": "tps-ch5-mcq2-04", "question": "Single-line comments in PHP can be written using _____ or _____.", "options": ["//", "#", "/* and */", "<!-- -->", "$$"], "answer": ["//", "#"] },
-    { "id": "tps-ch5-mcq2-05", "question": "Built-in string manipulation functions in PHP include _____ and _____.", "options": ["trim()", "substr()", "length()", "strreverse()", "stringLen()"], "answer": ["trim()", "substr()"] }
-  ],
-  "q5_mcq_three_correct": [
-    { "id": "tps-ch5-mcq3-01", "question": "The three types of arrays supported in PHP are _____.", "options": ["indexed", "associative", "multidimensional", "simple", "complex", "general"], "answer": ["indexed", "associative", "multidimensional"] },
-    { "id": "tps-ch5-mcq3-02", "question": "The variable scopes available in PHP include _____.", "options": ["local", "global", "static", "universal", "final", "outside"], "answer": ["local", "global", "static"] },
-    { "id": "tps-ch5-mcq3-03", "question": "Predefined string functions in PHP include _____.", "options": ["strpos()", "substr()", "strlen()", "lower()", "upper()", "strlength()"], "answer": ["strpos()", "substr()", "strlen()"] },
-    { "id": "tps-ch5-mcq3-04", "question": "Key features of PHP include _____.", "options": ["simple", "open source", "platform independent", "difficult", "error creating", "requires compilation"], "answer": ["simple", "open source", "platform independent"] }
-  ],
-  "q6_match_following": [
+﻿[
     {
-      "id": "tps-ch5-match-01",
-      "pairs": [
-        { "left": "strlen()", "right": "Returns length of a string" },
-        { "left": "str_word_count()", "right": "Counts number of words in a string" },
-        { "left": "strrev()", "right": "Reverses a string" },
-        { "left": "strpos()", "right": "Searches specific text position in string" }
-      ]
+        "id":  1,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "PHP is a ____________ scripting language.",
+        "options":  [
+                        "Client side",
+                        "Server side",
+                        "Both a and b",
+                        "None of these"
+                    ],
+        "answer":  1,
+        "explanation":  "PHP is an open-source server-side interpreted scripting language."
     },
     {
-      "id": "tps-ch5-match-02",
-      "pairs": [
-        { "left": "$_GET", "right": "Passed via URL parameters" },
-        { "left": "$_POST", "right": "Passed via HTTP POST body" },
-        { "left": "cookie", "right": "Stored on user computer" },
-        { "left": "session", "right": "Stored on server across pages" }
-      ]
+        "id":  2,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "A variable declared ____________ a function has GLOBAL scope.",
+        "options":  [
+                        "outside",
+                        "anywhere",
+                        "inside",
+                        "none"
+                    ],
+        "answer":  0,
+        "explanation":  "Variables declared outside functions hold global scope in PHP."
+    },
+    {
+        "id":  3,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "The ____________ function returns a part of a string.",
+        "options":  [
+                        "trim()",
+                        "ucwords()",
+                        "substr()",
+                        "stripos()"
+                    ],
+        "answer":  2,
+        "explanation":  "substr() returns a specified substring portion of a string."
+    },
+    {
+        "id":  4,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "A ____________ is a computer system that serves as a central repository of data and programs.",
+        "options":  [
+                        "Server",
+                        "Network",
+                        "Client",
+                        "Object"
+                    ],
+        "answer":  0,
+        "explanation":  "A server delivers resources and program logic across connected networks."
+    },
+    {
+        "id":  5,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "The server-side environment that runs a scripting language is termed as a ____________.",
+        "options":  [
+                        "Browser",
+                        "Computer",
+                        "Web Server",
+                        "Client"
+                    ],
+        "answer":  2,
+        "explanation":  "A web server interprets PHP logic and returns raw HTML to clients."
+    },
+    {
+        "id":  6,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "PHP is an interpreted language, so there is no need for ____________.",
+        "options":  [
+                        "execution",
+                        "running",
+                        "compilation",
+                        "debugging"
+                    ],
+        "answer":  2,
+        "explanation":  "Interpreted scripting languages execute directly without compiling."
+    },
+    {
+        "id":  7,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "PHP files are saved with the ____________ file extension.",
+        "options":  [
+                        ".html",
+                        ".xml",
+                        ".js",
+                        ".php"
+                    ],
+        "answer":  3,
+        "explanation":  "PHP source code scripts use the standard .php file extension."
+    },
+    {
+        "id":  8,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "The ____________ keyword/statement is used to display or output text on a web page in PHP.",
+        "options":  [
+                        "echo",
+                        "print",
+                        "write",
+                        "out"
+                    ],
+        "answer":  0,
+        "explanation":  "echo outputs one or more string expressions to the screen."
+    },
+    {
+        "id":  9,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "A variable in PHP starts with the ____________ sign followed by the name of the variable.",
+        "options":  [
+                        "#",
+                        "@",
+                        "$",
+                        "%"
+                    ],
+        "answer":  2,
+        "explanation":  "In PHP, variable identifiers must start with the dollar sign ($)."
+    },
+    {
+        "id":  10,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "A PHP variable name cannot start with a ____________.",
+        "options":  [
+                        "Number",
+                        "Character",
+                        "Alphanumeric",
+                        "Dollar"
+                    ],
+        "answer":  0,
+        "explanation":  "Variable names in PHP cannot begin with a numeric digit."
+    },
+    {
+        "id":  11,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "Which of the following is the correct method for declaring a PHP variable?",
+        "options":  [
+                        "#age",
+                        "$age",
+                        "$-age",
+                        "d.age"
+                    ],
+        "answer":  1,
+        "explanation":  "$age is the valid syntax for declaring a PHP variable."
+    },
+    {
+        "id":  12,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "A variable declared ____________ a function has LOCAL scope.",
+        "options":  [
+                        "inside",
+                        "outside",
+                        "between",
+                        "topside"
+                    ],
+        "answer":  0,
+        "explanation":  "Variables created within a function body have local scope."
+    },
+    {
+        "id":  13,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "To check the data type of a variable in PHP, which function/method is used?",
+        "options":  [
+                        "var_dump()",
+                        "var_type()",
+                        "var_check()",
+                        "var_value()"
+                    ],
+        "answer":  0,
+        "explanation":  "var_dump() outputs structured information about variable type and value."
+    },
+    {
+        "id":  14,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "____________ are lines in PHP code that are ignored by the compiler and not visible in the rendered output.",
+        "options":  [
+                        "Methods",
+                        "Comments",
+                        "Objects",
+                        "Values"
+                    ],
+        "answer":  1,
+        "explanation":  "Comments document code and are skipped during execution."
+    },
+    {
+        "id":  15,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "The ____________ loop in PHP works exclusively on arrays.",
+        "options":  [
+                        "for",
+                        "while",
+                        "foreach",
+                        "do-while"
+                    ],
+        "answer":  2,
+        "explanation":  "The foreach construct loops over each element of an array."
+    },
+    {
+        "id":  16,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "The ____________ function returns the length of a string in PHP.",
+        "options":  [
+                        "strlen()",
+                        "length()",
+                        "str_len()",
+                        "count()"
+                    ],
+        "answer":  0,
+        "explanation":  "strlen() returns the character count length of a string."
+    },
+    {
+        "id":  17,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "The ____________ function counts the number of words in a string.",
+        "options":  [
+                        "str_words()",
+                        "str_word_count()",
+                        "count_words()",
+                        "word_count()"
+                    ],
+        "answer":  1,
+        "explanation":  "str_word_count() calculates word counts in string primitives."
+    },
+    {
+        "id":  18,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "The ____________ function reverses a string in PHP.",
+        "options":  [
+                        "strrev()",
+                        "reverse()",
+                        "str_reverse()",
+                        "rev()"
+                    ],
+        "answer":  0,
+        "explanation":  "strrev() returns a reversed string."
+    },
+    {
+        "id":  19,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "The ____________ function searches for a specific text within a string and returns the character position.",
+        "options":  [
+                        "strpos()",
+                        "search()",
+                        "stripos()",
+                        "find()"
+                    ],
+        "answer":  0,
+        "explanation":  "strpos() returns the numerical position of the first occurrence."
+    },
+    {
+        "id":  20,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "The ____________ function replaces specific characters with replacement characters in a string.",
+        "options":  [
+                        "str_replace()",
+                        "replace()",
+                        "substr_replace()",
+                        "change()"
+                    ],
+        "answer":  0,
+        "explanation":  "str_replace() performs string replacement matches."
+    },
+    {
+        "id":  21,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "The ____________ function converts all characters in a string to lowercase.",
+        "options":  [
+                        "str_lower()",
+                        "strtolower()",
+                        "to_lower()",
+                        "strlowercase()"
+                    ],
+        "answer":  1,
+        "explanation":  "strtolower() converts string characters to lowercase."
+    },
+    {
+        "id":  22,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "The ____________ function converts all characters in a string to uppercase.",
+        "options":  [
+                        "strtoupper()",
+                        "str_upper()",
+                        "to_upper()",
+                        "struppercase()"
+                    ],
+        "answer":  0,
+        "explanation":  "strtoupper() converts string characters to uppercase."
+    },
+    {
+        "id":  23,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "The ____________ function capitalizes the first character of each word in a string.",
+        "options":  [
+                        "ucfirst()",
+                        "ucwords()",
+                        "capitalize()",
+                        "str_cap()"
+                    ],
+        "answer":  1,
+        "explanation":  "ucwords() capitalizes the first letter of each word in a string."
+    },
+    {
+        "id":  24,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "In PHP, there are ____________ primary types of arrays.",
+        "options":  [
+                        "Two",
+                        "Three",
+                        "Four",
+                        "Five"
+                    ],
+        "answer":  1,
+        "explanation":  "PHP arrays are classified into Indexed, Associative, and Multidimensional arrays."
+    },
+    {
+        "id":  25,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "____________ arrays are arrays with a numeric index.",
+        "options":  [
+                        "Indexed",
+                        "Associative",
+                        "Multidimensional",
+                        "Normal"
+                    ],
+        "answer":  0,
+        "explanation":  "Indexed arrays store each value using an incremental numerical key starting at 0."
+    },
+    {
+        "id":  26,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "____________ arrays are arrays with named key-value associations.",
+        "options":  [
+                        "Indexed",
+                        "Associative",
+                        "Multidimensional",
+                        "Normal"
+                    ],
+        "answer":  1,
+        "explanation":  "Associative arrays utilize user-defined string keys rather than numbers."
+    },
+    {
+        "id":  27,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "An indexed array\u0027s index number always begins at ____________.",
+        "options":  [
+                        "one",
+                        "two",
+                        "zero",
+                        "four"
+                    ],
+        "answer":  2,
+        "explanation":  "Numerical indices in PHP arrays default to starting from index 0."
+    },
+    {
+        "id":  28,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "The ____________ method/function in PHP is used to check whether a variable has a value or is set.",
+        "options":  [
+                        "isset()",
+                        "is_null()",
+                        "empty()",
+                        "check()"
+                    ],
+        "answer":  0,
+        "explanation":  "isset() determines if a variable is declared and is distinct from null."
+    },
+    {
+        "id":  29,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "A ____________ is a small text file that the server sends to and stores on the user\u0027s computer.",
+        "options":  [
+                        "Cookie",
+                        "Session",
+                        "Method",
+                        "Token"
+                    ],
+        "answer":  0,
+        "explanation":  "Cookies are client-side text files stored by browsers on request from servers."
+    },
+    {
+        "id":  30,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "A ____________ is used to store user information across multiple pages temporarily on the server.",
+        "options":  [
+                        "Cookie",
+                        "Session",
+                        "Presentation",
+                        "Variable"
+                    ],
+        "answer":  1,
+        "explanation":  "Sessions store data on the server across sequential page requests."
+    },
+    {
+        "id":  31,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "Information sent from a form with the ____________ method is visible to everyone in the URL address bar.",
+        "options":  [
+                        "POST",
+                        "GET",
+                        "HTTP",
+                        "FTP"
+                    ],
+        "answer":  1,
+        "explanation":  "The GET method appends form variables to the URL query string."
+    },
+    {
+        "id":  32,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "The ____________ method should NEVER be used for sending passwords or sensitive information.",
+        "options":  [
+                        "POST",
+                        "GET",
+                        "HTTP",
+                        "PUT"
+                    ],
+        "answer":  1,
+        "explanation":  "GET exposes cleartext payload variables directly inside URLs and browser history."
+    },
+    {
+        "id":  33,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_two",
+        "question":  "Select TWO valid data types supported in PHP:",
+        "options":  [
+                        "Double",
+                        "Varchar",
+                        "Integer",
+                        "Array",
+                        "Bigint"
+                    ],
+        "answer":  [
+                       2,
+                       3
+                   ],
+        "explanation":  "Integer and Array are native PHP data types (Varchar and Bigint belong to SQL)."
+    },
+    {
+        "id":  34,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_two",
+        "question":  "Single-line comments in PHP can be written using which TWO notations?",
+        "options":  [
+                        "//",
+                        "/* */",
+                        "#",
+                        "--"
+                    ],
+        "answer":  [
+                       0,
+                       2
+                   ],
+        "explanation":  "PHP supports both C++ style (//) and Unix shell style (#) single-line comments."
+    },
+    {
+        "id":  35,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_two",
+        "question":  "Select TWO recognized variable scopes in PHP:",
+        "options":  [
+                        "local",
+                        "global",
+                        "universal",
+                        "outside"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "Variables in PHP can hold local or global scope."
+    },
+    {
+        "id":  36,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_two",
+        "question":  "PHP runs on which TWO of the following operating system platforms?",
+        "options":  [
+                        "Linux",
+                        "Excel",
+                        "Word",
+                        "Windows"
+                    ],
+        "answer":  [
+                       0,
+                       3
+                   ],
+        "explanation":  "PHP is cross-platform and runs natively on Linux and Windows."
+    },
+    {
+        "id":  37,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_two",
+        "question":  "Select TWO server-side web servers compatible with PHP:",
+        "options":  [
+                        "Linux",
+                        "XAMPP",
+                        "Apache",
+                        "Word"
+                    ],
+        "answer":  [
+                       1,
+                       2
+                   ],
+        "explanation":  "Apache and local stacks like XAMPP run and serve PHP."
+    },
+    {
+        "id":  38,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_two",
+        "question":  "Select TWO key features of the PHP language:",
+        "options":  [
+                        "Interpreted",
+                        "Open source",
+                        "Difficult",
+                        "Platform dependent"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "PHP is an open-source, interpreted server-side scripting language."
+    },
+    {
+        "id":  39,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_two",
+        "question":  "Variables in PHP can store which TWO types of data?",
+        "options":  [
+                        "Character Strings",
+                        "Numeric values",
+                        "Methods",
+                        "Functions"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "Variables hold primitive values like character strings and numbers."
+    },
+    {
+        "id":  40,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_two",
+        "question":  "A user-defined function name in PHP can start with a ____________ or a(n) ____________:",
+        "options":  [
+                        "Letter",
+                        "Underscore",
+                        "Number",
+                        "Symbol"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "Function identifiers must begin with an alphabetic letter or underscore (_)."
+    },
+    {
+        "id":  41,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_two",
+        "question":  "HTML form data can be submitted to a PHP script using which TWO HTTP methods?",
+        "options":  [
+                        "GET",
+                        "POST",
+                        "RETURN",
+                        "FORWARD"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "HTML forms transmit payload requests using GET or POST."
+    },
+    {
+        "id":  42,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_three",
+        "question":  "Select the THREE primary types of arrays supported in PHP:",
+        "options":  [
+                        "Indexed",
+                        "Associative",
+                        "Multidimensional",
+                        "Simple",
+                        "Complex",
+                        "General"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "PHP classifies arrays as Indexed, Associative, or Multidimensional."
+    },
+    {
+        "id":  43,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_three",
+        "question":  "Select THREE popular server-side programming languages:",
+        "options":  [
+                        "PHP",
+                        "Python",
+                        "Java (JSP)",
+                        "HTML",
+                        "CSS",
+                        "XML"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "PHP, Python, and Java (JSP) run server-side; HTML and CSS are client-side."
+    },
+    {
+        "id":  44,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_three",
+        "question":  "Select THREE valid data types available in PHP:",
+        "options":  [
+                        "String",
+                        "Integer",
+                        "Boolean",
+                        "Array",
+                        "Float",
+                        "Varchar"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "String, Integer, and Boolean are core primitive data types in PHP."
+    },
+    {
+        "id":  45,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_three",
+        "question":  "Select THREE valid predefined string manipulation functions in PHP:",
+        "options":  [
+                        "strlen()",
+                        "strrev()",
+                        "strtolower()",
+                        "upper()",
+                        "reverse()",
+                        "length()"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "strlen(), strrev(), and strtolower() are built-in PHP string functions."
+    },
+    {
+        "id":  46,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_three",
+        "question":  "Select THREE rules for declaring variable names in PHP:",
+        "options":  [
+                        "A variable name must start with a $ sign",
+                        "A variable name can start with a letter or underscore",
+                        "A variable name cannot start with a number",
+                        "Variable names are case-insensitive",
+                        "Variable names must contain spaces",
+                        "A variable name can start with a number"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "PHP variables require a leading $, cannot start with digits, and must begin with a letter or underscore."
+    },
+    {
+        "id":  47,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_three",
+        "question":  "Select THREE PHP superglobal arrays used for collecting form data and request information:",
+        "options":  [
+                        "$_GET",
+                        "$_POST",
+                        "$_REQUEST",
+                        "$GET",
+                        "$POST",
+                        "$FETCH"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "$_GET, $_POST, and $_REQUEST are standard superglobal input variables."
+    },
+    {
+        "id":  48,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "What is the output of the following PHP code?\n\u003c?php\n$txt = \u0027Information\u0027;\necho strlen($txt);\n?\u003e",
+        "options":  [
+                        "10",
+                        "11",
+                        "12",
+                        "9"
+                    ],
+        "answer":  1,
+        "explanation":  "strlen() returns the character count of \u0027Information\u0027, which is 11."
+    },
+    {
+        "id":  49,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "What is the output of the following PHP code?\n\u003c?php\necho str_word_count(\u0027HSC IT Online Portal\u0027);\n?\u003e",
+        "options":  [
+                        "3",
+                        "4",
+                        "5",
+                        "19"
+                    ],
+        "answer":  1,
+        "explanation":  "str_word_count() counts 4 space-separated words."
+    },
+    {
+        "id":  50,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "What is the output of the following PHP code?\n\u003c?php\necho strrev(\u0027PHP\u0027);\n?\u003e",
+        "options":  [
+                        "PHP",
+                        "HPP",
+                        "PPH",
+                        "Error"
+                    ],
+        "answer":  0,
+        "explanation":  "The word \u0027PHP\u0027 is a palindrome, so its reverse is also \u0027PHP\u0027."
+    },
+    {
+        "id":  51,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "What is the output of the following PHP code?\n\u003c?php\n$arr = array(\u0027HTML\u0027, \u0027CSS\u0027, \u0027PHP\u0027);\necho count($arr);\n?\u003e",
+        "options":  [
+                        "2",
+                        "3",
+                        "4",
+                        "0"
+                    ],
+        "answer":  1,
+        "explanation":  "count() returns the total number of elements in the array."
+    },
+    {
+        "id":  52,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "What is the output of the following PHP code?\n\u003c?php\necho strpos(\u0027Maharashtra State Board\u0027, \u0027State\u0027);\n?\u003e",
+        "options":  [
+                        "11",
+                        "12",
+                        "10",
+                        "13"
+                    ],
+        "answer":  1,
+        "explanation":  "The substring \u0027State\u0027 starts at zero-based index 12 in \u0027Maharashtra State Board\u0027."
+    },
+    {
+        "id":  53,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "What is the output of the following PHP code?\n\u003c?php\n$age = array(\u0027Peter\u0027 =\u003e 35, \u0027Ben\u0027 =\u003e 37);\necho $age[\u0027Peter\u0027];\n?\u003e",
+        "options":  [
+                        "35",
+                        "37",
+                        "Peter",
+                        "0"
+                    ],
+        "answer":  0,
+        "explanation":  "Associative array access with key \u0027Peter\u0027 retrieves value 35."
+    },
+    {
+        "id":  54,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "What will be printed by the following PHP code?\n\u003c?php\necho ucwords(\u0027hsc science it\u0027);\n?\u003e",
+        "options":  [
+                        "HSC SCIENCE IT",
+                        "Hsc Science It",
+                        "Hsc science it",
+                        "hsc science it"
+                    ],
+        "answer":  1,
+        "explanation":  "ucwords() capitalizes the first letter of each word."
+    },
+    {
+        "id":  55,
+        "chapter":  "Server-Side Scripting (PHP)",
+        "type":  "mcq_single",
+        "question":  "What does the following PHP condition output?\n\u003c?php\n$x = 10;\nif ($x == \u002710\u0027) { echo \u0027Match\u0027; } else { echo \u0027Mismatch\u0027; }\n?\u003e",
+        "options":  [
+                        "Match",
+                        "Mismatch",
+                        "Error",
+                        "None"
+                    ],
+        "answer":  0,
+        "explanation":  "Loose equality ($x == \u002710\u0027) compares values after type coercion, so it outputs \u0027Match\u0027."
+    },
+    {
+        "id":  701,
+        "answer":  0,
+        "explanation":  "PHP code is executed on the web server before the HTML is sent to the client.",
+        "type":  "true_false",
+        "options":  [
+                        "True",
+                        "False"
+                    ],
+        "chapter":  "Server-Side Scripting (PHP)",
+        "question":  "PHP is a server-side scripting language."
+    },
+    {
+        "id":  702,
+        "answer":  0,
+        "explanation":  "Variables in PHP are denoted by a leading dollar sign ().",
+        "type":  "true_false",
+        "options":  [
+                        "True",
+                        "False"
+                    ],
+        "chapter":  "Server-Side Scripting (PHP)",
+        "question":  "All variable names in PHP must start with the $ symbol."
+    },
+    {
+        "id":  703,
+        "answer":  1,
+        "explanation":  "echo can render any HTML strings directly to the response output stream.",
+        "type":  "true_false",
+        "options":  [
+                        "True",
+                        "False"
+                    ],
+        "chapter":  "Server-Side Scripting (PHP)",
+        "question":  "In PHP, the echo statement cannot output HTML tags."
+    },
+    {
+        "id":  704,
+        "answer":  0,
+        "explanation":  "Standard PHP scripts use the .php extension.",
+        "type":  "true_false",
+        "options":  [
+                        "True",
+                        "False"
+                    ],
+        "chapter":  "Server-Side Scripting (PHP)",
+        "question":  "PHP files have a default file extension of .php."
+    },
+    {
+        "id":  705,
+        "answer":  1,
+        "explanation":  " exposes data in URL query parameters;  is preferred for sensitive form data.",
+        "type":  "true_false",
+        "options":  [
+                        "True",
+                        "False"
+                    ],
+        "chapter":  "Server-Side Scripting (PHP)",
+        "question":  "The  superglobal is more secure than  for passing sensitive passwords."
     }
-  ]
-}
+]

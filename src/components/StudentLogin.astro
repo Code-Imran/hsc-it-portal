@@ -1,0 +1,188 @@
+<section class="max-w-xl mx-auto w-full p-5 sm:p-8 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+  <div class="mb-6">
+    <p class="text-xs font-mono font-bold uppercase tracking-wide text-emerald-600 dark:text-emerald-400">Mock exam candidate</p>
+    <h1 class="text-2xl font-extrabold text-slate-900 dark:text-white mt-1">Student login</h1>
+    <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">Enter your details to initialize or resume an 80-mark practice exam. No password or account is needed.</p>
+  </div>
+
+  <form id="studentLoginForm" class="space-y-5" novalidate>
+    <div>
+      <label for="studentName" class="block text-sm font-semibold mb-1.5">Student name</label>
+      <input id="studentName" name="studentName" type="text" required maxlength="80" autocomplete="name"
+        class="w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 px-3 py-2.5 text-sm"
+        aria-describedby="studentNameError" />
+      <p id="studentNameError" class="mt-1 text-xs text-rose-600" hidden></p>
+    </div>
+
+    <div>
+      <label for="rollNo" class="block text-sm font-semibold mb-1.5">Roll / seat number</label>
+      <input id="rollNo" name="rollNo" type="text" required minlength="4" maxlength="12" autocomplete="off"
+        autocapitalize="characters" spellcheck="false" pattern="[A-Za-z0-9]{4,12}"
+        placeholder="e.g. M027891"
+        class="w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 px-3 py-2.5 text-sm font-mono uppercase"
+        aria-describedby="rollNoHelp rollNoError" />
+      <p id="rollNoHelp" class="mt-1 text-xs text-slate-500">Use 4–12 letters or numbers, with no spaces or symbols.</p>
+      <p id="rollNoError" class="mt-1 text-xs text-rose-600" hidden></p>
+    </div>
+
+    <fieldset>
+      <legend class="block text-sm font-semibold mb-2">Stream</legend>
+      <div class="grid grid-cols-2 gap-3">
+        <label class="flex items-center gap-2 rounded-lg border border-slate-300 dark:border-slate-700 p-3 cursor-pointer">
+          <input type="radio" name="stream" value="science" checked />
+          <span class="text-sm">Science <span class="text-xs text-slate-500">(97)</span></span>
+        </label>
+        <label class="flex items-center gap-2 rounded-lg border border-slate-300 dark:border-slate-700 p-3 cursor-pointer">
+          <input type="radio" name="stream" value="commerce" />
+          <span class="text-sm">Commerce <span class="text-xs text-slate-500">(99)</span></span>
+        </label>
+      </div>
+    </fieldset>
+
+    <div class="rounded-lg bg-slate-50 dark:bg-slate-950 p-3 flex items-center justify-between">
+      <span class="text-sm font-medium">IT subject code</span>
+      <output id="subjectCode" class="font-mono font-bold text-emerald-700 dark:text-emerald-400" aria-live="polite">97</output>
+    </div>
+
+    <p id="loginError" class="text-sm text-rose-600" role="alert" hidden></p>
+    <button type="submit" class="w-full rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm py-3">
+      Continue to exam instructions
+    </button>
+    <p class="text-xs text-slate-500 text-center">Progress is saved in this browser for crash recovery. It is not a secure account or a substitute for board-exam authentication.</p>
+  </form>
+
+  <div id="resumeDialog" class="fixed inset-0 z-[60] bg-slate-950/70 p-4 flex items-center justify-center" role="dialog" aria-modal="true" aria-labelledby="resumeTitle" hidden>
+    <div class="max-w-md w-full bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-xl border border-slate-200 dark:border-slate-700">
+      <h2 id="resumeTitle" class="text-lg font-bold">Unfinished exam found</h2>
+      <p id="resumeMessage" class="text-sm text-slate-600 dark:text-slate-400 mt-2"></p>
+      <div class="mt-5 flex flex-col sm:flex-row gap-2 justify-end">
+        <button id="resumeExistingBtn" type="button" class="rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 text-sm font-bold">Resume progress</button>
+        <button id="startFreshBtn" type="button" class="rounded-lg border border-slate-300 dark:border-slate-700 px-4 py-2 text-sm font-bold">Start fresh</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { getActiveSession, initSession, resumeSession, subjectCodeForStream } from "../lib/exam/sessionManager.js";
+
+  const form = document.querySelector("#studentLoginForm");
+  const nameInput = document.querySelector("#studentName");
+  const rollInput = document.querySelector("#rollNo");
+  const codeOutput = document.querySelector("#subjectCode");
+  const loginError = document.querySelector("#loginError");
+  const resumeDialog = document.querySelector("#resumeDialog");
+  const resumeMessage = document.querySelector("#resumeMessage");
+  const resumeButton = document.querySelector("#resumeExistingBtn");
+  const freshButton = document.querySelector("#startFreshBtn");
+  let pendingStudent = null;
+  let pendingSession = null;
+  let lastFocusedElement = null;
+
+  document.querySelectorAll('input[name="stream"]').forEach((input) => {
+    input.addEventListener("change", () => {
+      codeOutput.textContent = String(subjectCodeForStream(input.value));
+    });
+  });
+
+  rollInput.addEventListener("input", () => {
+    const start = rollInput.selectionStart;
+    const end = rollInput.selectionEnd;
+    rollInput.value = rollInput.value.toUpperCase();
+    rollInput.setSelectionRange(start, end);
+  });
+
+  function redirectToInstructions(session) {
+    const stream = encodeURIComponent(session.student.stream);
+    window.location.assign(`/exam/instructions?stream=${stream}`);
+  }
+
+  function hideResumeDialog() {
+    resumeDialog.hidden = true;
+    lastFocusedElement?.focus();
+  }
+
+  function startSession(replaceExisting) {
+    try {
+      const session = replaceExisting
+        ? initSession(pendingStudent, { replaceExisting: true })
+        : resumeSession(pendingSession.id);
+      hideResumeDialog();
+      redirectToInstructions(session);
+    } catch (error) {
+      hideResumeDialog();
+      loginError.textContent = error instanceof Error ? error.message : "Unable to initialize this exam session.";
+      loginError.hidden = false;
+    }
+  }
+
+  resumeButton.addEventListener("click", () => startSession(false));
+  freshButton.addEventListener("click", () => startSession(true));
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    loginError.hidden = true;
+    document.querySelector("#studentNameError").hidden = true;
+    document.querySelector("#rollNoError").hidden = true;
+
+    const studentName = nameInput.value.trim();
+    const rollNo = rollInput.value.trim().toUpperCase();
+    const stream = new FormData(form).get("stream");
+    let valid = true;
+
+    if (!studentName) {
+      const error = document.querySelector("#studentNameError");
+      error.textContent = "Enter your name.";
+      error.hidden = false;
+      nameInput.setAttribute("aria-invalid", "true");
+      valid = false;
+    } else {
+      nameInput.removeAttribute("aria-invalid");
+    }
+
+    if (!/^[A-Z0-9]{4,12}$/.test(rollNo)) {
+      const error = document.querySelector("#rollNoError");
+      error.textContent = "Enter 4–12 letters or numbers without spaces or symbols.";
+      error.hidden = false;
+      rollInput.setAttribute("aria-invalid", "true");
+      valid = false;
+    } else {
+      rollInput.removeAttribute("aria-invalid");
+    }
+
+    if (!valid) {
+      if (nameInput.getAttribute("aria-invalid") === "true") nameInput.focus();
+      else rollInput.focus();
+      return;
+    }
+
+    pendingStudent = {
+      studentName,
+      rollNo,
+      stream,
+      subjectCode: subjectCodeForStream(stream)
+    };
+
+    try {
+      const active = getActiveSession();
+      if (active) {
+        pendingSession = active;
+        lastFocusedElement = document.activeElement;
+        const sameStudent = active.student.rollNo === rollNo;
+        resumeMessage.textContent = sameStudent
+          ? `An unfinished ${active.student.stream} exam for seat ${active.student.rollNo} was found. Resume its saved answers or replace it with a fresh exam.`
+          : `An unfinished exam for seat ${active.student.rollNo} was found in this browser. Starting fresh will replace that student's saved progress.`;
+        resumeButton.hidden = !sameStudent;
+        freshButton.textContent = sameStudent ? "Start fresh" : "Replace with this student";
+        resumeDialog.hidden = false;
+        resumeButton.focus();
+        return;
+      }
+
+      redirectToInstructions(initSession(pendingStudent));
+    } catch (error) {
+      loginError.textContent = error instanceof Error ? error.message : "Unable to initialize this exam session.";
+      loginError.hidden = false;
+    }
+  });
+</script>

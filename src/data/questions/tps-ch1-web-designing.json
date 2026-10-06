@@ -1,106 +1,3745 @@
-{
-  "chapter_id": 1,
-  "chapter_name": "Advanced Web Designing",
-  "subject_stream": ["science", "commerce"],
-  "source": "TPS Notes - 12th IT",
-  "q1_fill_in_the_blanks": [
-    { "id": "tps-ch1-fb-01", "question": "HTML stands for _____.", "answer": "Hyper Text Markup Language" },
-    { "id": "tps-ch1-fb-02", "question": "<input type=\"_____\"> defines a color picker.", "answer": "color" },
-    { "id": "tps-ch1-fb-03", "question": "<input type=\"_____\"> defines a field for entering a number.", "answer": "number" },
-    { "id": "tps-ch1-fb-04", "question": "<input type=\"_____\"> defines an image as a submit button.", "answer": "image" },
-    { "id": "tps-ch1-fb-05", "question": "<input type=\"_____\"> defines a month and year control in format 'YYYY-MM'.", "answer": "month" },
-    { "id": "tps-ch1-fb-06", "question": "<input type=\"_____\"> defines the range control.", "answer": "range" },
-    { "id": "tps-ch1-fb-07", "question": "<input type=\"_____\"> defines a field select and a 'Browse' button for file uploads.", "answer": "file" },
-    { "id": "tps-ch1-fb-08", "question": "<input type=\"_____\"> is used to define input fields that should contain a telephone number.", "answer": "tel" },
-    { "id": "tps-ch1-fb-09", "question": "The _____ attribute of <input> tag specifies a regular expression to check input values.", "answer": "pattern" },
-    { "id": "tps-ch1-fb-10", "question": "The _____ attribute of <input> tag acts as a temporary label showing the purpose of a field.", "answer": "placeholder" },
-    { "id": "tps-ch1-fb-11", "question": "The _____ attribute of <input> tag specifies that the input field should automatically get focus on page load.", "answer": "autofocus" },
-    { "id": "tps-ch1-fb-12", "question": "The _____ tag is used by search engines to search information provided with the webpage.", "answer": "meta" },
-    { "id": "tps-ch1-fb-13", "question": "CSS stands for _____.", "answer": "Cascading Style Sheets" },
-    { "id": "tps-ch1-fb-14", "question": "External style sheets must be saved with the _____ extension.", "answer": ".css" },
-    { "id": "tps-ch1-fb-15", "question": "The _____ selector selects the id attribute of an HTML element and is written with a hash (#) character.", "answer": "id" },
-    { "id": "tps-ch1-fb-16", "question": "The _____ selector matches every single element on the page and is denoted by an asterisk (*).", "answer": "universal" },
-    { "id": "tps-ch1-fb-17", "question": "The default positioning for HTML elements is _____.", "answer": "static" },
-    { "id": "tps-ch1-fb-18", "question": "The clickable regions of an image map are called _____.", "answer": "hotspots" },
-    { "id": "tps-ch1-fb-19", "question": "To create a client-side image map, the _____ attribute of the <img> tag is used.", "answer": "usemap" },
-    { "id": "tps-ch1-fb-20", "question": "The value of usemap attribute must be preceded with a _____ symbol.", "answer": "#" },
-    { "id": "tps-ch1-fb-21", "question": "The _____ tag is used to specify multiple media resources for media elements like <audio> and <video>.", "answer": "source" },
-    { "id": "tps-ch1-fb-22", "question": "The _____ element creates an inline frame in HTML5.", "answer": "iframe" }
-  ],
-  "q2_true_false": [
-    { "id": "tps-ch1-tf-01", "statement": "<input type=\"color\"> defines a color picker.", "answer": true },
-    { "id": "tps-ch1-tf-02", "statement": "<input type=\"number\"> defines a field for entering a URL.", "answer": false },
-    { "id": "tps-ch1-tf-03", "statement": "Default range of range control is 100 to 200.", "answer": false },
-    { "id": "tps-ch1-tf-04", "statement": "Pattern attribute specifies a regular expression to check input values.", "answer": true },
-    { "id": "tps-ch1-tf-05", "statement": "Autofocus attribute specifies that the input field should automatically get focus on page load.", "answer": true },
-    { "id": "tps-ch1-tf-06", "statement": "<meta> tag is a paired tag.", "answer": false },
-    { "id": "tps-ch1-tf-07", "statement": "Metadata will not be displayed on the web page.", "answer": true },
-    { "id": "tps-ch1-tf-08", "statement": "CSS rule set contains a selector and a declaration block.", "answer": true },
-    { "id": "tps-ch1-tf-09", "statement": "Internal CSS is written inside <style> tag within the head section.", "answer": true },
-    { "id": "tps-ch1-tf-10", "statement": "External CSS uses <link> tag placed inside the head section.", "answer": true },
-    { "id": "tps-ch1-tf-11", "statement": "ID selector is written with a hash (#) character followed by the id name.", "answer": true },
-    { "id": "tps-ch1-tf-12", "statement": "Class name in CSS can start with a number.", "answer": false },
-    { "id": "tps-ch1-tf-13", "statement": "Static positioning is the default position for HTML elements.", "answer": true },
-    { "id": "tps-ch1-tf-14", "statement": "The fixed element will move when the page is scrolled.", "answer": false },
-    { "id": "tps-ch1-tf-15", "statement": "Clickable regions in an image map are called hotspots.", "answer": true },
-    { "id": "tps-ch1-tf-16", "statement": "Circle shape in <area> tag requires four coordinates.", "answer": false },
-    { "id": "tps-ch1-tf-17", "statement": "The <iframe_> element creates an inline frame.", "answer": true },
-    { "id": "tps-ch1-tf-18", "statement": "Shared hosting gives a free domain name and is the most expensive hosting.", "answer": false }
-  ],
-  "q3_mcq_single": [
-    { "id": "tps-ch1-mcq1-01", "question": "<input type=\"_____\"> defines a color picker.", "options": ["number", "url", "color", "date"], "answer": "color" },
-    { "id": "tps-ch1-mcq1-02", "question": "The default range of range control is _____.", "options": ["0 to 100", "100 to 150", "90 to 100", "200 to 300"], "answer": "0 to 100" },
-    { "id": "tps-ch1-mcq1-03", "question": "The _____ attribute specifies a regular expression to validate form input.", "options": ["required", "multiple", "pattern", "max"], "answer": "pattern" },
-    { "id": "tps-ch1-mcq1-04", "question": "The _____ attribute of <meta> tag specifies the character encoding used by the document.", "options": ["metadata", "name", "content", "charset"], "answer": "charset" },
-    { "id": "tps-ch1-mcq1-05", "question": "Internal CSS is also known as _____ CSS.", "options": ["embedded", "inline", "inbuilt", "external"], "answer": "embedded" },
-    { "id": "tps-ch1-mcq1-06", "question": "The ID selector is written with the _____ character followed by the id name.", "options": [".", "*", "#", "@"], "answer": "#" },
-    { "id": "tps-ch1-mcq1-07", "question": "Which of the following is the default position for HTML elements in CSS?", "options": ["static", "fixed", "relative", "absolute"], "answer": "static" },
-    { "id": "tps-ch1-mcq1-08", "question": "The clickable regions in an image map are known as _____.", "options": ["hotspots", "image map", "hyperlinks", "links"], "answer": "hotspots" },
-    { "id": "tps-ch1-mcq1-09", "question": "To create a client-side image map, the _____ attribute of the <img> tag is used.", "options": ["ismap", "nomap", "usemap", "mymap"], "answer": "usemap" },
-    { "id": "tps-ch1-mcq1-10", "question": "The _____ tag is used to create an inline frame.", "options": ["<frame>", "<body>", "<link>", "<iframe>"], "answer": "<iframe>" }
-  ],
-  "q4_mcq_two_correct": [
-    { "id": "tps-ch1-mcq2-01", "question": "The attributes of <input> tag used to specify minimum and maximum numerical values are _____ and _____.", "options": ["min", "disabled", "multiple", "max", "value"], "answer": ["min", "max"] },
-    { "id": "tps-ch1-mcq2-02", "question": "The 'multiple' attribute of <input> tag works with input types _____ and _____.", "options": ["email", "file", "week", "month", "number"], "answer": ["email", "file"] },
-    { "id": "tps-ch1-mcq2-03", "question": "A CSS rule set contains _____ and _____.", "options": ["value", "selector", "declaration block", "property", "attribute"], "answer": ["selector", "declaration block"] },
-    { "id": "tps-ch1-mcq2-04", "question": "Types of positioning in CSS include _____ and _____.", "options": ["form", "constant", "fixed", "static", "default"], "answer": ["fixed", "static"] },
-    { "id": "tps-ch1-mcq2-05", "question": "Tags used to define a Client-Side Image Map are _____ and _____.", "options": ["<img>", "<link>", "<map>", "<area>", "<a>"], "answer": ["<img>", "<map>"] },
-    { "id": "tps-ch1-mcq2-06", "question": "Attributes of <iframe> tag include _____ and _____.", "options": ["src", "href", "loop", "srcdoc", "coords"], "answer": ["src", "srcdoc"] }
-  ],
-  "q5_mcq_three_correct": [
-    { "id": "tps-ch1-mcq3-01", "question": "Following are valid values of the 'type' attribute of <input> tag: _____.", "options": ["date", "email", "file", "link", "list", "shirt"], "answer": ["date", "email", "file"] },
-    { "id": "tps-ch1-mcq3-02", "question": "Following are valid attributes of the <meta> tag: _____.", "options": ["content", "charset", "name", "min", "max", "href"], "answer": ["content", "charset", "name"] },
-    { "id": "tps-ch1-mcq3-03", "question": "Following are valid methods/types of CSS: _____.", "options": ["inline", "internal", "external", "object", "multiple", "multilevel"], "answer": ["inline", "internal", "external"] },
-    { "id": "tps-ch1-mcq3-04", "question": "Following are valid attributes of the <audio> tag: _____.", "options": ["controls", "loop", "muted", "width", "height", "href"], "answer": ["controls", "loop", "muted"] },
-    { "id": "tps-ch1-mcq3-05", "question": "Shape attribute of <area> tag can have the values: _____.", "options": ["rect", "circle", "poly", "square", "star", "triangle"], "answer": ["rect", "circle", "poly"] }
-  ],
-  "q6_match_following": [
+﻿[
     {
-      "id": "tps-ch1-match-01",
-      "pairs": [
-        { "left": "<input type='color'>", "right": "Defines color picker" },
-        { "left": "<input type='number'>", "right": "Defines field for entering number" },
-        { "left": "<input type='url'>", "right": "Defines field for entering URL" },
-        { "left": "<input type='image'>", "right": "Defines image as submit button" }
-      ]
+        "id":  1,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "HTML stands for ____________.",
+        "options":  [
+                        "Hyper Transfer Markup Language",
+                        "Hyper Text Markup Language",
+                        "Hyper Transform Markup",
+                        "Hyper Text Made Language"
+                    ],
+        "answer":  1,
+        "explanation":  "HTML stands for Hyper Text Markup Language."
     },
     {
-      "id": "tps-ch1-match-02",
-      "pairs": [
-        { "left": "disabled", "right": "Specifies input field is disabled" },
-        { "left": "pattern", "right": "Specifies regular expression to check input" },
-        { "left": "placeholder", "right": "Acts as temporary label" },
-        { "left": "required", "right": "Specifies input field is mandatory" }
-      ]
+        "id":  2,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ is an evolving language with different versions supporting different features.",
+        "options":  [
+                        "HTML (Hyper Text Markup Language)",
+                        "ASP (Active Server Pages)",
+                        "DOM (Document Object Model)",
+                        "HTTP (Hyper Text Transfer Protocol)"
+                    ],
+        "answer":  0,
+        "explanation":  "HTML is an evolving language with multiple specifications and versions."
     },
     {
-      "id": "tps-ch1-match-03",
-      "pairs": [
-        { "left": "<img>", "right": "Inserts image on webpage" },
-        { "left": "<map>", "right": "Defines image map with name attribute" },
-        { "left": "<area>", "right": "Defines clickable hotspot regions" },
-        { "left": "usemap", "right": "Pointer attribute preceded by # symbol" }
-      ]
+        "id":  3,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "____________ is currently used because it supports mobile technology.",
+        "options":  [
+                        "DOM",
+                        "HTTP",
+                        "HTML5",
+                        "FTP"
+                    ],
+        "answer":  2,
+        "explanation":  "HTML5 supports native mobile features, responsive design, and multimedia."
+    },
+    {
+        "id":  4,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ tag is used to create a form.",
+        "options":  [
+                        "\u003cinput\u003e",
+                        "\u003ctextarea\u003e",
+                        "\u003cselect\u003e",
+                        "\u003cform\u003e"
+                    ],
+        "answer":  3,
+        "explanation":  "The \u003cform\u003e element encapsulates form controls and data submission."
+    },
+    {
+        "id":  5,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "\u003cinput type=\"____________\"\u003e defines a color picker.",
+        "options":  [
+                        "Number",
+                        "URL",
+                        "Color",
+                        "Date"
+                    ],
+        "answer":  2,
+        "explanation":  "The color input type creates an interactive color picker interface."
+    },
+    {
+        "id":  6,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "\u003cinput type=\"____________\"\u003e defines a field for entering a number.",
+        "options":  [
+                        "color",
+                        "Number",
+                        "Date",
+                        "email"
+                    ],
+        "answer":  1,
+        "explanation":  "\u003cinput type=\"number\"\u003e limits input to numerical values."
+    },
+    {
+        "id":  7,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "\u003cinput type=\"____________\"\u003e defines a field for entering a URL.",
+        "options":  [
+                        "color",
+                        "image",
+                        "email",
+                        "URL (Uniform Resource Locator)"
+                    ],
+        "answer":  3,
+        "explanation":  "The url input type performs automatic validation on web addresses."
+    },
+    {
+        "id":  8,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "\u003cinput type=\"____________\"\u003e defines an image as a submit button.",
+        "options":  [
+                        "Image",
+                        "Button",
+                        "date",
+                        "radio"
+                    ],
+        "answer":  0,
+        "explanation":  "\u003cinput type=\"image\"\u003e displays an image that triggers form submission when clicked."
+    },
+    {
+        "id":  9,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "\u003cinput type=\"____________\"\u003e defines a date picker with the year, month, and day.",
+        "options":  [
+                        "Month",
+                        "Range",
+                        "Date",
+                        "Number"
+                    ],
+        "answer":  2,
+        "explanation":  "The date input type generates a calendar date picker control."
+    },
+    {
+        "id":  10,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "\u003cinput type=\"____________\"\u003e defines a field for an email address.",
+        "options":  [
+                        "Image",
+                        "email",
+                        "URL",
+                        "Color"
+                    ],
+        "answer":  1,
+        "explanation":  "The email input type validates standard user@domain format."
+    },
+    {
+        "id":  11,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "\u003cinput type=\"____________\"\u003e defines a month and year control in format \u0027YYYY-MM\u0027.",
+        "options":  [
+                        "Date",
+                        "datetime-local",
+                        "Week",
+                        "month"
+                    ],
+        "answer":  3,
+        "explanation":  "\u003cinput type=\"month\"\u003e selects a month and year without time or day."
+    },
+    {
+        "id":  12,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "\u003cinput type=\"____________\"\u003e defines the range control.",
+        "options":  [
+                        "time",
+                        "search",
+                        "range",
+                        "date"
+                    ],
+        "answer":  2,
+        "explanation":  "The range input type renders an interactive numeric slider control."
+    },
+    {
+        "id":  13,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "\u003cinput type=\"____________\"\u003e defines a date picker that includes the year, month, day, and time.",
+        "options":  [
+                        "datetime-local",
+                        "date",
+                        "week",
+                        "month"
+                    ],
+        "answer":  0,
+        "explanation":  "\u003cinput type=\"datetime-local\"\u003e provides inputs for both calendar date and local time."
+    },
+    {
+        "id":  14,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "\u003cinput type=\"____________\"\u003e defines a control for entering a time.",
+        "options":  [
+                        "week",
+                        "time",
+                        "datetime-control",
+                        "month"
+                    ],
+        "answer":  1,
+        "explanation":  "\u003cinput type=\"time\"\u003e allows selecting time (hours and minutes)."
+    },
+    {
+        "id":  15,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "\u003cinput type=\"____________\"\u003e defines a week and year control.",
+        "options":  [
+                        "week",
+                        "date",
+                        "month",
+                        "time"
+                    ],
+        "answer":  0,
+        "explanation":  "\u003cinput type=\"week\"\u003e defines a week and year selection input."
+    },
+    {
+        "id":  16,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "\u003cinput type=\"____________\"\u003e defines a text field for entering a search string.",
+        "options":  [
+                        "File",
+                        "Range",
+                        "Search",
+                        "Text"
+                    ],
+        "answer":  2,
+        "explanation":  "\u003cinput type=\"search\"\u003e is tailored for entry of search queries."
+    },
+    {
+        "id":  17,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "\u003cinput type=\"____________\"\u003e defines a file-select field and a \u0027Browse\u0027 button for file uploads.",
+        "options":  [
+                        "tel",
+                        "Range",
+                        "Search",
+                        "File"
+                    ],
+        "answer":  3,
+        "explanation":  "The file input type allows users to choose files from device storage."
+    },
+    {
+        "id":  18,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "\u003cinput type=\"____________\"\u003e is used to define input fields that should contain a telephone number.",
+        "options":  [
+                        "tel",
+                        "number",
+                        "phone",
+                        "digits"
+                    ],
+        "answer":  0,
+        "explanation":  "\u003cinput type=\"tel\"\u003e captures and validates phone numbers."
+    },
+    {
+        "id":  19,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The default range of range control is ____________.",
+        "options":  [
+                        "0 to 100",
+                        "100 to 150",
+                        "90 to 100",
+                        "200 to 300"
+                    ],
+        "answer":  0,
+        "explanation":  "By default, an HTML5 range input runs from 0 to 100 if min and max are not specified."
+    },
+    {
+        "id":  20,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute of \u003cinput\u003e tag specifies that an input field should be disabled.",
+        "options":  [
+                        "max",
+                        "required",
+                        "disabled",
+                        "auto-complete"
+                    ],
+        "answer":  2,
+        "explanation":  "The disabled attribute makes an input non-editable and non-submittable."
+    },
+    {
+        "id":  21,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute of \u003cinput\u003e tag specifies the maximum value for an input field.",
+        "options":  [
+                        "disabled",
+                        "max",
+                        "read only",
+                        "min"
+                    ],
+        "answer":  1,
+        "explanation":  "The max attribute defines the upper numerical or date limit."
+    },
+    {
+        "id":  22,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute of \u003cinput\u003e tag specifies the minimum value for an input field.",
+        "options":  [
+                        "min",
+                        "max",
+                        "Pattern",
+                        "Max"
+                    ],
+        "answer":  0,
+        "explanation":  "The min attribute defines the lower limit for acceptable values."
+    },
+    {
+        "id":  23,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute of \u003cinput\u003e tag specifies a regular expression to check the input values.",
+        "options":  [
+                        "Required",
+                        "Multiple",
+                        "pattern",
+                        "autofocus"
+                    ],
+        "answer":  2,
+        "explanation":  "The pattern attribute takes a regex expression used for client-side form validation."
+    },
+    {
+        "id":  24,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute of \u003cinput\u003e tag specifies that an input field is read only.",
+        "options":  [
+                        "read only",
+                        "placeholder",
+                        "disabled",
+                        "required"
+                    ],
+        "answer":  0,
+        "explanation":  "The readonly attribute keeps the field visible and copyable, but prevents modifications."
+    },
+    {
+        "id":  25,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute of \u003cinput\u003e tag acts as a temporary label showing the purpose of a text field without requiring a label tag.",
+        "options":  [
+                        "Pattern",
+                        "Placeholder",
+                        "Multiple",
+                        "Read only"
+                    ],
+        "answer":  1,
+        "explanation":  "Placeholder provides hint text inside an empty input control."
+    },
+    {
+        "id":  26,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute of \u003cinput\u003e tag specifies that an input field is required.",
+        "options":  [
+                        "required",
+                        "disabled",
+                        "multiple",
+                        "tel"
+                    ],
+        "answer":  0,
+        "explanation":  "The required attribute stops form submission if the input is left empty."
+    },
+    {
+        "id":  27,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute of \u003cinput\u003e tag specifies whether a form or input field should have autocomplete on or off.",
+        "options":  [
+                        "Required",
+                        "max",
+                        "autofocus",
+                        "autocomplete"
+                    ],
+        "answer":  3,
+        "explanation":  "Autocomplete toggles predictive automated input filling."
+    },
+    {
+        "id":  28,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute of \u003cinput\u003e tag specifies that the input field should automatically get focus when the page loads.",
+        "options":  [
+                        "autocomplete",
+                        "multiple",
+                        "autofocus",
+                        "required"
+                    ],
+        "answer":  2,
+        "explanation":  "The autofocus attribute puts active cursor focus on that element on initial load."
+    },
+    {
+        "id":  29,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute of \u003cinput\u003e tag specifies the height and width of an \u003cinput type=\"image\"\u003e.",
+        "options":  [
+                        "Multiple",
+                        "Height and width",
+                        "disabled",
+                        "min"
+                    ],
+        "answer":  1,
+        "explanation":  "Height and width define display dimensions for graphical image buttons."
+    },
+    {
+        "id":  30,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute of \u003cinput\u003e tag specifies that the user is allowed to enter more than one value in the \u003cinput\u003e element.",
+        "options":  [
+                        "Read only",
+                        "required",
+                        "multiple",
+                        "pattern"
+                    ],
+        "answer":  2,
+        "explanation":  "The multiple attribute permits multiple email addresses or file uploads."
+    },
+    {
+        "id":  31,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute works with input types like email and file.",
+        "options":  [
+                        "Required",
+                        "Multiple",
+                        "Pattern",
+                        "Read only"
+                    ],
+        "answer":  1,
+        "explanation":  "The multiple attribute is valid on email and file input elements."
+    },
+    {
+        "id":  32,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute of \u003cinput\u003e tag is used to identify the HTML element uniquely through the Document Object Model.",
+        "options":  [
+                        "ID",
+                        "Class",
+                        "Relative",
+                        "Grouping"
+                    ],
+        "answer":  0,
+        "explanation":  "The id attribute provides a unique identifier within the DOM."
+    },
+    {
+        "id":  33,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute of \u003cinput\u003e tag is used to apply CSS style to the individual input element.",
+        "options":  [
+                        "Relative",
+                        "Class",
+                        "ID",
+                        "Absolute"
+                    ],
+        "answer":  1,
+        "explanation":  "The class attribute assigns shared style rule hooks."
+    },
+    {
+        "id":  34,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ tag is used by search engines to search information that is provided with the web page.",
+        "options":  [
+                        "\u003cinput\u003e",
+                        "\u003cbody\u003e",
+                        "\u003cform\u003e",
+                        "\u003cmeta\u003e"
+                    ],
+        "answer":  3,
+        "explanation":  "\u003cmeta\u003e tags define structured document metadata indexed by search engines."
+    },
+    {
+        "id":  35,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ tag is placed inside the \u003chead\u003e tag.",
+        "options":  [
+                        "\u003cbody\u003e",
+                        "\u003cmeta\u003e",
+                        "\u003cform\u003e",
+                        "\u003caudio\u003e"
+                    ],
+        "answer":  1,
+        "explanation":  "Meta elements belong exclusively within the HTML \u003chead\u003e block."
+    },
+    {
+        "id":  36,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "____________ will not be displayed on the web page.",
+        "options":  [
+                        "Head data",
+                        "Form data",
+                        "Metadata",
+                        "Table data"
+                    ],
+        "answer":  2,
+        "explanation":  "Metadata is browser/crawler readable but not rendered directly in the visual viewport."
+    },
+    {
+        "id":  37,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute specifies the name of the metadata.",
+        "options":  [
+                        "Name",
+                        "http-equiv",
+                        "Content",
+                        "Charset"
+                    ],
+        "answer":  0,
+        "explanation":  "The name attribute gives property labels like author, keywords, or description."
+    },
+    {
+        "id":  38,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute of \u003cmeta\u003e tag can have any textual matter related to the name.",
+        "options":  [
+                        "http-equiv",
+                        "Name",
+                        "Content",
+                        "Charset"
+                    ],
+        "answer":  2,
+        "explanation":  "The content attribute holds the value paired with the name or http-equiv attribute."
+    },
+    {
+        "id":  39,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute of \u003cmeta\u003e tag specifies the character encoding used by the document.",
+        "options":  [
+                        "Metadata",
+                        "Name",
+                        "Content",
+                        "Charset"
+                    ],
+        "answer":  3,
+        "explanation":  "The charset attribute defines encoding standards like UTF-8."
+    },
+    {
+        "id":  40,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "\u003cmeta charset=\"UTF-8\"\u003e is for ____________ characters.",
+        "options":  [
+                        "Indian",
+                        "Japan",
+                        "America",
+                        "Chinese"
+                    ],
+        "answer":  0,
+        "explanation":  "TPS classifies UTF-8 support under standard international and Indian character representations."
+    },
+    {
+        "id":  41,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "\u003cmeta charset=\"Big5\"\u003e is for ____________ language.",
+        "options":  [
+                        "Indian",
+                        "USA",
+                        "Chinese",
+                        "Italy"
+                    ],
+        "answer":  2,
+        "explanation":  "Big5 is a traditional Chinese character encoding standard."
+    },
+    {
+        "id":  42,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute of \u003cmeta\u003e tag is used for HTTP response message headers.",
+        "options":  [
+                        "Name",
+                        "http-equiv",
+                        "content",
+                        "Charset"
+                    ],
+        "answer":  1,
+        "explanation":  "http-equiv simulates HTTP header directives directly from the client document."
+    },
+    {
+        "id":  43,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The page will get refreshed using ____________ value of the http-equiv attribute.",
+        "options":  [
+                        "expires",
+                        "set-cookie",
+                        "content-type",
+                        "Refresh"
+                    ],
+        "answer":  3,
+        "explanation":  "http-equiv=\"refresh\" reloads the page or redirects after a specified duration."
+    },
+    {
+        "id":  44,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The browser sends cookies back to the server using the ____________ value of http-equiv attribute.",
+        "options":  [
+                        "set-cookie",
+                        "expires",
+                        "content-type",
+                        "refresh"
+                    ],
+        "answer":  0,
+        "explanation":  "http-equiv=\"set-cookie\" manages client-to-server cookie transmission."
+    },
+    {
+        "id":  45,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ value specifies the character encoding for the document in http-equiv.",
+        "options":  [
+                        "expires",
+                        "content-type",
+                        "charset",
+                        "refresh"
+                    ],
+        "answer":  1,
+        "explanation":  "content-type specifies MIME type and encoding parameters."
+    },
+    {
+        "id":  46,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The page session will expire at a specified date and time using the ____________ value of http-equiv attribute.",
+        "options":  [
+                        "Expires",
+                        "Refresh",
+                        "set-cookie",
+                        "content-type"
+                    ],
+        "answer":  0,
+        "explanation":  "expires sets a cache or session invalidation timestamp."
+    },
+    {
+        "id":  47,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "CSS stands for ____________.",
+        "options":  [
+                        "Content Style Sheets",
+                        "Commanding Style Sheets",
+                        "Cascading Style Sheets",
+                        "Context Style Sheets"
+                    ],
+        "answer":  2,
+        "explanation":  "CSS stands for Cascading Style Sheets."
+    },
+    {
+        "id":  48,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "____________ allows you to control the look and feel of several pages by changing a single source.",
+        "options":  [
+                        "ASP",
+                        "CSS",
+                        "PHP",
+                        "DOM"
+                    ],
+        "answer":  1,
+        "explanation":  "CSS centralizes design rules across entire websites."
+    },
+    {
+        "id":  49,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "A ____________ indicates the HTML element you want to style.",
+        "options":  [
+                        "Selector",
+                        "Declaration",
+                        "Property",
+                        "Value"
+                    ],
+        "answer":  0,
+        "explanation":  "The selector targets HTML DOM nodes for stylistic formatting."
+    },
+    {
+        "id":  50,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ block can contain one or more declarations separated by a semicolon.",
+        "options":  [
+                        "Declaration",
+                        "Selector",
+                        "Property",
+                        "Value"
+                    ],
+        "answer":  0,
+        "explanation":  "The declaration block is enclosed within curly brackets {} and houses CSS properties."
+    },
+    {
+        "id":  51,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "Each declaration contains a property name and value, separated by a ____________.",
+        "options":  [
+                        "Colon",
+                        "Comma",
+                        "Semicolon",
+                        "Period"
+                    ],
+        "answer":  0,
+        "explanation":  "In CSS, a colon (:) divides the property from its assigned value."
+    },
+    {
+        "id":  52,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "A ____________ is a type of attribute of an HTML element styled in CSS.",
+        "options":  [
+                        "Property",
+                        "Value",
+                        "Declaration",
+                        "Selector"
+                    ],
+        "answer":  0,
+        "explanation":  "A property is the stylistic characteristic being configured (e.g., color, margin)."
+    },
+    {
+        "id":  53,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "____________ are assigned to CSS properties.",
+        "options":  [
+                        "Methods",
+                        "Values",
+                        "Selector",
+                        "Property"
+                    ],
+        "answer":  1,
+        "explanation":  "Values determine the specific behavior or aesthetic for a given CSS property."
+    },
+    {
+        "id":  54,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "There are ____________ methods of implementing styling information to an HTML document.",
+        "options":  [
+                        "Four",
+                        "Five",
+                        "Three",
+                        "Six"
+                    ],
+        "answer":  2,
+        "explanation":  "The three methods are Inline, Internal (Embedded), and External."
+    },
+    {
+        "id":  55,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "An ____________ style sheet uses the style attribute in the HTML start tag.",
+        "options":  [
+                        "Internal",
+                        "Inline",
+                        "External",
+                        "Selector"
+                    ],
+        "answer":  1,
+        "explanation":  "Inline CSS is applied directly inside an element using style=\"\"."
+    },
+    {
+        "id":  56,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "____________ CSS is used to apply CSS to a single line or element.",
+        "options":  [
+                        "Internal",
+                        "External",
+                        "Embedded",
+                        "Inline"
+                    ],
+        "answer":  3,
+        "explanation":  "Inline CSS operates only on that specific HTML element."
+    },
+    {
+        "id":  57,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "An example of Inline CSS is ____________.",
+        "options":  [
+                        "\u003cbody background-color: red\u003e",
+                        "\u003cbody style=\"background-color: red\"\u003e",
+                        "\u003cbody class=\"background-color: red\"\u003e",
+                        "\u003cbody id=\"background\" -color: red\"\u003e"
+                    ],
+        "answer":  1,
+        "explanation":  "\u003cbody style=\"background-color: red\"\u003e correctly employs inline style syntax."
+    },
+    {
+        "id":  58,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "Internal CSS is also called ____________ CSS.",
+        "options":  [
+                        "Embedded",
+                        "Inline",
+                        "Inbuilt",
+                        "External"
+                    ],
+        "answer":  0,
+        "explanation":  "Internal CSS declared within \u003cstyle\u003e tags is also termed Embedded CSS."
+    },
+    {
+        "id":  59,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "An ____________ style sheet is used to apply CSS to a single document or page.",
+        "options":  [
+                        "Internal",
+                        "Inline",
+                        "External",
+                        "Inbuilt"
+                    ],
+        "answer":  0,
+        "explanation":  "Internal style sheets define rules scoped to one individual HTML document."
+    },
+    {
+        "id":  60,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "Internal CSS is written inside the ____________ tag within the head section of HTML.",
+        "options":  [
+                        "\u003cbody\u003e",
+                        "\u003cstyle\u003e",
+                        "\u003clink\u003e",
+                        "\u003ctitle\u003e"
+                    ],
+        "answer":  1,
+        "explanation":  "Internal CSS sits within \u003cstyle\u003e...\u003c/style\u003e in the document \u003chead\u003e."
+    },
+    {
+        "id":  61,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "An ____________ style sheet is used when you want to make changes on multiple pages.",
+        "options":  [
+                        "Internal",
+                        "External",
+                        "Inline",
+                        "Embedded"
+                    ],
+        "answer":  1,
+        "explanation":  "External style sheets control design across an unlimited number of linked web pages."
+    },
+    {
+        "id":  62,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "An ____________ style sheet facilitates changing the look of the entire website by changing just one file.",
+        "options":  [
+                        "External",
+                        "Inline",
+                        "Internal",
+                        "Embedded"
+                    ],
+        "answer":  0,
+        "explanation":  "A single external .css file styles the entire website globally."
+    },
+    {
+        "id":  63,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "In external CSS, the ____________ tag should be placed inside the head section.",
+        "options":  [
+                        "\u003cstyle\u003e",
+                        "\u003clink\u003e",
+                        "\u003ctitle\u003e",
+                        "\u003cbody\u003e"
+                    ],
+        "answer":  1,
+        "explanation":  "The \u003clink\u003e element connects external stylesheets to HTML pages."
+    },
+    {
+        "id":  64,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "An external style sheet must be saved with the ____________ extension.",
+        "options":  [
+                        ".txt",
+                        ".html",
+                        ".js",
+                        ".css"
+                    ],
+        "answer":  3,
+        "explanation":  "External stylesheet files use the standard .css file extension."
+    },
+    {
+        "id":  65,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ CSS file should not contain any HTML tags.",
+        "options":  [
+                        "Internal",
+                        "Inline",
+                        "External",
+                        "Embedded"
+                    ],
+        "answer":  2,
+        "explanation":  "External .css files contain strictly CSS declarations and no HTML tags."
+    },
+    {
+        "id":  66,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ property changes the color of text in CSS.",
+        "options":  [
+                        "color",
+                        "background-color",
+                        "font-color",
+                        "text-color"
+                    ],
+        "answer":  0,
+        "explanation":  "The \u0027color\u0027 property sets element foreground text color."
+    },
+    {
+        "id":  67,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ property sets background color in your webpage.",
+        "options":  [
+                        "background-color",
+                        "background-bg-color",
+                        "back-color",
+                        "color"
+                    ],
+        "answer":  0,
+        "explanation":  "The background-color property changes background hue."
+    },
+    {
+        "id":  68,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ property is used to make text bold.",
+        "options":  [
+                        "font-color",
+                        "font-size",
+                        "font-weight",
+                        "font-style"
+                    ],
+        "answer":  2,
+        "explanation":  "font-weight: bold configures the thickness of typographic characters."
+    },
+    {
+        "id":  69,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ property is used to make text italics.",
+        "options":  [
+                        "font-weight",
+                        "font-size",
+                        "font-height",
+                        "font-style"
+                    ],
+        "answer":  3,
+        "explanation":  "font-style: italic slants the typography."
+    },
+    {
+        "id":  70,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ property is used to decorate text with lines.",
+        "options":  [
+                        "Text-align",
+                        "Text-color",
+                        "Text-decoration",
+                        "Decoration"
+                    ],
+        "answer":  2,
+        "explanation":  "text-decoration controls underline, overline, and strike-throughs."
+    },
+    {
+        "id":  71,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ value of text-decoration property is used to add strike-through marks.",
+        "options":  [
+                        "line-through",
+                        "underline",
+                        "None",
+                        "overline"
+                    ],
+        "answer":  0,
+        "explanation":  "text-decoration: line-through strikes a line across the center of text."
+    },
+    {
+        "id":  72,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ value of text-decoration property is used to underline text.",
+        "options":  [
+                        "Overline",
+                        "line-through",
+                        "underline",
+                        "none"
+                    ],
+        "answer":  2,
+        "explanation":  "text-decoration: underline renders a horizontal line under text."
+    },
+    {
+        "id":  73,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ value of text-decoration property is used to overstrike above the text.",
+        "options":  [
+                        "Overline",
+                        "underline",
+                        "none",
+                        "line-through"
+                    ],
+        "answer":  0,
+        "explanation":  "text-decoration: overline draws a line directly above characters."
+    },
+    {
+        "id":  74,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ value of text-decoration property is used to remove underlines from hyperlinks.",
+        "options":  [
+                        "Overline",
+                        "Underline",
+                        "none",
+                        "line-through"
+                    ],
+        "answer":  2,
+        "explanation":  "text-decoration: none clears native browser hyperlink underlines."
+    },
+    {
+        "id":  75,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ property is used to control horizontal alignment of block-level text.",
+        "options":  [
+                        "Text-align",
+                        "text-decoration",
+                        "font-size",
+                        "text-size"
+                    ],
+        "answer":  0,
+        "explanation":  "text-align sets alignment to left, right, center, or justify."
+    },
+    {
+        "id":  76,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ property is used to control the font face/family.",
+        "options":  [
+                        "font-size",
+                        "font-family",
+                        "font-style",
+                        "font-weight"
+                    ],
+        "answer":  1,
+        "explanation":  "font-family dictates the typographic typeface."
+    },
+    {
+        "id":  77,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ property allows you to control the size of the font.",
+        "options":  [
+                        "font-style",
+                        "font-weight",
+                        "font-size",
+                        "font-family"
+                    ],
+        "answer":  2,
+        "explanation":  "font-size sets typographic scale in pixels, points, or rems."
+    },
+    {
+        "id":  78,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ property helps in controlling horizontal spacing between characters of text.",
+        "options":  [
+                        "letter-spacing",
+                        "spacing",
+                        "padding",
+                        "border"
+                    ],
+        "answer":  0,
+        "explanation":  "letter-spacing adjusts whitespace tracking between individual letters."
+    },
+    {
+        "id":  79,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ property is used when you want to add blank spaces around the inner content of an element.",
+        "options":  [
+                        "Border",
+                        "letter-spacing",
+                        "Padding",
+                        "Margin-left"
+                    ],
+        "answer":  2,
+        "explanation":  "Padding adds internal breathing room between content and element border."
+    },
+    {
+        "id":  80,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ property adds a border to a web page element.",
+        "options":  [
+                        "padding",
+                        "border",
+                        "font-size",
+                        "marginal"
+                    ],
+        "answer":  1,
+        "explanation":  "The border shorthand property configures width, style, and color."
+    },
+    {
+        "id":  81,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ property is used to set an image as the background of a webpage.",
+        "options":  [
+                        "Background-color",
+                        "Background-image",
+                        "Background-img",
+                        "Image"
+                    ],
+        "answer":  1,
+        "explanation":  "background-image: url(...) assigns bitmap or vector imagery behind content."
+    },
+    {
+        "id":  82,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ property sets margin area on the left side of the element.",
+        "options":  [
+                        "Margin-left",
+                        "Padding",
+                        "Border",
+                        "font-style"
+                    ],
+        "answer":  0,
+        "explanation":  "margin-left pushes an element outwards away from items to its left."
+    },
+    {
+        "id":  83,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ selector selects the id attribute of an HTML element to select a specific element.",
+        "options":  [
+                        "ID",
+                        "Class",
+                        "Grouping",
+                        "Universal"
+                    ],
+        "answer":  0,
+        "explanation":  "The ID selector targets unique elements possessing a matching id attribute."
+    },
+    {
+        "id":  84,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ID selector is written with the ____________ character followed by the id name.",
+        "options":  [
+                        "Period (.)",
+                        "asterisk (*)",
+                        "hash (#)",
+                        "Copyright (©)"
+                    ],
+        "answer":  2,
+        "explanation":  "The hash (#) symbol prefixes all CSS ID selectors."
+    },
+    {
+        "id":  85,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ selector selects HTML elements with a specific class attribute.",
+        "options":  [
+                        "ID",
+                        "Class",
+                        "Grouping",
+                        "Universal"
+                    ],
+        "answer":  1,
+        "explanation":  "Class selectors target one or more elements sharing identical class names."
+    },
+    {
+        "id":  86,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "A Class selector is used with the ____________ character followed by the class name.",
+        "options":  [
+                        "Period (.)",
+                        "asterisk (*)",
+                        "hash (#)",
+                        "Copyright (©)"
+                    ],
+        "answer":  0,
+        "explanation":  "A period (.) prefixes class selectors in CSS syntax."
+    },
+    {
+        "id":  87,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The class name should not start with a ____________.",
+        "options":  [
+                        "Text",
+                        "Character",
+                        "Number",
+                        "Special symbol"
+                    ],
+        "answer":  2,
+        "explanation":  "CSS class names cannot begin with numeric digits."
+    },
+    {
+        "id":  88,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ selector is used as a wildcard character.",
+        "options":  [
+                        "Grouping",
+                        "Class",
+                        "ID",
+                        "Universal"
+                    ],
+        "answer":  3,
+        "explanation":  "The universal selector (*) targets every element in the DOM tree."
+    },
+    {
+        "id":  89,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ selector is used to select all the elements with the same style definitions together.",
+        "options":  [
+                        "Class",
+                        "Grouping",
+                        "ID",
+                        "Universal"
+                    ],
+        "answer":  1,
+        "explanation":  "Grouping selectors shares styles across multiple distinct element rules."
+    },
+    {
+        "id":  90,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "____________ are used to separate each selector in grouping.",
+        "options":  [
+                        "Period",
+                        "color",
+                        "commas",
+                        "semicolon"
+                    ],
+        "answer":  2,
+        "explanation":  "Commas (,) delimit elements in grouped selector chains."
+    },
+    {
+        "id":  91,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ property is used to set position for an element in CSS.",
+        "options":  [
+                        "Absolute",
+                        "Position",
+                        "Relative",
+                        "Fixed"
+                    ],
+        "answer":  1,
+        "explanation":  "The position property dictates the positioning context."
+    },
+    {
+        "id":  92,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "There are ____________ main types of positioning in CSS according to textbook definitions.",
+        "options":  [
+                        "One",
+                        "Four",
+                        "Six",
+                        "Three"
+                    ],
+        "answer":  1,
+        "explanation":  "The HSC syllabus highlights four primary positioning types: static, fixed, relative, and absolute."
+    },
+    {
+        "id":  93,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "____________ positioning is the default position for HTML elements.",
+        "options":  [
+                        "Static",
+                        "Fixed",
+                        "Relative",
+                        "Absolute"
+                    ],
+        "answer":  0,
+        "explanation":  "HTML elements are positioned static by default in document flow."
+    },
+    {
+        "id":  94,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ positioning property helps to put text fixed relative to the browser viewport.",
+        "options":  [
+                        "Relative",
+                        "Static",
+                        "Fixed",
+                        "Absolute"
+                    ],
+        "answer":  2,
+        "explanation":  "Fixed positioning pins elements in the exact viewport coordinate regardless of scrolling."
+    },
+    {
+        "id":  95,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ property forces an element into a fixed position relative to the browser window.",
+        "options":  [
+                        "Fixed",
+                        "Relative",
+                        "Static",
+                        "Absolute"
+                    ],
+        "answer":  0,
+        "explanation":  "position: fixed keeps elements anchored against viewport bounds."
+    },
+    {
+        "id":  96,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ positioned element will not move even when the page is scrolled.",
+        "options":  [
+                        "Absolute",
+                        "Static",
+                        "Relative",
+                        "Fixed"
+                    ],
+        "answer":  3,
+        "explanation":  "Fixed positioned items remain static relative to the screen on scroll."
+    },
+    {
+        "id":  97,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ positioning property is used to set the element relative to its normal position.",
+        "options":  [
+                        "Absolute",
+                        "Relative",
+                        "Fixed",
+                        "Static"
+                    ],
+        "answer":  1,
+        "explanation":  "Relative positioning offsets elements starting from their normal document flow point."
+    },
+    {
+        "id":  98,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ positioning property sets an element in a specific location and is not affected by normal page flow.",
+        "options":  [
+                        "Absolute",
+                        "Fixed",
+                        "Relative",
+                        "Static"
+                    ],
+        "answer":  0,
+        "explanation":  "Absolute positioning pulls elements entirely out of normal document flow."
+    },
+    {
+        "id":  99,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "Absolute positioning property positions the element at the specified coordinates relative to screen ____________ corner.",
+        "options":  [
+                        "Top-left",
+                        "Top-right",
+                        "Top-bottom",
+                        "Bottom-left"
+                    ],
+        "answer":  0,
+        "explanation":  "Default absolute Cartesian coordinates start relative to the top-left origin."
+    },
+    {
+        "id":  100,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "____________ is a CSS property written in a CSS file or element style to define content flow.",
+        "options":  [
+                        "Absolute",
+                        "Fixed",
+                        "Float",
+                        "Static"
+                    ],
+        "answer":  2,
+        "explanation":  "The float property shifts elements left or right while allowing text wrap."
+    },
+    {
+        "id":  101,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "____________ keeps the element floating on the left side of the container.",
+        "options":  [
+                        "float: left",
+                        "float: right",
+                        "float: none",
+                        "float: top"
+                    ],
+        "answer":  0,
+        "explanation":  "float: left pushes elements to the container\u0027s left edge."
+    },
+    {
+        "id":  102,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "____________ keeps the element floating on the right side of the container.",
+        "options":  [
+                        "float: left",
+                        "float: right",
+                        "float: none",
+                        "float: top"
+                    ],
+        "answer":  1,
+        "explanation":  "float: right docks elements to the container\u0027s right margin."
+    },
+    {
+        "id":  103,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "____________ is the default float property which shows the element as it is.",
+        "options":  [
+                        "float: left",
+                        "float: right",
+                        "float: none",
+                        "float: top"
+                    ],
+        "answer":  2,
+        "explanation":  "float: none prevents floating and keeps normal placement."
+    },
+    {
+        "id":  104,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ property in CSS defines how components are going to be placed/rendered on the web page.",
+        "options":  [
+                        "Static",
+                        "Fixed",
+                        "Display",
+                        "Relative"
+                    ],
+        "answer":  2,
+        "explanation":  "The display property specifies rendering behaviors such as inline, block, or flex."
+    },
+    {
+        "id":  105,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ value of display property is used to display an element as an inline element.",
+        "options":  [
+                        "Inline",
+                        "Block",
+                        "None",
+                        "Block-inline"
+                    ],
+        "answer":  0,
+        "explanation":  "display: inline allows elements to flow alongside text without forcing line breaks."
+    },
+    {
+        "id":  106,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ value is used to display an element as a block element.",
+        "options":  [
+                        "Inline",
+                        "Block",
+                        "None",
+                        "Block-inline"
+                    ],
+        "answer":  1,
+        "explanation":  "display: block makes an element start on a new line and span full available width."
+    },
+    {
+        "id":  107,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ value allows setting explicit width and height while flowing with adjacent content.",
+        "options":  [
+                        "Inline",
+                        "Block",
+                        "None",
+                        "Block-inline (inline-block)"
+                    ],
+        "answer":  3,
+        "explanation":  "Inline-block formats an element inline while allowing box width/height sizing."
+    },
+    {
+        "id":  108,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "Using the ____________ value of display, the element is completely removed from the page layout.",
+        "options":  [
+                        "Inline",
+                        "Block",
+                        "None",
+                        "Block-inline"
+                    ],
+        "answer":  2,
+        "explanation":  "display: none hides elements completely without leaving blank spacing."
+    },
+    {
+        "id":  109,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ tag defines an Ordered list.",
+        "options":  [
+                        "\u003col\u003e",
+                        "\u003cul\u003e",
+                        "\u003cdt\u003e",
+                        "\u003cli\u003e"
+                    ],
+        "answer":  0,
+        "explanation":  "\u003col\u003e creates numbered or ordered sequences."
+    },
+    {
+        "id":  110,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "An ____________ list can be numerical or alphabetical.",
+        "options":  [
+                        "Ordered",
+                        "Unordered",
+                        "Definition",
+                        "None"
+                    ],
+        "answer":  0,
+        "explanation":  "Ordered lists support 1, A, a, I, and i formats."
+    },
+    {
+        "id":  111,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute is used to specify the numbering type for ordered list items.",
+        "options":  [
+                        "Reversed",
+                        "start",
+                        "Type",
+                        "Name"
+                    ],
+        "answer":  2,
+        "explanation":  "The type attribute selects Arabic numerals, letters, or Roman numerals."
+    },
+    {
+        "id":  112,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The default value of the type attribute of an ordered list is ____________.",
+        "options":  [
+                        "1",
+                        "a",
+                        "I",
+                        "10"
+                    ],
+        "answer":  0,
+        "explanation":  "Ordered lists default to decimal numbers beginning at 1."
+    },
+    {
+        "id":  113,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute specifies that items of the list are specified in reverse order.",
+        "options":  [
+                        "type",
+                        "reverse / reversed",
+                        "Start",
+                        "Name"
+                    ],
+        "answer":  1,
+        "explanation":  "The reversed boolean attribute counts descending order."
+    },
+    {
+        "id":  114,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute specifies the starting number of the first item in an ordered list.",
+        "options":  [
+                        "Type",
+                        "Reversed",
+                        "start",
+                        "Name"
+                    ],
+        "answer":  2,
+        "explanation":  "start sets the initial numerical value for the list sequence."
+    },
+    {
+        "id":  115,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "An Unordered list is created using the ____________ tag.",
+        "options":  [
+                        "\u003col\u003e",
+                        "\u003cul\u003e",
+                        "\u003cdd\u003e",
+                        "\u003cdt\u003e"
+                    ],
+        "answer":  1,
+        "explanation":  "\u003cul\u003e creates bulleted lists."
+    },
+    {
+        "id":  116,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "An ____________ list is also called a bulleted list.",
+        "options":  [
+                        "Unordered",
+                        "Ordered",
+                        "Dataset",
+                        "lists"
+                    ],
+        "answer":  0,
+        "explanation":  "Unordered lists render with bullet markers by default."
+    },
+    {
+        "id":  117,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "Each list item starts with the ____________ tag.",
+        "options":  [
+                        "\u003cdd\u003e",
+                        "\u003cdt\u003e",
+                        "\u003col\u003e",
+                        "\u003cli\u003e"
+                    ],
+        "answer":  3,
+        "explanation":  "The \u003cli\u003e tag wraps individual items inside \u003col\u003e and \u003cul\u003e lists."
+    },
+    {
+        "id":  118,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute of \u003cul\u003e tag sets the list item marker to disc, circle, or square.",
+        "options":  [
+                        "type",
+                        "start",
+                        "name",
+                        "reversal"
+                    ],
+        "answer":  0,
+        "explanation":  "The type attribute selects disc, circle, or square bullet shapes."
+    },
+    {
+        "id":  119,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "____________ is the default value of type attribute of \u003cul\u003e tag.",
+        "options":  [
+                        "Disc",
+                        "square",
+                        "circle",
+                        "bullet"
+                    ],
+        "answer":  0,
+        "explanation":  "The filled disc marker is the browser default for \u003cul\u003e."
+    },
+    {
+        "id":  120,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "To define a description/definition list, the ____________ tag is used.",
+        "options":  [
+                        "\u003cdd\u003e",
+                        "\u003cdl\u003e",
+                        "\u003cdt\u003e",
+                        "\u003col\u003e"
+                    ],
+        "answer":  1,
+        "explanation":  "\u003cdl\u003e defines a description list."
+    },
+    {
+        "id":  121,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ tag is used to define the term in a definition list.",
+        "options":  [
+                        "\u003cul\u003e",
+                        "\u003cdd\u003e",
+                        "\u003cdt\u003e",
+                        "\u003cdl\u003e"
+                    ],
+        "answer":  2,
+        "explanation":  "\u003cdt\u003e defines the definition or description term."
+    },
+    {
+        "id":  122,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ tag is used to define the term\u0027s description/definition.",
+        "options":  [
+                        "\u003cdd\u003e",
+                        "\u003cdt\u003e",
+                        "\u003cdl\u003e",
+                        "\u003cul\u003e"
+                    ],
+        "answer":  0,
+        "explanation":  "\u003cdd\u003e encapsulates the detailed definition data."
+    },
+    {
+        "id":  123,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "A list within another list is called a ____________ list.",
+        "options":  [
+                        "listed",
+                        "tested",
+                        "none",
+                        "nested"
+                    ],
+        "answer":  3,
+        "explanation":  "A nested list is structured inside an outer list item."
+    },
+    {
+        "id":  124,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "MPEG stands for ____________.",
+        "options":  [
+                        "Making Pictures Expert Groups",
+                        "Moving Pictures Experts Group",
+                        "Managing Pictures Expert Groups",
+                        "Merging Pictures Expert Groups"
+                    ],
+        "answer":  1,
+        "explanation":  "MPEG stands for Moving Pictures Experts Group."
+    },
+    {
+        "id":  125,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "AAC stands for ____________.",
+        "options":  [
+                        "Auto Audio coding",
+                        "Arrange Audio Coding",
+                        "Advanced Audio Coding",
+                        "Advanced Arrange Coding"
+                    ],
+        "answer":  2,
+        "explanation":  "AAC stands for Advanced Audio Coding."
+    },
+    {
+        "id":  126,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ element enables embedding audio files into webpages.",
+        "options":  [
+                        "\u003caudio\u003e",
+                        "\u003cvideo\u003e",
+                        "\u003cstyle\u003e",
+                        "\u003cimg\u003e"
+                    ],
+        "answer":  0,
+        "explanation":  "The \u003caudio\u003e element provides standard browser playback for audio files."
+    },
+    {
+        "id":  127,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "Using the ____________ attribute of \u003caudio\u003e tag, audio will start playing as soon as it is ready.",
+        "options":  [
+                        "Controls",
+                        "Src",
+                        "loop",
+                        "Autoplay"
+                    ],
+        "answer":  3,
+        "explanation":  "The autoplay attribute triggers immediate playback upon file readiness."
+    },
+    {
+        "id":  128,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute of \u003caudio\u003e tag defines that audio controls should be displayed.",
+        "options":  [
+                        "loop",
+                        "muted",
+                        "controls",
+                        "Src"
+                    ],
+        "answer":  2,
+        "explanation":  "The controls attribute displays play, pause, seek, and volume interfaces."
+    },
+    {
+        "id":  129,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute of \u003caudio\u003e tag sets the audio to start over again every time it is finished.",
+        "options":  [
+                        "loop",
+                        "controls",
+                        "Src",
+                        "muted"
+                    ],
+        "answer":  0,
+        "explanation":  "The loop attribute restarts audio in a continuous cycle."
+    },
+    {
+        "id":  130,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute of \u003caudio\u003e tag specifies that the audio output should be muted.",
+        "options":  [
+                        "Src",
+                        "Controls",
+                        "Autoplay",
+                        "muted"
+                    ],
+        "answer":  3,
+        "explanation":  "muted sets the initial audio playback volume to zero."
+    },
+    {
+        "id":  131,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute of \u003caudio\u003e tag specifies the URL of the audio file.",
+        "options":  [
+                        "muted",
+                        "loop",
+                        "Src",
+                        "controls"
+                    ],
+        "answer":  2,
+        "explanation":  "src specifies the file location or URL of the media file."
+    },
+    {
+        "id":  132,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute is used to add audio controls such as play, pause, and volume.",
+        "options":  [
+                        "loop",
+                        "controls",
+                        "autoplay",
+                        "Src"
+                    ],
+        "answer":  1,
+        "explanation":  "controls injects the browser\u0027s built-in playback UI."
+    },
+    {
+        "id":  133,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ tag is used to specify multiple media resources for media elements.",
+        "options":  [
+                        "\u003col\u003e",
+                        "\u003cimg\u003e",
+                        "\u003cstyle\u003e",
+                        "\u003csource\u003e"
+                    ],
+        "answer":  3,
+        "explanation":  "\u003csource\u003e provides fallback audio or video streams in alternating formats."
+    },
+    {
+        "id":  134,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ tag is used to embed video into a web page.",
+        "options":  [
+                        "\u003cvideo\u003e",
+                        "\u003caudio\u003e",
+                        "\u003cstyle\u003e",
+                        "\u003cimg\u003e"
+                    ],
+        "answer":  0,
+        "explanation":  "The \u003cvideo\u003e tag handles native video rendering in HTML5."
+    },
+    {
+        "id":  135,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute defines the link to the video file.",
+        "options":  [
+                        "Autoplay",
+                        "Height",
+                        "Src",
+                        "loop"
+                    ],
+        "answer":  2,
+        "explanation":  "The src attribute points to the video stream or MP4/WebM resource."
+    },
+    {
+        "id":  136,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute specifies that the video will start playing as soon as it is ready.",
+        "options":  [
+                        "Controls",
+                        "Autoplay",
+                        "loop",
+                        "Muted"
+                    ],
+        "answer":  1,
+        "explanation":  "Autoplay initiates video playback without waiting for explicit user interaction."
+    },
+    {
+        "id":  137,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute specifies that video controls should be displayed.",
+        "options":  [
+                        "controls",
+                        "loop",
+                        "autoplay",
+                        "muted"
+                    ],
+        "answer":  0,
+        "explanation":  "Controls renders the default browser player toolbar."
+    },
+    {
+        "id":  138,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute sets the height of the video player in pixels.",
+        "options":  [
+                        "Width",
+                        "loop",
+                        "Muted",
+                        "height"
+                    ],
+        "answer":  3,
+        "explanation":  "Height sets vertical dimensions for the video display container."
+    },
+    {
+        "id":  139,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute specifies that the video will start over again every time it is finished.",
+        "options":  [
+                        "Muted",
+                        "loop",
+                        "Controls",
+                        "Autoplay"
+                    ],
+        "answer":  1,
+        "explanation":  "The loop attribute replays the video indefinitely."
+    },
+    {
+        "id":  140,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute specifies that the audio output of the video should be muted.",
+        "options":  [
+                        "controls",
+                        "loop",
+                        "Muted",
+                        "Height"
+                    ],
+        "answer":  2,
+        "explanation":  "muted mutes video audio tracks by default."
+    },
+    {
+        "id":  141,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute specifies an image to be shown while the video is downloading.",
+        "options":  [
+                        "Poster",
+                        "URL",
+                        "Autoplay",
+                        "Muted"
+                    ],
+        "answer":  0,
+        "explanation":  "poster specifies a placeholder cover image prior to playback."
+    },
+    {
+        "id":  142,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute specifies if and how the video should be loaded when the web page loads.",
+        "options":  [
+                        "Poster",
+                        "width",
+                        "controls",
+                        "preload"
+                    ],
+        "answer":  3,
+        "explanation":  "preload accepts values like \u0027auto\u0027, \u0027metadata\u0027, or \u0027none\u0027."
+    },
+    {
+        "id":  143,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute sets the width of the video player in pixels.",
+        "options":  [
+                        "Muted",
+                        "width",
+                        "loop",
+                        "controls"
+                    ],
+        "answer":  1,
+        "explanation":  "Width controls horizontal dimensions of video viewports."
+    },
+    {
+        "id":  144,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "An image with multiple hyperlinks is called an ____________.",
+        "options":  [
+                        "links",
+                        "Navigation",
+                        "Hyperlinks",
+                        "Image map"
+                    ],
+        "answer":  3,
+        "explanation":  "An image map divides a single image into multiple clickable hotspot links."
+    },
+    {
+        "id":  145,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "An ____________ is used to connect links to different regions on a single web image.",
+        "options":  [
+                        "links",
+                        "hotspots",
+                        "Image map",
+                        "Hyper links"
+                    ],
+        "answer":  2,
+        "explanation":  "Image maps map coordinate zones to distinct URL targets."
+    },
+    {
+        "id":  146,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The clickable regions of an image map are called ____________.",
+        "options":  [
+                        "hotspots",
+                        "Image map",
+                        "Hyperlinks",
+                        "links"
+                    ],
+        "answer":  0,
+        "explanation":  "Interactive clickable regions in image maps are called hotspots."
+    },
+    {
+        "id":  147,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ tag is used to insert an image on a web page.",
+        "options":  [
+                        "\u003cimage\u003e",
+                        "\u003cimg\u003e",
+                        "\u003cbody\u003e",
+                        "\u003chead\u003e"
+                    ],
+        "answer":  1,
+        "explanation":  "The \u003cimg\u003e tag embeds raster or vector images."
+    },
+    {
+        "id":  148,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "To create a Client-Side Image Map, the ____________ attribute of the \u003cimg\u003e tag is used.",
+        "options":  [
+                        "Ismap",
+                        "Nomap",
+                        "usemap",
+                        "Mymap"
+                    ],
+        "answer":  2,
+        "explanation":  "usemap binds an \u003cimg\u003e element to a \u003cmap\u003e container."
+    },
+    {
+        "id":  149,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The usemap attribute value in \u003cimg\u003e must be preceded with a ____________ symbol.",
+        "options":  [
+                        "#",
+                        "@",
+                        "$",
+                        "."
+                    ],
+        "answer":  0,
+        "explanation":  "usemap references map names prefixed with a hash (e.g., usemap=\"#mymap\")."
+    },
+    {
+        "id":  150,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute acts as a pointer indicating that the image is a Client Side Image Map.",
+        "options":  [
+                        "Ismap",
+                        "Nomap",
+                        "Mymap",
+                        "usemap"
+                    ],
+        "answer":  3,
+        "explanation":  "usemap signals client-side evaluation of map coordinates."
+    },
+    {
+        "id":  151,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ tag is used to map clickable coordinates to an image.",
+        "options":  [
+                        "\u003cimg\u003e",
+                        "\u003cmap\u003e",
+                        "\u003carea\u003e",
+                        "\u003cbody\u003e"
+                    ],
+        "answer":  1,
+        "explanation":  "The \u003cmap\u003e tag encapsulates area definitions for image hotspots."
+    },
+    {
+        "id":  152,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute of \u003cmap\u003e tag specifies the name linking it to the client-side image map.",
+        "options":  [
+                        "src",
+                        "href",
+                        "Name",
+                        "alt"
+                    ],
+        "answer":  2,
+        "explanation":  "The name attribute of \u003cmap\u003e corresponds to the usemap reference on the image."
+    },
+    {
+        "id":  153,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ tag defines specific clickable regions inside a \u003cmap\u003e.",
+        "options":  [
+                        "\u003cmap\u003e",
+                        "\u003cimg\u003e",
+                        "\u003cbody\u003e",
+                        "\u003carea\u003e"
+                    ],
+        "answer":  3,
+        "explanation":  "\u003carea\u003e elements describe shape, coordinates, and destination URLs."
+    },
+    {
+        "id":  154,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute of \u003carea\u003e tag defines the URL to which the clickable region navigates.",
+        "options":  [
+                        "Href",
+                        "Src",
+                        "URL",
+                        "Link"
+                    ],
+        "answer":  0,
+        "explanation":  "href points to the destination address when a hotspot is clicked."
+    },
+    {
+        "id":  155,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute defines the hotspot shape as rect, circle, or poly.",
+        "options":  [
+                        "Coords",
+                        "shape",
+                        "alt",
+                        "Href"
+                    ],
+        "answer":  1,
+        "explanation":  "The shape attribute sets geometry (rect, circle, or poly)."
+    },
+    {
+        "id":  156,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute specifies coordinates of clickable regions on the image map.",
+        "options":  [
+                        "dim",
+                        "points",
+                        "coords",
+                        "size"
+                    ],
+        "answer":  2,
+        "explanation":  "coords takes comma-separated pixel pairs mapping hotspot vertices."
+    },
+    {
+        "id":  157,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute specifies alternative text and extra accessibility information about a clickable area.",
+        "options":  [
+                        "Coords",
+                        "shape",
+                        "href",
+                        "alt"
+                    ],
+        "answer":  3,
+        "explanation":  "alt provides text alternatives for \u003carea\u003e tags."
+    },
+    {
+        "id":  158,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ element creates an inline frame.",
+        "options":  [
+                        "\u003cbody\u003e",
+                        "\u003cframe\u003e",
+                        "\u003clink\u003e",
+                        "\u003ciframe\u003e"
+                    ],
+        "answer":  3,
+        "explanation":  "The \u003ciframe\u003e element embeds another document inside the current HTML page."
+    },
+    {
+        "id":  159,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "____________ frames are often used in online advertising to embed external content.",
+        "options":  [
+                        "Inline",
+                        "Internal",
+                        "External",
+                        "Embedded"
+                    ],
+        "answer":  0,
+        "explanation":  "Inline frames (iframes) serve dynamic advertising components."
+    },
+    {
+        "id":  160,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute specifies the address of the document to embed in the \u003ciframe\u003e.",
+        "options":  [
+                        "Height",
+                        "Width",
+                        "Src",
+                        "Name"
+                    ],
+        "answer":  2,
+        "explanation":  "src defines the target URL displayed inside the iframe."
+    },
+    {
+        "id":  161,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute specifies the height of an \u003ciframe\u003e in pixels.",
+        "options":  [
+                        "Name",
+                        "Height",
+                        "Width",
+                        "Srcdoc"
+                    ],
+        "answer":  1,
+        "explanation":  "height sets the frame\u0027s vertical dimensions."
+    },
+    {
+        "id":  162,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute specifies the width of an \u003ciframe\u003e in pixels.",
+        "options":  [
+                        "Width",
+                        "Height",
+                        "Name",
+                        "Src"
+                    ],
+        "answer":  0,
+        "explanation":  "width controls the frame\u0027s horizontal dimension."
+    },
+    {
+        "id":  163,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute specifies the reference name of an \u003ciframe\u003e.",
+        "options":  [
+                        "Srcdoc",
+                        "Src",
+                        "Width",
+                        "Name"
+                    ],
+        "answer":  3,
+        "explanation":  "name gives an iframe an identifier targets can reference in links."
+    },
+    {
+        "id":  164,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "The ____________ attribute specifies direct HTML content to show in the \u003ciframe\u003e.",
+        "options":  [
+                        "Src",
+                        "Srcdoc",
+                        "Name",
+                        "Height"
+                    ],
+        "answer":  1,
+        "explanation":  "srcdoc overrides src to display inline HTML markups directly."
+    },
+    {
+        "id":  165,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "A website is made available on the Internet with the help of ____________.",
+        "options":  [
+                        "Website",
+                        "Web space",
+                        "Web world",
+                        "Web hosting"
+                    ],
+        "answer":  3,
+        "explanation":  "Web hosting provides the servers and bandwidth necessary to broadcast sites online."
+    },
+    {
+        "id":  166,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "____________ is the service of providing storage space for websites on servers.",
+        "options":  [
+                        "Website",
+                        "Web hosting",
+                        "Web world",
+                        "web page"
+                    ],
+        "answer":  1,
+        "explanation":  "Web hosting provisions remote disk space and server compute."
+    },
+    {
+        "id":  167,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "Companies that provide web hosting services are called ____________.",
+        "options":  [
+                        "Web hosts",
+                        "Web page",
+                        "Web site",
+                        "Browser"
+                    ],
+        "answer":  0,
+        "explanation":  "Web hosts own and service server infrastructure."
+    },
+    {
+        "id":  168,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "____________ own and manage web servers.",
+        "options":  [
+                        "Website",
+                        "Web page",
+                        "Web Hosts",
+                        "Web link"
+                    ],
+        "answer":  2,
+        "explanation":  "Web hosts manage physical machines and network lines."
+    },
+    {
+        "id":  169,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "____________ hosting shares server resources across multiple sites and is cost-effective.",
+        "options":  [
+                        "free",
+                        "fixed",
+                        "Dedicated",
+                        "Shared"
+                    ],
+        "answer":  3,
+        "explanation":  "Shared hosting divides single server overhead across multiple consumer accounts."
+    },
+    {
+        "id":  170,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "____________ are paid hosting servers reserved solely for a single large website.",
+        "options":  [
+                        "free",
+                        "dedicated hosting",
+                        "fixed",
+                        "shared"
+                    ],
+        "answer":  1,
+        "explanation":  "Dedicated hosting reserves entire server hardware for a single client."
+    },
+    {
+        "id":  171,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_single",
+        "question":  "____________ provides hosting of the website for a limited period of time at no cost.",
+        "options":  [
+                        "free hosting",
+                        "fixed",
+                        "shared",
+                        "Dedicated hosting"
+                    ],
+        "answer":  0,
+        "explanation":  "Free hosting packages offer zero-cost introductory tier hosting."
+    },
+    {
+        "id":  172,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_two",
+        "question":  "Select TWO major web browsers that support the features of HTML5:",
+        "options":  [
+                        "Windows Explorer",
+                        "Microsoft Edge",
+                        "Google Chrome",
+                        "My files"
+                    ],
+        "answer":  [
+                       1,
+                       2
+                   ],
+        "explanation":  "Microsoft Edge and Google Chrome are standard modern browsers that support HTML5."
+    },
+    {
+        "id":  173,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_two",
+        "question":  "The default range values of the range control are ____________ to ____________:",
+        "options":  [
+                        "0",
+                        "100",
+                        "120",
+                        "200"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "Without explicit min and max attributes, input type=\u0027range\u0027 defaults to 0 and 100."
+    },
+    {
+        "id":  174,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_two",
+        "question":  "Select TWO valid values for the \u0027type\u0027 attribute of the \u003cinput\u003e tag:",
+        "options":  [
+                        "Minimum",
+                        "Maximum",
+                        "date",
+                        "email"
+                    ],
+        "answer":  [
+                       2,
+                       3
+                   ],
+        "explanation":  "date and email are valid type values. Minimum and Maximum are input attributes, not types."
+    },
+    {
+        "id":  175,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_two",
+        "question":  "Select TWO attributes of \u003cinput\u003e tag used to specify minimum and maximum values for an input field:",
+        "options":  [
+                        "min",
+                        "disabled",
+                        "multiple",
+                        "max"
+                    ],
+        "answer":  [
+                       0,
+                       3
+                   ],
+        "explanation":  "min and max define numerical and date constraint boundaries."
+    },
+    {
+        "id":  176,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_two",
+        "question":  "The \u0027multiple\u0027 attribute of the \u003cinput\u003e tag works with which TWO input types?",
+        "options":  [
+                        "email",
+                        "file",
+                        "week",
+                        "month"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "The multiple attribute is valid only on email and file types."
+    },
+    {
+        "id":  177,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_two",
+        "question":  "Select TWO valid attributes of the \u003cmeta\u003e tag:",
+        "options":  [
+                        "Charset",
+                        "email",
+                        "http-equiv",
+                        "file"
+                    ],
+        "answer":  [
+                       0,
+                       2
+                   ],
+        "explanation":  "Charset and http-equiv are core attributes of the HTML5 \u003cmeta\u003e tag."
+    },
+    {
+        "id":  178,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_two",
+        "question":  "Select TWO valid values for the \u0027http-equiv\u0027 attribute of the \u003cmeta\u003e tag:",
+        "options":  [
+                        "month",
+                        "refresh",
+                        "image",
+                        "expires"
+                    ],
+        "answer":  [
+                       1,
+                       3
+                   ],
+        "explanation":  "refresh and expires are standard HTTP response message header directives."
+    },
+    {
+        "id":  179,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_two",
+        "question":  "The charset attribute of \u003cmeta\u003e tag uses ____________ for Indian characters and ____________ for Chinese characters:",
+        "options":  [
+                        "UTF-8",
+                        "Big5",
+                        "UTF-2",
+                        "Big B"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "UTF-8 encodes universal/Indian scripts, while Big5 encodes traditional Chinese."
+    },
+    {
+        "id":  180,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_two",
+        "question":  "A CSS rule set contains a ____________ and a ____________ block:",
+        "options":  [
+                        "value",
+                        "selector",
+                        "Declaration",
+                        "Property"
+                    ],
+        "answer":  [
+                       1,
+                       2
+                   ],
+        "explanation":  "Every complete CSS rule set consists of a selector followed by a declaration block."
+    },
+    {
+        "id":  181,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_two",
+        "question":  "Select TWO examples of valid CSS declarations:",
+        "options":  [
+                        "color: green",
+                        "font-size: 11px",
+                        "font-style = 11px",
+                        "background = red"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "Declarations require a colon (:) between property and value."
+    },
+    {
+        "id":  182,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_two",
+        "question":  "The text-decoration property is used to add which TWO effects?",
+        "options":  [
+                        "line-through",
+                        "strike-through",
+                        "underline",
+                        "justify"
+                    ],
+        "answer":  [
+                       0,
+                       2
+                   ],
+        "explanation":  "line-through and underline are valid CSS text-decoration property values."
+    },
+    {
+        "id":  183,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_two",
+        "question":  "Select TWO valid values for the \u0027text-align\u0027 property in CSS:",
+        "options":  [
+                        "Middle",
+                        "Center",
+                        "top",
+                        "Justify"
+                    ],
+        "answer":  [
+                       1,
+                       3
+                   ],
+        "explanation":  "Valid text-align values include left, right, center, and justify."
+    },
+    {
+        "id":  184,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_two",
+        "question":  "Select TWO valid values for the \u0027border-style\u0027 property:",
+        "options":  [
+                        "Solid",
+                        "Liquid",
+                        "Groove",
+                        "Gentle"
+                    ],
+        "answer":  [
+                       0,
+                       2
+                   ],
+        "explanation":  "Solid and groove are standard CSS border styles."
+    },
+    {
+        "id":  185,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_two",
+        "question":  "The ID selector is written with the ____________ character and the Class selector with the ____________ character:",
+        "options":  [
+                        "asterisk (*)",
+                        "Dollar ($)",
+                        "hash (#)",
+                        "period (.)"
+                    ],
+        "answer":  [
+                       2,
+                       3
+                   ],
+        "explanation":  "ID selectors use hash (#); class selectors use period (.)."
+    },
+    {
+        "id":  186,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_two",
+        "question":  "Select TWO valid types of positioning in CSS:",
+        "options":  [
+                        "Form",
+                        "Constant",
+                        "Fixed",
+                        "Static"
+                    ],
+        "answer":  [
+                       2,
+                       3
+                   ],
+        "explanation":  "Fixed and static are recognized CSS positioning methods."
+    },
+    {
+        "id":  187,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_two",
+        "question":  "Select TWO valid directional values for the CSS \u0027float\u0027 property:",
+        "options":  [
+                        "float: left",
+                        "float: right",
+                        "float: top",
+                        "float: bottom"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "CSS float supports left, right, and none."
+    },
+    {
+        "id":  188,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_two",
+        "question":  "Select TWO valid values for the CSS \u0027display\u0027 property:",
+        "options":  [
+                        "Middle",
+                        "Inline",
+                        "Block",
+                        "top"
+                    ],
+        "answer":  [
+                       1,
+                       2
+                   ],
+        "explanation":  "Inline and block are core display values."
+    },
+    {
+        "id":  189,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_two",
+        "question":  "An ordered list can be ____________ or ____________:",
+        "options":  [
+                        "Static",
+                        "Numerical",
+                        "Constant",
+                        "Alphabetical"
+                    ],
+        "answer":  [
+                       1,
+                       3
+                   ],
+        "explanation":  "Ordered lists support Arabic numbers and alphabetical characters."
+    },
+    {
+        "id":  190,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_two",
+        "question":  "Select TWO valid values for the \u0027type\u0027 attribute of the \u003col\u003e tag:",
+        "options":  [
+                        "1",
+                        "I",
+                        "5",
+                        "z"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "Valid \u003col\u003e types include 1, a, A, i, and I."
+    },
+    {
+        "id":  191,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_two",
+        "question":  "Select TWO valid attributes of the \u003col\u003e tag:",
+        "options":  [
+                        "Alphabet",
+                        "start",
+                        "Number",
+                        "reversed"
+                    ],
+        "answer":  [
+                       1,
+                       3
+                   ],
+        "explanation":  "start and reversed are valid attributes on ordered lists."
+    },
+    {
+        "id":  192,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_two",
+        "question":  "List items start with the \u003cli\u003e tag in which TWO list elements?",
+        "options":  [
+                        "\u003cdd\u003e",
+                        "\u003cdt\u003e",
+                        "\u003col\u003e",
+                        "\u003cul\u003e"
+                    ],
+        "answer":  [
+                       2,
+                       3
+                   ],
+        "explanation":  "Both \u003col\u003e and \u003cul\u003e contain \u003cli\u003e child elements."
+    },
+    {
+        "id":  193,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_two",
+        "question":  "Select TWO valid values for the \u0027type\u0027 attribute of the \u003cul\u003e tag:",
+        "options":  [
+                        "circle",
+                        "triangle",
+                        "square",
+                        "bold"
+                    ],
+        "answer":  [
+                       0,
+                       2
+                   ],
+        "explanation":  "disc, circle, and square are valid bullet shapes."
+    },
+    {
+        "id":  194,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_two",
+        "question":  "Which TWO tags are used to define items and descriptions in a definition list (\u003cdl\u003e)?",
+        "options":  [
+                        "\u003cdt\u003e",
+                        "\u003cdd\u003e",
+                        "\u003cdm\u003e",
+                        "\u003cul\u003e"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "\u003cdt\u003e defines the term, and \u003cdd\u003e defines the definition data."
+    },
+    {
+        "id":  195,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_two",
+        "question":  "Select TWO types of nested lists supported in HTML:",
+        "options":  [
+                        "Double list",
+                        "Single level list",
+                        "Multi-level list",
+                        "Grouping list"
+                    ],
+        "answer":  [
+                       1,
+                       2
+                   ],
+        "explanation":  "Lists can be nested at a single sub-level or across multiple hierarchical levels."
+    },
+    {
+        "id":  196,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_two",
+        "question":  "Select TWO common audio file formats supported in HTML5:",
+        "options":  [
+                        ".aac",
+                        ".mp3",
+                        ".mp4",
+                        ".webm"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  ".aac and .mp3 are standard audio codecs; .mp4 and .webm are video formats."
+    },
+    {
+        "id":  197,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_two",
+        "question":  "Select TWO valid attributes of the \u003caudio\u003e tag in HTML5:",
+        "options":  [
+                        "width",
+                        "autoplay",
+                        "muted",
+                        "height"
+                    ],
+        "answer":  [
+                       1,
+                       2
+                   ],
+        "explanation":  "autoplay and muted are audio attributes. Width and height apply to video."
+    },
+    {
+        "id":  198,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_two",
+        "question":  "Select TWO attributes of \u003caudio\u003e that are boolean (do not require values):",
+        "options":  [
+                        "controls",
+                        "src",
+                        "loop",
+                        "muted"
+                    ],
+        "answer":  [
+                       0,
+                       3
+                   ],
+        "explanation":  "controls, muted, loop, and autoplay can stand alone as boolean attributes."
+    },
+    {
+        "id":  199,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_two",
+        "question":  "Select TWO common video formats supported in HTML5:",
+        "options":  [
+                        ".mp3",
+                        ".aac",
+                        ".mp4",
+                        ".webm"
+                    ],
+        "answer":  [
+                       2,
+                       3
+                   ],
+        "explanation":  "MP4 and WebM are standard container formats for HTML5 video."
+    },
+    {
+        "id":  200,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_two",
+        "question":  "Select TWO valid values for the \u0027preload\u0027 attribute of the \u003cvideo\u003e tag:",
+        "options":  [
+                        "Src",
+                        "width",
+                        "auto",
+                        "metadata"
+                    ],
+        "answer":  [
+                       2,
+                       3
+                   ],
+        "explanation":  "preload accepts auto, metadata, and none."
+    },
+    {
+        "id":  201,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_two",
+        "question":  "Select TWO attributes of the \u003cvideo\u003e tag used to control dimensions:",
+        "options":  [
+                        "top",
+                        "bottom",
+                        "width",
+                        "height"
+                    ],
+        "answer":  [
+                       2,
+                       3
+                   ],
+        "explanation":  "width and height specify video viewport size."
+    },
+    {
+        "id":  202,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_two",
+        "question":  "Image maps are primarily classified into which TWO types?",
+        "options":  [
+                        "My side",
+                        "Client side",
+                        "Host side",
+                        "Server side"
+                    ],
+        "answer":  [
+                       1,
+                       3
+                   ],
+        "explanation":  "Image maps are classified as Client-Side or Server-Side."
+    },
+    {
+        "id":  203,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_two",
+        "question":  "Select TWO tags used to define a Client-Side Image Map:",
+        "options":  [
+                        "\u003cimg\u003e",
+                        "\u003clink\u003e",
+                        "\u003cmap\u003e",
+                        "\u003calt\u003e"
+                    ],
+        "answer":  [
+                       0,
+                       2
+                   ],
+        "explanation":  "A client-side image map is constructed using \u003cimg\u003e paired with \u003cmap\u003e."
+    },
+    {
+        "id":  204,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_two",
+        "question":  "A given ____________ element can contain multiple ____________ elements within it:",
+        "options":  [
+                        "\u003cmap\u003e",
+                        "\u003carea\u003e",
+                        "\u003clink\u003e",
+                        "\u003cbody\u003e"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "The \u003cmap\u003e tag wraps multiple clickable \u003carea\u003e definitions."
+    },
+    {
+        "id":  205,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_two",
+        "question":  "Select TWO valid attributes of the \u003carea\u003e tag:",
+        "options":  [
+                        "href",
+                        "src",
+                        "link",
+                        "coords"
+                    ],
+        "answer":  [
+                       0,
+                       3
+                   ],
+        "explanation":  "href and coords are core functional attributes of the \u003carea\u003e element."
+    },
+    {
+        "id":  206,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_two",
+        "question":  "Select TWO valid values for the \u0027shape\u0027 attribute of the \u003carea\u003e tag:",
+        "options":  [
+                        "Square",
+                        "Rect",
+                        "Circle",
+                        "list"
+                    ],
+        "answer":  [
+                       1,
+                       2
+                   ],
+        "explanation":  "Valid HTML area shapes are rect, circle, and poly."
+    },
+    {
+        "id":  207,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_two",
+        "question":  "Select TWO valid attributes of the \u003ciframe\u003e tag:",
+        "options":  [
+                        "src",
+                        "href",
+                        "loop",
+                        "srcdoc"
+                    ],
+        "answer":  [
+                       0,
+                       3
+                   ],
+        "explanation":  "src and srcdoc are specific to the \u003ciframe\u003e tag."
+    },
+    {
+        "id":  208,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_two",
+        "question":  "Select TWO valid categories of Website Hosting:",
+        "options":  [
+                        "Fixed hosting",
+                        "Shared Hosting",
+                        "Dedicated hosting",
+                        "My Hosting"
+                    ],
+        "answer":  [
+                       1,
+                       2
+                   ],
+        "explanation":  "Shared hosting and Dedicated hosting are standard web hosting services."
+    },
+    {
+        "id":  209,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_three",
+        "question":  "Select THREE major web browsers that support HTML5 features:",
+        "options":  [
+                        "Google Chrome",
+                        "Window Explorer",
+                        "My Documents",
+                        "Safari",
+                        "Opera",
+                        "My files"
+                    ],
+        "answer":  [
+                       0,
+                       3,
+                       4
+                   ],
+        "explanation":  "Google Chrome, Safari, and Opera are modern browsers that fully implement HTML5."
+    },
+    {
+        "id":  210,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_three",
+        "question":  "\u003cinput type=\"date\"\u003e defines a date picker that captures which THREE fields?",
+        "options":  [
+                        "week",
+                        "Date",
+                        "year",
+                        "month",
+                        "day",
+                        "Mthname"
+                    ],
+        "answer":  [
+                       2,
+                       3,
+                       4
+                   ],
+        "explanation":  "A date picker selects year, month, and day."
+    },
+    {
+        "id":  211,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_three",
+        "question":  "Select THREE valid values for the \u0027type\u0027 attribute of the \u003cinput\u003e tag:",
+        "options":  [
+                        "link",
+                        "date",
+                        "list",
+                        "email",
+                        "file",
+                        "start"
+                    ],
+        "answer":  [
+                       1,
+                       3,
+                       4
+                   ],
+        "explanation":  "date, email, and file are valid HTML5 input type values."
+    },
+    {
+        "id":  212,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_three",
+        "question":  "Select THREE valid attributes of the \u003cinput\u003e tag:",
+        "options":  [
+                        "autofocus",
+                        "link",
+                        "pattern",
+                        "star",
+                        "multiple",
+                        "start"
+                    ],
+        "answer":  [
+                       0,
+                       2,
+                       4
+                   ],
+        "explanation":  "autofocus, pattern, and multiple are valid \u003cinput\u003e attributes."
+    },
+    {
+        "id":  213,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_three",
+        "question":  "Select THREE valid attributes of the \u003cmeta\u003e tag:",
+        "options":  [
+                        "Content",
+                        "Charset",
+                        "Name",
+                        "Min",
+                        "Max",
+                        "Minimum"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "Content, Charset, and Name are primary attributes of the \u003cmeta\u003e tag."
+    },
+    {
+        "id":  214,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_three",
+        "question":  "The \u0027name\u0027 attribute of \u003cmeta\u003e tag typically specifies metadata types such as which THREE?",
+        "options":  [
+                        "Content",
+                        "author",
+                        "Keywords",
+                        "Src",
+                        "Description",
+                        "Desc"
+                    ],
+        "answer":  [
+                       1,
+                       2,
+                       4
+                   ],
+        "explanation":  "Standard metadata name values include author, keywords, and description."
+    },
+    {
+        "id":  215,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_three",
+        "question":  "Select THREE valid values for the \u0027http-equiv\u0027 attribute of the \u003cmeta\u003e tag:",
+        "options":  [
+                        "Refresh",
+                        "expires",
+                        "get-cookie",
+                        "make-cookie",
+                        "set-cookie",
+                        "get-value"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       4
+                   ],
+        "explanation":  "Refresh, expires, and set-cookie are valid http-equiv header directives."
+    },
+    {
+        "id":  216,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_three",
+        "question":  "Select the THREE methods of implementing CSS in an HTML document:",
+        "options":  [
+                        "Inline",
+                        "Internal",
+                        "Object",
+                        "External",
+                        "Multiple",
+                        "Multilevel"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       3
+                   ],
+        "explanation":  "CSS can be implemented via Inline styles, Internal/Embedded tags, or External files."
+    },
+    {
+        "id":  217,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_three",
+        "question":  "Select THREE valid values that can be assigned to the \u0027text-decoration\u0027 property in CSS:",
+        "options":  [
+                        "Strike-through",
+                        "line-through",
+                        "underline",
+                        "overline",
+                        "middle line",
+                        "Line between"
+                    ],
+        "answer":  [
+                       1,
+                       2,
+                       3
+                   ],
+        "explanation":  "line-through, underline, and overline are standard text-decoration lines."
+    },
+    {
+        "id":  218,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_three",
+        "question":  "Select THREE valid alignment values for the \u0027text-align\u0027 property in CSS:",
+        "options":  [
+                        "left",
+                        "top",
+                        "right",
+                        "Center",
+                        "middle",
+                        "Joint"
+                    ],
+        "answer":  [
+                       0,
+                       2,
+                       3
+                   ],
+        "explanation":  "left, right, and center are valid horizontal text-align values."
+    },
+    {
+        "id":  219,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_three",
+        "question":  "Select THREE valid CSS background/color properties:",
+        "options":  [
+                        "Mg-color",
+                        "Bg-color",
+                        "Color",
+                        "Background-image",
+                        "Background-color",
+                        "Fg-color"
+                    ],
+        "answer":  [
+                       2,
+                       3,
+                       4
+                   ],
+        "explanation":  "color, background-image, and background-color are valid CSS properties."
+    },
+    {
+        "id":  220,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_three",
+        "question":  "Select THREE valid CSS properties used to control typographic fonts:",
+        "options":  [
+                        "font-figure",
+                        "font-family",
+                        "font-style",
+                        "font-weight",
+                        "font-color",
+                        "font-face"
+                    ],
+        "answer":  [
+                       1,
+                       2,
+                       3
+                   ],
+        "explanation":  "font-family, font-style, and font-weight are standard font properties."
+    },
+    {
+        "id":  221,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_three",
+        "question":  "Positioned elements can be configured using which THREE offset properties?",
+        "options":  [
+                        "top",
+                        "bottom",
+                        "middle",
+                        "right",
+                        "up",
+                        "down"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       3
+                   ],
+        "explanation":  "Positioned elements use top, bottom, left, and right offsets."
+    },
+    {
+        "id":  222,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_three",
+        "question":  "Select THREE valid positioning types available in CSS:",
+        "options":  [
+                        "Static",
+                        "Fixed",
+                        "Absolute",
+                        "Mixed",
+                        "Firm",
+                        "Constant"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "Static, fixed, and absolute are core CSS position values."
+    },
+    {
+        "id":  223,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_three",
+        "question":  "Select THREE valid values for the CSS \u0027float\u0027 property:",
+        "options":  [
+                        "Float: mid",
+                        "Float: top",
+                        "Float: left",
+                        "Float: none",
+                        "Float: right",
+                        "Float: min"
+                    ],
+        "answer":  [
+                       2,
+                       3,
+                       4
+                   ],
+        "explanation":  "Float property options include left, right, and none."
+    },
+    {
+        "id":  224,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_three",
+        "question":  "Select THREE valid values for the CSS \u0027display\u0027 property:",
+        "options":  [
+                        "Internal",
+                        "Inline",
+                        "Block",
+                        "Block-inline",
+                        "Outline",
+                        "Between"
+                    ],
+        "answer":  [
+                       1,
+                       2,
+                       3
+                   ],
+        "explanation":  "Inline, block, and inline-block (block-inline) are valid display values."
+    },
+    {
+        "id":  225,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_three",
+        "question":  "Select THREE valid values for the \u0027type\u0027 attribute of the \u003col\u003e tag:",
+        "options":  [
+                        "I",
+                        "1",
+                        "a",
+                        "2",
+                        "0",
+                        "C"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "Valid ordered list types include 1, a, A, i, and I."
+    },
+    {
+        "id":  226,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_three",
+        "question":  "Select THREE valid attributes of the \u003col\u003e tag:",
+        "options":  [
+                        "loop",
+                        "type",
+                        "Name",
+                        "Reversed",
+                        "start",
+                        "src"
+                    ],
+        "answer":  [
+                       1,
+                       3,
+                       4
+                   ],
+        "explanation":  "type, reversed, and start are valid \u003col\u003e attributes."
+    },
+    {
+        "id":  227,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_three",
+        "question":  "Select THREE valid values for the \u0027type\u0027 attribute of the \u003cul\u003e tag:",
+        "options":  [
+                        "rectangle",
+                        "square",
+                        "triangle",
+                        "circle",
+                        "Disc",
+                        "diamond"
+                    ],
+        "answer":  [
+                       1,
+                       3,
+                       4
+                   ],
+        "explanation":  "disc, circle, and square are valid unordered list marker types."
+    },
+    {
+        "id":  228,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_three",
+        "question":  "Select THREE valid audio formats supported in HTML5:",
+        "options":  [
+                        ".mp3",
+                        ".aac",
+                        ".mp4",
+                        ".ogg",
+                        ".webm",
+                        ".www"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       3
+                   ],
+        "explanation":  ".mp3, .aac, and .ogg are dedicated audio formats."
+    },
+    {
+        "id":  229,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_three",
+        "question":  "Select THREE valid attributes of the \u003caudio\u003e tag in HTML5:",
+        "options":  [
+                        "Width",
+                        "Controls",
+                        "loop",
+                        "muted",
+                        "Height",
+                        "Depth"
+                    ],
+        "answer":  [
+                       1,
+                       2,
+                       3
+                   ],
+        "explanation":  "controls, loop, and muted belong to the \u003caudio\u003e tag."
+    },
+    {
+        "id":  230,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_three",
+        "question":  "Select THREE attributes of audio/video elements that do not require explicit values (boolean):",
+        "options":  [
+                        "Autoplay",
+                        "Controls",
+                        "Src",
+                        "Muted",
+                        "loop",
+                        "Href"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       3
+                   ],
+        "explanation":  "autoplay, controls, and muted can be written as boolean attributes."
+    },
+    {
+        "id":  231,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_three",
+        "question":  "Select THREE common video formats supported in HTML5:",
+        "options":  [
+                        ".mp3",
+                        ".mp4",
+                        ".ogg",
+                        ".webm",
+                        ".aac",
+                        ".mp9"
+                    ],
+        "answer":  [
+                       1,
+                       2,
+                       3
+                   ],
+        "explanation":  ".mp4, .ogg (Theora), and .webm are video formats supported by HTML5."
+    },
+    {
+        "id":  232,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_three",
+        "question":  "Select THREE valid attributes of the \u003cvideo\u003e tag in HTML5:",
+        "options":  [
+                        "Height",
+                        "links",
+                        "href",
+                        "loop",
+                        "muted",
+                        "video"
+                    ],
+        "answer":  [
+                       0,
+                       3,
+                       4
+                   ],
+        "explanation":  "height, loop, and muted are attributes supported on \u003cvideo\u003e."
+    },
+    {
+        "id":  233,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_three",
+        "question":  "Select THREE valid values for the \u0027preload\u0027 attribute of the \u003cvideo\u003e tag:",
+        "options":  [
+                        "Auto",
+                        "Metadata",
+                        "None",
+                        "Autoplay",
+                        "Autopause",
+                        "SetData"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "preload accepts auto, metadata, and none."
+    },
+    {
+        "id":  234,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_three",
+        "question":  "Select THREE tags required to construct and define a complete Client-Side Image Map:",
+        "options":  [
+                        "\u003clink\u003e",
+                        "\u003cimg\u003e",
+                        "\u003chref\u003e",
+                        "\u003cmap\u003e",
+                        "\u003carea\u003e",
+                        "\u003cimage\u003e"
+                    ],
+        "answer":  [
+                       1,
+                       3,
+                       4
+                   ],
+        "explanation":  "\u003cimg\u003e inserts the image, \u003cmap\u003e names the map, and \u003carea\u003e sets hotspot links."
+    },
+    {
+        "id":  235,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_three",
+        "question":  "Select THREE valid values for the \u0027shape\u0027 attribute of the \u003carea\u003e tag:",
+        "options":  [
+                        "rect",
+                        "circle",
+                        "square",
+                        "star",
+                        "poly",
+                        "triangle"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       4
+                   ],
+        "explanation":  "rect, circle, and poly are the three supported shapes in HTML image maps."
+    },
+    {
+        "id":  236,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_three",
+        "question":  "Select THREE valid attributes of the \u003carea\u003e tag:",
+        "options":  [
+                        "href",
+                        "src",
+                        "width",
+                        "alt",
+                        "height",
+                        "srcdoc"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       3
+                   ],
+        "explanation":  "href, shape/coords, and alt are standard \u003carea\u003e attributes."
+    },
+    {
+        "id":  237,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_three",
+        "question":  "Select THREE valid attributes of the \u003ciframe\u003e tag:",
+        "options":  [
+                        "Src",
+                        "Name",
+                        "Srcdoc",
+                        "loop",
+                        "href",
+                        "width"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "src, name, and srcdoc are specific to the \u003ciframe\u003e tag."
+    },
+    {
+        "id":  238,
+        "chapter":  "Advanced Web Designing",
+        "type":  "mcq_three",
+        "question":  "Select THREE primary types of Website Hosting:",
+        "options":  [
+                        "Fixed hosting",
+                        "Dedicated hosting",
+                        "formal hosting",
+                        "shared hosting",
+                        "free hosting",
+                        "No hosting"
+                    ],
+        "answer":  [
+                       1,
+                       3,
+                       4
+                   ],
+        "explanation":  "Dedicated hosting, shared hosting, and free hosting are standard web hosting categories."
+    },
+    {
+        "id":  301,
+        "answer":  0,
+        "explanation":  "The \u003ctextarea\u003e element provides a multi-line plain text editing control.",
+        "type":  "true_false",
+        "options":  [
+                        "True",
+                        "False"
+                    ],
+        "chapter":  "Advanced Web Designing",
+        "question":  "A text area field created using the \u003ctextarea\u003e tag allows entering multiple lines of text."
+    },
+    {
+        "id":  302,
+        "answer":  0,
+        "explanation":  "The controls attribute displays native audio player controls to the user.",
+        "type":  "true_false",
+        "options":  [
+                        "True",
+                        "False"
+                    ],
+        "chapter":  "Advanced Web Designing",
+        "question":  "In HTML5, the controls attribute of \u003caudio\u003e tag displays standard playback controls like play, pause, and volume."
+    },
+    {
+        "id":  303,
+        "answer":  1,
+        "explanation":  "The \u003cvideo\u003e tag is a container element and requires a closing \u003c/video\u003e tag.",
+        "type":  "true_false",
+        "options":  [
+                        "True",
+                        "False"
+                    ],
+        "chapter":  "Advanced Web Designing",
+        "question":  "The \u003cvideo\u003e element does not require a closing tag in HTML5."
+    },
+    {
+        "id":  304,
+        "answer":  1,
+        "explanation":  "\u003col\u003e displays numbered items; \u003cul\u003e (unordered list) displays bullets.",
+        "type":  "true_false",
+        "options":  [
+                        "True",
+                        "False"
+                    ],
+        "chapter":  "Advanced Web Designing",
+        "question":  "An ordered list created with \u003col\u003e displays list items marked with bullets by default."
+    },
+    {
+        "id":  305,
+        "answer":  0,
+        "explanation":  "row-reverse aligns flex items along the horizontal axis starting from the right.",
+        "type":  "true_false",
+        "options":  [
+                        "True",
+                        "False"
+                    ],
+        "chapter":  "Advanced Web Designing",
+        "question":  "In CSS Flexbox, flex-direction: row-reverse lays out items horizontally from right to left."
+    },
+    {
+        "id":  306,
+        "answer":  0,
+        "explanation":  "usemap specifies the hash-name reference of the corresponding \u003cmap\u003e element.",
+        "type":  "true_false",
+        "options":  [
+                        "True",
+                        "False"
+                    ],
+        "chapter":  "Advanced Web Designing",
+        "question":  "The usemap attribute in the \u003cimg\u003e tag is used to reference a client-side image map \u003cmap\u003e."
+    },
+    {
+        "id":  307,
+        "answer":  1,
+        "explanation":  "Multiple \u003csource\u003e elements can be declared to provide fallback multimedia formats.",
+        "type":  "true_false",
+        "options":  [
+                        "True",
+                        "False"
+                    ],
+        "chapter":  "Advanced Web Designing",
+        "question":  "The \u003csource\u003e tag can only be included once inside an HTML5 \u003caudio\u003e or \u003cvideo\u003e element."
+    },
+    {
+        "id":  308,
+        "answer":  0,
+        "explanation":  "justify-content handles alignment along the main axis, while align-items handles the cross axis.",
+        "type":  "true_false",
+        "options":  [
+                        "True",
+                        "False"
+                    ],
+        "chapter":  "Advanced Web Designing",
+        "question":  "In CSS Flexbox, justify-content defines how items are aligned along the main axis."
+    },
+    {
+        "id":  309,
+        "answer":  1,
+        "explanation":  "HTML5 form validation attributes are handled natively by the web browser without any JavaScript.",
+        "type":  "true_false",
+        "options":  [
+                        "True",
+                        "False"
+                    ],
+        "chapter":  "Advanced Web Designing",
+        "question":  "HTML5 client-side form validation attributes like \u0027required\u0027 and \u0027pattern\u0027 require JavaScript to function."
+    },
+    {
+        "id":  310,
+        "answer":  0,
+        "explanation":  "A rect area takes the coordinates of the top-left corner and bottom-right corner.",
+        "type":  "true_false",
+        "options":  [
+                        "True",
+                        "False"
+                    ],
+        "chapter":  "Advanced Web Designing",
+        "question":  "The coords attribute for a rectangular hotspot (shape=\u0027rect\u0027) requires four values: x1, y1, x2, y2."
     }
-  ]
-}
+]

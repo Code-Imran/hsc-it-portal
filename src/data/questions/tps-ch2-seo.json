@@ -1,71 +1,1005 @@
-{
-  "chapter_id": 2,
-  "chapter_name": "Introduction to SEO (Search Engine Optimization)",
-  "subject_stream": ["science", "commerce", "arts"],
-  "source": "TPS Notes - 12th IT",
-  "q1_fill_in_the_blanks": [
-    { "id": "tps-seo-fb-01", "question": "SEO stands for _____.", "answer": "Search Engine Optimization" },
-    { "id": "tps-seo-fb-02", "question": "SEO is a subset of _____.", "answer": "Search Engine Marketing" },
-    { "id": "tps-seo-fb-03", "question": "SEO is useful in _____ number of visitors to a website.", "answer": "increasing" },
-    { "id": "tps-seo-fb-04", "question": "_____ SEO includes provision of good content and good keywords.", "answer": "On-Page" },
-    { "id": "tps-seo-fb-05", "question": "_____ SEO is concerned with website-website relationship.", "answer": "Off-Page" },
-    { "id": "tps-seo-fb-06", "question": "SEO techniques that search engines do not approve are called _____.", "answer": "Black Hat" },
-    { "id": "tps-seo-fb-07", "question": "SEO techniques that search engines recommend as a part of good design are called _____.", "answer": "White Hat" },
-    { "id": "tps-seo-fb-08", "question": "Singular tags like <img> should be _____ enclosed.", "answer": "self" },
-    { "id": "tps-seo-fb-09", "question": "One of the optimizing factors to improve images is by using _____ attribute.", "answer": "alt" },
-    { "id": "tps-seo-fb-10", "question": "Title contents in SEO should be up to _____ characters.", "answer": "60" },
-    { "id": "tps-seo-fb-11", "question": "Meta Description should be between 70 and _____ characters.", "answer": "160" },
-    { "id": "tps-seo-fb-12", "question": "_____ file tells search engines which pages you want to exclude from indexing.", "answer": "Robots.txt" },
-    { "id": "tps-seo-fb-13", "question": "_____ is a free SEO audit tool that will perform a detailed SEO analysis.", "answer": "SEOptimer" },
-    { "id": "tps-seo-fb-14", "question": "_____ are the links on a website that, when clicked, take the user to another site.", "answer": "Backlinks" },
-    { "id": "tps-seo-fb-15", "question": "SMO stands for _____.", "answer": "Social Media Optimization" }
-  ],
-  "q2_true_false": [
-    { "id": "tps-seo-tf-01", "statement": "SEO stands for Search Engine Optimization.", "answer": true },
-    { "id": "tps-seo-tf-02", "statement": "SEM is a subset of Search Engine Optimization.", "answer": false },
-    { "id": "tps-seo-tf-03", "statement": "Off-Page SEO includes link building and increasing link popularity.", "answer": true },
-    { "id": "tps-seo-tf-04", "statement": "Invisible text and stuffed keywords are part of White Hat strategies.", "answer": false },
-    { "id": "tps-seo-tf-05", "statement": "Singular tag like <img> should be self-enclosed like <img/>.", "answer": true },
-    { "id": "tps-seo-tf-06", "statement": "Title content should be up to 60 characters.", "answer": true },
-    { "id": "tps-seo-tf-07", "statement": "Meta description should be between 70 and 160 characters.", "answer": true },
-    { "id": "tps-seo-tf-08", "statement": "SEOptimer is a paid SEO audit tool.", "answer": false },
-    { "id": "tps-seo-tf-09", "statement": "Robots.txt file tells search engines which pages you want to exclude from indexing.", "answer": true },
-    { "id": "tps-seo-tf-10", "statement": "Backlinks are links on one website that, when clicked, take the user to another site.", "answer": true }
-  ],
-  "q3_mcq_single": [
-    { "id": "tps-seo-mcq1-01", "question": "SEO is a subset of _____.", "options": ["Search Engine Optimization", "Search Engine Marketing", "Social Media Optimization", "Search Engine"], "answer": "Search Engine Marketing" },
-    { "id": "tps-seo-mcq1-02", "question": "_____ is concerned with Website-Website relationship.", "options": ["On-Page SEO", "Off-Page SEO", "White Hat SEO", "Black Hat SEO"], "answer": "Off-Page SEO" },
-    { "id": "tps-seo-mcq1-03", "question": "_____ includes relevant content and well-labeled images.", "options": ["White Hat SEO", "Black Hat SEO", "Invisible SEO", "Off-Page SEO"], "answer": "White Hat SEO" },
-    { "id": "tps-seo-mcq1-04", "question": "Title contents should be up to _____ characters.", "options": ["50", "60", "70", "80"], "answer": "60" },
-    { "id": "tps-seo-mcq1-05", "question": "Meta description should be between _____ characters.", "options": ["70 and 100", "100 and 200", "70 and 160", "50 and 100"], "answer": "70 and 160" },
-    { "id": "tps-seo-mcq1-06", "question": "SEO audit analyzes website's _____.", "options": ["users", "health", "visitors", "rank"], "answer": "health" }
-  ],
-  "q4_mcq_two_correct": [
-    { "id": "tps-seo-mcq2-01", "question": "The two primary types of SEO are _____ and _____.", "options": ["On-Page SEO", "White Hat SEO", "Off-Page SEO", "Black Hat SEO", "Default"], "answer": ["On-Page SEO", "Off-Page SEO"] },
-    { "id": "tps-seo-mcq2-02", "question": "Techniques of SEO are _____ and _____.", "options": ["On-Page SEO", "White Hat SEO", "Off-Page SEO", "Black Hat SEO", "Default"], "answer": ["White Hat SEO", "Black Hat SEO"] },
-    { "id": "tps-seo-mcq2-03", "question": "Page content optimization can be done by using keywords in _____ and _____ tags.", "options": ["<font>", "<title>", "<hr>", "<meta>", "<input>"], "answer": ["<title>", "<meta>"] },
-    { "id": "tps-seo-mcq2-04", "question": "Other factors to rank website higher in search engines are _____ and _____.", "options": ["Desktop friendly", "Speed of the website", "Creating robots.txt", "No backlinks", "No external links"], "answer": ["Speed of the website", "Creating robots.txt"] },
-    { "id": "tps-seo-mcq2-05", "question": "Recognized SEO Audit Tools are _____ and _____.", "options": ["SEOptimer", "SEOptimizer", "Seomator", "SEOAuditor", "Seomatizer"], "answer": ["SEOptimer", "Seomator"] }
-  ],
-  "q5_mcq_three_correct": [
-    { "id": "tps-seo-mcq3-01", "question": "Black Hat strategies include _____.", "options": ["duplicate content", "relevant content", "invisible text", "stuffed keywords", "complete sentences", "well-labeled images"], "answer": ["duplicate content", "invisible text", "stuffed keywords"] },
-    { "id": "tps-seo-mcq3-02", "question": "White Hat strategies include _____.", "options": ["duplicate content", "relevant content", "well-labeled images", "relevant links", "invisible text", "doorway pages"], "answer": ["relevant content", "well-labeled images", "relevant links"] },
-    { "id": "tps-seo-mcq3-03", "question": "Important factors of Search Engine Optimization include _____.", "options": ["Speed of website", "Mobile friendly", "Creating robots.txt", "Desktop friendly", "High memory usage", "Uncompressed images"], "answer": ["Speed of website", "Mobile friendly", "Creating robots.txt"] }
-  ],
-  "q6_match_following": [
-    {
-      "id": "tps-seo-match-01",
-      "pairs": [
-        { "left": "Image optimization", "right": "alt attribute" },
-        { "left": "Links to Twitter, Facebook", "right": "Social Media Optimization" },
-        { "left": "Description about author", "right": "meta tag" },
-        { "left": "White Hat strategy", "right": "Relevant content" },
-        { "left": "Black Hat strategy", "right": "Duplicate content" },
-        { "left": "Robots.txt", "right": "Exclude pages from indexing" },
-        { "left": "SEOptimer", "right": "SEO Audit Tool" },
-        { "left": "Backlinks", "right": "Links when clicked take user to another site" },
-        { "left": "SEO Audit", "right": "Determine the health of the website" }
-      ]
-    }
-  ]
-}
+[
+  {
+    "id": 1,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_single",
+    "question": "SEO stands for ____________.",
+    "options": [
+      "Search Engine Optimization",
+      "Search Engine Option",
+      "Search Engine Optimizing",
+      "Search Engine Organizing"
+    ],
+    "answer": 0,
+    "explanation": "SEO stands for Search Engine Optimization."
+  },
+  {
+    "id": 2,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_single",
+    "question": "SEO is a subset of ____________.",
+    "options": [
+      "Search Engine Optimization",
+      "Search Engine Marketing",
+      "Social Media Optimization",
+      "Search Engine"
+    ],
+    "answer": 1,
+    "explanation": "SEO is considered a subset of Search Engine Marketing (SEM)."
+  },
+  {
+    "id": 3,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_single",
+    "question": "SEO is useful in ____________ the number of visitors to a website.",
+    "options": [
+      "decreasing",
+      "increasing",
+      "removing",
+      "analyzing"
+    ],
+    "answer": 1,
+    "explanation": "SEO optimizes pages to increase organic visitor traffic."
+  },
+  {
+    "id": 4,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_single",
+    "question": "____________ is an online program or software that helps users to search for information on the World Wide Web.",
+    "options": [
+      "Search Engine",
+      "Website",
+      "Application",
+      "API"
+    ],
+    "answer": 0,
+    "explanation": "Search engines index the web to answer textual queries."
+  },
+  {
+    "id": 5,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_single",
+    "question": "____________ is concerned with Website-Website relationship.",
+    "options": [
+      "On-Page SEO",
+      "Off-Page SEO",
+      "White Hat SEO",
+      "Black Hat SEO"
+    ],
+    "answer": 1,
+    "explanation": "Off-Page SEO focuses on external link relationships and backlinks."
+  },
+  {
+    "id": 6,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_single",
+    "question": "____________ is concerned with information that is displayed to the end user.",
+    "options": [
+      "White Hat SEO",
+      "On-Page SEO",
+      "Off-Page SEO",
+      "Black Hat SEO"
+    ],
+    "answer": 1,
+    "explanation": "On-Page SEO handles visible content, headings, and page structure."
+  },
+  {
+    "id": 7,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_single",
+    "question": "____________ includes provision of good content, good keywords selection, etc.",
+    "options": [
+      "Off-Page SEO",
+      "On-Page SEO",
+      "Over-Page SEO",
+      "Above-Page SEO"
+    ],
+    "answer": 1,
+    "explanation": "On-Page optimization deals with keywords and content quality."
+  },
+  {
+    "id": 8,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_single",
+    "question": "____________ includes link building, search link exchange, etc.",
+    "options": [
+      "Off-Page SEO",
+      "On-Page SEO",
+      "Over-Page SEO",
+      "Above-Page SEO"
+    ],
+    "answer": 0,
+    "explanation": "Off-Page SEO deals with external link generation."
+  },
+  {
+    "id": 9,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_single",
+    "question": "____________ strategies include relevant content and good design.",
+    "options": [
+      "On-Page SEO",
+      "Off-Page SEO",
+      "White Hat SEO",
+      "Black Hat SEO"
+    ],
+    "answer": 2,
+    "explanation": "White Hat SEO adheres ethically to search engine guidelines."
+  },
+  {
+    "id": 10,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_single",
+    "question": "____________ strategies include duplicate and stolen content.",
+    "options": [
+      "On-Page SEO",
+      "Off-Page SEO",
+      "White Hat SEO",
+      "Black Hat SEO"
+    ],
+    "answer": 3,
+    "explanation": "Black Hat SEO uses deceptive techniques like duplicate content."
+  },
+  {
+    "id": 11,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_single",
+    "question": "____________ is associated with White Hat SEO.",
+    "options": [
+      "Well-labeled images",
+      "Duplicate content",
+      "Invisible text",
+      "Stuffed Keywords"
+    ],
+    "answer": 0,
+    "explanation": "Providing proper alt attributes and labels is a White Hat best practice."
+  },
+  {
+    "id": 12,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_single",
+    "question": "If it is a singular tag, e.g. <img>, it should be self-enclosed like ____________.",
+    "options": [
+      "<img>",
+      "</img>",
+      "<img/>",
+      "</img/>"
+    ],
+    "answer": 2,
+    "explanation": "Self-enclosing tags in strict standard-compliant HTML use `<img/>`."
+  },
+  {
+    "id": 13,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_single",
+    "question": "Title contents should be up to ____________ characters (spaces included).",
+    "options": [
+      "50",
+      "60",
+      "70",
+      "80"
+    ],
+    "answer": 1,
+    "explanation": "Search engines typically show up to 60 characters for page titles."
+  },
+  {
+    "id": 14,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_single",
+    "question": "Meta description should be between ____________ characters.",
+    "options": [
+      "70 and 100",
+      "100 and 200",
+      "70 and 160",
+      "50 and 100"
+    ],
+    "answer": 2,
+    "explanation": "Meta descriptions are optimized when kept between 70 and 160 characters."
+  },
+  {
+    "id": 15,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_single",
+    "question": "The ____________ attribute of the <img> tag gives information about the image.",
+    "options": [
+      "alt",
+      "src",
+      "height",
+      "width"
+    ],
+    "answer": 0,
+    "explanation": "The alt attribute provides alternative text for screen readers and SEO."
+  },
+  {
+    "id": 16,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_single",
+    "question": "____________ are important words and phrases related to the developed website content.",
+    "options": [
+      "SEO keywords",
+      "Structure",
+      "Search",
+      "Web Design"
+    ],
+    "answer": 0,
+    "explanation": "Keywords are central queries targeted by search optimization."
+  },
+  {
+    "id": 17,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_single",
+    "question": "____________ is a powerful tool in promoting a website and creating quality backlinks.",
+    "options": [
+      "Black links",
+      "Social bookmarking",
+      "Website speed",
+      "Media optimization"
+    ],
+    "answer": 1,
+    "explanation": "Social bookmarking platforms allow saving and sharing high-authority links."
+  },
+  {
+    "id": 18,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_single",
+    "question": "____________ are website links that are stored for future references.",
+    "options": [
+      "Webpage",
+      "Bookmarks",
+      "Speed",
+      "Media"
+    ],
+    "answer": 1,
+    "explanation": "Bookmarks store destination web links for quick retrieval."
+  },
+  {
+    "id": 19,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_single",
+    "question": "SMO stands for ____________.",
+    "options": [
+      "Social Media Optimization",
+      "Service Media Optimization",
+      "Search Media Optimization",
+      "Sound Media Optimization"
+    ],
+    "answer": 0,
+    "explanation": "SMO stands for Social Media Optimization."
+  },
+  {
+    "id": 20,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_single",
+    "question": "____________ deals with enhancing website ranking using interactive communities like Facebook and Twitter.",
+    "options": [
+      "Social Media Optimization",
+      "Search Engine Optimization",
+      "Backlinks",
+      "Speed of website"
+    ],
+    "answer": 0,
+    "explanation": "Social Media Optimization promotes engagement across social networks."
+  },
+  {
+    "id": 21,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_single",
+    "question": "____________ are links on one website that, when clicked, take the user to another site.",
+    "options": [
+      "Backlinks",
+      "Frontlinks",
+      "Blacklinks",
+      "Whitelinks"
+    ],
+    "answer": 0,
+    "explanation": "Backlinks direct users and search spiders to destination websites."
+  },
+  {
+    "id": 22,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_single",
+    "question": "Backlinks represent a 'vote of confidence' from one site to another.",
+    "options": [
+      "Frontlinks",
+      "Blacklinks",
+      "Backlinks",
+      "Whitelinks"
+    ],
+    "answer": 2,
+    "explanation": "Search engines evaluate inbound backlinks as authority indicators."
+  },
+  {
+    "id": 23,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_single",
+    "question": "The ____________ file tells search engines which pages you want to exclude from indexing.",
+    "options": [
+      "myfile.txt",
+      "file.txt",
+      "search.txt",
+      "Robots.txt"
+    ],
+    "answer": 3,
+    "explanation": "robots.txt sets crawling directives for web spiders."
+  },
+  {
+    "id": 24,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_single",
+    "question": "An SEO Audit analyzes a website's ____________.",
+    "options": [
+      "users",
+      "health",
+      "visitors",
+      "rank"
+    ],
+    "answer": 1,
+    "explanation": "An audit assesses compliance and overall site health."
+  },
+  {
+    "id": 25,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_single",
+    "question": "An ____________ helps to find out what could be done to improve ranking on search engines.",
+    "options": [
+      "SEO Search",
+      "SEO Audit",
+      "SEO Speed",
+      "SEO optimization"
+    ],
+    "answer": 1,
+    "explanation": "An SEO audit provides diagnostic recommendations."
+  },
+  {
+    "id": 26,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_single",
+    "question": "____________ is a free SEO audit tool that performs detailed SEO analysis.",
+    "options": [
+      "SEO Audit",
+      "SEO Search",
+      "SEOptimer",
+      "SEO Tool"
+    ],
+    "answer": 2,
+    "explanation": "SEOptimer is a widely referenced free web SEO analysis tool."
+  },
+  {
+    "id": 27,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_two",
+    "question": "SEO is a technique used for ____________ and ____________ a website to rank high in search engines:",
+    "options": [
+      "Designing",
+      "Developing",
+      "Monitoring",
+      "Analyzing"
+    ],
+    "answer": [
+      0,
+      1
+    ],
+    "explanation": "SEO influences both frontend design and backend development structure."
+  },
+  {
+    "id": 28,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_two",
+    "question": "Select TWO primary types of SEO:",
+    "options": [
+      "On-Page SEO",
+      "White Hat SEO",
+      "Off-Page SEO",
+      "Black Hat SEO"
+    ],
+    "answer": [
+      0,
+      2
+    ],
+    "explanation": "The two foundational classifications of SEO are On-Page and Off-Page."
+  },
+  {
+    "id": 29,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_two",
+    "question": "Techniques of SEO are classified into ____________ and ____________:",
+    "options": [
+      "On-Page SEO",
+      "White Hat SEO",
+      "Off-Page SEO",
+      "Black Hat SEO"
+    ],
+    "answer": [
+      1,
+      3
+    ],
+    "explanation": "SEO implementation techniques are split into White Hat and Black Hat."
+  },
+  {
+    "id": 30,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_two",
+    "question": "Page content optimization can be done by using keywords in which TWO HTML tags?",
+    "options": [
+      "<font>",
+      "<title>",
+      "<hr>",
+      "<meta>",
+      "<input>"
+    ],
+    "answer": [
+      1,
+      3
+    ],
+    "explanation": "<title> and <meta> tags are key on-page keyword placement zones."
+  },
+  {
+    "id": 31,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_two",
+    "question": "Select TWO additional factors that help rank a website higher:",
+    "options": [
+      "Desktop friendly",
+      "Speed of the website",
+      "Creating robots.txt",
+      "No backlinks",
+      "No external links"
+    ],
+    "answer": [
+      1,
+      2
+    ],
+    "explanation": "Fast loading times and a valid robots.txt file improve search engine ranking performance."
+  },
+  {
+    "id": 32,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_two",
+    "question": "Social Media Optimization deals with enhancing site ranking using interactive communities like ____________ and ____________:",
+    "options": [
+      "Blogs",
+      "E-Commerce websites",
+      "Facebook",
+      "Banking"
+    ],
+    "answer": [
+      0,
+      2
+    ],
+    "explanation": "Blogs and Facebook are interactive community spaces used in SMO."
+  },
+  {
+    "id": 33,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_two",
+    "question": "Meta description tags should be between ____________ and ____________ characters:",
+    "options": [
+      "70",
+      "80",
+      "160",
+      "120"
+    ],
+    "answer": [
+      0,
+      2
+    ],
+    "explanation": "Textbook specifications recommend a length between 70 and 160 characters."
+  },
+  {
+    "id": 34,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_two",
+    "question": "A web page should include proper heading tags from ____________ to ____________ wherever required:",
+    "options": [
+      "<head>",
+      "<h1>",
+      "</h6>",
+      "<title>"
+    ],
+    "answer": [
+      1,
+      2
+    ],
+    "explanation": "Headings in HTML follow the hierarchy from <h1> through <h6>."
+  },
+  {
+    "id": 35,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_two",
+    "question": "Keyword ____________ and ____________ are important parts of Search Engine Optimization:",
+    "options": [
+      "Research",
+      "Analysis",
+      "Structure",
+      "Website Speed"
+    ],
+    "answer": [
+      0,
+      1
+    ],
+    "explanation": "Keyword Research and Keyword Analysis form the core of keyword planning."
+  },
+  {
+    "id": 36,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_two",
+    "question": "Select TWO online Keyword Planner tools:",
+    "options": [
+      "Browser",
+      "Keyword Planner",
+      "URL",
+      "Google AdWords"
+    ],
+    "answer": [
+      1,
+      3
+    ],
+    "explanation": "Google AdWords (Google Ads) and Keyword Planner provide search volume analysis."
+  },
+  {
+    "id": 37,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_two",
+    "question": "Select TWO key technical factors that affect SEO:",
+    "options": [
+      "Speed of the website",
+      "Web Browser",
+      "Mobile friendly",
+      "URL length"
+    ],
+    "answer": [
+      0,
+      2
+    ],
+    "explanation": "Fast page loading and responsive mobile layouts are critical ranking criteria."
+  },
+  {
+    "id": 38,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_three",
+    "question": "On-Page SEO includes which THREE of the following?",
+    "options": [
+      "good content",
+      "good keywords selection",
+      "putting keywords on correct places",
+      "link building",
+      "directories",
+      "search"
+    ],
+    "answer": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Good content, relevant keywords, and strategic keyword placement are essential On-Page factors."
+  },
+  {
+    "id": 39,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_three",
+    "question": "Off-Page SEO includes which THREE of the following?",
+    "options": [
+      "link building",
+      "link exchange",
+      "search engines submission",
+      "good content",
+      "title",
+      "keywords"
+    ],
+    "answer": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Link building, link exchange, and directory submission are core Off-Page activities."
+  },
+  {
+    "id": 40,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_three",
+    "question": "On-Page SEO is concerned with information displayed to the end user, such as which THREE?",
+    "options": [
+      "Network",
+      "text",
+      "Speed",
+      "URL",
+      "image",
+      "website navigation"
+    ],
+    "answer": [
+      1,
+      4,
+      5
+    ],
+    "explanation": "On-Page factors focus on user-facing elements like text, images, and intuitive site navigation."
+  },
+  {
+    "id": 41,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_three",
+    "question": "Select THREE popular examples of search engines:",
+    "options": [
+      "Google",
+      "Yahoo",
+      "Bing",
+      "Java",
+      "Internet Explorer",
+      "Photoshop"
+    ],
+    "answer": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Google, Yahoo, and Bing are prominent web search engines."
+  },
+  {
+    "id": 42,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_three",
+    "question": "Black Hat strategies include which THREE practices?",
+    "options": [
+      "duplicate content",
+      "relevant content",
+      "invisible text",
+      "stuffed keywords",
+      "page titles",
+      "relevant links"
+    ],
+    "answer": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "Duplicate content, hidden/invisible text, and keyword stuffing are Black Hat practices."
+  },
+  {
+    "id": 43,
+    "chapter": "Introduction to SEO",
+    "type": "mcq_three",
+    "question": "White Hat strategies include which THREE practices?",
+    "options": [
+      "duplicate content",
+      "relevant content",
+      "well-labeled images",
+      "relevant links",
+      "duplicate keywords",
+      "stuffed keywords"
+    ],
+    "answer": [
+      1,
+      2,
+      3
+    ],
+    "explanation": "Relevant text, well-labeled images, and organic links are White Hat best practices."
+  },
+  {
+    "chapter": "Search Engine Optimization",
+    "type": "fill_in_the_blanks",
+    "question": "SEO stands for Search Engine _____.",
+    "answer": "Optimization",
+    "explanation": "SEO stands for Search Engine Optimization.",
+    "id": 44
+  },
+  {
+    "chapter": "Search Engine Optimization",
+    "type": "fill_in_the_blanks",
+    "question": "The file named _____ instructs search engine crawlers which pages or files not to crawl.",
+    "answer": "robots.txt",
+    "explanation": "robots.txt contains instructions on disallowed URLs for search engine robots.",
+    "id": 45
+  },
+  {
+    "chapter": "Search Engine Optimization",
+    "type": "fill_in_the_blanks",
+    "question": "In On-Page SEO, the _____ attribute of the img tag provides alternative text for screen readers and search bots.",
+    "answer": "alt",
+    "explanation": "The alt attribute describes the image content to search engines and visually impaired users.",
+    "id": 46
+  },
+  {
+    "chapter": "Search Engine Optimization",
+    "type": "fill_in_the_blanks",
+    "question": "A _____ sitemap provides a roadmap of website URLs formatted specifically for search engine web crawlers.",
+    "answer": "XML",
+    "explanation": "An XML sitemap helps crawlers discover and index all valid URLs on a website.",
+    "id": 47
+  },
+  {
+    "chapter": "Search Engine Optimization",
+    "type": "fill_in_the_blanks",
+    "question": "Techniques that follow search engine guidelines to improve organic rankings are called _____ Hat SEO.",
+    "answer": "White",
+    "explanation": "White Hat SEO adheres strictly to search engine webmaster quality guidelines.",
+    "id": 48
+  },
+  {
+    "chapter": "Search Engine Optimization",
+    "type": "fill_in_the_blanks",
+    "question": "Deceptive techniques such as keyword stuffing and invisible text are known as _____ Hat SEO.",
+    "answer": "Black",
+    "explanation": "Black Hat SEO uses manipulative tactics that violate search engine policies.",
+    "id": 49
+  },
+  {
+    "chapter": "Search Engine Optimization",
+    "type": "fill_in_the_blanks",
+    "question": "In HTML, the meta tag with name='_____' describes the overall summary of the webpage content.",
+    "answer": "description",
+    "explanation": "The meta description summarises the page snippet in search engine results pages (SERPs).",
+    "id": 50
+  },
+  {
+    "chapter": "Search Engine Optimization",
+    "type": "fill_in_the_blanks",
+    "question": "SERP stands for Search Engine _____ Pages.",
+    "answer": "Results",
+    "explanation": "SERP stands for Search Engine Results Pages.",
+    "id": 51
+  },
+  {
+    "chapter": "Search Engine Optimization",
+    "type": "true_false",
+    "question": "Off-Page SEO includes activities carried out directly on your own website code and content.",
+    "answer": false,
+    "explanation": "Off-Page SEO involves external signals like backlinks and social shares.",
+    "id": 52
+  },
+  {
+    "chapter": "Search Engine Optimization",
+    "type": "true_false",
+    "question": "Keyword stuffing is considered a legitimate White Hat SEO practice.",
+    "answer": false,
+    "explanation": "Keyword stuffing is a manipulative Black Hat tactic penalized by search engines.",
+    "id": 53
+  },
+  {
+    "chapter": "Search Engine Optimization",
+    "type": "true_false",
+    "question": "High-quality inbound links (backlinks) from authoritative websites improve a site's search ranking.",
+    "answer": true,
+    "explanation": "Backlinks serve as votes of confidence, increasing domain authority and trust.",
+    "id": 54
+  },
+  {
+    "chapter": "Search Engine Optimization",
+    "type": "true_false",
+    "question": "The title tag is an essential On-Page SEO element placed inside the head section.",
+    "answer": true,
+    "explanation": "The title tag is displayed in browser tabs and as the clickable headline on SERPs.",
+    "id": 55
+  },
+  {
+    "chapter": "Search Engine Optimization",
+    "type": "true_false",
+    "question": "A slow page loading speed can negatively impact a website's search engine ranking.",
+    "answer": true,
+    "explanation": "Page speed is a confirmed ranking factor in modern search engine algorithms.",
+    "id": 56
+  },
+  {
+    "chapter": "Search Engine Optimization",
+    "type": "true_false",
+    "question": "Google Analytics and Google Search Console are tools used to monitor website performance and indexing.",
+    "answer": true,
+    "explanation": "These tools track traffic, crawl errors, click-through rates, and query impressions.",
+    "id": 57
+  },
+  {
+    "chapter": "Search Engine Optimization",
+    "type": "mcq_single",
+    "question": "Which of the following is an example of an On-Page SEO factor?",
+    "options": [
+      "Backlink generation",
+      "Optimizing meta tags",
+      "Social bookmarking",
+      "Guest blogging"
+    ],
+    "answer": 1,
+    "explanation": "Meta tag optimization occurs directly within the HTML source code of the webpage.",
+    "id": 58
+  },
+  {
+    "chapter": "Search Engine Optimization",
+    "type": "mcq_single",
+    "question": "Which file is placed in the root directory to guide search engine spiders on crawl rules?",
+    "options": [
+      "index.html",
+      "style.css",
+      "robots.txt",
+      "config.json"
+    ],
+    "answer": 2,
+    "explanation": "robots.txt sits at the domain root (example.com/robots.txt) to communicate with crawlers.",
+    "id": 59
+  },
+  {
+    "chapter": "Search Engine Optimization",
+    "type": "mcq_single",
+    "question": "Which Black Hat technique involves displaying different content to search engines than to human visitors?",
+    "options": [
+      "Cloaking",
+      "Backlinking",
+      "Blogging",
+      "Deep Linking"
+    ],
+    "answer": 0,
+    "explanation": "Cloaking serves one version of a page to crawlers and another to regular users.",
+    "id": 60
+  },
+  {
+    "chapter": "Search Engine Optimization",
+    "type": "mcq_single",
+    "question": "Which metric measures the percentage of visitors who leave a site after viewing only one single page?",
+    "options": [
+      "Click-Through Rate",
+      "Bounce Rate",
+      "Conversion Rate",
+      "Crawl Budget"
+    ],
+    "answer": 1,
+    "explanation": "Bounce rate represents single-page visits with no interaction on the page.",
+    "id": 61
+  },
+  {
+    "chapter": "Search Engine Optimization",
+    "type": "mcq_two",
+    "question": "Select TWO primary classifications of Search Engine Optimization techniques:",
+    "options": [
+      "On-Page SEO",
+      "Off-Page SEO",
+      "Static SEO",
+      "Terminal SEO",
+      "Direct SEO"
+    ],
+    "answer": [
+      0,
+      1
+    ],
+    "explanation": "SEO is broadly divided into On-Page (site factors) and Off-Page (external signals).",
+    "id": 62
+  },
+  {
+    "chapter": "Search Engine Optimization",
+    "type": "mcq_two",
+    "question": "Select TWO unethical Black Hat SEO techniques:",
+    "options": [
+      "Keyword Stuffing",
+      "Doorway Pages",
+      "Creating high quality content",
+      "Mobile responsiveness",
+      "Descriptive alt tags"
+    ],
+    "answer": [
+      0,
+      1
+    ],
+    "explanation": "Keyword stuffing and doorway pages are deceptive Black Hat tactics.",
+    "id": 63
+  },
+  {
+    "chapter": "Search Engine Optimization",
+    "type": "mcq_two",
+    "question": "Select TWO essential HTML tags used for On-Page optimization:",
+    "options": [
+      "<title>",
+      "<meta>",
+      "<canvas>",
+      "<footer>",
+      "<aside>"
+    ],
+    "answer": [
+      0,
+      1
+    ],
+    "explanation": "The <title> tag and <meta> tags directly communicate page subject matter to search engines.",
+    "id": 64
+  },
+  {
+    "chapter": "Search Engine Optimization",
+    "type": "mcq_two",
+    "question": "Select TWO major types of website sitemaps:",
+    "options": [
+      "XML Sitemap",
+      "HTML Sitemap",
+      "CSS Sitemap",
+      "JSON-RPC Map",
+      "Binary Sitemap"
+    ],
+    "answer": [
+      0,
+      1
+    ],
+    "explanation": "XML sitemaps cater to search engine bots, while HTML sitemaps aid human visitors.",
+    "id": 65
+  },
+  {
+    "chapter": "Search Engine Optimization",
+    "type": "mcq_three",
+    "question": "Select THREE valid White Hat SEO practices:",
+    "options": [
+      "High-quality unique content",
+      "Mobile friendly responsive design",
+      "Fast page loading speed",
+      "Invisible hidden text",
+      "Buying paid backlinks",
+      "Duplicate doorway pages"
+    ],
+    "answer": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Quality content, responsiveness, and performance are standard White Hat guidelines.",
+    "id": 66
+  },
+  {
+    "chapter": "Search Engine Optimization",
+    "type": "mcq_three",
+    "question": "Select THREE factors that influence technical SEO ranking:",
+    "options": [
+      "HTTPS SSL security",
+      "Mobile-first index friendliness",
+      "Website page loading speed",
+      "Physical motherboard speed",
+      "VGA monitor resolution",
+      "Keyboard typing latency"
+    ],
+    "answer": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "SSL, mobile friendliness, and Core Web Vitals (speed) are core technical SEO signals.",
+    "id": 67
+  },
+  {
+    "chapter": "Search Engine Optimization",
+    "type": "match",
+    "question": "Match the SEO terms with their definitions:",
+    "pairs": [
+      {
+        "left": "On-Page SEO",
+        "right": "Optimizing website code and content"
+      },
+      {
+        "left": "Off-Page SEO",
+        "right": "Building backlinks and domain trust"
+      },
+      {
+        "left": "White Hat SEO",
+        "right": "Legitimate search engine approved methods"
+      },
+      {
+        "left": "Black Hat SEO",
+        "right": "Deceptive ranking tactics violating rules"
+      }
+    ],
+    "explanation": "Associates each SEO methodology with its standard textbook definition.",
+    "id": 68
+  },
+  {
+    "chapter": "Search Engine Optimization",
+    "type": "match",
+    "question": "Match the technical files and metrics with their function:",
+    "pairs": [
+      {
+        "left": "robots.txt",
+        "right": "Directs web crawler access permissions"
+      },
+      {
+        "left": "sitemap.xml",
+        "right": "Lists site URLs for index discovery"
+      },
+      {
+        "left": "Bounce Rate",
+        "right": "Percentage of single-page visits"
+      },
+      {
+        "left": "SERP",
+        "right": "Search results display screen"
+      }
+    ],
+    "explanation": "Pairs technical SEO files and key engagement analytics with their roles.",
+    "id": 69
+  }
+]

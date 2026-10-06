@@ -1,0 +1,53 @@
+---
+import PortalLayout from "../../layouts/PortalLayout.astro";
+---
+
+<PortalLayout title="Exam Instructions">
+  <main class="max-w-3xl mx-auto px-4 py-10 sm:py-16">
+    <section class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm p-5 sm:p-8">
+      <p class="text-xs font-mono font-bold uppercase tracking-wide text-emerald-600 dark:text-emerald-400">Before you begin</p>
+      <h1 class="text-2xl font-extrabold mt-1">Exam instructions</h1>
+      <p id="candidateSummary" class="text-sm text-slate-600 dark:text-slate-400 mt-3" aria-live="polite"></p>
+
+      <ul class="mt-6 space-y-3 text-sm text-slate-700 dark:text-slate-300 list-disc pl-5">
+        <li>The mock examination is 150 minutes and carries 80 marks.</li>
+        <li>Q1–Q6 are objective sections worth 50 marks. Q7–Q8 are written practice and are not automatically graded.</li>
+        <li>Your answers are saved in this browser so you can recover progress after a reload.</li>
+        <li>Keep the exam in one tab. Switching tabs is counted and shown as a practice warning.</li>
+        <li>This browser-only session is for practice; it is not secure identity verification or tamper-proof proctoring.</li>
+      </ul>
+
+      <p id="instructionError" class="text-sm text-rose-600 mt-5" role="alert" hidden></p>
+      <div class="mt-7 flex flex-col sm:flex-row gap-3">
+        <button id="beginExamBtn" type="button" class="rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-3 text-sm font-bold">Begin 80-mark exam</button>
+        <a href="/exam/login" class="rounded-lg border border-slate-300 dark:border-slate-700 px-5 py-3 text-sm font-bold text-center">Back to student login</a>
+      </div>
+    </section>
+  </main>
+</PortalLayout>
+
+<script>
+  import { beginExam, getActiveSession, resumeSession } from "../../lib/exam/sessionManager.js";
+
+  const summary = document.querySelector("#candidateSummary");
+  const error = document.querySelector("#instructionError");
+  const beginButton = document.querySelector("#beginExamBtn");
+  const session = getActiveSession();
+  const requestedStream = new URLSearchParams(window.location.search).get("stream");
+
+  if (!session || (requestedStream && requestedStream !== session.student.stream)) {
+    window.location.replace("/exam/login");
+  } else {
+    summary.textContent = `${session.student.studentName} · Seat ${session.student.rollNo} · ${session.student.stream} · Subject code ${session.student.subjectCode}`;
+    resumeSession(session.id);
+    beginButton.addEventListener("click", () => {
+      try {
+        beginExam();
+        window.location.assign("/simulator");
+      } catch (cause) {
+        error.textContent = cause instanceof Error ? cause.message : "Unable to start the exam.";
+        error.hidden = false;
+      }
+    });
+  }
+</script>

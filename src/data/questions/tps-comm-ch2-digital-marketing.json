@@ -1,55 +1,948 @@
-{
-  "chapter_id": 2,
-  "chapter_name": "Digital Marketing",
-  "subject_stream": ["commerce"],
-  "source": "Maharashtra State Board HSC IT Commerce Curriculum",
-  "q1_fill_in_the_blanks": [
-    { "id": "comm-ch2-fb-01", "question": "Digital Marketing is also termed as _____ marketing.", "answer": "online" },
-    { "id": "comm-ch2-fb-02", "question": "SEM stands for Search Engine _____.", "answer": "Marketing" },
-    { "id": "comm-ch2-fb-03", "question": "_____ marketing involves promoting products or services through social media platforms.", "answer": "Social Media" },
-    { "id": "comm-ch2-fb-04", "question": "SERP stands for Search Engine _____ Page.", "answer": "Results" },
-    { "id": "comm-ch2-fb-05", "question": "PPC stands for Pay Per _____.", "answer": "Click" },
-    { "id": "comm-ch2-fb-06", "question": "_____ marketing focuses on attracting customers through relevant and helpful content.", "answer": "Inbound" },
-    { "id": "comm-ch2-fb-07", "question": "Sending commercial messages to a group of people via email is called _____ marketing.", "answer": "Email" },
-    { "id": "comm-ch2-fb-08", "question": "SMO stands for Social Media _____.", "answer": "Optimization" },
-    { "id": "comm-ch2-fb-09", "question": "In digital advertising, CPC stands for Cost Per _____.", "answer": "Click" },
-    { "id": "comm-ch2-fb-10", "question": "_____ marketing is a performance-based marketing where a business rewards affiliates for visitors brought by their efforts.", "answer": "Affiliate" }
-  ],
-  "q2_true_false": [
-    { "id": "comm-ch2-tf-01", "statement": "Digital marketing allows businesses to reach a global audience with measurable results.", "answer": true },
-    { "id": "comm-ch2-tf-02", "statement": "SEO results are paid advertisements on search engines.", "answer": false },
-    { "id": "comm-ch2-tf-03", "statement": "Inbound marketing pulls interested customers rather than interrupting them with cold ads.", "answer": true },
-    { "id": "comm-ch2-tf-04", "statement": "PPC stands for Pay Per Call.", "answer": false },
-    { "id": "comm-ch2-tf-05", "statement": "Social Media Marketing includes platforms such as LinkedIn, Instagram, and Facebook.", "answer": true },
-    { "id": "comm-ch2-tf-06", "statement": "Organic traffic requires paying search engines for each click.", "answer": false },
-    { "id": "comm-ch2-tf-07", "statement": "Email marketing is one of the most cost-effective digital marketing channels.", "answer": true },
-    { "id": "comm-ch2-tf-08", "statement": "SERP displays both organic search listings and paid ads.", "answer": true }
-  ],
-  "q3_mcq_single": [
-    { "id": "comm-ch2-mcq1-01", "question": "PPC stands for _____ in digital advertising.", "options": ["Pay Per Click", "Pay Per Call", "Page Per Click", "Payment Per Channel"], "answer": "Pay Per Click" },
-    { "id": "comm-ch2-mcq1-02", "question": "Which of the following is an unpaid, organic method of gaining search traffic?", "options": ["Search Engine Optimization (SEO)", "Search Engine Marketing (SEM)", "Google Search Ads", "Display Banner Ads"], "answer": "Search Engine Optimization (SEO)" },
-    { "id": "comm-ch2-mcq1-03", "question": "SERP stands for _____.", "options": ["Search Engine Results Page", "Search Engine Routing Protocol", "Social Engine Results Page", "Standard Electronic Resource Plan"], "answer": "Search Engine Results Page" },
-    { "id": "comm-ch2-mcq1-04", "question": "Promoting products through commissioned third-party publishers is known as _____ marketing.", "options": ["Affiliate", "Outbound", "Traditional", "Broadcast"], "answer": "Affiliate" },
-    { "id": "comm-ch2-mcq1-05", "question": "SMO stands for _____.", "options": ["Social Media Optimization", "Search Media Organization", "Server Media Operation", "Single Mail Option"], "answer": "Social Media Optimization" }
-  ],
-  "q4_mcq_two_correct": [
-    { "id": "comm-ch2-mcq2-01", "question": "Select TWO primary forms of Search Marketing:", "options": ["SEO (Organic)", "SEM (Paid)", "FTP Sharing", "Offline Radio", "Print Classifieds"], "answer": ["SEO (Organic)", "SEM (Paid)"] },
-    { "id": "comm-ch2-mcq2-02", "question": "Select TWO popular channels used for Social Media Marketing (SMM):", "options": ["Instagram", "LinkedIn", "Command Prompt", "Localhost Server", "MS-DOS"], "answer": ["Instagram", "LinkedIn"] },
-    { "id": "comm-ch2-mcq2-03", "question": "Select TWO key metrics used in digital advertising campaigns:", "options": ["Cost Per Click (CPC)", "Click Through Rate (CTR)", "RAM Usage", "Clock Speed", "Screen Resolution"], "answer": ["Cost Per Click (CPC)", "Click Through Rate (CTR)"] }
-  ],
-  "q5_mcq_three_correct": [
-    { "id": "comm-ch2-mcq3-01", "question": "Select THREE valid digital marketing channels:", "options": ["Search Engine Optimization (SEO)", "Email Marketing", "Content Marketing", "Handbill Pamphlets", "Door-to-Door Sales", "Cold Calling"], "answer": ["Search Engine Optimization (SEO)", "Email Marketing", "Content Marketing"] },
-    { "id": "comm-ch2-mcq3-02", "question": "Select THREE advantages of Digital Marketing over traditional marketing:", "options": ["Global Reach", "Measurable Analytics & ROI", "Real-Time Tracking", "High Printing Paper Cost", "Physical Travel Needed", "Limited Business Hours"], "answer": ["Global Reach", "Measurable Analytics & ROI", "Real-Time Tracking"] }
-  ],
-  "q6_match_following": [
-    {
-      "id": "comm-ch2-match-01",
-      "pairs": [
-        { "left": "SEO", "right": "Organic search ranking" },
-        { "left": "PPC", "right": "Paid search advertising" },
-        { "left": "SMM", "right": "Social media promotions" },
-        { "left": "SERP", "right": "Search results display page" }
-      ]
-    }
-  ]
-}
+[
+  {
+    "id": 1,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "____________ is an example of digital marketing.",
+    "options": [
+      "Social Media mentions",
+      "business cards",
+      "print ads",
+      "newspapers"
+    ],
+    "answer": 0,
+    "explanation": "Social Media mentions utilize digital channels and online networks to reach audiences."
+  },
+  {
+    "id": 2,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "____________ is an example of traditional marketing.",
+    "options": [
+      "social media mentions",
+      "business cards",
+      "YouTube Videos",
+      "Websites"
+    ],
+    "answer": 1,
+    "explanation": "Business cards represent conventional tangible print media used in traditional marketing."
+  },
+  {
+    "id": 3,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "The world of ____________ marketing continues to evolve as long as technology continues to advance.",
+    "options": [
+      "Digital Marketing",
+      "Mobile Marketing",
+      "Email Marketing",
+      "Paid search"
+    ],
+    "answer": 0,
+    "explanation": "Digital marketing continuously expands alongside advancements in digital devices and communication technologies."
+  },
+  {
+    "id": 4,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "____________ is the process of boosting content and technical set-up of the website so that it appears at the top of a search engine result for specific keywords.",
+    "options": [
+      "Content Marketing",
+      "Search Engine Optimization",
+      "Social Media Marketing",
+      "Email Marketing"
+    ],
+    "answer": 1,
+    "explanation": "SEO optimizes a website's architecture and content to secure top organic ranks in search engines."
+  },
+  {
+    "id": 5,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "____________ is to attract visitors to your website when they search for products or services related to your business.",
+    "options": [
+      "Content Marketing",
+      "Search Engine Optimization",
+      "Social Media Marketing",
+      "Email Marketing"
+    ],
+    "answer": 1,
+    "explanation": "Search Engine Optimization captures intent-driven organic traffic searching for relevant goods or services."
+  },
+  {
+    "id": 6,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "Companies communicate with their audience through ____________ marketing.",
+    "options": [
+      "Email Marketing",
+      "Paid Search",
+      "SEO",
+      "Mobile Marketing"
+    ],
+    "answer": 0,
+    "explanation": "Email marketing provides direct messaging channels between businesses and prospective or existing clients."
+  },
+  {
+    "id": 7,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "____________ advertising refers to the sponsored result on the search engine results pages.",
+    "options": [
+      "Mobile Marketing",
+      "Paid Search",
+      "Content Marketing",
+      "Email Marketing"
+    ],
+    "answer": 1,
+    "explanation": "Paid search ads occupy labeled sponsored placements at the top and bottom of SERPs."
+  },
+  {
+    "id": 8,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "____________ denotes the creation and promotion of content assets.",
+    "options": [
+      "Paid Search",
+      "Email Marketing",
+      "Content Marketing",
+      "Mobile Marketing"
+    ],
+    "answer": 2,
+    "explanation": "Content marketing focuses on producing informational assets like articles, whitepapers, and guides."
+  },
+  {
+    "id": 9,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "____________ is the use of social media platforms and websites to promote a product or service.",
+    "options": [
+      "Social Media Marketing",
+      "Paid Search",
+      "Content Marketing",
+      "Mobile Marketing"
+    ],
+    "answer": 0,
+    "explanation": "Social Media Marketing (SMM) leverages platforms like Facebook, Instagram, and LinkedIn for brand awareness."
+  },
+  {
+    "id": 10,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "____________ is a software system that is designed to carry out web search.",
+    "options": [
+      "Paid Search",
+      "Web search engine",
+      "Content Search",
+      "Email Marketing"
+    ],
+    "answer": 1,
+    "explanation": "A web search engine indexes and retrieves indexed documents matching queries submitted across the web."
+  },
+  {
+    "id": 11,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "The search results are generally presented in a line of results referred as ____________.",
+    "options": [
+      "Search Engine Result Pages",
+      "Paid Search",
+      "Email Marketing",
+      "Mobile Marketing"
+    ],
+    "answer": 0,
+    "explanation": "SERP (Search Engine Results Page) is the list of results returned to a user after running an online query."
+  },
+  {
+    "id": 12,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "____________ SEO involves looking for ways to improve user experience ethically and genuinely.",
+    "options": [
+      "On-Page",
+      "Off-Page",
+      "White Hat",
+      "Black Hat"
+    ],
+    "answer": 2,
+    "explanation": "White Hat SEO conforms strictly to search engine quality guidelines and emphasizes human-centric experiences."
+  },
+  {
+    "id": 13,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "____________ SEO relies on manipulating Google's algorithm to improve ranking.",
+    "options": [
+      "On-Page",
+      "Off-Page",
+      "White Hat",
+      "Black Hat"
+    ],
+    "answer": 3,
+    "explanation": "Black Hat SEO exploits algorithmic loopholes, using cloaking, keyword stuffing, or link manipulation."
+  },
+  {
+    "id": 14,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "The paid advertisement of Google can be identified with ____________ keyword.",
+    "options": [
+      "Ad",
+      "ads",
+      "Advertisement",
+      "Ads"
+    ],
+    "answer": 0,
+    "explanation": "Google SERPs explicitly mark sponsored pay-per-click listings with an 'Ad' badge."
+  },
+  {
+    "id": 15,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "____________ SEO involves looking for ways to improve users experience ethically and genuinely.",
+    "options": [
+      "White Hat",
+      "Black Hat",
+      "Green Hat",
+      "Red Hat"
+    ],
+    "answer": 0,
+    "explanation": "White Hat strategies represent ethical optimization designed to bring sustainable ranking improvements."
+  },
+  {
+    "id": 16,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "____________ SEO relies on manipulating Google's algorithm to improve ranking.",
+    "options": [
+      "White Hat",
+      "Green Hat",
+      "Red Hat",
+      "Black Hat"
+    ],
+    "answer": 3,
+    "explanation": "Manipulating search engine crawlers against guidelines is defined as Black Hat SEO."
+  },
+  {
+    "id": 17,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "____________ is a program used by search engines to collect data from the website.",
+    "options": [
+      "Crawler",
+      "Crawl",
+      "SEOptimer",
+      "Google Analytics"
+    ],
+    "answer": 0,
+    "explanation": "A web crawler (spider/bot) visits web pages to extract documents and build the search engine's index."
+  },
+  {
+    "id": 18,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "____________ is a balance between giving the right information to search engines without compromising the information that customer are reading on the page.",
+    "options": [
+      "Off Page SEO",
+      "On Page SEO",
+      "Technical SEO",
+      "Black Hat SEO"
+    ],
+    "answer": 1,
+    "explanation": "On-Page SEO optimizes user-visible content and internal meta code without hindering readability."
+  },
+  {
+    "id": 19,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "____________ is about everything that doesn't happen directly on your website.",
+    "options": [
+      "On Page SEO",
+      "Black Hat SEO",
+      "Off Page SEO",
+      "White Hat SEO"
+    ],
+    "answer": 2,
+    "explanation": "Off-Page SEO encompasses third-party backlinks, domain authority, and social signals off-site."
+  },
+  {
+    "id": 20,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "If the speed of the displaying the website is slow then ____________ ranking method is used.",
+    "options": [
+      "technical",
+      "on-page",
+      "of-page",
+      "load-page"
+    ],
+    "answer": 0,
+    "explanation": "Technical SEO addresses underlying infrastructure such as server response times, compression, and rendering speeds."
+  },
+  {
+    "id": 21,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "____________ tags are displayed on search engine result pages.",
+    "options": [
+      "<html>",
+      "<meta>",
+      "<search>",
+      "<title>"
+    ],
+    "answer": 3,
+    "explanation": "The contents of the <title> tag form the primary clickable headline displayed in search results."
+  },
+  {
+    "id": 22,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "____________ tags are snippets of code that tells search engines important information about your web page.",
+    "options": [
+      "<html>",
+      "<title>",
+      "<meta>",
+      "<body>"
+    ],
+    "answer": 2,
+    "explanation": "<meta> tags define descriptions, character sets, and crawling instructions inside the document head."
+  },
+  {
+    "id": 23,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "By adding an ____________ text, you provide users of screen readers and search engines with a textual description of what's on that image.",
+    "options": [
+      "alt",
+      "src",
+      "width",
+      "height"
+    ],
+    "answer": 0,
+    "explanation": "The alt attribute gives accessibility tools and web bots an indexable textual description of an image."
+  },
+  {
+    "id": 24,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "____________ means having the keywords those will rank your site in search engine.",
+    "options": [
+      "Header",
+      "Keyword Consistency",
+      "Indexing",
+      "Links"
+    ],
+    "answer": 1,
+    "explanation": "Keyword consistency ensures targeted terms appear harmoniously throughout titles, headers, and body copy."
+  },
+  {
+    "id": 25,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "____________ tool helps to optimize the website.",
+    "options": [
+      "SEOptimer",
+      "Google Analytics",
+      "Go daddy",
+      "Amazon"
+    ],
+    "answer": 0,
+    "explanation": "SEOptimer audits pages and provides targeted recommendations to fix SEO errors."
+  },
+  {
+    "id": 26,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "____________ are the links that are directed towards your website.",
+    "options": [
+      "Links",
+      "Backlinks",
+      "Broken Links",
+      "Friendly URLs"
+    ],
+    "answer": 1,
+    "explanation": "Backlinks are incoming hyperlinks leading from external domains to your website."
+  },
+  {
+    "id": 27,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "____________ are links that send a message to its visitors that the webpage no longer exists.",
+    "options": [
+      "Links",
+      "Backlinks",
+      "Broken Links",
+      "Friendly URLs"
+    ],
+    "answer": 2,
+    "explanation": "Broken links return HTTP 404 response codes indicating a deleted or dead URL destination."
+  },
+  {
+    "id": 28,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "To analyze traffic coming to website ____________ tool is used.",
+    "options": [
+      "SEOptimer",
+      "Google Analytics",
+      "Go daddy",
+      "Amazon"
+    ],
+    "answer": 1,
+    "explanation": "Google Analytics tracks visitor metrics, referrers, bounce rates, and session durations."
+  },
+  {
+    "id": 29,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "The product of Google Analytics was originally developed by ____________ company in year 2005.",
+    "options": [
+      "Google",
+      "Microsoft",
+      "Urchin",
+      "Yahoo"
+    ],
+    "answer": 2,
+    "explanation": "Google acquired web metrics software developer Urchin in 2005 to establish Google Analytics."
+  },
+  {
+    "id": 30,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "The product of Google Analytics was originally developed by Urchin company in year ____________.",
+    "options": [
+      "2005",
+      "2006",
+      "2010",
+      "2002"
+    ],
+    "answer": 0,
+    "explanation": "Urchin Software was acquired by Google in 2005."
+  },
+  {
+    "id": 31,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "____________ are the URL's that are designed to meet the needs of users and searchers.",
+    "options": [
+      "Indexing",
+      "Keywords",
+      "Header",
+      "Friendly URLs"
+    ],
+    "answer": 3,
+    "explanation": "SEO-friendly URLs use clean, human-readable slugs free of obscure query parameters."
+  },
+  {
+    "id": 32,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "____________ is the process of adding web pages into Google search.",
+    "options": [
+      "Links",
+      "Indexing",
+      "Googlebot",
+      "Header"
+    ],
+    "answer": 1,
+    "explanation": "Indexing parses web page text and files to store them inside search databases."
+  },
+  {
+    "id": 33,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "____________ is the Google's Spider.",
+    "options": [
+      "Googlebot",
+      "Header",
+      "Links",
+      "Indexing"
+    ],
+    "answer": 0,
+    "explanation": "Googlebot is the proprietary name given to Google's automated web-crawling system."
+  },
+  {
+    "id": 34,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "____________ collects documents from the web to build Google's search index.",
+    "options": [
+      "Googlebot",
+      "Indexing",
+      "Backlinks",
+      "Header"
+    ],
+    "answer": 0,
+    "explanation": "Googlebot crawls hyperlinks across the web and feeds harvested data to the indexer."
+  },
+  {
+    "id": 35,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "____________ file tells the search engines which pages to access and index on your website and which not.",
+    "options": [
+      "Googlebot",
+      "Indexing",
+      "Header",
+      "Robot.txt"
+    ],
+    "answer": 3,
+    "explanation": "The robots.txt file provides rules dictating crawler access permissions for web crawlers."
+  },
+  {
+    "id": 36,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "____________ is the interactive media technology that makes sites more interesting.",
+    "options": [
+      "Flash",
+      "Favicon",
+      "Device Rendering",
+      "Header"
+    ],
+    "answer": 0,
+    "explanation": "Legacy Adobe Flash enabled animations and media, although modern search engines cannot easily index it."
+  },
+  {
+    "id": 37,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "A ____________ is a visual representation of your website and business.",
+    "options": [
+      "Flash",
+      "Favicon",
+      "Header",
+      "Indexing"
+    ],
+    "answer": 1,
+    "explanation": "A favicon is an identifying graphic shown beside site titles in browser tabs and bookmarks."
+  },
+  {
+    "id": 38,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "____________ is any element on a web page that a user interacts with.",
+    "options": [
+      "Tap target",
+      "iFrames",
+      "Favicon",
+      "Device Rendering"
+    ],
+    "answer": 0,
+    "explanation": "Tap targets refer to clickable and tappable elements like buttons, navigation items, and inputs."
+  },
+  {
+    "id": 39,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "____________ check displays the total number of files that need to be retrieved from web servers to load your page.",
+    "options": [
+      "Flash",
+      "Favicon",
+      "Page Speed Info",
+      "Number of Resources"
+    ],
+    "answer": 3,
+    "explanation": "The Number of Resources audit calculates total HTTP requests required to build the web page."
+  },
+  {
+    "id": 40,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "____________ can slow down the website and obstruct usability.",
+    "options": [
+      "Tap target",
+      "Page Speed Info",
+      "Flash",
+      "iFrames"
+    ],
+    "answer": 1,
+    "explanation": "Poor page speed metrics result in high user abandonment and drag down SEO rankings."
+  },
+  {
+    "id": 41,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "____________ refers to the downloaded file size of a given web page.",
+    "options": [
+      "Page Size Info",
+      "Page Speed Info",
+      "Flash",
+      "Backlinks"
+    ],
+    "answer": 0,
+    "explanation": "Page size metrics aggregate the payload weight of HTML, CSS, JavaScript, and image assets."
+  },
+  {
+    "id": 42,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "____________ means creating interest in the mind of customer about your product.",
+    "options": [
+      "Acquisition",
+      "Behavior",
+      "Conversion",
+      "Diversion"
+    ],
+    "answer": 0,
+    "explanation": "Acquisition is the funnel phase dedicated to attracting customer attention and interest."
+  },
+  {
+    "id": 43,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "____________ is a web analytics services offered by Google.",
+    "options": [
+      "Google Analytics",
+      "Amazon",
+      "Red Hat",
+      "Black Hat"
+    ],
+    "answer": 0,
+    "explanation": "Google Analytics provides comprehensive visitor measurement and behavioral metrics reporting."
+  },
+  {
+    "id": 44,
+    "chapter": "Digital Marketing",
+    "type": "mcq_single",
+    "question": "____________ is the use of social media platforms to connect with your audience to build your brand and increase sales.",
+    "options": [
+      "Paid search",
+      "Social media marketing",
+      "Email",
+      "Search result"
+    ],
+    "answer": 1,
+    "explanation": "Social Media Marketing engages audiences directly across community networks."
+  },
+  {
+    "id": 45,
+    "chapter": "Digital Marketing",
+    "type": "mcq_two",
+    "question": "Digital marketing is the use of ____________ and ____________:",
+    "options": [
+      "Print ads",
+      "Internet",
+      "Phone communication",
+      "Social Media"
+    ],
+    "answer": [1, 3],
+    "explanation": "Digital marketing relies fundamentally on the Internet and social media networks."
+  },
+  {
+    "id": 46,
+    "chapter": "Digital Marketing",
+    "type": "mcq_two",
+    "question": "Traditional marketing is the use of ____________ and ____________:",
+    "options": [
+      "print ads",
+      "internet",
+      "search engines",
+      "Physical marketing"
+    ],
+    "answer": [0, 3],
+    "explanation": "Traditional marketing depends on physical channels and tangible print ads."
+  },
+  {
+    "id": 47,
+    "chapter": "Digital Marketing",
+    "type": "mcq_two",
+    "question": "Select TWO valid channels of Digital Marketing:",
+    "options": [
+      "Mobile Marketing",
+      "Posters",
+      "Brochures",
+      "Paid Search"
+    ],
+    "answer": [0, 3],
+    "explanation": "Mobile Marketing and Paid Search are core digital marketing channels."
+  },
+  {
+    "id": 48,
+    "chapter": "Digital Marketing",
+    "type": "mcq_two",
+    "question": "Select TWO major Social Media platforms:",
+    "options": [
+      "FaceBook",
+      "TV",
+      "YouTube",
+      "Radio"
+    ],
+    "answer": [0, 2],
+    "explanation": "Facebook and YouTube operate as interactive digital social media networks."
+  },
+  {
+    "id": 49,
+    "chapter": "Digital Marketing",
+    "type": "mcq_two",
+    "question": "The paid advertisement of Google can be identified with which TWO keyword labels?",
+    "options": [
+      "Ad",
+      "Sponsored",
+      "Sp",
+      "Advertisement"
+    ],
+    "answer": [0, 1],
+    "explanation": "Google flags commercial sponsored placements using 'Ad' or 'Sponsored'."
+  },
+  {
+    "id": 50,
+    "chapter": "Digital Marketing",
+    "type": "mcq_two",
+    "question": "Select TWO technique strategies used to get higher search ranking on search engines:",
+    "options": [
+      "White Hat",
+      "Blue Hat",
+      "Green Hat",
+      "Black Hat"
+    ],
+    "answer": [0, 3],
+    "explanation": "SEO optimization techniques are fundamentally categorized into White Hat and Black Hat strategies."
+  },
+  {
+    "id": 51,
+    "chapter": "Digital Marketing",
+    "type": "mcq_two",
+    "question": "To rank a website you must follow the tactic of ____________ and ____________ keywords:",
+    "options": [
+      "long tail",
+      "short tail",
+      "small tail",
+      "big tail"
+    ],
+    "answer": [0, 1],
+    "explanation": "Keyword research blends high-intent long-tail keywords with broad short-tail keywords."
+  },
+  {
+    "id": 52,
+    "chapter": "Digital Marketing",
+    "type": "mcq_two",
+    "question": "Select TWO ways to optimize a web page for SEO:",
+    "options": [
+      "Indexing",
+      "Black Hat",
+      "White Hat",
+      "Googlebot"
+    ],
+    "answer": [0, 3],
+    "explanation": "Allowing Googlebot crawling and verifying proper search indexing are foundational optimization tasks."
+  },
+  {
+    "id": 53,
+    "chapter": "Digital Marketing",
+    "type": "mcq_two",
+    "question": "The product of Google Analytics was originally developed by ____________ company in year ____________:",
+    "options": [
+      "Google",
+      "Microsoft",
+      "Urchin",
+      "2005"
+    ],
+    "answer": [2, 3],
+    "explanation": "Urchin company engineered the platform which was purchased by Google in 2005."
+  },
+  {
+    "id": 54,
+    "chapter": "Digital Marketing",
+    "type": "mcq_two",
+    "question": "The Google Analytics Report contains which TWO metrics?",
+    "options": [
+      "Page Size Info",
+      "Conversion",
+      "Sessions",
+      "Bounce Rate"
+    ],
+    "answer": [2, 3],
+    "explanation": "Sessions and Bounce Rate are core standard visitor engagement metrics in Google Analytics reports."
+  },
+  {
+    "id": 55,
+    "chapter": "Digital Marketing",
+    "type": "mcq_two",
+    "question": "SEO process involves two ways to rank a website: ____________ and ____________:",
+    "options": [
+      "keywords",
+      "pay and rank",
+      "search result",
+      "without payment"
+    ],
+    "answer": [1, 3],
+    "explanation": "Rankings can be secured via paid ads ('pay and rank') or earned organically ('without payment')."
+  },
+  {
+    "id": 56,
+    "chapter": "Digital Marketing",
+    "type": "mcq_three",
+    "question": "Select THREE digital marketing channels/methods:",
+    "options": [
+      "print ads",
+      "Internet",
+      "phone communication",
+      "YouTube Videos",
+      "social media",
+      "physical marketing"
+    ],
+    "answer": [1, 3, 4],
+    "explanation": "The Internet, YouTube videos, and social media platforms represent pure digital marketing channels."
+  },
+  {
+    "id": 57,
+    "chapter": "Digital Marketing",
+    "type": "mcq_three",
+    "question": "Select THREE traditional marketing channels/methods:",
+    "options": [
+      "print ads",
+      "internet",
+      "search engines",
+      "social media",
+      "physical marketing",
+      "phone communication"
+    ],
+    "answer": [0, 4, 5],
+    "explanation": "Print advertising, physical distribution, and telemarketing phone calls represent traditional marketing."
+  },
+  {
+    "id": 58,
+    "chapter": "Digital Marketing",
+    "type": "mcq_three",
+    "question": "Select THREE valid marketing channels in Digital Marketing:",
+    "options": [
+      "Email Marketing",
+      "Content Marketing",
+      "Valid Marketing",
+      "Mobile Marketing",
+      "On-Page Marketing",
+      "Off-Page Marketing"
+    ],
+    "answer": [0, 1, 3],
+    "explanation": "Email, Content, and Mobile Marketing represent official marketing channels."
+  },
+  {
+    "id": 59,
+    "chapter": "Digital Marketing",
+    "type": "mcq_three",
+    "question": "Select THREE valid approaches in SEO to generate traffic to your website:",
+    "options": [
+      "On-Page SEO",
+      "all-Page SEO",
+      "Off-Page SEO",
+      "Technical SEO",
+      "with-page SEO",
+      "online-page SEO"
+    ],
+    "answer": [0, 2, 3],
+    "explanation": "The three core pillars of SEO are On-Page, Off-Page, and Technical SEO."
+  },
+  {
+    "id": 60,
+    "chapter": "Digital Marketing",
+    "type": "mcq_three",
+    "question": "Select THREE ways to optimize a webpage for SEO:",
+    "options": [
+      "Links",
+      "Black Hat",
+      "Conversion",
+      "HTML Header",
+      "Body Content",
+      "White Hat"
+    ],
+    "answer": [0, 3, 4],
+    "explanation": "Optimizing links, HTML headers, and body content are standard on-page SEO techniques."
+  },
+  {
+    "id": 61,
+    "chapter": "Digital Marketing",
+    "type": "mcq_three",
+    "question": "The market funnel behaves in THREE stages:",
+    "options": [
+      "Acquisition",
+      "Page Size Info",
+      "Black Hat",
+      "White Hat",
+      "Behavior",
+      "Conversion"
+    ],
+    "answer": [0, 4, 5],
+    "explanation": "Customer journey tracking follows the Acquisition, Behavior, and Conversion funnel model."
+  },
+  {
+    "id": 62,
+    "chapter": "Digital Marketing",
+    "type": "mcq_three",
+    "question": "Select THREE key metrics included in a Google Analytics Report:",
+    "options": [
+      "Users",
+      "Bounce Rate",
+      "Session Duration",
+      "Behavior",
+      "Black Hat",
+      "White Hat"
+    ],
+    "answer": [0, 1, 2],
+    "explanation": "Users, Bounce Rate, and Session Duration are quantitative reporting metrics."
+  },
+  {
+    "id": 63,
+    "chapter": "Digital Marketing",
+    "type": "mcq_three",
+    "question": "What are the THREE ways to optimize a webpage for SEO in HTML body content?",
+    "options": [
+      "Title Tags",
+      "Heading Tags",
+      "Line break Tag",
+      "<img> Tag",
+      "Document",
+      "Keyword consistency"
+    ],
+    "answer": [1, 3, 5],
+    "explanation": "Heading tags, image alt tags, and keyword consistency optimize body content for search engines."
+  },
+  {
+    "id": 64,
+    "chapter": "Digital Marketing",
+    "type": "mcq_three",
+    "question": "Select THREE valid digital marketing channels:",
+    "options": [
+      "Social Media",
+      "Newspaper",
+      "Content",
+      "Poster",
+      "Magazines",
+      "Pay Per Click"
+    ],
+    "answer": [0, 2, 5],
+    "explanation": "Social Media, Content Marketing, and Pay Per Click (PPC) are primary digital channels."
+  },
+  {
+    "id": 65,
+    "chapter": "Digital Marketing",
+    "type": "mcq_three",
+    "question": "Select THREE major platforms used for social media marketing:",
+    "options": [
+      "Libre office",
+      "YouTube",
+      "Wikipedia",
+      "Twitter",
+      "Google Map",
+      "Facebook"
+    ],
+    "answer": [1, 3, 5],
+    "explanation": "YouTube, Twitter, and Facebook are prominent platforms used in social media marketing."
+  },
+  {
+    "id": 66,
+    "chapter": "Digital Marketing",
+    "type": "mcq_three",
+    "question": "In Digital Marketing, content marketing includes which THREE formats?",
+    "options": [
+      "Video",
+      "Books",
+      "Business cards",
+      "Television",
+      "E-Books",
+      "Blogs"
+    ],
+    "answer": [0, 4, 5],
+    "explanation": "Videos, downloadable e-books, and blog posts are primary assets used in digital content marketing."
+  }
+]

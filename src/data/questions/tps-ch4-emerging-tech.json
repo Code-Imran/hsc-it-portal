@@ -1,81 +1,1526 @@
-{
-  "chapter_id": 4,
-  "chapter_name": "Emerging Technologies",
-  "subject_stream": ["science", "commerce", "arts"],
-  "source": "TPS Notes - 12th IT",
-  "q1_fill_in_the_blanks": [
-    { "id": "tps-ch4-fb-01", "question": "IoT stands for _____.", "answer": "Internet of Things" },
-    { "id": "tps-ch4-fb-02", "question": "The Internet of Things is the network of physical devices embedded with electronics, software, sensors and _____.", "answer": "actuators" },
-    { "id": "tps-ch4-fb-03", "question": "IoT helps to _____ human efforts.", "answer": "reduce" },
-    { "id": "tps-ch4-fb-04", "question": "_____ allow users to schedule, monitor and remotely control home temperatures.", "answer": "Smart thermostats" },
-    { "id": "tps-ch4-fb-05", "question": "SaaS stands for _____.", "answer": "Software as a Service" },
-    { "id": "tps-ch4-fb-06", "question": "IaaS stands for _____.", "answer": "Infrastructure as a Service" },
-    { "id": "tps-ch4-fb-07", "question": "PaaS stands for _____.", "answer": "Platform as a Service" },
-    { "id": "tps-ch4-fb-08", "question": "_____ gives users access to storage, networking, servers and other computing resources via cloud.", "answer": "IaaS" },
-    { "id": "tps-ch4-fb-09", "question": "Amazon Web Services (AWS) is an example of _____.", "answer": "IaaS" },
-    { "id": "tps-ch4-fb-10", "question": "_____ enables organizations to focus on development without worrying about underlying infrastructure.", "answer": "PaaS" },
-    { "id": "tps-ch4-fb-11", "question": "In SaaS, users access applications through a web browser or an _____.", "answer": "API" },
-    { "id": "tps-ch4-fb-12", "question": "In _____ cloud, all data is protected behind the firewall.", "answer": "private" },
-    { "id": "tps-ch4-fb-13", "question": "_____ cloud environment combines both public and private cloud elements.", "answer": "Hybrid" },
-    { "id": "tps-ch4-fb-14", "question": "AI stands for _____.", "answer": "Artificial Intelligence" },
-    { "id": "tps-ch4-fb-15", "question": "_____ imitate the brain's array of interconnected neurons.", "answer": "Neural networks" },
-    { "id": "tps-ch4-fb-16", "question": "_____ employs pattern recognition and deep learning to understand the content of pictures and videos.", "answer": "Computer Vision" },
-    { "id": "tps-ch4-fb-17", "question": "Chatbots are an example of _____.", "answer": "Digital Assistance" },
-    { "id": "tps-ch4-fb-18", "question": "5G stands for _____ generation of cellular network technology.", "answer": "fifth" },
-    { "id": "tps-ch4-fb-19", "question": "LTE stands for _____.", "answer": "Long Term Evolution" }
-  ],
-  "q2_true_false": [
-    { "id": "tps-ch4-tf-01", "statement": "The internet of things is the network of physical devices only.", "answer": false },
-    { "id": "tps-ch4-tf-02", "statement": "IoT helps to minimize human effort.", "answer": true },
-    { "id": "tps-ch4-tf-03", "statement": "In IaaS, enterprises save the cost of buying and maintaining their own hardware.", "answer": true },
-    { "id": "tps-ch4-tf-04", "statement": "PaaS vendors provide users with software and applications via a subscription model.", "answer": false },
-    { "id": "tps-ch4-tf-05", "statement": "In private cloud, all data is protected behind the firewall.", "answer": true },
-    { "id": "tps-ch4-tf-06", "statement": "Public cloud is more expensive than private cloud.", "answer": false },
-    { "id": "tps-ch4-tf-07", "statement": "Hybrid cloud allows greater flexibility.", "answer": true },
-    { "id": "tps-ch4-tf-08", "statement": "Chatbots are an example of Digital Assistance.", "answer": true },
-    { "id": "tps-ch4-tf-09", "statement": "AI helps in reducing human error.", "answer": true },
-    { "id": "tps-ch4-tf-10", "statement": "High cost of creation and unemployment are disadvantages of AI.", "answer": true },
-    { "id": "tps-ch4-tf-11", "statement": "5G is expected to provide Internet connections multiple times faster than 4G LTE.", "answer": true }
-  ],
-  "q3_mcq_single": [
-    { "id": "tps-ch4-mcq1-01", "question": "IoT helps to _____ human efforts.", "options": ["remove", "reduce", "increase", "stop"], "answer": "reduce" },
-    { "id": "tps-ch4-mcq1-02", "question": "PaaS stands for _____.", "options": ["Platform as a Service", "Platform as a Self", "Platform as Secure", "Platform as a Section"], "answer": "Platform as a Service" },
-    { "id": "tps-ch4-mcq1-03", "question": "In _____ cloud, all data is protected behind the firewall.", "options": ["public", "private", "secure", "hybrid"], "answer": "private" },
-    { "id": "tps-ch4-mcq1-04", "question": "_____ imitate the brain's array of interconnected neurons.", "options": ["Machine learning", "Neural network", "Deep learning", "Computer vision"], "answer": "Neural network" },
-    { "id": "tps-ch4-mcq1-05", "question": "_____ computing is about creating a 'natural, human-like interaction'.", "options": ["Machine learning", "Cognitive computing", "Neural network", "Computer vision"], "answer": "Cognitive computing" },
-    { "id": "tps-ch4-mcq1-06", "question": "LTE stands for _____.", "options": ["Long Term Evolution", "Long Term Evolve", "Large Term Evolution", "Long Test Evolution"], "answer": "Long Term Evolution" }
-  ],
-  "q4_mcq_two_correct": [
-    { "id": "tps-ch4-mcq2-01", "question": "Primary service models of cloud computing are _____ and _____.", "options": ["SaaS", "PaaS", "FaaS", "DaaS", "CaaS"], "answer": ["SaaS", "PaaS"] },
-    { "id": "tps-ch4-mcq2-02", "question": "Examples of SaaS applications are _____ and _____.", "options": ["GitHub", "Dropbox", "AWS", "Microsoft Azure VM", "Google Compute Engine"], "answer": ["GitHub", "Dropbox"] },
-    { "id": "tps-ch4-mcq2-03", "question": "Types of cloud deployments are _____ and _____.", "options": ["Public Cloud", "Private Cloud", "Personal Cloud", "Secure Cloud", "Local Cloud"], "answer": ["Public Cloud", "Private Cloud"] },
-    { "id": "tps-ch4-mcq2-04", "question": "Disadvantages of AI are _____ and _____.", "options": ["Digital Assistance", "Faster Decisions", "Cost of creation", "Unemployment", "Daily application"], "answer": ["Cost of creation", "Unemployment"] }
-  ],
-  "q5_mcq_three_correct": [
-    { "id": "tps-ch4-mcq3-01", "question": "Advantages of IoT include _____.", "options": ["Time saving", "Enhance data collection", "Improve security", "Privacy issues", "Complexity", "High bandwidth requirement"], "answer": ["Time saving", "Enhance data collection", "Improve security"] },
-    { "id": "tps-ch4-mcq3-02", "question": "The three primary service models of cloud computing are _____.", "options": ["SaaS", "PaaS", "IaaS", "FaaS", "DaaS", "CaaS"], "answer": ["SaaS", "PaaS", "IaaS"] },
-    { "id": "tps-ch4-mcq3-03", "question": "Types of cloud deployment are _____.", "options": ["Public Cloud", "Private Cloud", "Hybrid Cloud", "Personal Cloud", "Secure Cloud", "Static Cloud"], "answer": ["Public Cloud", "Private Cloud", "Hybrid Cloud"] },
-    { "id": "tps-ch4-mcq3-04", "question": "Applications of 5G cellular technology include _____.", "options": ["Online 5G Games", "Automated Vehicles", "Virtual Classroom", "Floppy Disk Storage", "Dial-up Networking", "Analog TV"], "answer": ["Online 5G Games", "Automated Vehicles", "Virtual Classroom"] }
-  ],
-  "q6_match_following": [
-    {
-      "id": "tps-ch4-match-01",
-      "pairs": [
-        { "left": "IaaS", "right": "Infrastructure as a Service" },
-        { "left": "PaaS", "right": "Platform as a Service" },
-        { "left": "SaaS", "right": "Software as a Service" },
-        { "left": "Private Cloud", "right": "Data protected behind firewall" },
-        { "left": "Hybrid Cloud", "right": "Combines public and private cloud" }
-      ]
-    },
-    {
-      "id": "tps-ch4-match-02",
-      "pairs": [
-        { "left": "Neural Network", "right": "Imitates brain interconnected neurons" },
-        { "left": "Deep Learning", "right": "Image and speech recognition" },
-        { "left": "Cognitive Computing", "right": "Natural human-like interaction" },
-        { "left": "Computer Vision", "right": "Understanding content of pictures and videos" }
-      ]
-    }
-  ]
-}
+[
+  {
+    "id": 1,
+    "chapter": "Emerging Technologies",
+    "type": "mcq_single",
+    "question": "The Internet of Things (IoT) is the network of physical devices, vehicles, home appliances, etc. embedded with ____________.",
+    "options": [
+      "collection",
+      "network",
+      "relation",
+      "group"
+    ],
+    "answer": 1,
+    "explanation": "IoT refers to a network of physical objects interconnected to collect and exchange data."
+  },
+  {
+    "id": 2,
+    "chapter": "Emerging Technologies",
+    "type": "mcq_single",
+    "question": "IoT helps to ____________ human efforts.",
+    "options": [
+      "remove",
+      "reduce",
+      "increase",
+      "stop"
+    ],
+    "answer": 1,
+    "explanation": "Automation through IoT significantly reduces repetitive human tasks and labor."
+  },
+  {
+    "id": 3,
+    "chapter": "Emerging Technologies",
+    "type": "mcq_single",
+    "question": "IoT devices can collect data from their ____________.",
+    "options": [
+      "environment",
+      "internet",
+      "books",
+      "documents"
+    ],
+    "answer": 0,
+    "explanation": "IoT sensors continuously gather real-time data from their surrounding physical environment."
+  },
+  {
+    "id": 4,
+    "chapter": "Emerging Technologies",
+    "type": "mcq_single",
+    "question": "SaaS stands for ____________.",
+    "options": [
+      "Software as a Service",
+      "Software as a Sell",
+      "Software as Secure",
+      "Software as a Section"
+    ],
+    "answer": 0,
+    "explanation": "SaaS stands for Software as a Service."
+  },
+  {
+    "id": 5,
+    "chapter": "Emerging Technologies",
+    "type": "mcq_single",
+    "question": "PaaS stands for ____________.",
+    "options": [
+      "Platform as a Service",
+      "Platform as a Sell",
+      "Platform as Secure",
+      "Platform as a Section"
+    ],
+    "answer": 0,
+    "explanation": "PaaS stands for Platform as a Service."
+  },
+  {
+    "id": 6,
+    "chapter": "Emerging Technologies",
+    "type": "mcq_single",
+    "question": "IaaS stands for ____________.",
+    "options": [
+      "Infrastructure as a Service",
+      "Infrastructure as a Sell",
+      "Infrastructure as Secure",
+      "Infrastructure as a Section"
+    ],
+    "answer": 0,
+    "explanation": "IaaS stands for Infrastructure as a Service."
+  },
+  {
+    "id": 7,
+    "chapter": "Emerging Technologies",
+    "type": "mcq_single",
+    "question": "In a ____________ cloud, services and supporting infrastructure are shared across multiple users/organizations.",
+    "options": [
+      "public",
+      "private",
+      "secure",
+      "hybrid"
+    ],
+    "answer": 0,
+    "explanation": "Public cloud infrastructure is provisioned for open use by the general public over the internet."
+  },
+  {
+    "id": 8,
+    "chapter": "Emerging Technologies",
+    "type": "mcq_single",
+    "question": "In a ____________ cloud, services and data are protected behind a dedicated firewall for single-tenant use.",
+    "options": [
+      "public",
+      "private",
+      "hybrid",
+      "secure"
+    ],
+    "answer": 1,
+    "explanation": "A private cloud operates solely for a single enterprise, ensuring heightened isolation and security."
+  },
+  {
+    "id": 9,
+    "chapter": "Emerging Technologies",
+    "type": "mcq_single",
+    "question": "____________ imitate the human brain's array of interconnected neurons.",
+    "options": [
+      "Machine learning",
+      "Neural networks",
+      "Deep learning",
+      "Computer vision"
+    ],
+    "answer": 1,
+    "explanation": "Artificial Neural Networks (ANN) simulate biological neuron topologies."
+  },
+  {
+    "id": 10,
+    "chapter": "Emerging Technologies",
+    "type": "mcq_single",
+    "question": "____________ is about creating a 'natural, human-like interaction' with machines.",
+    "options": [
+      "Machine learning",
+      "Neural network",
+      "Cognitive computing",
+      "Computer vision"
+    ],
+    "answer": 2,
+    "explanation": "Cognitive computing simulates human thought processes, understanding language, intent, and context."
+  },
+  {
+    "id": 11,
+    "chapter": "Emerging Technologies",
+    "type": "mcq_single",
+    "question": "____________ is the next generation of cellular wireless mobile communication.",
+    "options": [
+      "3G",
+      "4G",
+      "5G",
+      "6G"
+    ],
+    "answer": 2,
+    "explanation": "5G is the fifth generation mobile network standard designed for hyper-connectivity."
+  },
+  {
+    "id": 12,
+    "chapter": "Emerging Technologies",
+    "type": "mcq_single",
+    "question": "LTE stands for ____________.",
+    "options": [
+      "Long Term Evolution",
+      "Long Term Evolve",
+      "Large Term Evolution",
+      "Long Test Evolution"
+    ],
+    "answer": 0,
+    "explanation": "LTE stands for Long Term Evolution."
+  },
+  {
+    "id": 13,
+    "chapter": "Emerging Technologies",
+    "type": "mcq_single",
+    "question": "Amazon Web Services (AWS) is an example of a(n) ____________ cloud service provider.",
+    "options": [
+      "IaaS",
+      "PaaS",
+      "SaaS",
+      "DaaS"
+    ],
+    "answer": 0,
+    "explanation": "AWS provides on-demand virtual compute, networking, and storage under the IaaS model."
+  },
+  {
+    "id": 14,
+    "chapter": "Emerging Technologies",
+    "type": "mcq_single",
+    "question": "Google's G Suite (Google Workspace) and Dropbox are examples of ____________.",
+    "options": [
+      "IaaS",
+      "PaaS",
+      "SaaS",
+      "CaaS"
+    ],
+    "answer": 2,
+    "explanation": "Turnkey software accessed directly via web browsers is categorized as Software as a Service (SaaS)."
+  },
+  {
+    "id": 15,
+    "chapter": "Emerging Technologies",
+    "type": "mcq_single",
+    "question": "Google App Engine is an example of ____________.",
+    "options": [
+      "IaaS",
+      "PaaS",
+      "SaaS",
+      "DaaS"
+    ],
+    "answer": 1,
+    "explanation": "Google App Engine provides developer runtimes and deployment hosting under the PaaS tier."
+  },
+  {
+    "id": 16,
+    "chapter": "Emerging Technologies",
+    "type": "mcq_two",
+    "question": "Select TWO primary service models of cloud computing:",
+    "options": [
+      "SaaS",
+      "PaaS",
+      "RaaS",
+      "DaaS"
+    ],
+    "answer": [
+      0,
+      1
+    ],
+    "explanation": "SaaS, PaaS, and IaaS are recognized cloud service models."
+  },
+  {
+    "id": 17,
+    "chapter": "Emerging Technologies",
+    "type": "mcq_two",
+    "question": "Select TWO recognized deployment models/types of cloud computing:",
+    "options": [
+      "Public Cloud",
+      "Private Cloud",
+      "Personal Cloud",
+      "Secure Cloud"
+    ],
+    "answer": [
+      0,
+      1
+    ],
+    "explanation": "Standard cloud deployment models are Public, Private, and Hybrid clouds."
+  },
+  {
+    "id": 18,
+    "chapter": "Emerging Technologies",
+    "type": "mcq_two",
+    "question": "Select TWO recognized disadvantages/challenges of Artificial Intelligence:",
+    "options": [
+      "Digital Assistance",
+      "Faster Decisions",
+      "Cost of creation",
+      "Unemployment"
+    ],
+    "answer": [
+      2,
+      3
+    ],
+    "explanation": "High development setup costs and workplace job displacements are acknowledged AI concerns."
+  },
+  {
+    "id": 19,
+    "chapter": "Emerging Technologies",
+    "type": "mcq_two",
+    "question": "Select TWO examples of IaaS providers:",
+    "options": [
+      "Amazon Web Services (AWS)",
+      "Microsoft Azure VM",
+      "GitHub",
+      "Google's G Suite"
+    ],
+    "answer": [
+      0,
+      1
+    ],
+    "explanation": "AWS EC2 and Azure Virtual Machines deliver raw Infrastructure as a Service compute."
+  },
+  {
+    "id": 20,
+    "chapter": "Emerging Technologies",
+    "type": "mcq_two",
+    "question": "In SaaS, applications reside on a remote cloud network accessed through the ____________ or an ____________:",
+    "options": [
+      "web",
+      "file",
+      "API",
+      "wifi"
+    ],
+    "answer": [
+      0,
+      2
+    ],
+    "explanation": "SaaS applications are delivered over standard web interfaces or programmable APIs."
+  },
+  {
+    "id": 21,
+    "chapter": "Emerging Technologies",
+    "type": "mcq_two",
+    "question": "Select TWO sub-fields or key branches of Artificial Intelligence:",
+    "options": [
+      "Machine Learning",
+      "Neural Network",
+      "Cognitive Computing",
+      "Computer Vision"
+    ],
+    "answer": [
+      0,
+      1
+    ],
+    "explanation": "Machine Learning and Neural Networks are foundational paradigms of AI."
+  },
+  {
+    "id": 22,
+    "chapter": "Emerging Technologies",
+    "type": "mcq_three",
+    "question": "The Internet of Things (IoT) comprises a network of which THREE components?",
+    "options": [
+      "Physical devices",
+      "sensors",
+      "actuators",
+      "wires",
+      "Time saving",
+      "security"
+    ],
+    "answer": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "IoT hardware layers integrate physical hardware devices, sensory inputs, and physical actuators."
+  },
+  {
+    "id": 23,
+    "chapter": "Emerging Technologies",
+    "type": "mcq_three",
+    "question": "Select THREE key advantages of IoT systems:",
+    "options": [
+      "Time saving",
+      "Enhance data collection",
+      "Improve security",
+      "Privacy",
+      "Complexity",
+      "Higher Latency"
+    ],
+    "answer": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "IoT delivers automated efficiency, expanded sensory telemetry, and real-time security alerts."
+  },
+  {
+    "id": 24,
+    "chapter": "Emerging Technologies",
+    "type": "mcq_three",
+    "question": "Select the THREE primary service models of Cloud Computing:",
+    "options": [
+      "SaaS",
+      "PaaS",
+      "IaaS",
+      "TaaS",
+      "XaaS",
+      "ZaaS"
+    ],
+    "answer": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "The three standard cloud delivery tiers are SaaS, PaaS, and IaaS."
+  },
+  {
+    "id": 25,
+    "chapter": "Emerging Technologies",
+    "type": "mcq_three",
+    "question": "Select THREE popular cloud platforms that provide IaaS infrastructure:",
+    "options": [
+      "Amazon Web Services",
+      "Microsoft Azure VM",
+      "Google Compute Engine",
+      "Google's G Suite",
+      "Smart locks",
+      "No locks"
+    ],
+    "answer": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "AWS, Azure Virtual Machines, and Google Compute Engine are major IaaS cloud platforms."
+  },
+  {
+    "id": 26,
+    "chapter": "Emerging Technologies",
+    "type": "mcq_three",
+    "question": "Select THREE popular applications of SaaS software:",
+    "options": [
+      "GitHub",
+      "SAP",
+      "Dropbox",
+      "AWS EC2",
+      "Azure VM",
+      "Local Disk"
+    ],
+    "answer": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "GitHub, SAP Cloud, and Dropbox are delivered as managed browser software applications."
+  },
+  {
+    "id": 27,
+    "chapter": "Emerging Technologies",
+    "type": "mcq_three",
+    "question": "Select THREE primary deployment types/models of Cloud Computing:",
+    "options": [
+      "Public Cloud",
+      "Private Cloud",
+      "Personal Cloud",
+      "Hybrid Cloud",
+      "My Cloud",
+      "House Cloud"
+    ],
+    "answer": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "Public, Private, and Hybrid clouds form the three recognized cloud deployment models."
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "fill_in_the_blanks",
+    "question": "IoT stands for Internet of _____.",
+    "answer": "Things",
+    "explanation": "IoT stands for Internet of Things, connecting physical objects to the internet.",
+    "id": 28
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "fill_in_the_blanks",
+    "question": "In Cloud Computing, SaaS stands for Software as a _____.",
+    "answer": "Service",
+    "explanation": "SaaS stands for Software as a Service.",
+    "id": 29
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "fill_in_the_blanks",
+    "question": "In Cloud Computing, PaaS stands for _____ as a Service.",
+    "answer": "Platform",
+    "explanation": "PaaS stands for Platform as a Service.",
+    "id": 30
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "fill_in_the_blanks",
+    "question": "In Cloud Computing, IaaS stands for Infrastructure as a _____.",
+    "answer": "Service",
+    "explanation": "IaaS stands for Infrastructure as a Service.",
+    "id": 31
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "fill_in_the_blanks",
+    "question": "The decentralised, distributed ledger technology used in cryptocurrencies is called _____.",
+    "answer": "Blockchain",
+    "explanation": "Blockchain is an immutable, distributed digital ledger.",
+    "id": 32
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "fill_in_the_blanks",
+    "question": "AI stands for Artificial _____.",
+    "answer": "Intelligence",
+    "explanation": "AI refers to the simulation of human intelligence in machines.",
+    "id": 33
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "fill_in_the_blanks",
+    "question": "The fifth generation of mobile network technology is designated as _____.",
+    "answer": "5G",
+    "explanation": "5G is the fifth generation mobile network offering high speeds and ultra-low latency.",
+    "id": 34
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "fill_in_the_blanks",
+    "question": "In Blockchain, each block contains cryptographic hash of the _____ block.",
+    "answer": "previous",
+    "explanation": "Chaining is maintained by storing the previous block's hash value.",
+    "id": 35
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "true_false",
+    "question": "Cloud computing allows users to access resources over the internet on a pay-as-you-go basis.",
+    "answer": true,
+    "explanation": "Cloud computing provides on-demand computing services via the internet.",
+    "id": 36
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "true_false",
+    "question": "In public cloud deployment, computing resources are dedicated exclusively to a single business.",
+    "answer": false,
+    "explanation": "Dedicated exclusive resources describe a Private Cloud, not a Public Cloud.",
+    "id": 37
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "true_false",
+    "question": "Blockchain records can be easily modified or deleted once entered into the ledger.",
+    "answer": false,
+    "explanation": "Blockchain entries are immutable and tamper-resistant.",
+    "id": 38
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "true_false",
+    "question": "5G networks offer significantly lower latency compared to 4G LTE networks.",
+    "answer": true,
+    "explanation": "Low latency (approx 1ms) is a core advantage of 5G architecture.",
+    "id": 39
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "true_false",
+    "question": "Sensors and actuators are key hardware components in IoT ecosystems.",
+    "answer": true,
+    "explanation": "Sensors detect environmental changes and actuators perform physical actions.",
+    "id": 40
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "true_false",
+    "question": "Google Docs and Microsoft 365 are popular examples of IaaS solutions.",
+    "answer": false,
+    "explanation": "Google Docs and Office 365 are SaaS (Software as a Service) products.",
+    "id": 41
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "mcq_single",
+    "question": "Which cloud computing model delivers computing infrastructure, such as virtual machines and storage?",
+    "options": [
+      "SaaS",
+      "PaaS",
+      "IaaS",
+      "DaaS"
+    ],
+    "answer": 2,
+    "explanation": "IaaS provides raw infrastructure like servers, storage, and networking.",
+    "id": 42
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "mcq_single",
+    "question": "Which cloud service model provides hardware and development software tools over the internet?",
+    "options": [
+      "IaaS",
+      "PaaS",
+      "SaaS",
+      "BaaS"
+    ],
+    "answer": 1,
+    "explanation": "PaaS delivers execution environments and developer tools.",
+    "id": 43
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "mcq_single",
+    "question": "What is the primary characteristic of Blockchain data records?",
+    "options": [
+      "Temporary",
+      "Mutable",
+      "Immutable",
+      "Unencrypted"
+    ],
+    "answer": 2,
+    "explanation": "Blockchain ledgers are immutable, meaning data cannot be altered once written.",
+    "id": 44
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "mcq_single",
+    "question": "Which of the following devices acts as an input sensor in an IoT smart home setup?",
+    "options": [
+      "Smart Light Bulb",
+      "Motion Detector",
+      "Siren Speaker",
+      "Motor Valve"
+    ],
+    "answer": 1,
+    "explanation": "A motion detector senses input changes; lights and sirens are output actuators.",
+    "id": 45
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "mcq_single",
+    "question": "Which technology allows machines to simulate human problem-solving and decision-making capabilities?",
+    "options": [
+      "Virtual Reality",
+      "Artificial Intelligence",
+      "Blockchain",
+      "5G"
+    ],
+    "answer": 1,
+    "explanation": "Artificial Intelligence is engineered to simulate human cognitive functions.",
+    "id": 46
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "mcq_two",
+    "question": "Select TWO primary deployment models of Cloud Computing:",
+    "options": [
+      "Public Cloud",
+      "Private Cloud",
+      "Local Cloud",
+      "Static Cloud",
+      "Linear Cloud"
+    ],
+    "answer": [
+      0,
+      1
+    ],
+    "explanation": "Public, Private, Hybrid, and Community are the recognized cloud deployment models.",
+    "id": 47
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "mcq_two",
+    "question": "Select TWO primary cloud computing service models:",
+    "options": [
+      "SaaS (Software as a Service)",
+      "IaaS (Infrastructure as a Service)",
+      "RaaS (Routing as a Service)",
+      "MaaS (Memory as a Service)",
+      "DaaS (Domain as a Service)"
+    ],
+    "answer": [
+      0,
+      1
+    ],
+    "explanation": "SaaS, PaaS, and IaaS are the core SPI service models.",
+    "id": 48
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "mcq_two",
+    "question": "Select TWO major advantages of 5G cellular communication:",
+    "options": [
+      "High data transfer speeds",
+      "Ultra-low latency",
+      "High physical cabling requirement",
+      "Requirement of analog switches",
+      "Limited bandwidth"
+    ],
+    "answer": [
+      0,
+      1
+    ],
+    "explanation": "5G is distinguished by multi-Gbps peak data speeds and ultra-low latency.",
+    "id": 49
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "mcq_two",
+    "question": "Select TWO real-world applications of IoT (Internet of Things):",
+    "options": [
+      "Smart Home Automation",
+      "Wearable Fitness Trackers",
+      "Manual Typewriting",
+      "Offline Filing Cabinets",
+      "Rotary Dial Calling"
+    ],
+    "answer": [
+      0,
+      1
+    ],
+    "explanation": "Smart thermostats, connected lights, and fitness bands are classic IoT systems.",
+    "id": 50
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "mcq_three",
+    "question": "Select THREE core components of an IoT ecosystem:",
+    "options": [
+      "Sensors/Devices",
+      "Connectivity / Network",
+      "Data Processing",
+      "Paper Ledger",
+      "Manual Sorter",
+      "Cathode Tube"
+    ],
+    "answer": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "IoT systems require sensors for data collection, network connectivity, and data processing engines.",
+    "id": 51
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "mcq_three",
+    "question": "Select THREE prominent applications of Artificial Intelligence:",
+    "options": [
+      "Natural Language Processing",
+      "Autonomous Vehicles",
+      "Computer Vision / Facial Recognition",
+      "Steam Engine Control",
+      "Mechanical Printing",
+      "Manual Bookkeeping"
+    ],
+    "answer": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "NLP, self-driving algorithms, and computer vision are major branches of AI.",
+    "id": 52
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "mcq_three",
+    "question": "Select THREE key features of Blockchain technology:",
+    "options": [
+      "Decentralization",
+      "Immutability",
+      "Transparency / Consensus",
+      "Central Administrator Control",
+      "Single Point of Failure",
+      "Unencrypted Plaintext Data"
+    ],
+    "answer": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Decentralization, tamper-resistance (immutability), and consensus verification are core features.",
+    "id": 53
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "match",
+    "question": "Match the Cloud Computing service model with its typical offering:",
+    "pairs": [
+      {
+        "left": "SaaS",
+        "right": "End-user ready applications"
+      },
+      {
+        "left": "PaaS",
+        "right": "Application runtime & development environment"
+      },
+      {
+        "left": "IaaS",
+        "right": "Virtual machines and cloud storage"
+      },
+      {
+        "left": "Hybrid Cloud",
+        "right": "Combination of public and private clouds"
+      }
+    ],
+    "explanation": "SaaS provides apps, PaaS gives platforms, IaaS delivers hardware infrastructure, and Hybrid combines both.",
+    "id": 54
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "match",
+    "question": "Match the emerging technology with its primary description:",
+    "pairs": [
+      {
+        "left": "IoT",
+        "right": "Interconnected physical computing devices"
+      },
+      {
+        "left": "5G",
+        "right": "Fifth generation wireless cellular network"
+      },
+      {
+        "left": "Blockchain",
+        "right": "Distributed immutable cryptographic ledger"
+      },
+      {
+        "left": "AI",
+        "right": "Machines simulating human cognitive tasks"
+      }
+    ],
+    "explanation": "Matches each emerging tech paradigm to its board-standard definition.",
+    "id": 55
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "fill_in_the_blanks",
+    "question": "IoT stands for Internet of _____.",
+    "answer": "Things",
+    "explanation": "IoT stands for Internet of Things, connecting physical objects to the internet.",
+    "id": 56
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "fill_in_the_blanks",
+    "question": "In Cloud Computing, SaaS stands for Software as a _____.",
+    "answer": "Service",
+    "explanation": "SaaS stands for Software as a Service.",
+    "id": 57
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "fill_in_the_blanks",
+    "question": "In Cloud Computing, PaaS stands for _____ as a Service.",
+    "answer": "Platform",
+    "explanation": "PaaS stands for Platform as a Service.",
+    "id": 58
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "fill_in_the_blanks",
+    "question": "In Cloud Computing, IaaS stands for Infrastructure as a _____.",
+    "answer": "Service",
+    "explanation": "IaaS stands for Infrastructure as a Service.",
+    "id": 59
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "fill_in_the_blanks",
+    "question": "The decentralised, distributed ledger technology used in cryptocurrencies is called _____.",
+    "answer": "Blockchain",
+    "explanation": "Blockchain is an immutable, distributed digital ledger.",
+    "id": 60
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "fill_in_the_blanks",
+    "question": "AI stands for Artificial _____.",
+    "answer": "Intelligence",
+    "explanation": "AI refers to the simulation of human intelligence in machines.",
+    "id": 61
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "fill_in_the_blanks",
+    "question": "The fifth generation of mobile network technology is designated as _____.",
+    "answer": "5G",
+    "explanation": "5G is the fifth generation mobile network offering high speeds and ultra-low latency.",
+    "id": 62
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "fill_in_the_blanks",
+    "question": "In Blockchain, each block contains cryptographic hash of the _____ block.",
+    "answer": "previous",
+    "explanation": "Chaining is maintained by storing the previous block's hash value.",
+    "id": 63
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "true_false",
+    "question": "Cloud computing allows users to access resources over the internet on a pay-as-you-go basis.",
+    "answer": true,
+    "explanation": "Cloud computing provides on-demand computing services via the internet.",
+    "id": 64
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "true_false",
+    "question": "In public cloud deployment, computing resources are dedicated exclusively to a single business.",
+    "answer": false,
+    "explanation": "Dedicated exclusive resources describe a Private Cloud, not a Public Cloud.",
+    "id": 65
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "true_false",
+    "question": "Blockchain records can be easily modified or deleted once entered into the ledger.",
+    "answer": false,
+    "explanation": "Blockchain entries are immutable and tamper-resistant.",
+    "id": 66
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "true_false",
+    "question": "5G networks offer significantly lower latency compared to 4G LTE networks.",
+    "answer": true,
+    "explanation": "Low latency (approx 1ms) is a core advantage of 5G architecture.",
+    "id": 67
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "true_false",
+    "question": "Sensors and actuators are key hardware components in IoT ecosystems.",
+    "answer": true,
+    "explanation": "Sensors detect environmental changes and actuators perform physical actions.",
+    "id": 68
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "true_false",
+    "question": "Google Docs and Microsoft 365 are popular examples of IaaS solutions.",
+    "answer": false,
+    "explanation": "Google Docs and Office 365 are SaaS (Software as a Service) products.",
+    "id": 69
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "mcq_single",
+    "question": "Which cloud computing model delivers computing infrastructure, such as virtual machines and storage?",
+    "options": [
+      "SaaS",
+      "PaaS",
+      "IaaS",
+      "DaaS"
+    ],
+    "answer": 2,
+    "explanation": "IaaS provides raw infrastructure like servers, storage, and networking.",
+    "id": 70
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "mcq_single",
+    "question": "Which cloud service model provides hardware and development software tools over the internet?",
+    "options": [
+      "IaaS",
+      "PaaS",
+      "SaaS",
+      "BaaS"
+    ],
+    "answer": 1,
+    "explanation": "PaaS delivers execution environments and developer tools.",
+    "id": 71
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "mcq_single",
+    "question": "What is the primary characteristic of Blockchain data records?",
+    "options": [
+      "Temporary",
+      "Mutable",
+      "Immutable",
+      "Unencrypted"
+    ],
+    "answer": 2,
+    "explanation": "Blockchain ledgers are immutable, meaning data cannot be altered once written.",
+    "id": 72
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "mcq_single",
+    "question": "Which of the following devices acts as an input sensor in an IoT smart home setup?",
+    "options": [
+      "Smart Light Bulb",
+      "Motion Detector",
+      "Siren Speaker",
+      "Motor Valve"
+    ],
+    "answer": 1,
+    "explanation": "A motion detector senses input changes; lights and sirens are output actuators.",
+    "id": 73
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "mcq_single",
+    "question": "Which technology allows machines to simulate human problem-solving and decision-making capabilities?",
+    "options": [
+      "Virtual Reality",
+      "Artificial Intelligence",
+      "Blockchain",
+      "5G"
+    ],
+    "answer": 1,
+    "explanation": "Artificial Intelligence is engineered to simulate human cognitive functions.",
+    "id": 74
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "mcq_two",
+    "question": "Select TWO primary deployment models of Cloud Computing:",
+    "options": [
+      "Public Cloud",
+      "Private Cloud",
+      "Local Cloud",
+      "Static Cloud",
+      "Linear Cloud"
+    ],
+    "answer": [
+      0,
+      1
+    ],
+    "explanation": "Public, Private, Hybrid, and Community are the recognized cloud deployment models.",
+    "id": 75
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "mcq_two",
+    "question": "Select TWO primary cloud computing service models:",
+    "options": [
+      "SaaS (Software as a Service)",
+      "IaaS (Infrastructure as a Service)",
+      "RaaS (Routing as a Service)",
+      "MaaS (Memory as a Service)",
+      "DaaS (Domain as a Service)"
+    ],
+    "answer": [
+      0,
+      1
+    ],
+    "explanation": "SaaS, PaaS, and IaaS are the core SPI service models.",
+    "id": 76
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "mcq_two",
+    "question": "Select TWO major advantages of 5G cellular communication:",
+    "options": [
+      "High data transfer speeds",
+      "Ultra-low latency",
+      "High physical cabling requirement",
+      "Requirement of analog switches",
+      "Limited bandwidth"
+    ],
+    "answer": [
+      0,
+      1
+    ],
+    "explanation": "5G is distinguished by multi-Gbps peak data speeds and ultra-low latency.",
+    "id": 77
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "mcq_two",
+    "question": "Select TWO real-world applications of IoT (Internet of Things):",
+    "options": [
+      "Smart Home Automation",
+      "Wearable Fitness Trackers",
+      "Manual Typewriting",
+      "Offline Filing Cabinets",
+      "Rotary Dial Calling"
+    ],
+    "answer": [
+      0,
+      1
+    ],
+    "explanation": "Smart thermostats, connected lights, and fitness bands are classic IoT systems.",
+    "id": 78
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "mcq_three",
+    "question": "Select THREE core components of an IoT ecosystem:",
+    "options": [
+      "Sensors/Devices",
+      "Connectivity / Network",
+      "Data Processing",
+      "Paper Ledger",
+      "Manual Sorter",
+      "Cathode Tube"
+    ],
+    "answer": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "IoT systems require sensors for data collection, network connectivity, and data processing engines.",
+    "id": 79
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "mcq_three",
+    "question": "Select THREE prominent applications of Artificial Intelligence:",
+    "options": [
+      "Natural Language Processing",
+      "Autonomous Vehicles",
+      "Computer Vision / Facial Recognition",
+      "Steam Engine Control",
+      "Mechanical Printing",
+      "Manual Bookkeeping"
+    ],
+    "answer": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "NLP, self-driving algorithms, and computer vision are major branches of AI.",
+    "id": 80
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "mcq_three",
+    "question": "Select THREE key features of Blockchain technology:",
+    "options": [
+      "Decentralization",
+      "Immutability",
+      "Transparency / Consensus",
+      "Central Administrator Control",
+      "Single Point of Failure",
+      "Unencrypted Plaintext Data"
+    ],
+    "answer": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Decentralization, tamper-resistance (immutability), and consensus verification are core features.",
+    "id": 81
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "match",
+    "question": "Match the Cloud Computing service model with its typical offering:",
+    "pairs": [
+      {
+        "left": "SaaS",
+        "right": "End-user ready applications"
+      },
+      {
+        "left": "PaaS",
+        "right": "Application runtime & development environment"
+      },
+      {
+        "left": "IaaS",
+        "right": "Virtual machines and cloud storage"
+      },
+      {
+        "left": "Hybrid Cloud",
+        "right": "Combination of public and private clouds"
+      }
+    ],
+    "explanation": "SaaS provides apps, PaaS gives platforms, IaaS delivers hardware infrastructure, and Hybrid combines both.",
+    "id": 82
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "match",
+    "question": "Match the emerging technology with its primary description:",
+    "pairs": [
+      {
+        "left": "IoT",
+        "right": "Interconnected physical computing devices"
+      },
+      {
+        "left": "5G",
+        "right": "Fifth generation wireless cellular network"
+      },
+      {
+        "left": "Blockchain",
+        "right": "Distributed immutable cryptographic ledger"
+      },
+      {
+        "left": "AI",
+        "right": "Machines simulating human cognitive tasks"
+      }
+    ],
+    "explanation": "Matches each emerging tech paradigm to its board-standard definition.",
+    "id": 83
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "fill_in_the_blanks",
+    "question": "IoT stands for Internet of _____.",
+    "answer": "Things",
+    "explanation": "IoT stands for Internet of Things, connecting physical objects to the internet.",
+    "id": 84
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "fill_in_the_blanks",
+    "question": "In Cloud Computing, SaaS stands for Software as a _____.",
+    "answer": "Service",
+    "explanation": "SaaS stands for Software as a Service.",
+    "id": 85
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "fill_in_the_blanks",
+    "question": "In Cloud Computing, PaaS stands for _____ as a Service.",
+    "answer": "Platform",
+    "explanation": "PaaS stands for Platform as a Service.",
+    "id": 86
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "fill_in_the_blanks",
+    "question": "In Cloud Computing, IaaS stands for Infrastructure as a _____.",
+    "answer": "Service",
+    "explanation": "IaaS stands for Infrastructure as a Service.",
+    "id": 87
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "fill_in_the_blanks",
+    "question": "The decentralised, distributed ledger technology used in cryptocurrencies is called _____.",
+    "answer": "Blockchain",
+    "explanation": "Blockchain is an immutable, distributed digital ledger.",
+    "id": 88
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "fill_in_the_blanks",
+    "question": "AI stands for Artificial _____.",
+    "answer": "Intelligence",
+    "explanation": "AI refers to the simulation of human intelligence in machines.",
+    "id": 89
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "fill_in_the_blanks",
+    "question": "The fifth generation of mobile network technology is designated as _____.",
+    "answer": "5G",
+    "explanation": "5G is the fifth generation mobile network offering high speeds and ultra-low latency.",
+    "id": 90
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "fill_in_the_blanks",
+    "question": "In Blockchain, each block contains cryptographic hash of the _____ block.",
+    "answer": "previous",
+    "explanation": "Chaining is maintained by storing the previous block's hash value.",
+    "id": 91
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "true_false",
+    "question": "Cloud computing allows users to access resources over the internet on a pay-as-you-go basis.",
+    "answer": true,
+    "explanation": "Cloud computing provides on-demand computing services via the internet.",
+    "id": 92
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "true_false",
+    "question": "In public cloud deployment, computing resources are dedicated exclusively to a single business.",
+    "answer": false,
+    "explanation": "Dedicated exclusive resources describe a Private Cloud, not a Public Cloud.",
+    "id": 93
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "true_false",
+    "question": "Blockchain records can be easily modified or deleted once entered into the ledger.",
+    "answer": false,
+    "explanation": "Blockchain entries are immutable and tamper-resistant.",
+    "id": 94
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "true_false",
+    "question": "5G networks offer significantly lower latency compared to 4G LTE networks.",
+    "answer": true,
+    "explanation": "Low latency (approx 1ms) is a core advantage of 5G architecture.",
+    "id": 95
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "true_false",
+    "question": "Sensors and actuators are key hardware components in IoT ecosystems.",
+    "answer": true,
+    "explanation": "Sensors detect environmental changes and actuators perform physical actions.",
+    "id": 96
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "true_false",
+    "question": "Google Docs and Microsoft 365 are popular examples of IaaS solutions.",
+    "answer": false,
+    "explanation": "Google Docs and Office 365 are SaaS (Software as a Service) products.",
+    "id": 97
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "mcq_single",
+    "question": "Which cloud computing model delivers computing infrastructure, such as virtual machines and storage?",
+    "options": [
+      "SaaS",
+      "PaaS",
+      "IaaS",
+      "DaaS"
+    ],
+    "answer": 2,
+    "explanation": "IaaS provides raw infrastructure like servers, storage, and networking.",
+    "id": 98
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "mcq_single",
+    "question": "Which cloud service model provides hardware and development software tools over the internet?",
+    "options": [
+      "IaaS",
+      "PaaS",
+      "SaaS",
+      "BaaS"
+    ],
+    "answer": 1,
+    "explanation": "PaaS delivers execution environments and developer tools.",
+    "id": 99
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "mcq_single",
+    "question": "What is the primary characteristic of Blockchain data records?",
+    "options": [
+      "Temporary",
+      "Mutable",
+      "Immutable",
+      "Unencrypted"
+    ],
+    "answer": 2,
+    "explanation": "Blockchain ledgers are immutable, meaning data cannot be altered once written.",
+    "id": 100
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "mcq_single",
+    "question": "Which of the following devices acts as an input sensor in an IoT smart home setup?",
+    "options": [
+      "Smart Light Bulb",
+      "Motion Detector",
+      "Siren Speaker",
+      "Motor Valve"
+    ],
+    "answer": 1,
+    "explanation": "A motion detector senses input changes; lights and sirens are output actuators.",
+    "id": 101
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "mcq_single",
+    "question": "Which technology allows machines to simulate human problem-solving and decision-making capabilities?",
+    "options": [
+      "Virtual Reality",
+      "Artificial Intelligence",
+      "Blockchain",
+      "5G"
+    ],
+    "answer": 1,
+    "explanation": "Artificial Intelligence is engineered to simulate human cognitive functions.",
+    "id": 102
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "mcq_two",
+    "question": "Select TWO primary deployment models of Cloud Computing:",
+    "options": [
+      "Public Cloud",
+      "Private Cloud",
+      "Local Cloud",
+      "Static Cloud",
+      "Linear Cloud"
+    ],
+    "answer": [
+      0,
+      1
+    ],
+    "explanation": "Public, Private, Hybrid, and Community are the recognized cloud deployment models.",
+    "id": 103
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "mcq_two",
+    "question": "Select TWO primary cloud computing service models:",
+    "options": [
+      "SaaS (Software as a Service)",
+      "IaaS (Infrastructure as a Service)",
+      "RaaS (Routing as a Service)",
+      "MaaS (Memory as a Service)",
+      "DaaS (Domain as a Service)"
+    ],
+    "answer": [
+      0,
+      1
+    ],
+    "explanation": "SaaS, PaaS, and IaaS are the core SPI service models.",
+    "id": 104
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "mcq_two",
+    "question": "Select TWO major advantages of 5G cellular communication:",
+    "options": [
+      "High data transfer speeds",
+      "Ultra-low latency",
+      "High physical cabling requirement",
+      "Requirement of analog switches",
+      "Limited bandwidth"
+    ],
+    "answer": [
+      0,
+      1
+    ],
+    "explanation": "5G is distinguished by multi-Gbps peak data speeds and ultra-low latency.",
+    "id": 105
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "mcq_two",
+    "question": "Select TWO real-world applications of IoT (Internet of Things):",
+    "options": [
+      "Smart Home Automation",
+      "Wearable Fitness Trackers",
+      "Manual Typewriting",
+      "Offline Filing Cabinets",
+      "Rotary Dial Calling"
+    ],
+    "answer": [
+      0,
+      1
+    ],
+    "explanation": "Smart thermostats, connected lights, and fitness bands are classic IoT systems.",
+    "id": 106
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "mcq_three",
+    "question": "Select THREE core components of an IoT ecosystem:",
+    "options": [
+      "Sensors/Devices",
+      "Connectivity / Network",
+      "Data Processing",
+      "Paper Ledger",
+      "Manual Sorter",
+      "Cathode Tube"
+    ],
+    "answer": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "IoT systems require sensors for data collection, network connectivity, and data processing engines.",
+    "id": 107
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "mcq_three",
+    "question": "Select THREE prominent applications of Artificial Intelligence:",
+    "options": [
+      "Natural Language Processing",
+      "Autonomous Vehicles",
+      "Computer Vision / Facial Recognition",
+      "Steam Engine Control",
+      "Mechanical Printing",
+      "Manual Bookkeeping"
+    ],
+    "answer": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "NLP, self-driving algorithms, and computer vision are major branches of AI.",
+    "id": 108
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "mcq_three",
+    "question": "Select THREE key features of Blockchain technology:",
+    "options": [
+      "Decentralization",
+      "Immutability",
+      "Transparency / Consensus",
+      "Central Administrator Control",
+      "Single Point of Failure",
+      "Unencrypted Plaintext Data"
+    ],
+    "answer": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Decentralization, tamper-resistance (immutability), and consensus verification are core features.",
+    "id": 109
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "match",
+    "question": "Match the Cloud Computing service model with its typical offering:",
+    "pairs": [
+      {
+        "left": "SaaS",
+        "right": "End-user ready applications"
+      },
+      {
+        "left": "PaaS",
+        "right": "Application runtime & development environment"
+      },
+      {
+        "left": "IaaS",
+        "right": "Virtual machines and cloud storage"
+      },
+      {
+        "left": "Hybrid Cloud",
+        "right": "Combination of public and private clouds"
+      }
+    ],
+    "explanation": "SaaS provides apps, PaaS gives platforms, IaaS delivers hardware infrastructure, and Hybrid combines both.",
+    "id": 110
+  },
+  {
+    "chapter": "Emerging Technologies",
+    "type": "match",
+    "question": "Match the emerging technology with its primary description:",
+    "pairs": [
+      {
+        "left": "IoT",
+        "right": "Interconnected physical computing devices"
+      },
+      {
+        "left": "5G",
+        "right": "Fifth generation wireless cellular network"
+      },
+      {
+        "left": "Blockchain",
+        "right": "Distributed immutable cryptographic ledger"
+      },
+      {
+        "left": "AI",
+        "right": "Machines simulating human cognitive tasks"
+      }
+    ],
+    "explanation": "Matches each emerging tech paradigm to its board-standard definition.",
+    "id": 111
+  }
+]

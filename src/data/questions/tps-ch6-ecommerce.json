@@ -1,95 +1,2942 @@
-{
-  "chapter_id": 6,
-  "chapter_name": "E-Commerce and E-Governance",
-  "subject_stream": ["science", "commerce", "arts"],
-  "source": "TPS Notes - 12th IT",
-  "q1_fill_in_the_blanks": [
-    { "id": "tps-ch6-fb-01", "question": "E-Commerce stands for _____.", "answer": "Electronic Commerce" },
-    { "id": "tps-ch6-fb-02", "question": "In E-Commerce, trading activities are online and the scope is _____.", "answer": "global" },
-    { "id": "tps-ch6-fb-03", "question": "In the _____ model, business sells its products directly to the customer.", "answer": "B2C" },
-    { "id": "tps-ch6-fb-04", "question": "In the _____ model, business sells products to an intermediate buyer who then sells to the final customer.", "answer": "B2B" },
-    { "id": "tps-ch6-fb-05", "question": "Online auction sites like OLX and Quikr are examples of the _____ model.", "answer": "C2C" },
-    { "id": "tps-ch6-fb-06", "question": "The _____ phase of the Trade Cycle consists of search and negotiate.", "answer": "Pre-sales" },
-    { "id": "tps-ch6-fb-07", "question": "The _____ phase of the Trade Cycle consists of order and delivery.", "answer": "Execution" },
-    { "id": "tps-ch6-fb-08", "question": "The _____ phase of the Trade Cycle consists of invoice and payment.", "answer": "Settlement" },
-    { "id": "tps-ch6-fb-09", "question": "The _____ phase of the Trade Cycle consists of warranty and after-sale services.", "answer": "After-sales" },
-    { "id": "tps-ch6-fb-10", "question": "E-wallet is a type of _____ account in which a user can store money for future transactions.", "answer": "prepaid" },
-    { "id": "tps-ch6-fb-11", "question": "Buying and selling goods through handheld devices like smartphones and tablets is called _____.", "answer": "M-Commerce" },
-    { "id": "tps-ch6-fb-12", "question": "EDI stands for Electronic _____ Interchange.", "answer": "Data" },
-    { "id": "tps-ch6-fb-13", "question": "Business entities conducting business electronically through EDI are called _____.", "answer": "Trading Partners" },
-    { "id": "tps-ch6-fb-14", "question": "E-Governance delivers _____ governance (Simple, Moral, Accessible, Responsive, Transparent).", "answer": "SMART" },
-    { "id": "tps-ch6-fb-15", "question": "License renewals and paying taxes online are examples of the _____ model of E-Governance.", "answer": "G2C" },
-    { "id": "tps-ch6-fb-16", "question": "Applying for leave and checking holiday balance online by staff is an example of the _____ model.", "answer": "G2E" },
-    { "id": "tps-ch6-fb-17", "question": "The process of converting plain text into cipher text is called _____.", "answer": "encryption" },
-    { "id": "tps-ch6-fb-18", "question": "The process of converting cipher text back into plain text is called _____.", "answer": "decryption" },
-    { "id": "tps-ch6-fb-19", "question": "A _____ guarantees the authenticity of an electronic document and is also known as an electronic signature.", "answer": "Digital Signature" },
-    { "id": "tps-ch6-fb-20", "question": "PKI stands for Public Key _____.", "answer": "Infrastructure" }
-  ],
-  "q2_true_false": [
-    { "id": "tps-ch6-tf-01", "statement": "Traditional commerce is limited to business hours, whereas E-Commerce is 24x7.", "answer": true },
-    { "id": "tps-ch6-tf-02", "statement": "Traditional commerce has a global scope.", "answer": false },
-    { "id": "tps-ch6-tf-03", "statement": "In the B2C model, business sells directly to consumers.", "answer": true },
-    { "id": "tps-ch6-tf-04", "statement": "OLX and Quikr are examples of B2B e-commerce model.", "answer": false },
-    { "id": "tps-ch6-tf-05", "statement": "Execution phase of the trade cycle consists of order and delivery.", "answer": true },
-    { "id": "tps-ch6-tf-06", "statement": "Settlement phase of the trade cycle consists of search and negotiate.", "answer": false },
-    { "id": "tps-ch6-tf-07", "statement": "E-wallet is a type of post-paid account.", "answer": false },
-    { "id": "tps-ch6-tf-08", "statement": "EDI is the electronic interchange of business information using a standardized format.", "answer": true },
-    { "id": "tps-ch6-tf-09", "statement": "G2E is an internal part of the G2G sector of E-Governance.", "answer": true },
-    { "id": "tps-ch6-tf-10", "statement": "Conversion of plain text into cipher text is called decryption.", "answer": false },
-    { "id": "tps-ch6-tf-11", "statement": "Encryption is of two types: Symmetric and Asymmetric.", "answer": true }
-  ],
-  "q3_mcq_single": [
-    { "id": "tps-ch6-mcq1-01", "question": "In which model does a business sell its products directly to a customer?", "options": ["C2B", "B2C", "B2B", "C2C"], "answer": "B2C" },
-    { "id": "tps-ch6-mcq1-02", "question": "Online auction is an example of which E-Commerce model?", "options": ["C2B", "B2C", "B2B", "C2C"], "answer": "C2C" },
-    { "id": "tps-ch6-mcq1-03", "question": "Invoice and Payment are parts of which phase of the Trade Cycle?", "options": ["Pre-sales", "Execution", "Settlement", "After-sales"], "answer": "Settlement" },
-    { "id": "tps-ch6-mcq1-04", "question": "Buying and selling through handheld devices like smartphones and tablets is called _____.", "options": ["Trade Cycle", "M-Commerce", "Social Commerce", "EDI"], "answer": "M-Commerce" },
-    { "id": "tps-ch6-mcq1-05", "question": "EDI stands for _____.", "options": ["Easy Data Interchange", "Economic Data Interchange", "Electronic Data Interchange", "Enable Data Interchange"], "answer": "Electronic Data Interchange" },
-    { "id": "tps-ch6-mcq1-06", "question": "License renewal and paying tax online are examples of which E-Governance service?", "options": ["G2E", "G2C", "G2B", "G2G"], "answer": "G2C" },
-    { "id": "tps-ch6-mcq1-07", "question": "The conversion of plain text into cipher text is called _____.", "options": ["decryption", "encryption", "digital signature", "digital certificate"], "answer": "encryption" },
-    { "id": "tps-ch6-mcq1-08", "question": "PKI stands for _____.", "options": ["Public Key Infrastructure", "Personal Key Certificate", "Publish Key Certificate", "Person Key Certificate"], "answer": "Public Key Infrastructure" }
-  ],
-  "q4_mcq_two_correct": [
-    { "id": "tps-ch6-mcq2-01", "question": "The pre-sales phase of the Trade Cycle consists of _____ and _____.", "options": ["Order", "Delivery", "Search", "Negotiate", "Invoice"], "answer": ["Search", "Negotiate"] },
-    { "id": "tps-ch6-mcq2-02", "question": "The execution phase of the Trade Cycle consists of _____ and _____.", "options": ["Order", "Delivery", "Search", "Payment", "Warranty"], "answer": ["Order", "Delivery"] },
-    { "id": "tps-ch6-mcq2-03", "question": "The settlement phase of the Trade Cycle consists of _____ and _____.", "options": ["Search", "Invoice", "Negotiate", "Payment", "Delivery"], "answer": ["Invoice", "Payment"] },
-    { "id": "tps-ch6-mcq2-04", "question": "Two common documents exchanged using EDI are _____ and _____.", "options": ["Purchase orders", "Word documents", "Invoices", "Flyers", "Spreadsheets"], "answer": ["Purchase orders", "Invoices"] },
-    { "id": "tps-ch6-mcq2-05", "question": "Encryption consists of two opposite processes: _____ and _____.", "options": ["EDI", "Encryption", "Decryption", "Signature", "Trade Cycle"], "answer": ["Encryption", "Decryption"] },
-    { "id": "tps-ch6-mcq2-06", "question": "Social Commerce utilizes social networks like _____ and _____ to sell products.", "options": ["Facebook", "Twitter", "Gmail", "Google Docs", "Notepad"], "answer": ["Facebook", "Twitter"] }
-  ],
-  "q5_mcq_three_correct": [
-    { "id": "tps-ch6-mcq3-01", "question": "Advantages of E-Commerce include _____.", "options": ["Global scope", "Cost saving", "Anytime shopping", "High setup cost", "Delivery delays", "Lack of physical touch"], "answer": ["Global scope", "Cost saving", "Anytime shopping"] },
-    { "id": "tps-ch6-mcq3-02", "question": "Phases of the E-Commerce Trade Cycle include _____.", "options": ["Pre-sales", "Execution", "Settlement", "C2B", "B2C", "C2C"], "answer": ["Pre-sales", "Execution", "Settlement"] },
-    { "id": "tps-ch6-mcq3-03", "question": "Popular electronic modes of payment include _____.", "options": ["Mobile payments", "Bank transfer", "E-wallets", "Postal money order", "Barter exchange", "Promissory note"], "answer": ["Mobile payments", "Bank transfer", "E-wallets"] },
-    { "id": "tps-ch6-mcq3-04", "question": "Types of E-Governance models are _____.", "options": ["G2C", "G2G", "G2E", "C2B", "B2B", "C2C"], "answer": ["G2C", "G2G", "G2E"] },
-    { "id": "tps-ch6-mcq3-05", "question": "Primary security measures in E-Commerce include _____.", "options": ["Encryption", "Digital Signature", "Digital Certificate", "EDI", "Trade Cycle", "B2C"], "answer": ["Encryption", "Digital Signature", "Digital Certificate"] }
-  ],
-  "q6_match_following": [
+﻿[
     {
-      "id": "tps-ch6-match-01",
-      "pairs": [
-        { "left": "Pre-sales", "right": "Search and Negotiate" },
-        { "left": "Execution", "right": "Order and Delivery" },
-        { "left": "Settlement", "right": "Invoice and Payment" },
-        { "left": "After-sales", "right": "Warranty and Services" }
-      ]
+        "id":  1,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "E-Commerce stands for ____________.",
+        "options":  [
+                        "Engage Commerce",
+                        "Evolve Commerce",
+                        "Electronic Commerce",
+                        "Easy Commerce"
+                    ],
+        "answer":  2,
+        "explanation":  "E-Commerce stands for Electronic Commerce."
     },
     {
-      "id": "tps-ch6-match-02",
-      "pairs": [
-        { "left": "G2C", "right": "Citizen public services like tax & license" },
-        { "left": "G2B", "right": "Services between govt and businesses" },
-        { "left": "G2G", "right": "Agencies sharing same database" },
-        { "left": "G2E", "right": "Online facility for employee leaves & salary" }
-      ]
+        "id":  2,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "____________ is the process of buying and selling goods and services using electronic medium.",
+        "options":  [
+                        "E-Commerce",
+                        "Digital Certificate",
+                        "E-Governance",
+                        "Digital Signature"
+                    ],
+        "answer":  0,
+        "explanation":  "E-Commerce conducts business transactions electronically over the internet."
     },
     {
-      "id": "tps-ch6-match-03",
-      "pairs": [
-        { "left": "Encryption", "right": "Converts plain text into cipher text" },
-        { "left": "Decryption", "right": "Converts cipher text into plain text" },
-        { "left": "Digital Signature", "right": "Electronic signature for authentication" },
-        { "left": "Digital Certificate", "right": "Public key certificate using PKI" }
-      ]
+        "id":  3,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "Traditional Commerce focuses on the exchange of products and services through ____________ interactions.",
+        "options":  [
+                        "personal",
+                        "electronic",
+                        "digital",
+                        "remote"
+                    ],
+        "answer":  0,
+        "explanation":  "Traditional commerce relies on face-to-face personal interactions."
+    },
+    {
+        "id":  4,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "Traditional commerce has limited business hours, whereas E-Commerce is available ____________.",
+        "options":  [
+                        "12 x 7",
+                        "24 x 7",
+                        "8 hours a day",
+                        "office hours only"
+                    ],
+        "answer":  1,
+        "explanation":  "E-Commerce systems operate round the clock, 24 hours a day, 7 days a week."
+    },
+    {
+        "id":  5,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "Traditional commerce\u0027s scope is local, while E-Commerce scope is ____________.",
+        "options":  [
+                        "local",
+                        "divisional",
+                        "global",
+                        "regional"
+                    ],
+        "answer":  2,
+        "explanation":  "The reach of E-Commerce extends globally without geographic barriers."
+    },
+    {
+        "id":  6,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "In the ____________ model, a business sells products directly to the final customer.",
+        "options":  [
+                        "B2B",
+                        "B2C",
+                        "C2C",
+                        "C2B"
+                    ],
+        "answer":  1,
+        "explanation":  "B2C stands for Business to Consumer."
+    },
+    {
+        "id":  7,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "In the ____________ model, business sells products to an intermediate buyer who then sells to final consumers.",
+        "options":  [
+                        "B2C",
+                        "B2B",
+                        "C2C",
+                        "C2B"
+                    ],
+        "answer":  1,
+        "explanation":  "B2B stands for Business to Business."
+    },
+    {
+        "id":  8,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "In the ____________ model, consumers help consumers sell assets by publishing info on websites (e.g. OLX, Quikr).",
+        "options":  [
+                        "B2B",
+                        "C2B",
+                        "B2C",
+                        "C2C"
+                    ],
+        "answer":  3,
+        "explanation":  "C2C represents Consumer to Consumer transactions."
+    },
+    {
+        "id":  9,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "In the ____________ model, consumers have products or services of value that can be consumed by businesses.",
+        "options":  [
+                        "C2B",
+                        "B2B",
+                        "B2C",
+                        "C2C"
+                    ],
+        "answer":  0,
+        "explanation":  "C2B represents Consumer to Business transactions."
+    },
+    {
+        "id":  10,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "The ____________ phase of the trade cycle consists of Search and Negotiate.",
+        "options":  [
+                        "Pre-sales",
+                        "Execution",
+                        "Settlement",
+                        "After-sales"
+                    ],
+        "answer":  0,
+        "explanation":  "Pre-sales is where customers find products and agree on terms."
+    },
+    {
+        "id":  11,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "The ____________ phase of the trade cycle consists of Order and Delivery.",
+        "options":  [
+                        "Pre-sales",
+                        "Execution",
+                        "Settlement",
+                        "After-sales"
+                    ],
+        "answer":  1,
+        "explanation":  "Execution involves placing orders and dispatching products."
+    },
+    {
+        "id":  12,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "The ____________ phase of the trade cycle consists of Invoice and Payment.",
+        "options":  [
+                        "Pre-sales",
+                        "Execution",
+                        "Settlement",
+                        "After-sales"
+                    ],
+        "answer":  2,
+        "explanation":  "Settlement involves billing and payment receipt."
+    },
+    {
+        "id":  13,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "The ____________ phase of the trade cycle consists of Warranty and After-Sales Services.",
+        "options":  [
+                        "Pre-sales",
+                        "Execution",
+                        "Settlement",
+                        "After-sales"
+                    ],
+        "answer":  3,
+        "explanation":  "After-sales covers customer maintenance and guarantee claims."
+    },
+    {
+        "id":  14,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "An ____________ is an electronic card used for online payments through a computer or smartphone.",
+        "options":  [
+                        "E-Wallet",
+                        "E-Book",
+                        "E-Pocket",
+                        "E-Draw"
+                    ],
+        "answer":  0,
+        "explanation":  "An E-Wallet stores funds digitally for online transactions."
+    },
+    {
+        "id":  15,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "Buying and selling goods using handheld mobile devices like smartphones is called ____________.",
+        "options":  [
+                        "Trade Cycle",
+                        "Social Commerce",
+                        "M-Commerce",
+                        "EDI"
+                    ],
+        "answer":  2,
+        "explanation":  "M-Commerce refers to mobile electronic commerce."
+    },
+    {
+        "id":  16,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "EDI stands for ____________.",
+        "options":  [
+                        "Easy Data Interchange",
+                        "Economic Data Interchange",
+                        "Electronic Data Interchange",
+                        "Enable Data Interchange"
+                    ],
+        "answer":  2,
+        "explanation":  "EDI stands for Electronic Data Interchange."
+    },
+    {
+        "id":  17,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "Business entities conducting business electronically using EDI are called ____________.",
+        "options":  [
+                        "Global partners",
+                        "Visiting partners",
+                        "Local partners",
+                        "Trading partners"
+                    ],
+        "answer":  3,
+        "explanation":  "Organizations that exchange standardized EDI records are called trading partners."
+    },
+    {
+        "id":  18,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "____________ signifies the implementation of information technology in government functions.",
+        "options":  [
+                        "E-Governance",
+                        "Social Commerce",
+                        "E-Commerce",
+                        "M-Commerce"
+                    ],
+        "answer":  0,
+        "explanation":  "E-Governance is government service delivery via digital IT."
+    },
+    {
+        "id":  19,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "The ____________ model refers to government services enabling citizens to access public services.",
+        "options":  [
+                        "G2B",
+                        "G2C",
+                        "G2G",
+                        "G2E"
+                    ],
+        "answer":  1,
+        "explanation":  "G2C stands for Government to Citizen."
+    },
+    {
+        "id":  20,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "Online renewal of vehicle licenses and paying tax is an example of ____________.",
+        "options":  [
+                        "G2C",
+                        "G2G",
+                        "G2B",
+                        "G2E"
+                    ],
+        "answer":  0,
+        "explanation":  "Citizen utility services fall under G2C."
+    },
+    {
+        "id":  21,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "The ____________ model is the exchange of services between Government and Business organizations.",
+        "options":  [
+                        "G2C",
+                        "G2B",
+                        "G2G",
+                        "G2E"
+                    ],
+        "answer":  1,
+        "explanation":  "G2B stands for Government to Business."
+    },
+    {
+        "id":  22,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "The ____________ model refers to interaction between different government departments and agencies.",
+        "options":  [
+                        "G2C",
+                        "G2B",
+                        "G2G",
+                        "G2E"
+                    ],
+        "answer":  2,
+        "explanation":  "G2G stands for Government to Government."
+    },
+    {
+        "id":  23,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "The ____________ model provides online facilities to employees like leave applications and salary details.",
+        "options":  [
+                        "G2C",
+                        "G2B",
+                        "G2G",
+                        "G2E"
+                    ],
+        "answer":  3,
+        "explanation":  "G2E stands for Government to Employee."
+    },
+    {
+        "id":  24,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "Which security measure converts plain text into cipher text?",
+        "options":  [
+                        "Decryption",
+                        "Encryption",
+                        "Digital Certificate",
+                        "Digital Signature"
+                    ],
+        "answer":  1,
+        "explanation":  "Encryption transforms plaintext into encrypted ciphertext."
+    },
+    {
+        "id":  25,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "Which process converts cipher text back into readable plain text?",
+        "options":  [
+                        "Encryption",
+                        "Decryption",
+                        "Signing",
+                        "Authenticating"
+                    ],
+        "answer":  1,
+        "explanation":  "Decryption restores ciphertext to original plaintext."
+    },
+    {
+        "id":  26,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "A ____________ guarantees the authenticity of an electronic document.",
+        "options":  [
+                        "Digital Certificate",
+                        "Digital Signature",
+                        "Cipher Text",
+                        "Plain Text"
+                    ],
+        "answer":  1,
+        "explanation":  "A digital signature authenticates identity and validates document integrity."
+    },
+    {
+        "id":  27,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "PKI stands for ____________.",
+        "options":  [
+                        "Public Key Infrastructure",
+                        "Private Key Infrastructure",
+                        "Personal Key Infrastructure",
+                        "Publish Key Infrastructure"
+                    ],
+        "answer":  0,
+        "explanation":  "PKI stands for Public Key Infrastructure."
+    },
+    {
+        "id":  28,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO common advantages of E-Commerce:",
+        "options":  [
+                        "Security risk",
+                        "Global scope",
+                        "Cost saving",
+                        "High setup cost"
+                    ],
+        "answer":  [
+                       1,
+                       2
+                   ],
+        "explanation":  "Global scope and significant cost savings are primary benefits of E-Commerce."
+    },
+    {
+        "id":  29,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO recognized disadvantages of E-Commerce:",
+        "options":  [
+                        "Global scope",
+                        "High setup cost",
+                        "Anytime shopping",
+                        "Late delivery of physical goods"
+                    ],
+        "answer":  [
+                       1,
+                       3
+                   ],
+        "explanation":  "High infrastructure setup costs and shipping wait times are noted disadvantages."
+    },
+    {
+        "id":  30,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO examples of B2C online shopping platforms:",
+        "options":  [
+                        "Flipkart",
+                        "Amazon",
+                        "Linux",
+                        "Windows"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "Flipkart and Amazon are major consumer-facing retail sites."
+    },
+    {
+        "id":  31,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO examples of C2C trading portals:",
+        "options":  [
+                        "OLX",
+                        "Quikr",
+                        "Network provider",
+                        "Amazon Web Services"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "OLX and Quikr facilitate peer-to-peer consumer listings."
+    },
+    {
+        "id":  32,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO examples of mobile payment apps in India:",
+        "options":  [
+                        "BHIM",
+                        "Paytm",
+                        "EDI",
+                        "Trade Cycle"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "BHIM and Paytm are mobile payment applications."
+    },
+    {
+        "id":  33,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO common modes of bank electronic fund transfers:",
+        "options":  [
+                        "NEFT",
+                        "IMPS",
+                        "Cash Deposit",
+                        "Postal Order"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "NEFT and IMPS are electronic interbank fund transfer mechanisms."
+    },
+    {
+        "id":  34,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO types of encryption used in E-Commerce security:",
+        "options":  [
+                        "Symmetric",
+                        "Asymmetric",
+                        "Direct",
+                        "Physical"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "Cryptographic encryption is divided into Symmetric and Asymmetric systems."
+    },
+    {
+        "id":  35,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_three",
+        "question":  "Select THREE valid models of E-Commerce:",
+        "options":  [
+                        "B2B",
+                        "B2C",
+                        "C2C",
+                        "P2X",
+                        "R2R",
+                        "M2N"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "B2B, B2C, and C2C represent foundational E-Commerce trading models."
+    },
+    {
+        "id":  36,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_three",
+        "question":  "Select THREE phases of the E-Commerce Trade Cycle:",
+        "options":  [
+                        "Pre-sales",
+                        "Execution",
+                        "Settlement",
+                        "Manufacturing",
+                        "Warehousing",
+                        "Packing"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "The Trade Cycle phases are Pre-sales, Execution, Settlement, and After-sales."
+    },
+    {
+        "id":  37,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_three",
+        "question":  "Select THREE valid electronic modes of payment:",
+        "options":  [
+                        "Credit card",
+                        "Mobile Payments",
+                        "E-Wallets",
+                        "Barter Exchange",
+                        "Promissory note",
+                        "IOU"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "Credit cards, mobile payment gateways, and e-wallets are electronic payment mechanisms."
+    },
+    {
+        "id":  38,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_three",
+        "question":  "Select THREE recognized models of E-Governance:",
+        "options":  [
+                        "G2C",
+                        "G2B",
+                        "G2G",
+                        "B2B",
+                        "C2C",
+                        "G2X"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "G2C, G2B, and G2G are established government service delivery classifications."
+    },
+    {
+        "id":  39,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_three",
+        "question":  "Select THREE key advantages of E-Governance:",
+        "options":  [
+                        "Reduced corruption",
+                        "High transparency",
+                        "Increased convenience",
+                        "Higher paper usage",
+                        "Slow response time",
+                        "Increased costs"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "E-Governance reduces corruption, boosts civic transparency, and offers citizen convenience."
+    },
+    {
+        "id":  40,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "In symmetric encryption, ____________ key is used for both encryption and decryption.",
+        "options":  [
+                        "the same",
+                        "a different",
+                        "a public",
+                        "an asymmetric"
+                    ],
+        "answer":  0,
+        "explanation":  "Symmetric encryption uses a single shared secret key to both encrypt and decrypt data."
+    },
+    {
+        "id":  41,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "In asymmetric encryption, the key made available to anyone who wants to send encrypted data is the ____________ key.",
+        "options":  [
+                        "Private",
+                        "Public",
+                        "Secret",
+                        "Master"
+                    ],
+        "answer":  1,
+        "explanation":  "Asymmetric encryption uses a public key that can be openly distributed and a private key kept secret."
+    },
+    {
+        "id":  42,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "A ____________ is an electronic \u0027passport\u0027 issued by a trusted third party that establishes the credentials of the sender.",
+        "options":  [
+                        "Digital Certificate",
+                        "Trade license",
+                        "Digital Token",
+                        "Smart Card"
+                    ],
+        "answer":  0,
+        "explanation":  "A Digital Certificate acts as an electronic passport issued by a Certificate Authority (CA) to establish credentials."
+    },
+    {
+        "id":  43,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "The trusted third-party organization that issues Digital Certificates is known as the ____________.",
+        "options":  [
+                        "Trading Authority",
+                        "Security Exchange",
+                        "Certifying Authority",
+                        "Gateway Authority"
+                    ],
+        "answer":  2,
+        "explanation":  "A Certifying Authority (CA) is a trusted entity that issues digital certificates."
+    },
+    {
+        "id":  44,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "RTGS stands for ____________.",
+        "options":  [
+                        "Real Time Gross Settlement",
+                        "Rapid Transfer Gross System",
+                        "Real Total Gross Settlement",
+                        "Ready Time Global Settlement"
+                    ],
+        "answer":  0,
+        "explanation":  "RTGS stands for Real Time Gross Settlement, used for high-value continuous fund transfers."
+    },
+    {
+        "id":  45,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "UPI stands for ____________.",
+        "options":  [
+                        "Uniform Payment Interface",
+                        "Unified Payments Interface",
+                        "Universal Payment Integration",
+                        "Unique Payment Identification"
+                    ],
+        "answer":  1,
+        "explanation":  "UPI stands for Unified Payments Interface."
+    },
+    {
+        "id":  46,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "Which payment card allows a cardholder to pay for goods and services based on a promise to pay later up to an agreed limit?",
+        "options":  [
+                        "Debit Card",
+                        "Credit Card",
+                        "Smart Card",
+                        "ATM Card"
+                    ],
+        "answer":  1,
+        "explanation":  "A Credit Card allows purchases on credit with deferred repayment up to a sanctioned limit."
+    },
+    {
+        "id":  47,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "Which card deducts funds directly from the cardholder\u0027s bank account at the time of transaction?",
+        "options":  [
+                        "Debit Card",
+                        "Credit Card",
+                        "Charge Card",
+                        "Store Card"
+                    ],
+        "answer":  0,
+        "explanation":  "Debit cards draw funds immediately and directly from the user\u0027s linked bank balance."
+    },
+    {
+        "id":  48,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "E-Commerce transactions conducted without human intervention through automated standard formats primarily utilize ____________.",
+        "options":  [
+                        "EDI",
+                        "C2C",
+                        "Physical Mail",
+                        "Tele-calling"
+                    ],
+        "answer":  0,
+        "explanation":  "EDI enables standard structured computer-to-computer electronic data transfers without manual entry."
+    },
+    {
+        "id":  49,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "In asymmetric encryption, data encrypted using a Public Key can only be decrypted by the corresponding ____________ key.",
+        "options":  [
+                        "Public",
+                        "Private",
+                        "Shared",
+                        "Temporary"
+                    ],
+        "answer":  1,
+        "explanation":  "In asymmetric cryptography, a message encrypted with a public key is decrypted only with the matching private key."
+    },
+    {
+        "id":  50,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO key components or protocols involved in securing E-Commerce transactions:",
+        "options":  [
+                        "SSL",
+                        "Digital Certificate",
+                        "Barter System",
+                        "Cash on Delivery"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "SSL (Secure Sockets Layer) and Digital Certificates are fundamental technical mechanisms for securing web transactions."
+    },
+    {
+        "id":  51,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO direct benefits of M-Commerce:",
+        "options":  [
+                        "Ubiquity and mobility",
+                        "Location-based services",
+                        "Requirement of high capital",
+                        "Dependence on desktop hardware"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "M-Commerce enables anytime-anywhere ubiquitous access and facilitates location-based customer targeting."
+    },
+    {
+        "id":  52,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO common examples of G2C (Government to Citizen) online services:",
+        "options":  [
+                        "Issuance of birth certificates",
+                        "Online payment of electricity and property taxes",
+                        "Corporate tender submissions",
+                        "Inter-ministry data sharing"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "Birth certificate issuance and municipal utility tax payments are direct citizen-facing public services."
+    },
+    {
+        "id":  53,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO main types of cryptographic keys used in Asymmetric Cryptography:",
+        "options":  [
+                        "Public Key",
+                        "Private Key",
+                        "Duplicate Key",
+                        "Analog Key"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "Asymmetric cryptography mathematically pairs a Public Key with a Private Key."
+    },
+    {
+        "id":  54,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_three",
+        "question":  "Select THREE popular electronic fund transfer systems in modern online banking:",
+        "options":  [
+                        "NEFT",
+                        "RTGS",
+                        "IMPS",
+                        "Postal Order",
+                        "Demand Draft",
+                        "Money Order"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "NEFT, RTGS, and IMPS are core electronic banking transfer mechanisms."
+    },
+    {
+        "id":  55,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_three",
+        "question":  "Select THREE crucial security objectives achieved using Digital Signatures and Certificates:",
+        "options":  [
+                        "Authentication",
+                        "Integrity",
+                        "Non-repudiation",
+                        "Broadcasting",
+                        "Plagiarism",
+                        "Free bandwidth"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "Authentication, message integrity, and non-repudiation form the core pillars of digital signature security."
+    },
+    {
+        "id":  56,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "A digital signature is created by encrypting the ____________ of the message with the sender\u0027s private key.",
+        "options":  [
+                        "hash value",
+                        "full duplicate",
+                        "public key",
+                        "plain envelope"
+                    ],
+        "answer":  0,
+        "explanation":  "A hash digest generated from the message is encrypted using the sender\u0027s private key to form the digital signature."
+    },
+    {
+        "id":  57,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "Which of the following ensures that a sender cannot later deny having sent a transaction message?",
+        "options":  [
+                        "Non-repudiation",
+                        "Confidentiality",
+                        "Efficiency",
+                        "Ubiquity"
+                    ],
+        "answer":  0,
+        "explanation":  "Non-repudiation prevents an individual from denying previous commitments or sent transactions."
+    },
+    {
+        "id":  58,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "In the trade cycle, which document is sent by the seller to the buyer requesting payment for delivered goods?",
+        "options":  [
+                        "Invoice",
+                        "Order slip",
+                        "Quotation",
+                        "Warranty slip"
+                    ],
+        "answer":  0,
+        "explanation":  "An invoice is issued by the supplier to specify the balance due during the settlement phase."
+    },
+    {
+        "id":  59,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "The process of ensuring data has not been altered or tampered with in transit is known as ____________.",
+        "options":  [
+                        "Integrity",
+                        "Authorization",
+                        "Interchange",
+                        "Conversion"
+                    ],
+        "answer":  0,
+        "explanation":  "Integrity guarantees that transmitted data remains complete, unchanged, and uncorrupted."
+    },
+    {
+        "id":  60,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "Which phase of the trade cycle involves price discussions, product quotations, and delivery terms?",
+        "options":  [
+                        "Negotiate",
+                        "Delivery",
+                        "Payment",
+                        "After-sales"
+                    ],
+        "answer":  0,
+        "explanation":  "Negotiation occurs within the pre-sales stage to finalize pricing and terms before order placement."
+    },
+    {
+        "id":  61,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO key advantages of Electronic Data Interchange (EDI):",
+        "options":  [
+                        "Reduced paper usage",
+                        "Faster transaction processing",
+                        "Increased postage costs",
+                        "Mandatory manual data entry"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "EDI reduces administrative paperwork and accelerates corporate data exchange between trading partners."
+    },
+    {
+        "id":  62,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO examples of Government to Business (G2B) online services:",
+        "options":  [
+                        "Online e-Tendering and procurement",
+                        "Corporate GST tax filing",
+                        "Citizen driving license renewal",
+                        "Employee leave application portal"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "Government e-tenders and business tax filings are direct G2B electronic interactions."
+    },
+    {
+        "id":  63,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO items typically contained inside an electronic Digital Certificate:",
+        "options":  [
+                        "Owner\u0027s public key",
+                        "Digital signature of the CA",
+                        "Owner\u0027s private banking PIN",
+                        "Cleartext credit card CVV"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "A Digital Certificate contains the owner\u0027s public key and the validating signature of the Certifying Authority."
+    },
+    {
+        "id":  64,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_three",
+        "question":  "Select THREE major security threats encountered in E-Commerce platforms:",
+        "options":  [
+                        "Data tampering",
+                        "Phishing attacks",
+                        "Unauthorized access (Hacking)",
+                        "High inventory turnover",
+                        "Fast order dispatch",
+                        "Global availability"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "Tampering, phishing scams, and unauthorized system breaches represent core threats to web commerce."
+    },
+    {
+        "id":  65,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_three",
+        "question":  "Select THREE key components included in the Trade Cycle structure:",
+        "options":  [
+                        "Pre-sales",
+                        "Execution",
+                        "Settlement",
+                        "Demolition",
+                        "Subcontracting",
+                        "Liquidation"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "Pre-sales, Execution, Settlement, and After-sales form the four primary phases of the standard trade cycle."
+    },
+    {
+        "id":  66,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "In asymmetric encryption, which key must be kept secret and protected by the owner?",
+        "options":  [
+                        "Private Key",
+                        "Public Key",
+                        "Shared Key",
+                        "Broadcast Key"
+                    ],
+        "answer":  0,
+        "explanation":  "The private key must remain confidential to the owner to decrypt data and generate digital signatures."
+    },
+    {
+        "id":  67,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "Which E-Governance model facilitates online income tax filing and PAN card application for citizens?",
+        "options":  [
+                        "G2C",
+                        "G2B",
+                        "G2G",
+                        "G2E"
+                    ],
+        "answer":  0,
+        "explanation":  "Direct online services like PAN generation and personal income tax submissions fall under G2C."
+    },
+    {
+        "id":  68,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO primary attributes distinguishing Traditional Commerce from E-Commerce:",
+        "options":  [
+                        "Personal physical touch and inspection",
+                        "Manual exchange of cash and physical receipts",
+                        "Round-the-clock 24/7 global operation",
+                        "Instant electronic transmission of digital orders"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "Traditional commerce depends on physical examination of goods and manual physical exchanges."
+    },
+    {
+        "id":  69,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO examples of G2E (Government to Employee) interactions:",
+        "options":  [
+                        "Accessing online monthly payslips",
+                        "Applying for annual leave digitally",
+                        "Submitting an open vendor tender",
+                        "Paying property assessment tax"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "Pay slips and internal leave processing directly connect government administration with its employees."
+    },
+    {
+        "id":  70,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_three",
+        "question":  "Select THREE valid examples of E-Wallets commonly used for digital transactions:",
+        "options":  [
+                        "Google Pay",
+                        "Paytm",
+                        "PhonePe",
+                        "BIOS",
+                        "RAM",
+                        "Linux"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "Google Pay, Paytm, and PhonePe are established digital wallet and payment apps."
+    },
+    {
+        "id":  71,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "Which phase of the trade cycle involves the physical shipment and receipt of goods by the buyer?",
+        "options":  [
+                        "Delivery",
+                        "Negotiation",
+                        "Invoice",
+                        "Warranty"
+                    ],
+        "answer":  0,
+        "explanation":  "Delivery falls under the Execution phase where ordered goods are handed over to the buyer."
+    },
+    {
+        "id":  72,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "The conversion of unreadable ciphertext into readable plaintext at the recipient\u0027s end is called ____________.",
+        "options":  [
+                        "Decryption",
+                        "Encryption",
+                        "Hashing",
+                        "Encoding"
+                    ],
+        "answer":  0,
+        "explanation":  "Decryption restores scrambled ciphertext back into legible plaintext using the appropriate key."
+    },
+    {
+        "id":  73,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO core elements that comprise the Settlement phase of the Trade Cycle:",
+        "options":  [
+                        "Invoice",
+                        "Payment",
+                        "Search",
+                        "Warranty"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "The settlement phase strictly consists of bill/invoice generation and subsequent payment."
+    },
+    {
+        "id":  74,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO key advantages of using digital certificates in web transactions:",
+        "options":  [
+                        "Confirms sender identity",
+                        "Builds customer trust and security",
+                        "Eliminates network charges",
+                        "Removes computer hardware needs"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "Digital certificates validate identity authenticity via trusted CAs and build transactional security."
+    },
+    {
+        "id":  75,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_three",
+        "question":  "Select THREE fundamental security services provided by modern cryptographic implementations:",
+        "options":  [
+                        "Confidentiality",
+                        "Data Integrity",
+                        "Non-repudiation",
+                        "Free distribution",
+                        "High power consumption",
+                        "Infinite memory"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "Confidentiality, Integrity, and Non-repudiation are foundational cryptographic guarantees."
+    },
+    {
+        "id":  76,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "Which of the following is an example of an Asymmetric Key cryptographic algorithm?",
+        "options":  [
+                        "RSA",
+                        "DES",
+                        "AES",
+                        "Blowfish"
+                    ],
+        "answer":  0,
+        "explanation":  "RSA is a widely used public-key (asymmetric) cryptography algorithm."
+    },
+    {
+        "id":  77,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "Which protocol provides end-to-end communication security and encryption over the Internet using HTTPS?",
+        "options":  [
+                        "SSL/TLS",
+                        "FTP",
+                        "SMTP",
+                        "Telnet"
+                    ],
+        "answer":  0,
+        "explanation":  "SSL/TLS protocols secure HTTP web traffic by encrypting data packets."
+    },
+    {
+        "id":  78,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "In E-Commerce, OTP stands for ____________.",
+        "options":  [
+                        "One Time Password",
+                        "Only Transaction Password",
+                        "Open Transfer Protocol",
+                        "Online Term Protection"
+                    ],
+        "answer":  0,
+        "explanation":  "OTP stands for One Time Password, used as a dynamic second-factor authentication mechanism."
+    },
+    {
+        "id":  79,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "In the execution phase of the trade cycle, the buyer issues a(n) ____________ to the seller.",
+        "options":  [
+                        "Purchase Order",
+                        "Invoice",
+                        "Payment Receipt",
+                        "Catalog"
+                    ],
+        "answer":  0,
+        "explanation":  "The buyer places an order to buy specific goods or services during the Execution phase."
+    },
+    {
+        "id":  80,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "A business-to-business electronic marketplace where multiple businesses meet to buy and sell products is called a(n) ____________.",
+        "options":  [
+                        "E-Marketplace",
+                        "Private Blog",
+                        "Social Chat",
+                        "Personal Feed"
+                    ],
+        "answer":  0,
+        "explanation":  "An E-Marketplace is an online trading hub where corporate buyers and sellers transact."
+    },
+    {
+        "id":  81,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO key phases comprising the Pre-sales stage of the Trade Cycle:",
+        "options":  [
+                        "Search",
+                        "Negotiate",
+                        "Delivery",
+                        "Invoice"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "Search and Negotiate are the two distinct steps within the Pre-sales trade phase."
+    },
+    {
+        "id":  82,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO primary disadvantages of traditional commerce compared to E-Commerce:",
+        "options":  [
+                        "Constrained by geographical boundaries",
+                        "Limited store opening hours",
+                        "Immediate inspection of physical goods",
+                        "Face-to-face consumer relationships"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "Physical geographic boundaries and strict operating hours are standard limitations of traditional shops."
+    },
+    {
+        "id":  83,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO essential security components verified by a web browser when establishing an HTTPS connection:",
+        "options":  [
+                        "Digital Certificate validity",
+                        "Certifying Authority trust chain",
+                        "Local hard drive capacity",
+                        "Screen resolution"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "Browsers automatically check whether the server\u0027s certificate is valid and issued by a trusted CA."
+    },
+    {
+        "id":  84,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO examples of Government-to-Government (G2G) initiatives:",
+        "options":  [
+                        "Inter-departmental intelligence data sharing",
+                        "Central government grant dispersal to state departments",
+                        "Citizen municipal grievance lodging",
+                        "Consumer dispute settlement portal"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "Inter-departmental data exchange and inter-governmental grants are direct G2G functional channels."
+    },
+    {
+        "id":  85,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_three",
+        "question":  "Select THREE main advantages of Symmetric Encryption:",
+        "options":  [
+                        "Fast execution speed",
+                        "Lower computational requirements",
+                        "Simple algorithm structure",
+                        "Requires zero key management",
+                        "Uses public directories",
+                        "Replaces digital signatures entirely"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "Symmetric ciphers execute quickly with low overhead and relatively simple structures compared to asymmetric ciphers."
+    },
+    {
+        "id":  86,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_three",
+        "question":  "Select THREE common electronic payment cards used in modern commerce:",
+        "options":  [
+                        "Credit Card",
+                        "Debit Card",
+                        "Smart Card",
+                        "Postcard",
+                        "Voter ID Card",
+                        "Ration Card"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "Credit, debit, and smart/chip-based payment cards represent standard electronic transaction cards."
+    },
+    {
+        "id":  87,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "Which of the following E-Commerce segments enables consumers to bid for projects or contracts posted by businesses (e.g. Freelancer, Upwork)?",
+        "options":  [
+                        "C2B",
+                        "B2C",
+                        "B2B",
+                        "C2C"
+                    ],
+        "answer":  0,
+        "explanation":  "Under C2B, independent professionals and consumers propose pricing and services directly to corporate entities."
+    },
+    {
+        "id":  88,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "A cryptographic mathematical algorithm that generates a fixed-size string from an arbitrary length message is a ____________.",
+        "options":  [
+                        "Hash Function",
+                        "Decryption cipher",
+                        "Public key",
+                        "Private certificate"
+                    ],
+        "answer":  0,
+        "explanation":  "A hash function generates a fixed-length cryptographic digest used to confirm message integrity."
+    },
+    {
+        "id":  89,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO key aspects included in the After-sales phase of the Trade Cycle:",
+        "options":  [
+                        "Warranty support",
+                        "Customer maintenance service",
+                        "Price negotiation",
+                        "Placing purchase order"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "Warranty fulfillment and post-purchase customer maintenance constitute the After-sales phase."
+    },
+    {
+        "id":  90,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_three",
+        "question":  "Select THREE direct benefits of adopting E-Governance in public administration:",
+        "options":  [
+                        "Paperless workflows",
+                        "Quick turnaround on service requests",
+                        "Greater public accountability",
+                        "Mandatory bureaucratic queues",
+                        "Increased administrative paperwork",
+                        "Reduced digital transparency"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "E-Governance streamlines processes via paperless systems, faster processing times, and enhanced accountability."
+    },
+    {
+        "id":  91,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "Which of the following is an example of a symmetric key encryption algorithm?",
+        "options":  [
+                        "AES",
+                        "RSA",
+                        "Diffie-Hellman",
+                        "ECC"
+                    ],
+        "answer":  0,
+        "explanation":  "AES (Advanced Encryption Standard) is a widely used symmetric key block cipher."
+    },
+    {
+        "id":  92,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "A digital wallet is also widely referred to as a(n) ____________.",
+        "options":  [
+                        "e-Wallet",
+                        "Cash drawer",
+                        "Passbook",
+                        "Paper ledger"
+                    ],
+        "answer":  0,
+        "explanation":  "A digital wallet is commonly known as an e-Wallet, storing credentials for electronic payments."
+    },
+    {
+        "id":  93,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "In asymmetric cryptography, if User A wants to send an encrypted message to User B, User A must encrypt it using ____________.",
+        "options":  [
+                        "User B\u0027s public key",
+                        "User A\u0027s private key",
+                        "User A\u0027s public key",
+                        "A shared master cipher"
+                    ],
+        "answer":  0,
+        "explanation":  "To ensure only the intended recipient can read it, the message is encrypted using the recipient\u0027s public key."
+    },
+    {
+        "id":  94,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "The electronic issuance of land records (e.g. 7/12 extract online) by state revenue departments is categorized under ____________.",
+        "options":  [
+                        "G2C",
+                        "B2B",
+                        "C2C",
+                        "G2E"
+                    ],
+        "answer":  0,
+        "explanation":  "Direct delivery of land records to individual citizens falls under the Government-to-Citizen (G2C) model."
+    },
+    {
+        "id":  95,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "Which cryptographic principle ensures that only authorized entities can view confidential information?",
+        "options":  [
+                        "Confidentiality",
+                        "Availability",
+                        "Authenticity",
+                        "Non-repudiation"
+                    ],
+        "answer":  0,
+        "explanation":  "Confidentiality protects data against unauthorized disclosure and eavesdropping."
+    },
+    {
+        "id":  96,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO primary disadvantages of Symmetric Key Encryption:",
+        "options":  [
+                        "Secure key distribution problem",
+                        "Scalability issue with a growing number of users",
+                        "Extremely slow encryption speeds",
+                        "High computing resource consumption"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "Symmetric encryption struggles with securely sharing the secret key across untrusted channels and managing keys at scale."
+    },
+    {
+        "id":  97,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO distinguishing characteristics of Mobile Commerce (M-Commerce):",
+        "options":  [
+                        "Ubiquitous access via handheld mobile devices",
+                        "Ability to leverage GPS location-based services",
+                        "Requirement of stationary desktop workstations",
+                        "Restricted transaction hours"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "M-Commerce enables anytime-anywhere mobility and localized services directly on handheld smart devices."
+    },
+    {
+        "id":  98,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO fundamental functions executed by a Certifying Authority (CA):",
+        "options":  [
+                        "Verifying applicant identity before issuance",
+                        "Signing digital certificates with its own private key",
+                        "Processing credit card refund requests",
+                        "Shipping consumer goods physically"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "A CA authenticates the identity of an applicant and cryptographically signs their public certificate."
+    },
+    {
+        "id":  99,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO common forms of payment gateways integrated into online stores:",
+        "options":  [
+                        "Razorpay",
+                        "PayPal",
+                        "Apache Server",
+                        "MySQL"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "Razorpay and PayPal are established payment gateways processing merchant online payments."
+    },
+    {
+        "id":  100,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_three",
+        "question":  "Select THREE steps carried out during the creation of a digital signature:",
+        "options":  [
+                        "Computing a cryptographic hash digest of the document",
+                        "Encrypting the hash digest with the sender\u0027s private key",
+                        "Attaching the signature to the outgoing document",
+                        "Encrypting the entire document with the recipient\u0027s private key",
+                        "Uploading the sender\u0027s private key to a public database",
+                        "Deleting the original plaintext document"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "A digital signature hashes the original content, encrypts the digest with the sender\u0027s private key, and bundles it with the message."
+    },
+    {
+        "id":  101,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_three",
+        "question":  "Select THREE major components of the IT infrastructure required to run an E-Commerce portal:",
+        "options":  [
+                        "Web server and web hosting platform",
+                        "Secure payment gateway",
+                        "Shopping cart and catalog management software",
+                        "Physical cash registers",
+                        "Handwritten ledger books",
+                        "Typewriter machines"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "Web servers, digital payment gateways, and shopping cart backends form the core technical architecture of an e-commerce platform."
+    },
+    {
+        "id":  102,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "Which of the following describes a transaction where an individual consumer sells an old car to another individual consumer via an online platform?",
+        "options":  [
+                        "C2C",
+                        "B2B",
+                        "B2C",
+                        "G2C"
+                    ],
+        "answer":  0,
+        "explanation":  "Transactions between two individual consumers through a listing platform represent Consumer-to-Consumer (C2C)."
+    },
+    {
+        "id":  103,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "What is the primary role of the Settlement phase in the standard Trade Cycle?",
+        "options":  [
+                        "Handling invoicing and final payment transfer",
+                        "Searching for prospective suppliers",
+                        "Physical packaging of ordered stock",
+                        "Issuing customer warranties"
+                    ],
+        "answer":  0,
+        "explanation":  "The settlement phase resolves the financial balance through invoicing and payment."
+    },
+    {
+        "id":  104,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO key reasons businesses adopt Electronic Data Interchange (EDI) over manual paper processing:",
+        "options":  [
+                        "Reduced data-entry errors",
+                        "Shorter document exchange turnaround time",
+                        "Higher paper printing costs",
+                        "Slower order processing cycles"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "EDI eliminates manual re-entry errors and significantly speeds up document transmissions between businesses."
+    },
+    {
+        "id":  105,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_three",
+        "question":  "Select THREE examples of information typically displayed on a standard E-Commerce invoice:",
+        "options":  [
+                        "Invoice number and date",
+                        "Itemized product description and unit price",
+                        "Applicable taxes and total amount payable",
+                        "Customer\u0027s net banking password",
+                        "Customer\u0027s credit card PIN",
+                        "Merchant\u0027s master cryptographic private key"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "Invoices outline transaction details including invoice ID, line-item pricing, and taxes due, while sensitive secrets are never shown."
+    },
+    {
+        "id":  106,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "Which of the following is considered the primary drawback of Cash on Delivery (COD) for online retailers?",
+        "options":  [
+                        "High rate of customer order refusal and return shipping costs",
+                        "Instant availability of working capital",
+                        "Elimination of transit risk",
+                        "Zero dependency on delivery logistics"
+                    ],
+        "answer":  0,
+        "explanation":  "Cash on Delivery often leads to higher order rejection rates and increased return logistics costs for merchants."
+    },
+    {
+        "id":  107,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "Which cryptographic property ensures that received information cannot be modified unnoticed by an unauthorized party?",
+        "options":  [
+                        "Integrity",
+                        "Portability",
+                        "Scalability",
+                        "Redundancy"
+                    ],
+        "answer":  0,
+        "explanation":  "Data integrity guarantees that data has not been altered, modified, or corrupted during transit."
+    },
+    {
+        "id":  108,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "An online portal where citizens can apply for birth, caste, or income certificates from the state government is an application of ____________.",
+        "options":  [
+                        "G2C",
+                        "B2B",
+                        "C2B",
+                        "G2E"
+                    ],
+        "answer":  0,
+        "explanation":  "Citizen-centric public document issuance is a core service under Government-to-Citizen (G2C)."
+    },
+    {
+        "id":  109,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "In asymmetric encryption, the key that is safely distributed to the public is the ____________.",
+        "options":  [
+                        "Public Key",
+                        "Private Key",
+                        "Secret Key",
+                        "Master Passcode"
+                    ],
+        "answer":  0,
+        "explanation":  "The public key is designed to be shared openly so senders can encrypt data intended for the receiver."
+    },
+    {
+        "id":  110,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "Which phase of the Trade Cycle includes steps where the supplier prepares the goods and ships them to the purchaser?",
+        "options":  [
+                        "Execution",
+                        "Pre-sales",
+                        "Settlement",
+                        "After-sales"
+                    ],
+        "answer":  0,
+        "explanation":  "The Execution phase covers order processing and physical dispatch or delivery of goods."
+    },
+    {
+        "id":  111,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO key advantages of implementing E-Governance across administrative bodies:",
+        "options":  [
+                        "Enhanced transparency and reduced bureaucracy",
+                        "Faster grievance redressal for citizens",
+                        "Increased manual record-keeping paperwork",
+                        "Longer waiting queues in government offices"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "E-Governance eliminates bureaucratic delays, raises transparency, and enables swift complaint resolution."
+    },
+    {
+        "id":  112,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO distinct features of M-Commerce compared to desktop E-Commerce:",
+        "options":  [
+                        "Portability across handheld devices",
+                        "Location-based real-time offers via GPS",
+                        "Mandatory requirement of wired LAN",
+                        "Restriction to corporate desktop environments"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "M-Commerce provides continuous handheld mobility and location-specific contextual targeting."
+    },
+    {
+        "id":  113,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO essential components required to generate and attach a valid Digital Signature:",
+        "options":  [
+                        "Sender\u0027s Private Key",
+                        "Cryptographic hash function",
+                        "Receiver\u0027s ATM PIN",
+                        "Sender\u0027s Credit Card CVV"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "Digital signatures rely on calculating a hash digest and encrypting it using the sender\u0027s private key."
+    },
+    {
+        "id":  114,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO common examples of C2C transactions in online commerce:",
+        "options":  [
+                        "Selling used textbooks to another student on a classifieds site",
+                        "Selling a second-hand bicycle directly to another buyer online",
+                        "Purchasing groceries directly from a brand supermarket",
+                        "Procuring bulk manufacturing raw materials from a steel mill"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "Selling pre-owned personal items between individual consumers represents Consumer-to-Consumer commerce."
+    },
+    {
+        "id":  115,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_three",
+        "question":  "Select THREE common electronic modes of consumer payment accepted on E-Commerce websites:",
+        "options":  [
+                        "UPI",
+                        "Credit Card",
+                        "Net Banking",
+                        "Personal IOU notes",
+                        "Bartered livestock",
+                        "Handwritten postal drafts"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "UPI, credit cards, and online net banking are standard digital settlement methods."
+    },
+    {
+        "id":  116,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_three",
+        "question":  "Select THREE primary services commonly facilitated by Government-to-Business (G2B) portals:",
+        "options":  [
+                        "E-Tendering and corporate procurement",
+                        "Corporate income and GST tax filing",
+                        "Business registration and license renewals",
+                        "Citizen primary school admission requests",
+                        "Public hospital patient appointment bookings",
+                        "Personal voter card address updates"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "Commercial tendering, corporate tax filings, and company registration portals are designed strictly for G2B."
+    },
+    {
+        "id":  117,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "What is the primary function of a Certifying Authority (CA) in Public Key Infrastructure (PKI)?",
+        "options":  [
+                        "To verify identities and issue digital certificates",
+                        "To store consumer banking balances",
+                        "To design e-commerce websites",
+                        "To manufacture credit cards"
+                    ],
+        "answer":  0,
+        "explanation":  "A Certifying Authority acts as a trusted third party that validates credentials and issues digital certificates."
+    },
+    {
+        "id":  118,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "Which of the following payment methods provides instant real-time interbank electronic fund transfers available 24x7?",
+        "options":  [
+                        "IMPS",
+                        "Demand Draft",
+                        "Bearer Cheque",
+                        "Money Order"
+                    ],
+        "answer":  0,
+        "explanation":  "IMPS (Immediate Payment Service) delivers round-the-clock instant interbank money transfers."
+    },
+    {
+        "id":  119,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO primary security goals achieved through encryption in E-Commerce:",
+        "options":  [
+                        "Confidentiality of user data",
+                        "Protection against unauthorized interception",
+                        "Faster device charging speeds",
+                        "Elimination of web hosting fees"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "Encryption preserves transaction confidentiality and shields sensitive data packets against interception."
+    },
+    {
+        "id":  120,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_three",
+        "question":  "Select THREE critical stages comprising the end-to-end Trade Cycle:",
+        "options":  [
+                        "Pre-sales",
+                        "Execution",
+                        "Settlement",
+                        "Asset Liquidation",
+                        "Factory Dismantling",
+                        "Company Insolvency"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "Pre-sales, Execution, Settlement, and After-sales form the core stages of the trade cycle."
+    },
+    {
+        "id":  121,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "Which security concept guarantees that a user is genuinely who they claim to be before granting access?",
+        "options":  [
+                        "Authentication",
+                        "Non-repudiation",
+                        "Confidentiality",
+                        "Interoperability"
+                    ],
+        "answer":  0,
+        "explanation":  "Authentication verifies and validates the declared identity of a user or system entity."
+    },
+    {
+        "id":  122,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "Which of the following is an example of an online Government-to-Employee (G2E) service?",
+        "options":  [
+                        "Online employee loan application and PF tracking",
+                        "Citizen property registration",
+                        "Corporate e-tendering portal",
+                        "Online trade license application"
+                    ],
+        "answer":  0,
+        "explanation":  "Provident fund status tracking and loan processing for civil staff are core G2E services."
+    },
+    {
+        "id":  123,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "The phase of the trade cycle where customer feedback and guarantee claims are handled is ____________.",
+        "options":  [
+                        "After-sales",
+                        "Settlement",
+                        "Execution",
+                        "Pre-sales"
+                    ],
+        "answer":  0,
+        "explanation":  "The After-sales phase addresses product warranties, servicing, and post-purchase consumer support."
+    },
+    {
+        "id":  124,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "Which type of cipher requires both communicating parties to securely share an identical secret key beforehand?",
+        "options":  [
+                        "Symmetric Cipher",
+                        "Asymmetric Cipher",
+                        "Public Cipher",
+                        "Hashing Algorithm"
+                    ],
+        "answer":  0,
+        "explanation":  "Symmetric ciphers depend on a single shared secret key for both encryption and decryption."
+    },
+    {
+        "id":  125,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "In an e-commerce website, which software feature stores items selected by a visitor before proceeding to final checkout?",
+        "options":  [
+                        "Shopping Cart",
+                        "Payment Gateway",
+                        "Search Crawler",
+                        "Digital Certificate"
+                    ],
+        "answer":  0,
+        "explanation":  "A shopping cart temporarily aggregates selected merchandise until the customer initiates checkout."
+    },
+    {
+        "id":  126,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO distinguishing features of Consumer-to-Consumer (C2C) e-commerce:",
+        "options":  [
+                        "Transactions occur between private individuals",
+                        "Platform acts as a third-party intermediary/facilitator",
+                        "Strictly wholesale transactions between factories",
+                        "Direct retail sales from corporate brand stores"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "C2C facilitates trade between individual citizens with the host website serving as a listing platform."
+    },
+    {
+        "id":  127,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO key advantages of implementing EDI standards for document exchange:",
+        "options":  [
+                        "Standardized format minimizes misinterpretation",
+                        "Elimination of postal mail transit delays",
+                        "Need for frequent manual retyping",
+                        "Higher expenditure on physical stationery"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "Standardized electronic messages prevent communication errors and bypass postal transit times."
+    },
+    {
+        "id":  128,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO core elements that describe Asymmetric Encryption:",
+        "options":  [
+                        "Employs a mathematically paired public and private key",
+                        "Solves the symmetric key distribution vulnerability",
+                        "Uses only one identical key for both processes",
+                        "Operates faster than symmetric encryption"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "Asymmetric cryptography utilizes public/private key pairs and overcomes the need to share secret keys over open channels."
+    },
+    {
+        "id":  129,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO prominent examples of digital certificate authorities:",
+        "options":  [
+                        "DigiCert",
+                        "VeriSign",
+                        "Flipkart",
+                        "OLX"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "DigiCert and VeriSign are recognized trusted Certifying Authorities that issue digital certificates."
+    },
+    {
+        "id":  130,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_three",
+        "question":  "Select THREE main goals that drive government bodies toward E-Governance transformation:",
+        "options":  [
+                        "Enhancing administrative efficiency",
+                        "Broadening citizen access to public records",
+                        "Minimizing paperwork and red tape",
+                        "Eliminating digital literacy programs",
+                        "Restricting government service hours",
+                        "Increasing administrative processing fees"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "E-Governance enhances civil efficiency, widens document accessibility, and reduces bureaucratic red tape."
+    },
+    {
+        "id":  131,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_three",
+        "question":  "Select THREE distinct steps involved in a typical online payment gateway transaction:",
+        "options":  [
+                        "Cardholder details encryption",
+                        "Authorization check by the issuing bank",
+                        "Settlement confirmation to the merchant",
+                        "Manual physical cheque clearance",
+                        "Physical dispatch of currency notes",
+                        "Postal verification of consumer address"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "Online gateways securely encrypt credentials, verify authorization with the cardholder bank, and settle funds with the seller."
+    },
+    {
+        "id":  132,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "What is the primary role of a hash value during the verification of a digital signature?",
+        "options":  [
+                        "To verify that the document contents were not altered",
+                        "To conceal the identity of the signer",
+                        "To compress the message for free hosting",
+                        "To encrypt the physical storage media"
+                    ],
+        "answer":  0,
+        "explanation":  "If the computed hash matches the decrypted signature hash, the receiver knows the message content has maintained its integrity."
+    },
+    {
+        "id":  133,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "Which of the following is considered an electronic fund transfer mechanism primarily suited for large-value bulk business transfers?",
+        "options":  [
+                        "RTGS",
+                        "Cash on Delivery",
+                        "Money Order",
+                        "VPP"
+                    ],
+        "answer":  0,
+        "explanation":  "RTGS is designed for continuous, immediate settlement of high-value electronic interbank transactions."
+    },
+    {
+        "id":  134,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO primary reasons why consumers favor M-Commerce applications:",
+        "options":  [
+                        "Convenience of one-tap mobile checkout",
+                        "Push notifications for personalized discounts",
+                        "Requirement of stationary network equipment",
+                        "Dependence on desktop computer monitors"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "Mobile apps offer instant biometric/one-tap checkout convenience and timely personalized push notifications."
+    },
+    {
+        "id":  135,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_three",
+        "question":  "Select THREE typical activities carried out during the Pre-sales phase of E-Commerce:",
+        "options":  [
+                        "Searching online supplier catalogs",
+                        "Comparing product reviews and specifications",
+                        "Negotiating commercial terms or discounts",
+                        "Unboxing delivered parcels",
+                        "Applying for product warranty claims",
+                        "Paying the monthly utility invoice"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "Product discovery, feature comparison, and quotation negotiations comprise the Pre-sales phase."
+    },
+    {
+        "id":  136,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "Which security property prevents an unauthorized person from listening in or viewing data across an open network?",
+        "options":  [
+                        "Confidentiality",
+                        "Availability",
+                        "Non-repudiation",
+                        "Integrity"
+                    ],
+        "answer":  0,
+        "explanation":  "Confidentiality ensures that sensitive information is kept secret and inaccessible to unauthorized sniffers or eavesdroppers."
+    },
+    {
+        "id":  137,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "In the E-Commerce Trade Cycle, customer dispute resolution and replacement of damaged goods are handled in the ____________ phase.",
+        "options":  [
+                        "After-sales",
+                        "Pre-sales",
+                        "Execution",
+                        "Settlement"
+                    ],
+        "answer":  0,
+        "explanation":  "Post-delivery disputes, replacements, and servicing belong directly to the After-sales phase."
+    },
+    {
+        "id":  138,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "Which of the following payment systems in India settles fund transactions continuously on a transaction-by-transaction basis without netting?",
+        "options":  [
+                        "RTGS",
+                        "NEFT",
+                        "Cheque truncation",
+                        "Demand Draft"
+                    ],
+        "answer":  0,
+        "explanation":  "RTGS (Real Time Gross Settlement) processes money transfers individually and continuously on a gross basis."
+    },
+    {
+        "id":  139,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "An online portal connecting municipal corporations with commercial vendors for waste management equipment procurement is an example of ____________.",
+        "options":  [
+                        "G2B",
+                        "G2C",
+                        "C2C",
+                        "G2E"
+                    ],
+        "answer":  0,
+        "explanation":  "Commercial contracting and procurement interactions between state agencies and private enterprises fall under Government-to-Business (G2B)."
+    },
+    {
+        "id":  140,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "Which of the following is an example of an Asymmetric Key cryptographic algorithm commonly taught in HSC IT?",
+        "options":  [
+                        "RSA",
+                        "DES",
+                        "Triple DES",
+                        "RC4"
+                    ],
+        "answer":  0,
+        "explanation":  "RSA is the standard asymmetric cryptosystem based on the mathematical difficulty of factoring large composite prime numbers."
+    },
+    {
+        "id":  141,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO recognized security risks encountered in E-Commerce transactions:",
+        "options":  [
+                        "Credit card spoofing and fraud",
+                        "Interception of sensitive data packets (Sniffing)",
+                        "High-speed optical fiber connectivity",
+                        "Instant global search reach"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "Card spoofing and data sniffing during transmission represent critical vulnerabilities in online commerce."
+    },
+    {
+        "id":  142,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO primary features that define Symmetric Encryption systems:",
+        "options":  [
+                        "Uses a single private secret key for both encryption and decryption",
+                        "Faster execution and computational efficiency",
+                        "Uses two mathematically paired different keys",
+                        "Provides non-repudiation natively without extra infrastructure"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "Symmetric ciphers use the same key for both cipher operations and run significantly faster than asymmetric ciphers."
+    },
+    {
+        "id":  143,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO common citizen benefits provided by G2C e-governance platforms:",
+        "options":  [
+                        "24x7 online access to utility bill payments",
+                        "Online tracking of official application status",
+                        "Requirement of physical queues at administrative offices",
+                        "Mandatory paper submissions for every request"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "G2C portals offer anytime utility payments and real-time electronic progress monitoring."
+    },
+    {
+        "id":  144,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO major differences between M-Commerce and E-Commerce:",
+        "options":  [
+                        "M-Commerce relies on cellular mobile networks and handhelds",
+                        "M-Commerce facilitates dynamic location-based notifications",
+                        "E-Commerce cannot process credit card payments",
+                        "M-Commerce does not require an active internet connection"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "M-Commerce is built around portable smartphones and leverages geofencing/GPS for personalized contextual alerts."
+    },
+    {
+        "id":  145,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_three",
+        "question":  "Select THREE major components stored inside an X.509 Digital Certificate:",
+        "options":  [
+                        "Subject\u0027s Public Key",
+                        "Digital Signature of the Issuing CA",
+                        "Validity expiration date",
+                        "User\u0027s secret ATM PIN",
+                        "Consumer\u0027s confidential bank password",
+                        "Private cryptographic key of the server"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "A digital certificate contains the subject\u0027s public key, the CA\u0027s signature, and validity periods, never private passwords or keys."
+    },
+    {
+        "id":  146,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_three",
+        "question":  "Select THREE typical activities carried out during the Execution phase of an E-Commerce Trade Cycle:",
+        "options":  [
+                        "Generating purchase orders",
+                        "Dispatching products from the warehouse",
+                        "Customer acknowledgment of delivery",
+                        "Drafting annual financial audit reports",
+                        "Broadcasting advertisements on television",
+                        "Resolving warranty claim disputes"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "Placing the purchase order, physical shipment dispatch, and customer delivery confirmation form the Execution phase."
+    },
+    {
+        "id":  147,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "When a student pays their Maharashtra State Board HSC examination fee online through the official education portal, it represents a ____________ model.",
+        "options":  [
+                        "G2C",
+                        "B2B",
+                        "C2B",
+                        "G2E"
+                    ],
+        "answer":  0,
+        "explanation":  "The student acting as a citizen accessing and paying for government educational services represents G2C."
+    },
+    {
+        "id":  148,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO key functions of a Payment Gateway in an online store:",
+        "options":  [
+                        "Securely encrypting sensitive credit/debit card credentials",
+                        "Facilitating communication between the merchant and acquiring bank",
+                        "Physically packing merchandise in the warehouse",
+                        "Delivering physical goods to the buyer\u0027s doorstep"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "Gateways provide secure encryption of payment data and coordinate authorization across financial networks."
+    },
+    {
+        "id":  149,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO core advantages of Electronic Data Interchange (EDI):",
+        "options":  [
+                        "Reduces document turnaround and delivery times",
+                        "Minimizes errors caused by manual rekeying of invoices",
+                        "Eliminates the need for computer systems",
+                        "Requires daily physical mail exchanges"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "EDI streamlines B2B interactions by automating standardized document exchanges and removing human data-entry flaws."
+    },
+    {
+        "id":  150,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_three",
+        "question":  "Select THREE primary models of E-Commerce categorized by market participants:",
+        "options":  [
+                        "Business-to-Consumer (B2C)",
+                        "Business-to-Business (B2B)",
+                        "Consumer-to-Consumer (C2C)",
+                        "Browser-to-Server (B2S)",
+                        "Desktop-to-Mobile (D2M)",
+                        "Router-to-Switch (R2S)"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "B2C, B2B, and C2C represent foundational market classifications of Electronic Commerce."
+    },
+    {
+        "id":  151,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "Which of the following is considered an electronic medium commonly used for conducting business transactions in E-Commerce?",
+        "options":  [
+                        "Internet",
+                        "Handwritten Letter",
+                        "Postal Postcard",
+                        "Notice Board"
+                    ],
+        "answer":  0,
+        "explanation":  "The Internet serves as the primary digital backbone and medium for conducting modern e-commerce."
+    },
+    {
+        "id":  152,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "A digital certificate contains the digital signature of the ____________ to guarantee its credibility.",
+        "options":  [
+                        "Certifying Authority (CA)",
+                        "End Consumer",
+                        "Merchant Vendor",
+                        "Internet Service Provider"
+                    ],
+        "answer":  0,
+        "explanation":  "The issuing Certifying Authority cryptographically signs the digital certificate to validate trust and authenticity."
+    },
+    {
+        "id":  153,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "In the Settlement phase of the Trade Cycle, ____________ indicates the transfer of financial value from buyer to seller.",
+        "options":  [
+                        "Payment",
+                        "Order dispatch",
+                        "Searching",
+                        "Inspection"
+                    ],
+        "answer":  0,
+        "explanation":  "Payment represents the financial settlement clearing the outstanding balance reflected in the invoice."
+    },
+    {
+        "id":  154,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "Which electronic system enables businesses to exchange standard electronic purchase orders and invoices directly without paper?",
+        "options":  [
+                        "EDI",
+                        "IMPS",
+                        "RTGS",
+                        "C2C"
+                    ],
+        "answer":  0,
+        "explanation":  "Electronic Data Interchange (EDI) enables structured, automated document exchange between enterprise applications."
+    },
+    {
+        "id":  155,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "Which model of E-Governance connects central government agencies with state administration departments for coordinated governance?",
+        "options":  [
+                        "G2G",
+                        "G2C",
+                        "G2B",
+                        "G2E"
+                    ],
+        "answer":  0,
+        "explanation":  "Government-to-Government (G2G) covers inter-departmental, inter-agency, and inter-state administrative communications."
+    },
+    {
+        "id":  156,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO primary components that form a valid Electronic Trade Cycle:",
+        "options":  [
+                        "Execution",
+                        "Settlement",
+                        "Asset Destruction",
+                        "Factory Liquidation"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "Execution and Settlement are core sequential phases along with Pre-sales and After-sales."
+    },
+    {
+        "id":  157,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO key security parameters established through asymmetric cryptography:",
+        "options":  [
+                        "Authentication",
+                        "Non-repudiation",
+                        "Free data transfer",
+                        "Physical peripheral sharing"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "Asymmetric cryptography uniquely binds transactions to verify sender identity (Authentication) and prevent denial (Non-repudiation)."
+    },
+    {
+        "id":  158,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO core advantages of adopting M-Commerce for retail consumers:",
+        "options":  [
+                        "Instant transactions anywhere via cellular smartphones",
+                        "Personalized contextual alerts via geolocation",
+                        "Mandatory tethering to desktop personal computers",
+                        "Restricted banking hours for transaction submission"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "M-Commerce enables untethered mobility on cellular networks and location-aware personalized commerce."
+    },
+    {
+        "id":  159,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO major reasons why online merchants implement SSL/TLS certificates:",
+        "options":  [
+                        "Encrypting credit card numbers during transmission",
+                        "Building customer trust through browser security indicators",
+                        "Eliminating monthly web hosting fees",
+                        "Automatically formatting website CSS files"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "SSL/TLS certificates encrypt sensitive consumer data in transit and display trusted HTTPS padlock indicators."
+    },
+    {
+        "id":  160,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_three",
+        "question":  "Select THREE valid examples of electronic fund transfer mechanisms provided by commercial banks:",
+        "options":  [
+                        "NEFT",
+                        "RTGS",
+                        "IMPS",
+                        "Postal Telegraph",
+                        "Handwritten Money Order",
+                        "Physical Bill of Lading"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "NEFT, RTGS, and IMPS are standard electronic interbank transfer channels."
+    },
+    {
+        "id":  161,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_three",
+        "question":  "Select THREE primary stakeholder categories interacting within E-Governance architectures:",
+        "options":  [
+                        "Citizens (C)",
+                        "Businesses (B)",
+                        "Employees (E)",
+                        "Monitors (M)",
+                        "Routers (R)",
+                        "Cables (K)"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "E-Governance models are formally structured around Citizens (G2C), Businesses (G2B), Employees (G2E), and Government (G2G)."
+    },
+    {
+        "id":  162,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "Which of the following represents the correct sequence of phases in a standard E-Commerce Trade Cycle?",
+        "options":  [
+                        "Pre-sales -\u003e Execution -\u003e Settlement -\u003e After-sales",
+                        "Execution -\u003e Settlement -\u003e Pre-sales -\u003e After-sales",
+                        "Settlement -\u003e Pre-sales -\u003e Execution -\u003e After-sales",
+                        "Pre-sales -\u003e Settlement -\u003e Execution -\u003e After-sales"
+                    ],
+        "answer":  0,
+        "explanation":  "The Trade Cycle begins with Pre-sales (Search/Negotiate), continues to Execution (Order/Delivery), proceeds to Settlement (Invoice/Payment), and finishes with After-sales (Warranty/Service)."
+    },
+    {
+        "id":  163,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO core tasks performed during the Pre-sales stage:",
+        "options":  [
+                        "Searching for suppliers and products",
+                        "Negotiating terms and prices",
+                        "Processing final credit card payments",
+                        "Providing warranty repair servicing"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "Product discovery (Search) and price quotation agreements (Negotiate) make up the Pre-sales stage."
+    },
+    {
+        "id":  164,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO key properties of symmetric encryption compared to asymmetric encryption:",
+        "options":  [
+                        "Requires less computational overhead and runs faster",
+                        "Uses a single identical secret key for encryption and decryption",
+                        "Uses a public key directory for universal distribution",
+                        "Inherently prevents the secret key distribution problem"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "Symmetric encryption processes data with high speed and low overhead using one shared secret key."
+    },
+    {
+        "id":  165,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_three",
+        "question":  "Select THREE recognized benefits of adopting E-Commerce for end consumers:",
+        "options":  [
+                        "Convenience of anytime round-the-clock shopping (24x7)",
+                        "Access to a global selection of products and brands",
+                        "Easy price comparison across multiple vendors",
+                        "Immediate physical touch and trial before delivery",
+                        "Zero dependence on internet or cellular connectivity",
+                        "Cash-only offline settlement requirements"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "E-Commerce empowers consumers with 24/7 availability, vast cross-border selections, and fast online price comparison."
+    },
+    {
+        "id":  166,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "Which of the following acts in India provides the legal framework for electronic governance and e-commerce transactions?",
+        "options":  [
+                        "IT Act, 2000",
+                        "Companies Act, 1956",
+                        "Consumer Protection Act, 1986",
+                        "Indian Contract Act, 1872"
+                    ],
+        "answer":  0,
+        "explanation":  "The Information Technology Act, 2000 (IT Act 2000) provides legal recognition for electronic transactions, digital signatures, and e-governance in India."
+    },
+    {
+        "id":  167,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "In asymmetric encryption, the mathematical key used by the sender to verify a digital signature is the sender\u0027s ____________ key.",
+        "options":  [
+                        "Public",
+                        "Private",
+                        "Shared Secret",
+                        "Symmetric"
+                    ],
+        "answer":  0,
+        "explanation":  "While the sender signs the document with their private key, any recipient verifies that digital signature using the sender\u0027s public key."
+    },
+    {
+        "id":  168,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "Which type of payment card requires a microchip and integrated circuit embedded into the card surface to process transactions securely?",
+        "options":  [
+                        "Smart Card",
+                        "Paper Card",
+                        "Barter Token",
+                        "Punch Card"
+                    ],
+        "answer":  0,
+        "explanation":  "Smart cards contain an embedded integrated circuit chip to authenticate data and store monetary or credential records."
+    },
+    {
+        "id":  169,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "Which of the following is an example of an online Government-to-Citizen (G2C) transport service?",
+        "options":  [
+                        "Sarathi portal for driving licenses",
+                        "GeM portal for corporate procurement",
+                        "Internal civil service transfer system",
+                        "Ministry inter-department budget routing"
+                    ],
+        "answer":  0,
+        "explanation":  "The Sarathi portal facilitates citizen driving license issuance, renewals, and learner applications directly under G2C."
+    },
+    {
+        "id":  170,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "In symmetric encryption, the main security vulnerability lies in ____________.",
+        "options":  [
+                        "the secure transmission and sharing of the secret key",
+                        "the excessively large size of encrypted files",
+                        "the inability to encrypt plain text",
+                        "the lack of math algorithms"
+                    ],
+        "answer":  0,
+        "explanation":  "The key distribution problem—securely sharing the single secret key without interception over an untrusted network—is symmetric encryption\u0027s main weakness."
+    },
+    {
+        "id":  171,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO key functions of a digital certificate during web transactions:",
+        "options":  [
+                        "Authenticating the identity of a website or individual",
+                        "Distributing the verified public key of the holder",
+                        "Replacing web servers with client terminals",
+                        "Eliminating network bandwidth costs"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "Digital certificates bind verified identity information with the holder\u0027s public key to establish identity and enable secure cryptography."
+    },
+    {
+        "id":  172,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO examples of Government-to-Business (G2B) digital initiatives:",
+        "options":  [
+                        "GeM (Government e-Marketplace) procurement",
+                        "MCA21 corporate filing portal",
+                        "Online caste certificate application",
+                        "Central school student admission system"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "GeM enables enterprises to supply goods to public agencies, and MCA21 manages corporate company filings under G2B."
+    },
+    {
+        "id":  173,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO common electronic modes used for retail e-commerce payments:",
+        "options":  [
+                        "Net Banking",
+                        "Debit Card",
+                        "Postal Order",
+                        "Demand Draft sent by post"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "Net Banking and Debit Cards allow instant online authorization and funds transfer directly during web checkout."
+    },
+    {
+        "id":  174,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO distinguishing traits of Electronic Data Interchange (EDI):",
+        "options":  [
+                        "Uses standardized electronic messaging formats (e.g. EDIFACT/ANSI)",
+                        "Direct computer-to-computer data exchange without human intervention",
+                        "Requires manual printing and postal delivery",
+                        "Relies entirely on verbal telephone orders"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "EDI replaces manual paperwork with standardized electronic formats transmitted directly between enterprise computer systems."
+    },
+    {
+        "id":  175,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_three",
+        "question":  "Select THREE major components included within the Public Key Infrastructure (PKI) ecosystem:",
+        "options":  [
+                        "Certifying Authority (CA)",
+                        "Digital Certificates",
+                        "Public and Private Key pairs",
+                        "Thermal receipt rolls",
+                        "Cash register drawers",
+                        "Paper invoice slips"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "PKI encompasses the Certifying Authority, digital certificates, and asymmetric key pairs to establish a framework of trust."
+    },
+    {
+        "id":  176,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_three",
+        "question":  "Select THREE critical advantages of implementing E-Governance systems for citizens:",
+        "options":  [
+                        "Reduced administrative processing time",
+                        "Anytime access to civic records and public utilities",
+                        "Greater transparency in municipal procedures",
+                        "Mandatory physical visits to government secretariats",
+                        "Higher dependency on clerical intermediaries",
+                        "Exclusive reliance on paper forms"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "E-Governance enhances citizen convenience via quick processing, remote anytime availability, and reduced bureaucratic friction."
+    },
+    {
+        "id":  177,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_single",
+        "question":  "What is the primary objective of using a cryptographic hash function in digital signature generation?",
+        "options":  [
+                        "To produce a unique, fixed-size digest that ensures data integrity",
+                        "To increase the file size to prevent deletion",
+                        "To disguise the identity of the signer",
+                        "To compress audio files on the server"
+                    ],
+        "answer":  0,
+        "explanation":  "A cryptographic hash produces a unique fixed-length digest; if the message is tampered with, the hash changes, proving a breach of integrity."
+    },
+    {
+        "id":  178,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO primary disadvantages faced by consumers using E-Commerce platforms:",
+        "options":  [
+                        "Inability to physically touch or inspect items prior to delivery",
+                        "Risk of credit card theft and personal data breaches",
+                        "Availability of 24x7 shopping convenience",
+                        "Access to broad multi-brand catalogs"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "Lacking physical tactile evaluation prior to purchase and the ongoing threat of cyber theft are standard consumer drawbacks of e-commerce."
+    },
+    {
+        "id":  179,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_two",
+        "question":  "Select TWO activities that occur specifically within the Execution phase of the Trade Cycle:",
+        "options":  [
+                        "Buyer sending a formal Purchase Order",
+                        "Supplier delivering the ordered consignment",
+                        "Buyer searching for vendor catalogs",
+                        "Customer claiming a product replacement under warranty"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "Placing the purchase order and dispatching/delivering the consignment constitute the Execution phase."
+    },
+    {
+        "id":  180,
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "type":  "mcq_three",
+        "question":  "Select THREE valid reasons why businesses prefer electronic B2B transactions over traditional paper procurement:",
+        "options":  [
+                        "Shorter order-to-delivery fulfillment cycles",
+                        "Lower administrative and stationery operational costs",
+                        "Accurate automated inventory and stock synchronization",
+                        "Need for physical courier dispatches for quotes",
+                        "Frequent manual transcription and entry errors",
+                        "Restricted localized dealer networks"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       2
+                   ],
+        "explanation":  "B2B automation accelerates procurement cycles, saves operational stationery expenditure, and syncs enterprise inventory seamlessly."
+    },
+    {
+        "id":  901,
+        "answer":  0,
+        "explanation":  "B2C represents electronic commerce transactions between businesses and consumers.",
+        "type":  "true_false",
+        "options":  [
+                        "True",
+                        "False"
+                    ],
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "question":  "B2C stands for Business to Consumer."
+    },
+    {
+        "id":  902,
+        "answer":  0,
+        "explanation":  "EDI facilitates paperless computer-to-computer exchange of structured business documents.",
+        "type":  "true_false",
+        "options":  [
+                        "True",
+                        "False"
+                    ],
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "question":  "EDI stands for Electronic Data Interchange."
+    },
+    {
+        "id":  903,
+        "answer":  0,
+        "explanation":  "Bharat Interface for Money (BHIM) was built by NPCI to enable UPI payments.",
+        "type":  "true_false",
+        "options":  [
+                        "True",
+                        "False"
+                    ],
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "question":  "BHIM is an Indian mobile payment app developed by NPCI based on UPI."
+    },
+    {
+        "id":  904,
+        "answer":  1,
+        "explanation":  "Symmetric encryption uses one key; Asymmetric encryption uses a public and private key pair.",
+        "type":  "true_false",
+        "options":  [
+                        "True",
+                        "False"
+                    ],
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "question":  "In asymmetric key encryption, the same key is used for encryption and decryption."
+    },
+    {
+        "id":  905,
+        "answer":  0,
+        "explanation":  "Digital signatures verify the sender\u0027s identity and ensure document integrity.",
+        "type":  "true_false",
+        "options":  [
+                        "True",
+                        "False"
+                    ],
+        "chapter":  "E-Commerce \u0026 E-Governance",
+        "question":  "Digital signatures provide authentication and non-repudiation in electronic transactions."
     }
-  ]
-}
+]
