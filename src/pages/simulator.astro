@@ -155,6 +155,9 @@ import PortalLayout from "../layouts/PortalLayout.astro";
           </span>
           <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white mt-1">Practice Result</h3>
           <p class="text-xs text-slate-500">Seat No: <span id="resultRollNo">—</span> • Maharashtra State Board HSC IT 2027</p>
+          <p id="mockExamPersonalizedMessage" class="text-sm font-semibold text-emerald-700 dark:text-emerald-300" aria-live="polite"></p>
+          <p id="mockExamAttemptCount" class="text-xs text-slate-500 dark:text-slate-400" aria-live="polite"></p>
+          <p id="mockExamShareFeedback" class="text-xs text-slate-500 dark:text-slate-400" aria-live="polite"></p>
         </div>
 
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center text-xs">
@@ -176,7 +179,8 @@ import PortalLayout from "../layouts/PortalLayout.astro";
           </div>
         </div>
 
-        <div class="pt-3 border-t border-slate-200 dark:border-slate-800 flex justify-end gap-2">
+        <div class="pt-3 border-t border-slate-200 dark:border-slate-800 flex flex-wrap justify-end gap-2">
+          <button type="button" id="shareMockExamResultBtn" class="px-4 py-2 rounded-lg border border-emerald-300 dark:border-emerald-800 text-xs font-bold text-emerald-700 dark:text-emerald-300 hover:bg-emerald-50 dark:hover:bg-emerald-950/30">Share Result</button>
           <button type="button" id="reviewReportBtn" class="px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 text-xs font-bold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">
             Review Submitted Paper
           </button>
@@ -666,7 +670,12 @@ import PortalLayout from "../layouts/PortalLayout.astro";
 
         document.getElementById("finalObjScore").textContent = `${result.scoredMarks} / ${result.totalMarks}`;
         document.getElementById("finalAccuracy").textContent = `${result.percentage}%`;
+        document.getElementById("mockExamPersonalizedMessage").textContent = result.attemptedQuestions
+          ? `${activeSession.student.studentName}, you scored ${result.scoredMarks} out of ${result.totalMarks} marks across ${result.attemptedQuestions} answered questions.`
+          : `${activeSession.student.studentName}, no objective questions were answered, so this round has no objective score.`;
+        document.getElementById("mockExamAttemptCount").textContent = `${result.attemptedQuestions} objective questions answered. Score is calculated only from answered questions.`;
         completeSession(result.scoredMarks);
+        document.dispatchEvent(new CustomEvent("portal:quiz-completed", { detail: { path: "/simulator" } }));
         tabProtectionCleanup();
         isLockedOut = true;
         invigilatorModal.classList.add("hidden");
@@ -684,6 +693,21 @@ import PortalLayout from "../layouts/PortalLayout.astro";
         confirmEndExamBtn.textContent = "Confirm & Final Submit";
       }
     }
+
+    document.getElementById("shareMockExamResultBtn")?.addEventListener("click", async () => {
+      const score = document.getElementById("finalObjScore")?.textContent || "";
+      const shareData = { title: "HSC IT Mock Exam Result", text: `I scored ${score} on the HSC IT Portal mock exam. Try it yourself:`, url: location.origin };
+      try {
+        if (navigator.share) await navigator.share(shareData);
+        else {
+          await navigator.clipboard.writeText(`${shareData.text} ${shareData.url}`);
+          document.getElementById("mockExamShareFeedback").textContent = "Result link copied. Share it with a friend!";
+        }
+      } catch (error) {
+        if (error instanceof Error && error.name === "AbortError") return;
+        document.getElementById("mockExamShareFeedback").textContent = "Sharing is unavailable in this browser.";
+      }
+    });
 
     document.getElementById("reviewReportBtn")?.addEventListener('click', () => {
       resultModal.classList.add('hidden');

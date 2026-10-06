@@ -1,0 +1,328 @@
+<dialog
+  id="portal-auth-dialog"
+  class="w-[calc(100%-2rem)] max-w-lg rounded-3xl border border-slate-200 bg-white p-0 text-slate-800 shadow-2xl backdrop:bg-slate-950/60 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
+  aria-labelledby="portal-auth-title"
+>
+  <div class="relative p-6 sm:p-8">
+    <button id="portal-auth-close" type="button" aria-label="Close" class="absolute right-5 top-5 rounded-lg p-2 text-slate-400 hover:bg-slate-100 hover:text-slate-700 dark:hover:bg-slate-800 dark:hover:text-white">
+      <svg aria-hidden="true" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 6 12 12M18 6 6 18" /></svg>
+    </button>
+
+    <div class="mb-6 flex items-center gap-3">
+      <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-emerald-600 text-sm font-black text-white">IT</span>
+      <div>
+        <p class="text-xs font-bold uppercase tracking-[0.16em] text-emerald-700 dark:text-emerald-400">HSC IT Portal</p>
+        <h2 id="portal-auth-title" class="text-2xl font-black tracking-tight">Student Login</h2>
+      </div>
+    </div>
+
+    <p id="portal-auth-message" class="mb-4 hidden rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-900 dark:border-emerald-900 dark:bg-emerald-950/50 dark:text-emerald-200" role="status" aria-live="polite"></p>
+    <div id="portal-auth-profile" class="hidden rounded-2xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-800/60">
+      <p class="text-sm font-bold">You are signed in</p>
+      <p id="portal-auth-profile-copy" class="mt-1 break-words text-sm text-slate-600 dark:text-slate-300"></p>
+      <p id="portal-auth-profile-kind" class="mt-3 text-xs text-slate-500 dark:text-slate-400"></p>
+      <div class="mt-4 flex flex-wrap gap-2">
+        <button id="portal-auth-new-profile" type="button" class="rounded-xl border border-slate-300 px-4 py-2 text-sm font-bold hover:bg-white dark:border-slate-600 dark:hover:bg-slate-700">Use another option</button>
+        <button id="portal-auth-signout" type="button" class="rounded-xl px-4 py-2 text-sm font-bold text-rose-700 hover:bg-rose-50 dark:text-rose-300 dark:hover:bg-rose-950/40">Sign out</button>
+      </div>
+    </div>
+
+    <div id="portal-auth-options">
+      <p class="mb-5 text-sm leading-relaxed text-slate-600 dark:text-slate-300">Sign in with your Google account, or create a basic student profile without a password.</p>
+      <a id="portal-google-start" href="/api/auth/google/start" class="flex w-full items-center justify-center gap-3 rounded-xl bg-emerald-700 px-5 py-3.5 text-sm font-bold text-white shadow-sm transition hover:bg-emerald-600 focus:outline-none focus:ring-4 focus:ring-emerald-500/25">
+        <svg aria-hidden="true" class="h-5 w-5 rounded bg-white p-0.5" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5Z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.74 7.18l7.72 6C44.42 38.02 46.98 31.94 46.98 24.55Z"/><path fill="#FBBC05" d="M10.53 28.59A14.4 14.4 0 0 1 9.75 24c0-1.59.27-3.13.76-4.59l-7.98-6.2A23.92 23.92 0 0 0 0 24c0 3.87.93 7.54 2.56 10.78l7.97-6.19Z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.91-5.8l-7.72-6c-2.14 1.44-4.89 2.3-8.19 2.3-6.26 0-11.57-4.22-13.46-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48Z"/></svg>
+        Continue with Google
+      </a>
+      <div class="my-5 flex items-center gap-3 text-[11px] font-bold uppercase tracking-widest text-slate-400"><span class="h-px flex-1 bg-slate-200 dark:bg-slate-700"></span>or<span class="h-px flex-1 bg-slate-200 dark:bg-slate-700"></span></div>
+      <button id="portal-guest-start" type="button" class="w-full rounded-xl border border-slate-300 px-5 py-3.5 text-sm font-bold text-slate-800 transition hover:border-emerald-500 hover:bg-emerald-50 dark:border-slate-700 dark:text-slate-100 dark:hover:bg-emerald-950/30">Continue without Google</button>
+      <p class="mt-3 text-center text-xs leading-relaxed text-slate-500 dark:text-slate-400">Google sign-in uses Google's secure authorization flow. We never ask for or store your Google password.</p>
+    </div>
+
+    <form id="portal-student-registration" class="hidden space-y-4" novalidate>
+      <div>
+        <h3 class="text-lg font-extrabold">Create a student profile</h3>
+        <p class="mt-1 text-sm leading-relaxed text-slate-600 dark:text-slate-300">This is a profile form, not password authentication. A profile alone does not verify your identity or unlock restricted features.</p>
+      </div>
+      <label class="block text-sm font-semibold">Full Name<input name="name" autocomplete="name" required maxlength="80" class="mt-1.5 w-full rounded-xl border border-slate-300 bg-white px-3.5 py-3 text-sm outline-none focus:border-emerald-600 focus:ring-2 focus:ring-emerald-500/20 dark:border-slate-700 dark:bg-slate-950" /></label>
+      <label class="block text-sm font-semibold">WhatsApp Number<input name="whatsapp" type="tel" autocomplete="tel" required maxlength="24" placeholder="+91 98765 43210" class="mt-1.5 w-full rounded-xl border border-slate-300 bg-white px-3.5 py-3 text-sm outline-none focus:border-emerald-600 focus:ring-2 focus:ring-emerald-500/20 dark:border-slate-700 dark:bg-slate-950" /></label>
+      <label class="block text-sm font-semibold">College / School Name<input name="school" autocomplete="organization" required maxlength="120" class="mt-1.5 w-full rounded-xl border border-slate-300 bg-white px-3.5 py-3 text-sm outline-none focus:border-emerald-600 focus:ring-2 focus:ring-emerald-500/20 dark:border-slate-700 dark:bg-slate-950" /></label>
+      <label class="block text-sm font-semibold">City<input name="city" autocomplete="address-level2" required maxlength="80" class="mt-1.5 w-full rounded-xl border border-slate-300 bg-white px-3.5 py-3 text-sm outline-none focus:border-emerald-600 focus:ring-2 focus:ring-emerald-500/20 dark:border-slate-700 dark:bg-slate-950" /></label>
+      <label class="block text-sm font-semibold">Email <span class="font-normal text-slate-500">(optional)</span><input name="email" type="email" autocomplete="email" maxlength="254" class="mt-1.5 w-full rounded-xl border border-slate-300 bg-white px-3.5 py-3 text-sm outline-none focus:border-emerald-600 focus:ring-2 focus:ring-emerald-500/20 dark:border-slate-700 dark:bg-slate-950" /></label>
+      <p id="portal-registration-error" class="hidden rounded-xl bg-rose-50 px-4 py-3 text-sm text-rose-800 dark:bg-rose-950/40 dark:text-rose-200" role="alert"></p>
+      <button type="submit" class="w-full rounded-xl bg-emerald-700 px-5 py-3.5 text-sm font-bold text-white transition hover:bg-emerald-600 disabled:cursor-wait disabled:opacity-60">Save student profile</button>
+      <button id="portal-registration-back" type="button" class="w-full rounded-xl px-4 py-2 text-sm font-semibold text-slate-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800">Back to sign-in options</button>
+    </form>
+  </div>
+</dialog>
+
+<script is:inline>
+  (() => {
+    const dialog = document.getElementById('portal-auth-dialog');
+    if (!dialog || dialog.dataset.initialized === 'true') return;
+    dialog.dataset.initialized = 'true';
+
+    const message = document.getElementById('portal-auth-message');
+    const options = document.getElementById('portal-auth-options');
+    const profilePanel = document.getElementById('portal-auth-profile');
+    const profileCopy = document.getElementById('portal-auth-profile-copy');
+    const profileKind = document.getElementById('portal-auth-profile-kind');
+    const form = document.getElementById('portal-student-registration');
+    const formError = document.getElementById('portal-registration-error');
+    const openers = [document.getElementById('portal-auth-trigger'), document.getElementById('portal-auth-trigger-mobile')];
+    const promptStorageKey = 'hsc_portal_auth_prompt_seen';
+    const pendingTestStorageKey = 'hsc_portal_pending_test';
+    const completedAttemptsStorageKey = 'hsc_portal_completed_assessment_attempts';
+    const authError = new URLSearchParams(location.search).get('auth_error');
+    let profile = null;
+
+    const markPromptSeen = () => sessionStorage.setItem(promptStorageKey, 'true');
+    const assessmentKeyForPath = (path) => path.startsWith('/mcqs/') ? path : '/mock-exam';
+    const completedAttemptCount = (path) => {
+      try {
+        const attempts = JSON.parse(localStorage.getItem(completedAttemptsStorageKey) || '{}');
+        const count = attempts[assessmentKeyForPath(path)];
+        return Number.isSafeInteger(count) && count > 0 ? count : 0;
+      } catch (error) {
+        console.error('Could not read completed assessment attempts:', error);
+        return 0;
+      }
+    };
+    const continuePendingTest = () => {
+      const pending = sessionStorage.getItem(pendingTestStorageKey);
+      if (!pending) return;
+      sessionStorage.removeItem(pendingTestStorageKey);
+      if (pending === 'begin-exam') {
+        document.getElementById('beginExamBtn')?.click();
+        return;
+      }
+      if (pending === 'retry-quiz') {
+        document.getElementById('btn-retry-test')?.click();
+        return;
+      }
+      const destination = new URL(pending, location.href);
+      if (destination.origin === location.origin) location.assign(destination.href);
+    };
+    const resumePendingExamStart = () => {
+      if (sessionStorage.getItem(pendingTestStorageKey) !== 'begin-exam') return;
+      if (document.readyState !== 'complete') {
+        window.addEventListener('load', resumePendingExamStart, { once: true });
+        return;
+      }
+      continuePendingTest();
+    };
+    const isTestPath = (pathname) =>
+      pathname.startsWith('/mcqs/') ||
+      ['/simulator', '/mock-exam', '/practice', '/exam/login', '/exam/instructions'].includes(pathname);
+    const openAutomaticPrompt = () => {
+      if (authError || sessionStorage.getItem(promptStorageKey) === 'true') return;
+      markPromptSeen();
+      const googleOnly = isTestPath(location.pathname) && completedAttemptCount(location.pathname) > 0;
+      showOptions({ googleOnly });
+      if (!dialog.open) dialog.showModal();
+    };
+
+    const setMessage = (text) => {
+      message.textContent = text || '';
+      message.classList.toggle('hidden', !text);
+    };
+    const showOptions = ({ googleOnly = false } = {}) => {
+      options.classList.remove('hidden');
+      form.classList.add('hidden');
+      profilePanel.classList.add('hidden');
+      const guestStart = document.getElementById('portal-guest-start');
+      const divider = options.querySelector('.my-5');
+      if (guestStart) guestStart.classList.toggle('hidden', googleOnly);
+      if (divider) divider.classList.toggle('hidden', googleOnly);
+      setMessage(googleOnly
+        ? 'You have completed one attempt. Sign in with Google to take another attempt.'
+        : '');
+    };
+    const showProfile = (value) => {
+      profile = value;
+      const label = value ? `Hi, ${value.name}` : 'Student Login';
+      openers.forEach((button) => {
+        if (!button) return;
+        button.setAttribute('aria-label', `Open student profile: ${label}`);
+        button.title = value?.email || label;
+        const greeting = button.querySelector('#portal-user-greeting');
+        if (greeting) greeting.textContent = label;
+      });
+      if (value && dialog.open) {
+        options.classList.add('hidden');
+        form.classList.add('hidden');
+        profilePanel.classList.remove('hidden');
+        profileCopy.textContent = value.email || value.whatsapp || '';
+        profileKind.textContent = value.kind === 'google'
+          ? `Google account · ${value.sub}`
+          : `Student profile · ${value.school}, ${value.city} · Not identity-verified`;
+      }
+    };
+
+    openers.forEach((button) => button?.addEventListener('click', async () => {
+      markPromptSeen();
+      if (!dialog.open) dialog.showModal();
+      showOptions();
+      if (profile) showProfile(profile);
+      else {
+        try {
+          const response = await fetch('/api/auth/profile', { headers: { Accept: 'application/json' }, cache: 'no-store' });
+          if (!response.ok) throw new Error('Could not load your student profile.');
+          const data = await response.json();
+          if (data.profile) showProfile(data.profile);
+        } catch (error) {
+          setMessage(error instanceof Error ? error.message : 'Could not load your student profile.');
+        }
+      }
+    }));
+
+    document.addEventListener('portal:quiz-completed', (event) => {
+      try {
+        const path = event.detail?.path || location.pathname;
+        const attempts = JSON.parse(localStorage.getItem(completedAttemptsStorageKey) || '{}');
+        const key = assessmentKeyForPath(path);
+        attempts[key] = (Number.isSafeInteger(attempts[key]) && attempts[key] > 0 ? attempts[key] : 0) + 1;
+        localStorage.setItem(completedAttemptsStorageKey, JSON.stringify(attempts));
+      } catch (error) {
+        console.error('Could not save completed assessment attempt:', error);
+        setMessage('Your result is shown, but this browser could not save attempt history.');
+      }
+    });
+
+    document.addEventListener('click', (event) => {
+      const clicked = event.target;
+      if (!(clicked instanceof Element)) return;
+      const beginButton = clicked.closest('#beginExamBtn');
+      const retryButton = clicked.closest('#btn-retry-test');
+      const link = beginButton || retryButton ? null : clicked.closest('a[href]');
+      if (!beginButton && !retryButton && !link) return;
+      const destination = link ? new URL(link.href, location.href) : null;
+      if (destination && (destination.origin !== location.origin || !isTestPath(destination.pathname))) return;
+      const assessmentPath = retryButton ? location.pathname : destination?.pathname || location.pathname;
+      const googleOnly = completedAttemptCount(assessmentPath) > 0;
+      if (profile && (!googleOnly || profile.kind === 'google')) return;
+
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      sessionStorage.setItem(
+        pendingTestStorageKey,
+        beginButton ? 'begin-exam' : retryButton ? 'retry-quiz' : `${destination.pathname}${destination.search}${destination.hash}`,
+      );
+      markPromptSeen();
+      if (!dialog.open) dialog.showModal();
+      showOptions({ googleOnly });
+
+      fetch('/api/auth/profile', { headers: { Accept: 'application/json' }, cache: 'no-store' })
+        .then((response) => { if (!response.ok) throw new Error('Could not verify your student profile.'); return response.json(); })
+        .then((data) => {
+          if (!data.profile) return;
+          showProfile(data.profile);
+          if (googleOnly && data.profile.kind !== 'google') {
+            showOptions({ googleOnly: true });
+            return;
+          }
+          sessionStorage.removeItem(pendingTestStorageKey);
+          if (beginButton) beginButton.click();
+          else if (retryButton) retryButton.click();
+          else location.assign(destination.href);
+        })
+        .catch((error) => setMessage(error instanceof Error ? error.message : 'Could not verify your student profile.'));
+    }, true);
+
+    dialog.addEventListener('close', () => {
+      if (!profile) sessionStorage.removeItem(pendingTestStorageKey);
+    });
+    document.getElementById('portal-auth-close')?.addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', (event) => { if (event.target === dialog) dialog.close(); });
+    document.getElementById('portal-guest-start')?.addEventListener('click', () => {
+      options.classList.add('hidden');
+      profilePanel.classList.add('hidden');
+      form.classList.remove('hidden');
+      setMessage('');
+    });
+    document.getElementById('portal-registration-back')?.addEventListener('click', showOptions);
+    document.getElementById('portal-auth-new-profile')?.addEventListener('click', showOptions);
+
+    document.getElementById('portal-google-start')?.addEventListener('click', (event) => {
+      const pending = sessionStorage.getItem(pendingTestStorageKey);
+      const returnTo = pending && pending !== 'begin-exam' && pending !== 'retry-quiz' && pending.startsWith('/')
+        ? pending
+        : `${location.pathname}${location.search}${location.hash}`;
+      event.currentTarget.href = `/api/auth/google/start?returnTo=${encodeURIComponent(returnTo)}`;
+    });
+
+    form?.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      formError.classList.add('hidden');
+      const submit = form.querySelector('button[type="submit"]');
+      submit.disabled = true;
+      try {
+        const values = new FormData(form);
+        const response = await fetch('/api/auth/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify(Object.fromEntries(values.entries())),
+        });
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.error || 'Unable to save your profile.');
+        showProfile(data.profile);
+        setMessage('Your student profile has been saved in this portal session. It is not a verified sign-in.');
+        continuePendingTest();
+      } catch (error) {
+        formError.textContent = error instanceof Error ? error.message : 'Unable to save your profile.';
+        formError.classList.remove('hidden');
+      } finally {
+        submit.disabled = false;
+      }
+    });
+
+    document.getElementById('portal-auth-signout')?.addEventListener('click', async () => {
+      try {
+        const response = await fetch('/api/auth/logout', { method: 'POST', headers: { Accept: 'application/json' } });
+        if (!response.ok) throw new Error('Unable to sign out. Please try again.');
+        profile = null;
+        sessionStorage.removeItem(promptStorageKey);
+        showProfile(null);
+        showOptions();
+        setMessage('You have signed out.');
+      } catch (error) {
+        setMessage(error instanceof Error ? error.message : 'Unable to sign out.');
+      }
+    });
+
+    const errors = {
+      invalid_state: 'Google sign-in could not be verified. Please try again.',
+      google_cancelled: 'Google sign-in was cancelled.',
+      not_configured: 'Google sign-in is unavailable because this site is missing its Google OAuth credentials. Continue without Google or ask the site administrator to configure Google OAuth.',
+      google_exchange_failed: 'Google could not complete sign-in. Please try again.',
+      google_profile_failed: 'Google profile details could not be loaded.',
+      google_profile_incomplete: 'Google did not return a verified email and profile.',
+    };
+    const errorCode = authError;
+    if (errorCode) {
+      markPromptSeen();
+      dialog.showModal();
+      const googleOnly = isTestPath(location.pathname) && completedAttemptCount(location.pathname) > 0;
+      showOptions({ googleOnly });
+      setMessage(errors[errorCode] || 'Sign-in could not be completed. Please try again.');
+      const url = new URL(location.href);
+      url.searchParams.delete('auth_error');
+      history.replaceState(null, '', url);
+    }
+
+    fetch('/api/auth/profile', { headers: { Accept: 'application/json' }, cache: 'no-store' })
+      .then((response) => { if (!response.ok) throw new Error('Profile lookup failed.'); return response.json(); })
+      .then((data) => {
+        if (data.profile) {
+          showProfile(data.profile);
+          const pending = sessionStorage.getItem(pendingTestStorageKey);
+          if (pending === 'begin-exam') resumePendingExamStart();
+          else if (pending === 'retry-quiz') continuePendingTest();
+          else sessionStorage.removeItem(pendingTestStorageKey);
+        } else openAutomaticPrompt();
+      })
+      .catch((error) => {
+        console.error('Student profile lookup failed:', error);
+        openAutomaticPrompt();
+      });
+  })();
+</script>

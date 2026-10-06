@@ -1,0 +1,62 @@
+[
+  {
+    "id": "sn-ch5-comm-01",
+    "chapter": 5,
+    "chapterTitle": "Database Concepts (RDBMS)",
+    "stream": "commerce",
+    "title": "Differentiate between Primary Key and Foreign Key",
+    "marks": 2,
+    "examTags": ["Board March 2024", "High Frequency", "Balbharati Exercise"],
+    "summaryPoint": "Primary keys enforce unique identity within a table; foreign keys build referential relationships across tables.",
+    "keyPoints": [
+      "A Primary Key uniquely identifies each row (tuple) in a table and cannot contain NULL values.",
+      "A Foreign Key is a field (or collection of fields) in one table that references the primary key of another table.",
+      "A table can have only one primary key, but it can have multiple foreign keys to establish relationships with other tables."
+    ]
+  },
+  {
+    "id": "sn-ch5-comm-02",
+    "chapter": 5,
+    "chapterTitle": "Database Concepts (RDBMS)",
+    "stream": "commerce",
+    "title": "Differentiate between DDL and DML SQL Commands",
+    "marks": 2,
+    "examTags": ["Board July 2024", "Balbharati Exercise"],
+    "summaryPoint": "DDL commands define and modify database structures, whereas DML commands manipulate the data stored within them.",
+    "keyPoints": [
+      "Data Definition Language (DDL) commands manage the schema and table structure. Examples: CREATE TABLE, ALTER TABLE, DROP TABLE.",
+      "Data Manipulation Language (DML) commands insert, retrieve, and update the actual records within tables. Examples: SELECT, INSERT, UPDATE, DELETE.",
+      "DDL modifications automatically change structural schemas, whereas DML statements affect table contents."
+    ]
+  },
+  {
+    "id": "sn-ch5-comm-03",
+    "chapter": 5,
+    "chapterTitle": "Database Concepts (RDBMS)",
+    "stream": "commerce",
+    "title": "Explain the Basic Components of a Relational Table",
+    "marks": 2,
+    "examTags": ["Board March 2023", "High Frequency"],
+    "summaryPoint": "RDBMS data representation based on relational tables made of columns and rows.",
+    "keyPoints": [
+      "Table (Relation): A two-dimensional data structure consisting of rows and columns storing related information.",
+      "Tuple (Record / Row): A single horizontal row in a table representing a complete set of related data for an entity.",
+      "Attribute (Field / Column): A vertical column in a table representing a specific property or data item of the entity."
+    ]
+  },
+  {
+    "id": "sn-ch5-comm-04",
+    "chapter": 5,
+    "chapterTitle": "Database Concepts (RDBMS)",
+    "stream": "commerce",
+    "title": "Explain Candidate Keys and Alternate Keys in Database Design",
+    "marks": 2,
+    "examTags": ["High Frequency", "Viva Key"],
+    "summaryPoint": "Candidate keys are all possible unique identifiers; alternate keys are candidate keys not chosen as the primary key.",
+    "keyPoints": [
+      "Candidate Key: Any minimal attribute (or set of attributes) that uniquely identifies a record in a table without redundancy.",
+      "Primary Key: The single candidate key selected by the database designer as the official unique row identifier.",
+      "Alternate Key: The remaining candidate keys that were not selected as the primary key."
+    ]
+  }
+]

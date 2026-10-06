@@ -1,0 +1,252 @@
+---
+// src/pages/notes/advanced-javascript.astro
+export const prerender = true;
+import PortalLayout from "../../layouts/PortalLayout.astro";
+import ch3Notes from "../../data/notes/ch3-javascript-notes.json";
+
+const chapterNo = "Chapter 3";
+const topicName = "Advanced JavaScript";
+const stream = "Science & Commerce";
+const pageHeading = `Short Notes on ${topicName} (${chapterNo})`;
+
+const description = "Board-standard 2-mark brief answers on Client-Side Form Validation, Event Handlers (onsubmit, onblur, onchange), and Built-in Math and String objects.";
+const seoTitle = `${pageHeading} | Class 12 HSC IT Notes & Solutions`;
+const seoDesc = `Board examination short notes for HSC IT Chapter 3 Advanced JavaScript. Model 2-mark answers for Q7 with repeat tags and key points.`;
+const seoKeywords = `${pageHeading}, HSC IT Chapter 3 short notes, Class 12 IT Q7 brief answers, JavaScript notes Maharashtra Board`;
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": pageHeading,
+  "description": seoDesc,
+  "author": { "@type": "Organization", "name": "HSC IT Portal" }
+};
+---
+
+<PortalLayout 
+  title={seoTitle} 
+  description={seoDesc} 
+  keywords={seoKeywords}
+  schemaData={pageSchema}
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 space-y-8">
+    
+    <div class="border-b border-slate-200 dark:border-slate-800 pb-6">
+      <div class="flex items-center gap-2 text-xs font-mono text-emerald-600 dark:text-emerald-400 font-bold mb-2">
+        <a href="/" class="hover:underline">Home</a>
+        <span>/</span>
+        <a href="/notes" class="hover:underline">Notes</a>
+        <span>/</span>
+        <span class="text-slate-500 dark:text-slate-400">{chapterNo}</span>
+      </div>
+
+      <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+        {pageHeading}
+      </h1>
+
+      <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2">
+        {description}
+      </p>
+
+      <div class="flex flex-wrap items-center gap-3 mt-4 text-xs font-mono">
+        <span class="bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 px-2.5 py-1 rounded-md font-bold">
+          {stream}
+        </span>
+        <span class="text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-700 font-medium">
+          Board Question 7 (2 Marks Each)
+        </span>
+        <span class="text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-700 font-medium">
+          Total Notes: {ch3Notes.length}
+        </span>
+      </div>
+    </div>
+
+    <div class="flex flex-wrap items-center gap-2">
+      <span class="text-xs font-mono font-bold text-slate-400 mr-1 uppercase">Jump to:</span>
+      {ch3Notes.map((_, idx) => (
+        <button 
+          type="button" 
+          class="jump-pill px-3 py-1 text-xs font-mono font-bold rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:border-emerald-500 transition text-slate-700 dark:text-slate-300"
+          data-jump={idx}
+        >
+          Q{idx + 1}
+        </button>
+      ))}
+    </div>
+
+    <div class="relative">
+      <div class="flex items-center justify-between text-xs font-mono font-bold text-slate-500 dark:text-slate-400 mb-2">
+        <span id="note-tracker-label">Note 1 of {ch3Notes.length}</span>
+        <span class="text-emerald-600 dark:text-emerald-400">Board Model Solution</span>
+      </div>
+      <div class="w-full bg-slate-200 dark:bg-slate-800 h-1.5 rounded-full overflow-hidden mb-6">
+        <div id="note-progress-bar" class="bg-emerald-600 h-full w-[25%] transition-all duration-300"></div>
+      </div>
+
+      {ch3Notes.map((note, index) => (
+        <div 
+          class={"note-step p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-md space-y-6 " + (index === 0 ? "" : "hidden")}
+          data-index={index}
+        >
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <div class="flex items-center gap-2">
+              <span class="font-mono text-xs font-extrabold px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-300 dark:border-slate-700">
+                Q{index + 1}
+              </span>
+              <span class="font-mono text-xs font-bold text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950 px-2.5 py-1 rounded border border-emerald-300 dark:border-emerald-800">
+                {note.marks} Marks
+              </span>
+            </div>
+
+            <div class="flex flex-wrap gap-1.5">
+              {note.examTags.map((tag: string) => (
+                <span class="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-amber-50 dark:bg-amber-950 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-800">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white leading-snug">
+            {note.title}
+          </h2>
+
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+            <span class="font-bold text-slate-900 dark:text-white font-mono uppercase text-[11px] block mb-1">Core Concept:</span>
+            {note.summaryPoint}
+          </div>
+
+          <div class="solution-wrapper pt-2">
+            <button 
+              type="button" 
+              class="reveal-btn w-full py-3 px-4 rounded-xl border border-emerald-600 bg-emerald-50 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 text-xs font-bold font-mono tracking-tight hover:bg-emerald-100 dark:hover:bg-emerald-900 transition flex items-center justify-center gap-2"
+            >
+              <span>👁 Click to View Model Answer (Points to Write)</span>
+            </button>
+
+            <div class="solution-content hidden mt-4 p-5 rounded-2xl border border-emerald-300 dark:border-emerald-800 bg-emerald-50/50 dark:bg-emerald-950/20 space-y-3 select-none">
+              <p class="text-xs font-mono font-bold uppercase text-emerald-800 dark:text-emerald-400">
+                Board Evaluation Key Points:
+              </p>
+              <ul class="space-y-2 text-xs sm:text-sm text-slate-700 dark:text-slate-200 leading-relaxed list-disc list-inside">
+                {note.keyPoints.map((pt: string) => (
+                  <li class="pl-1">{pt}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      ))}
+
+      <div class="flex items-center justify-between pt-6">
+        <button 
+          id="btn-prev-note" 
+          type="button" 
+          class="px-5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold text-slate-700 dark:text-slate-300 transition"
+        >
+          ← Previous
+        </button>
+
+        <button 
+          id="btn-next-note" 
+          type="button" 
+          class="px-6 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm transition shadow-md shadow-emerald-600/20 flex items-center gap-2"
+        >
+          <span>Next Note</span>
+          <span>→</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <a href="/mcqs/advanced-javascript" class="text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400 hover:underline">
+        ← Practice Chapter 3 MCQs
+      </a>
+      <a href="/notes" class="text-xs font-mono font-bold text-slate-600 dark:text-slate-400 hover:text-emerald-600 transition">
+        View All Notes Chapters →
+      </a>
+    </div>
+
+  </div>
+
+  <script is:inline>
+    function initNotesStepper() {
+      const steps = Array.from(document.querySelectorAll('.note-step'));
+      const pills = Array.from(document.querySelectorAll('.jump-pill'));
+      const totalNotes = steps.length;
+      let currentIndex = 0;
+
+      const prevBtn = document.getElementById('btn-prev-note');
+      const nextBtn = document.getElementById('btn-next-note');
+      const trackerLabel = document.getElementById('note-tracker-label');
+      const progressBar = document.getElementById('note-progress-bar');
+
+      function updateView() {
+        steps.forEach((step, idx) => {
+          if (idx === currentIndex) step.classList.remove('hidden');
+          else step.classList.add('hidden');
+        });
+
+        pills.forEach((pill, idx) => {
+          if (idx === currentIndex) {
+            pill.className = "jump-pill px-3 py-1 text-xs font-mono font-bold rounded-lg border border-emerald-500 bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300";
+          } else {
+            pill.className = "jump-pill px-3 py-1 text-xs font-mono font-bold rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:border-emerald-500";
+          }
+        });
+
+        if (trackerLabel) trackerLabel.textContent = "Note " + (currentIndex + 1) + " of " + totalNotes;
+        if (progressBar) progressBar.style.width = (((currentIndex + 1) / totalNotes) * 100) + "%";
+
+        if (prevBtn) {
+          prevBtn.disabled = currentIndex === 0;
+          prevBtn.style.opacity = currentIndex === 0 ? "0.4" : "1";
+        }
+        if (nextBtn) {
+          if (currentIndex === totalNotes - 1) {
+            nextBtn.innerHTML = "<span>Completed</span> <span>✓</span>";
+            nextBtn.disabled = true;
+            nextBtn.style.opacity = "0.7";
+          } else {
+            nextBtn.innerHTML = "<span>Next Note</span> <span>→</span>";
+            nextBtn.disabled = false;
+            nextBtn.style.opacity = "1";
+          }
+        }
+      }
+
+      steps.forEach((step) => {
+        const revealBtn = step.querySelector('.reveal-btn');
+        const content = step.querySelector('.solution-content');
+
+        if (revealBtn && content) {
+          revealBtn.onclick = () => {
+            const isHidden = content.classList.contains('hidden');
+            if (isHidden) {
+              content.classList.remove('hidden');
+              revealBtn.innerHTML = "<span>▲ Hide Answer</span>";
+            } else {
+              content.classList.add('hidden');
+              revealBtn.innerHTML = "<span>👁 Click to View Model Answer (Points to Write)</span>";
+            }
+          };
+        }
+      });
+
+      if (prevBtn) prevBtn.onclick = () => { if (currentIndex > 0) { currentIndex--; updateView(); } };
+      if (nextBtn) nextBtn.onclick = () => { if (currentIndex < totalNotes - 1) { currentIndex++; updateView(); } };
+
+      pills.forEach((pill) => {
+        pill.onclick = () => {
+          currentIndex = parseInt(pill.getAttribute('data-jump') || '0', 10);
+          updateView();
+        };
+      });
+
+      updateView();
+    }
+
+    initNotesStepper();
+    document.addEventListener('astro:after-swap', initNotesStepper);
+  </script>
+</PortalLayout>

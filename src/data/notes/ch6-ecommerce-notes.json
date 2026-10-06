@@ -1,0 +1,63 @@
+[
+  {
+    "id": "sn-ch6-01",
+    "chapter": 6,
+    "chapterTitle": "E-Commerce & E-Governance",
+    "stream": "both",
+    "title": "Explain Key E-Commerce Business Models (B2B, B2C, C2C)",
+    "marks": 2,
+    "examTags": ["Board March 2024", "High Frequency", "Balbharati Exercise"],
+    "summaryPoint": "Categorization of commercial internet trade based on buyer-seller interactions.",
+    "keyPoints": [
+      "B2B (Business-to-Business): Commercial electronic trade between businesses (e.g. wholesalers and manufacturers like Alibaba).",
+      "B2C (Business-to-Consumer): Businesses selling commercial products or services directly to individual consumers (e.g. Amazon, Flipkart).",
+      "C2C (Consumer-to-Consumer): Consumers trading and transacting goods directly with other consumers using online platforms (e.g. OLX, eBay)."
+    ]
+  },
+  {
+    "id": "sn-ch6-02",
+    "chapter": 6,
+    "chapterTitle": "E-Commerce & E-Governance",
+    "stream": "both",
+    "title": "Explain Electronic Data Interchange (EDI) and Its Key Benefits",
+    "marks": 2,
+    "examTags": ["Board July 2024", "Balbharati Exercise"],
+    "summaryPoint": "Computer-to-computer electronic exchange of business documents in a standardized format.",
+    "keyPoints": [
+      "EDI replaces paper-based business transactions (like purchase orders and invoices) with standardized electronic formats.",
+      "It minimizes manual document handling errors, accelerates order-processing cycles, and reduces logistics costs.",
+      "Documents are processed directly by connected computer applications without requiring manual re-typing."
+    ]
+  },
+  {
+    "id": "sn-ch6-03",
+    "chapter": 6,
+    "chapterTitle": "E-Commerce & E-Governance",
+    "stream": "both",
+    "title": "Explain Security Protocols in E-Commerce (SSL & SET)",
+    "marks": 2,
+    "examTags": ["Board March 2023", "High Frequency"],
+    "summaryPoint": "Cryptographic security protocols protecting credit card details and confidential payment data.",
+    "keyPoints": [
+      "SSL (Secure Sockets Layer): Security protocol that establishes encrypted links between a web browser and an e-commerce server (visible as https:// and a padlock icon).",
+      "SET (Secure Electronic Transaction): Payment protocol developed by Visa and MasterCard to secure credit card transactions over open networks.",
+      "These protocols protect against data interception, spoofing, and fraud during online checkout."
+    ]
+  },
+  {
+    "id": "sn-ch6-04",
+    "chapter": 6,
+    "chapterTitle": "E-Commerce & E-Governance",
+    "stream": "both",
+    "title": "Explain E-Governance Models (G2C, G2B, G2G, G2E)",
+    "marks": 2,
+    "examTags": ["High Frequency", "Viva Key"],
+    "summaryPoint": "Delivery of public government services and administration through web-enabled digital portals.",
+    "keyPoints": [
+      "G2C (Government-to-Citizen): Digital services offered to citizens (e.g. issuing birth certificates, passport applications, land records).",
+      "G2B (Government-to-Business): Seamless online licensing, corporate tax payments, and tender bidding for commercial enterprises.",
+      "G2G (Government-to-Government): Digital communication and data exchange between different government departments and ministries.",
+      "G2E (Government-to-Employee): Internal administrative workflows, payroll, and benefits for government personnel."
+    ]
+  }
+]

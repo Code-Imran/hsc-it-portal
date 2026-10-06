@@ -1,0 +1,79 @@
+[
+  {
+    "id": "sn-ch1-01",
+    "chapter": 1,
+    "chapterTitle": "Advanced Web Designing",
+    "stream": "both",
+    "title": "Explain Client-Side Image Mapping in HTML5",
+    "marks": 2,
+    "examTags": ["Board March 2024", "High Frequency", "Balbharati Exercise"],
+    "summaryPoint": "Mapping clickable hotspot regions on a single image linked to different URLs using <map> and <area> tags.",
+    "keyPoints": [
+      "Client-side image mapping is defined using the <map> tag with a mandatory name attribute linked to an image via the usemap=\"#mapname\" attribute in <img>.",
+      "The <area> tag is placed inside <map> to define specific clickable coordinate shapes: rect (rectangle), circle, and poly (polygon).",
+      "Key attributes of <area> include: shape, coords (coordinates for clickable area), href (target web URL), and alt (alternative text description)."
+    ]
+  },
+  {
+    "id": "sn-ch1-02",
+    "chapter": 1,
+    "chapterTitle": "Advanced Web Designing",
+    "stream": "both",
+    "title": "Explain CSS3 Flexbox and its Container Properties",
+    "marks": 2,
+    "examTags": ["Board July 2024", "High Frequency"],
+    "summaryPoint": "Flexible Box Layout module for designing fluid, responsive layouts without complex floats or positioning.",
+    "keyPoints": [
+      "A Flexbox layout is activated on a parent container by specifying display: flex; or display: inline-flex;.",
+      "flex-direction defines the main axis direction along which flex items are placed (row, row-reverse, column, column-reverse).",
+      "justify-content aligns items along the horizontal main axis (flex-start, flex-end, center, space-between, space-around).",
+      "align-items aligns items along the cross axis vertically (stretch, center, flex-start, flex-end)."
+    ]
+  },
+  {
+    "id": "sn-ch1-03",
+    "chapter": 1,
+    "chapterTitle": "Advanced Web Designing",
+    "stream": "both",
+    "title": "Differentiate between Semantic and Non-Semantic Elements in HTML5",
+    "marks": 2,
+    "examTags": ["Board March 2023", "Balbharati Exercise"],
+    "summaryPoint": "Semantic elements clearly convey their meaning to both browser and developer, whereas non-semantic elements tell nothing about content.",
+    "keyPoints": [
+      "Semantic Elements clearly define their purpose and structural role in a document structure. Examples: <header>, <nav>, <section>, <article>, <aside>, and <footer>.",
+      "Non-Semantic Elements tell nothing about the content they enclose and serve only as generic styling wrappers. Examples: <div> and <span>.",
+      "Using semantic tags improves SEO rankings, web accessibility (screen readers), and code maintainability."
+    ]
+  },
+  {
+    "id": "sn-ch1-04",
+    "chapter": 1,
+    "chapterTitle": "Advanced Web Designing",
+    "stream": "both",
+    "title": "Explain <audio> and <video> Elements in HTML5",
+    "marks": 2,
+    "examTags": ["High Frequency", "Viva Key"],
+    "summaryPoint": "Native multimedia embedding tags eliminating the historical requirement for third-party flash plugins.",
+    "keyPoints": [
+      "The <audio> tag embeds sound files (MP3, OGG, WAV) into a webpage without external plugins.",
+      "The <video> tag embeds video streams (MP4, WebM, OGG) directly in the browser layout.",
+      "Common attributes supported by both tags: src (source path), controls (displays play, pause, volume bar), autoplay (starts immediately), loop (replays continuously), and muted (mutes default audio)."
+    ]
+  },
+  {
+    "id": "sn-ch1-05",
+    "chapter": 1,
+    "chapterTitle": "Advanced Web Designing",
+    "stream": "both",
+    "title": "Explain HTML5 Form Validation Attributes",
+    "marks": 2,
+    "examTags": ["Board March 2024", "Balbharati Exercise"],
+    "summaryPoint": "Built-in declarative validation rules executed by modern browsers before form submission without custom JavaScript.",
+    "keyPoints": [
+      "required: Specifies that an input field cannot be left blank during submission.",
+      "pattern: Enforces a regular expression that the input field value must match (e.g. mobile or postal format).",
+      "placeholder: Displays temporary hint text inside the input box describing the expected input format.",
+      "min & max: Specifies minimum and maximum numerical or date limits for <input type=\"number\"> or <input type=\"date\">."
+    ]
+  }
+]

@@ -1,0 +1,41 @@
+﻿[
+  {
+    "id": "sn-ch1-01",
+    "chapter": "Advanced Web Designing",
+    "slug": "advanced-web-designing",
+    "question": "Explain CSS3 Flexbox with its key container and item properties.",
+    "marks": 4,
+    "points": [
+      "Flexbox provides a one-dimensional layout model for aligning items efficiently across rows or columns.",
+      "display: flex activates the flex container context.",
+      "flex-direction defines the main axis (row, column, row-reverse, column-reverse).",
+      "justify-content aligns flex items along the main axis, while align-items aligns along the cross axis."
+    ]
+  },
+  {
+    "id": "sn-ch2-01",
+    "chapter": "Digital Marketing & SEO",
+    "slug": "digital-marketing-seo",
+    "question": "Differentiate between On-Page SEO and Off-Page SEO.",
+    "marks": 4,
+    "points": [
+      "On-Page SEO optimizes elements directly on the website (title tags, meta descriptions, headings, URL structure).",
+      "Off-Page SEO focuses on external authority signals such as backlinks and brand mentions.",
+      "On-Page includes technical site performance, valid HTML, and image alt tags.",
+      "Off-Page relies on external reputation building and social bookmarking."
+    ]
+  },
+  {
+    "id": "sn-ch3-01",
+    "chapter": "Advanced JavaScript",
+    "slug": "advanced-javascript",
+    "question": "Explain event handling in JavaScript with an example.",
+    "marks": 4,
+    "points": [
+      "An event is an action or occurrence recognized by software, such as mouse clicks or key presses.",
+      "Event handlers are JavaScript functions executed when a specific event is triggered.",
+      "Common DOM events include onclick, onmouseover, onsubmit, and onload.",
+      "Event listeners can be attached using element.addEventListener('click', handlerFunction)."
+    ]
+  }
+]

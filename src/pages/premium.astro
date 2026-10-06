@@ -1,0 +1,150 @@
+﻿---
+export const prerender = true;
+import PortalLayout from "../layouts/PortalLayout.astro";
+
+const seoTitle = "HSC IT 90+ Marks Mastery Pack | Notes, Slips Solutions & Technical Guidance";
+const seoDesc = "Boost your Maharashtra State Board Class 12 IT score to 90+. Access the Most Likely Question Bank with complete solutions, Q8 practical code breakdowns, downloadable revision PDFs, and expert technical guidance.";
+---
+
+<PortalLayout title={seoTitle} description={seoDesc}>
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <!-- Hero Header -->
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black tracking-wider uppercase bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20 mb-4 animate-pulse">
+        ★ Exclusive Board Merit Strategy
+      </span>
+      <h1 class="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight leading-tight mb-4">
+        Guaranteed <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-500 to-amber-500">90+ Marks</span> in HSC IT Online Exam
+      </h1>
+      <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+        Stop memorizing randomly. Get access to our handpicked <strong>Most Likely Questions with Verified Solutions</strong>, complete <strong>Q.8 Practical Slips Code</strong>, downloadable <strong>Revision PDFs</strong>, and direct <strong>Technical Guidance</strong> for Class 12 Science & Commerce.
+      </p>
+    </div>
+
+    <!-- Value Proposition Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+      <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm hover:border-emerald-500/40 transition">
+        <div class="w-12 h-12 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-black text-xl mb-4">
+          ✓
+        </div>
+        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Most Likely Question Bank</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+          Targeted question set strictly mapped to the Maharashtra State Board paper pattern. Includes model answers for MCQs (1, 2, 3 correct), True/False, and Briefs.
+        </p>
+      </div>
+
+      <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm hover:border-emerald-500/40 transition">
+        <div class="w-12 h-12 rounded-xl bg-cyan-50 dark:bg-cyan-950/40 text-cyan-600 dark:text-cyan-400 flex items-center justify-center font-black text-xl mb-4">
+          📁
+        </div>
+        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Q.8 Practical Slips & PDFs</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+          Zero-error, pre-tested code snippets for all SOP slips in HTML5, CSS Flexbox, JavaScript form validations, PHP, and LibreOffice Base queries.
+        </p>
+      </div>
+
+      <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm hover:border-emerald-500/40 transition">
+        <div class="w-12 h-12 rounded-xl bg-amber-50 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400 flex items-center justify-center font-black text-xl mb-4">
+          ★
+        </div>
+        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Personal Technical Guidance</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+          Direct doubt clearance for exam simulator errors, syntax bugs, and board examiner presentation tips to guarantee full 80/80 on theory + 20/20 on practicals.
+        </p>
+      </div>
+    </div>
+
+    <!-- Enrollment Form Section -->
+    <div class="max-w-2xl mx-auto bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 sm:p-10 shadow-lg backdrop-blur">
+      <div class="text-center mb-8">
+        <h2 class="text-2xl font-black text-slate-900 dark:text-white mb-2">Reserve Your 90+ Score Kit</h2>
+        <p class="text-sm text-slate-600 dark:text-slate-400">
+          Leave your details below and our team will get in touch with you immediately with access details.
+        </p>
+      </div>
+
+      <!-- Web3Forms Contact Form -->
+      <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4" id="premium-enrollment-form">
+        <!-- REPLACE THIS ACCESS KEY WITH YOUR WEB3FORMS KEY -->
+        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE" />
+        <input type="hidden" name="subject" value="New 90+ Marks Mastery Pack Enquiry" />
+        <input type="hidden" name="from_name" value="HSC IT Portal" />
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
+
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5" for="name">
+            Full Name *
+          </label>
+          <input 
+            type="text" 
+            name="name" 
+            id="name" 
+            required 
+            placeholder="e.g. Aaron D'Souza" 
+            class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm"
+          />
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5" for="phone">
+              WhatsApp / Mobile No. *
+            </label>
+            <input 
+              type="tel" 
+              name="phone" 
+              id="phone" 
+              required 
+              pattern="[0-9]{10}"
+              placeholder="10-digit number" 
+              class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm"
+            />
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5" for="stream">
+              Your Stream *
+            </label>
+            <select 
+              name="stream" 
+              id="stream" 
+              required 
+              class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm"
+            >
+              <option value="Science">Class 12 Science (Code 97)</option>
+              <option value="Commerce">Class 12 Commerce (Code 99)</option>
+              <option value="Arts">Class 12 Arts (Code 98)</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5" for="college">
+            College Name / District *
+          </label>
+          <input 
+            type="text" 
+            name="college" 
+            id="college" 
+            required 
+            placeholder="e.g. Sanjeevan Vidyalaya, Panchgani" 
+            class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm"
+          />
+        </div>
+
+        <button 
+          type="submit" 
+          class="w-full mt-2 py-3.5 px-6 rounded-xl font-black text-sm tracking-wide text-white bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 hover:from-emerald-500 hover:to-teal-600 shadow-md shadow-emerald-600/30 transition transform active:scale-[0.98] cursor-pointer"
+        >
+          Enroll Now & Get Early Access →
+        </button>
+
+        <p class="text-xs text-center text-slate-500 dark:text-slate-400 mt-3">
+          🔒 Your details are 100% confidential. No spam, only genuine study materials & guidance.
+        </p>
+      </form>
+    </div>
+
+  </div>
+</PortalLayout>

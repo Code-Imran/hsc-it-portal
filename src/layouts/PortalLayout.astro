@@ -1,485 +1,264 @@
 ---
+// src/layouts/PortalLayout.astro
 import '../styles/global.css';
+import PortalNavigation from '../components/PortalNavigation.astro';
 
-interface Props {
-  title: string;
+export interface Props {
+  title?: string;
   description?: string;
   keywords?: string;
+  schemaData?: Record<string, any>;
 }
 
-const { 
-  title, 
-  description = "Maharashtra State Board & ICSE Computer Applications study portal. 80-mark computerized online mock exams, Balbharati textbook solutions, SOP practical solutions, IT MCQs with answers, and chapter notes.",
-  keywords = "hsc it notes, hsc it practicals, 12th information technology notes, hsc it mock exam, 12th it textbook pdf science, 12th it textbook pdf commerce, balbharati solutions for information technology 12th standard hsc, icse computer applications class 10"
+const {
+  title = "HSC Information Technology Portal",
+  description = "Maharashtra State Board Class 12 Information Technology (IT) study materials, question banks, and online mock exam simulator.",
+  keywords = "HSC IT, Class 12 IT Maharashtra Board, Information Technology Code 97, Information Technology Code 99, HSC IT online exam, Balbharati IT solutions",
+  schemaData
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'http://localhost:4321');
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site || "https://yourdomain.in").href;
+
+// Shared topic list for chapter links in the site footer.
+const mcqTopics = [
+  { slug: "web-designing", name: "Advanced Web Designing", code: "Ch 1" },
+  { slug: "digital-marketing-seo", name: "Digital Marketing & SEO", code: "Ch 2" },
+  { slug: "advanced-javascript", name: "Advanced JavaScript", code: "Ch 3" },
+  { slug: "emerging-technologies", name: "Emerging Technologies", code: "Ch 4" },
+  { slug: "server-side-scripting-php", name: "Server-Side Scripting (PHP)", code: "Ch 5" },
+  { slug: "ecommerce-egovernance", name: "E-Commerce & E-Governance", code: "Ch 6" },
+];
+
+
 ---
 
-<!doctype html>
-<html lang="en" class="h-full scroll-smooth overflow-x-hidden">
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     
-    <title>{title} | HSC IT Portal</title>
-    <meta name="title" content={`${title} | HSC IT Portal`} />
+    <!-- Primary Page Metadata -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href={canonicalURL} />
+    <meta name="author" content="HSC IT Portal" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <link rel="canonical" href={canonicalUrl} />
 
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={canonicalURL} />
-    <meta property="og:title" content={`${title} | HSC IT Portal`} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:locale" content="en_IN" />
+    <meta property="og:site_name" content="HSC IT Portal" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-    <style>
-      body {
-        font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-      }
-      .font-mono {
-        font-family: 'JetBrains Mono', monospace;
-      }
-      /* Hover bridge so menus don't snap shut */
-      .nav-item-dropdown:hover .nav-dropdown-menu {
-        display: block;
-      }
-    </style>
-    <script is:inline>
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-      }
-    </script>
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalUrl} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <!-- Rich Snippets Schema -->
+    {schemaData && (
+      <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+    )}
   </head>
-  <body class="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 flex flex-col justify-between transition-colors duration-150 antialiased overflow-x-hidden">
+  <body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 min-h-screen flex flex-col transition-colors selection:bg-emerald-500 selection:text-white">
     
-    <!-- Primary Header -->
-    <header class="sticky top-0 z-50 bg-white/95 dark:bg-slate-950/95 backdrop-blur border-b border-slate-200/80 dark:border-slate-800/80">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
-        
-        <!-- Left: Brand Identity -->
-        <a href="/" class="flex items-center gap-3 shrink-0 group">
-          <div class="h-10 w-10 rounded-xl bg-emerald-600 flex items-center justify-center text-white shadow-md shadow-emerald-600/30 transition group-hover:scale-105">
-            <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M3 9h2m-2 6h2m14-6h2m-2 6h2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
-            </svg>
-          </div>
-          <div>
-            <div class="font-extrabold tracking-tight text-slate-900 dark:text-white text-sm leading-tight">
-              HSC IT PORTAL
-            </div>
-            <p class="text-[10px] text-slate-500 dark:text-slate-400 font-semibold tracking-wide uppercase">
-              EXAM PREP &amp; RESOURCES
-            </p>
-          </div>
-        </a>
+    <PortalNavigation />
 
-        <!-- Center: Primary Nav Links & Stream Switcher -->
-        <div class="hidden lg:flex items-center gap-6">
-          
-          <!-- Stream Switcher Pill -->
-          <div class="flex items-center bg-slate-100 dark:bg-slate-900 p-1 rounded-xl border border-slate-200 dark:border-slate-800 text-xs font-bold shadow-inner">
-            <button 
-              id="btn-stream-sci" 
-              type="button"
-              class="px-3 py-1.5 rounded-lg transition-all flex items-center gap-1.5 cursor-pointer font-bold"
-            >
-              <span>Science</span>
-              <span class="text-[10px] opacity-80 font-mono font-normal">97</span>
-            </button>
-            <button 
-              id="btn-stream-comm" 
-              type="button"
-              class="px-3 py-1.5 rounded-lg transition-all flex items-center gap-1.5 cursor-pointer font-bold"
-            >
-              <span>Commerce</span>
-              <span class="text-[10px] opacity-80 font-mono font-normal">99</span>
-            </button>
-          </div>
-
-          <!-- Nav Items -->
-          <nav class="flex items-center gap-6 text-xs font-semibold text-slate-600 dark:text-slate-300">
-            
-            <!-- Curriculum Dropdown -->
-            <div class="relative nav-item-dropdown py-4">
-              <button type="button" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition flex items-center gap-1 cursor-pointer">
-                Curriculum
-                <svg class="w-3.5 h-3.5 opacity-60" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-              </button>
-              <div class="nav-dropdown-menu hidden absolute top-12 left-0 w-64 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-xl p-2 z-50">
-                <div class="text-[10px] font-mono font-bold text-slate-400 px-3 py-1 uppercase">HSC State Board</div>
-                <a href="/#syllabus" class="block px-3 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-medium">Class 12 IT (Syllabus & Notes)</a>
-                <a href="/class-11" class="block px-3 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-medium">Class 11 IT (Notes & Syllabus)</a>
-                
-                <div class="border-t border-slate-100 dark:border-slate-800 my-1"></div>
-                
-                <div class="text-[10px] font-mono font-bold text-slate-400 px-3 py-1 uppercase">ICSE Computer Apps</div>
-                <a href="/icse/class-10" class="block px-3 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-medium">Class 10 (Java & BlueJ)</a>
-                <a href="/icse/class-9" class="block px-3 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-medium">Class 9 Computer Apps</a>
-                <a href="/icse/class-8" class="block px-3 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-medium">Class 8 Computer Studies</a>
-              </div>
-            </div>
-
-            <!-- Practicals Dropdown -->
-            <div class="relative nav-item-dropdown py-4">
-              <button type="button" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition flex items-center gap-1 cursor-pointer">
-                Practicals (SOP)
-                <svg class="w-3.5 h-3.5 opacity-60" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-              </button>
-              <div class="nav-dropdown-menu hidden absolute top-12 left-0 w-60 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-xl p-2 z-50">
-                <a href="/practicals/class-12-science" class="block px-3 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-medium">Class 12 Science SOPs</a>
-                <a href="/practicals/class-12-commerce" class="block px-3 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-medium">Class 12 Commerce SOPs</a>
-                <a href="/practicals/class-11" class="block px-3 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-medium">Class 11 SOPs</a>
-              </div>
-            </div>
-
-            <!-- Downloads Dropdown -->
-            <div class="relative nav-item-dropdown py-4">
-              <button type="button" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition flex items-center gap-1 cursor-pointer">
-                Downloads
-                <svg class="w-3.5 h-3.5 opacity-60" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-              </button>
-              <div class="nav-dropdown-menu hidden absolute top-12 left-0 w-72 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-xl p-2 z-50">
-                <div class="text-[10px] font-mono font-bold text-slate-400 px-3 py-1 uppercase">Official E-Books (PDF)</div>
-                <a 
-                  href="https://ebooks.ebalbharati.in/pdfs/1203010499.pdf" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-medium group"
-                >
-                  <span>XII IT Science Textbook</span>
-                  <span class="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 font-bold">PDF ↗</span>
-                </a>
-                <a 
-                  href="https://ebooks.ebalbharati.in/pdfs/1203010499.pdf" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-medium group"
-                >
-                  <span>XII IT Commerce Textbook</span>
-                  <span class="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 font-bold">PDF ↗</span>
-                </a>
-                
-                <div class="border-t border-slate-100 dark:border-slate-800 my-1"></div>
-                
-                <div class="text-[10px] font-mono font-bold text-slate-400 px-3 py-1 uppercase">Specimen & Projects</div>
-                <a href="/downloads/journal" class="block px-3 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-medium">Class 12 IT Journal Specimen</a>
-                <a href="/downloads/projects" class="block px-3 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-medium">Project Reports & Guidelines</a>
-                <a href="/downloads/papers" class="block px-3 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-medium">Past Board Papers</a>
-              </div>
-            </div>
-
-            <a href="/q8-vault" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition text-emerald-700 dark:text-emerald-400 font-bold">Q8 (20Marks)</a>
-            <a href="/#pattern" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Paper Pattern</a>
-          </nav>
-        </div>
-
-        <!-- Right: Actions & Launcher -->
-        <div class="flex items-center gap-2.5">
-          <!-- Theme Toggle -->
-          <button 
-            id="theme-toggle" 
-            aria-label="Toggle Theme"
-            class="h-9 w-9 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center transition shadow-sm cursor-pointer"
-          >
-            <svg class="w-4 h-4 hidden dark:block text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 9h-1m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-            </svg>
-            <svg class="w-4 h-4 block dark:hidden text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-            </svg>
-          </button>
-
-          <!-- Primary CTA Button -->
-          <a href="/simulator" class="hidden sm:inline-flex px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs transition shadow-md shadow-emerald-600/25 items-center gap-1.5 shrink-0">
-            Mock Exam →
-          </a>
-
-          <!-- Mobile Hamburger Toggle -->
-          <button 
-            id="mobile-menu-btn" 
-            aria-label="Open Navigation Menu"
-            class="lg:hidden h-9 w-9 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center transition shadow-sm cursor-pointer"
-          >
-            <svg id="hamburger-icon" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-            <svg id="close-icon" class="w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-
-      </div>
-
-      <!-- Mobile Navigation Drawer -->
-      <div id="mobile-menu-drawer" class="hidden lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 px-4 py-6 space-y-5 shadow-2xl">
-        
-        <!-- Mobile Stream Switcher -->
-        <div class="space-y-1.5">
-          <p class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400">Select Stream</p>
-          <div class="grid grid-cols-2 gap-2 bg-slate-100 dark:bg-slate-900 p-1.5 rounded-xl border border-slate-200 dark:border-slate-800 text-xs font-bold">
-            <button 
-              id="m-btn-stream-sci" 
-              type="button"
-              class="py-2.5 text-center rounded-lg transition-all flex flex-col items-center justify-center cursor-pointer font-bold"
-            >
-              <span>Science</span>
-              <span class="text-[10px] opacity-80 font-mono font-normal">Code 97</span>
-            </button>
-            <button 
-              id="m-btn-stream-comm" 
-              type="button"
-              class="py-2.5 text-center rounded-lg transition-all flex flex-col items-center justify-center cursor-pointer font-bold"
-            >
-              <span>Commerce</span>
-              <span class="text-[10px] opacity-80 font-mono font-normal">Code 99</span>
-            </button>
-          </div>
-        </div>
-
-        <a href="/simulator" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-md shadow-emerald-600/25">
-          <span>Mock Exam</span>
-          <span>→</span>
-        </a>
-
-        <!-- Mobile Route Tree -->
-        <div class="space-y-4 pt-2 border-t border-slate-100 dark:border-slate-800/80 text-sm">
-          <div>
-            <div class="text-[11px] font-mono font-bold text-slate-400 uppercase tracking-wider mb-2">Curriculum Units</div>
-            <div class="space-y-2 pl-2">
-              <a href="/#syllabus" class="block font-medium text-slate-700 dark:text-slate-200 hover:text-emerald-600">Class 12 IT (Syllabus & Weightage)</a>
-              <a href="/class-11" class="block font-medium text-slate-700 dark:text-slate-200 hover:text-emerald-600">Class 11 IT (Notes & Syllabus)</a>
-              <a href="/icse/class-10" class="block font-medium text-slate-700 dark:text-slate-200 hover:text-emerald-600">ICSE Class 10 (Java & BlueJ)</a>
-            </div>
-          </div>
-
-          <div>
-            <div class="text-[11px] font-mono font-bold text-slate-400 uppercase tracking-wider mb-2">Practicals (SOP)</div>
-            <div class="space-y-2 pl-2">
-              <a href="/practicals/class-12-science" class="block font-medium text-slate-700 dark:text-slate-200 hover:text-emerald-600">Class 12 Science SOPs</a>
-              <a href="/practicals/class-12-commerce" class="block font-medium text-slate-700 dark:text-slate-200 hover:text-emerald-600">Class 12 Commerce SOPs</a>
-              <a href="/practicals/class-11" class="block font-medium text-slate-700 dark:text-slate-200 hover:text-emerald-600">Class 11 SOPs</a>
-            </div>
-          </div>
-
-          <div>
-            <div class="text-[11px] font-mono font-bold text-slate-400 uppercase tracking-wider mb-2">Downloads & Textbooks</div>
-            <div class="space-y-2 pl-2">
-              <a href="https://ebooks.ebalbharati.in/pdfs/1203010499.pdf" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between font-medium text-slate-700 dark:text-slate-200 hover:text-emerald-600">
-                <span>12th IT Science Textbook</span>
-                <span class="text-[10px] font-mono text-emerald-600 font-bold">PDF ↗</span>
-              </a>
-              <a href="https://ebooks.ebalbharati.in/pdfs/1203010499.pdf" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between font-medium text-slate-700 dark:text-slate-200 hover:text-emerald-600">
-                <span>12th IT Commerce Textbook</span>
-                <span class="text-[10px] font-mono text-emerald-600 font-bold">PDF ↗</span>
-              </a>
-              <a href="/downloads/journal" class="block font-medium text-slate-700 dark:text-slate-200 hover:text-emerald-600">Class 12 IT Journal Specimen</a>
-              <a href="/downloads/projects" class="block font-medium text-slate-700 dark:text-slate-200 hover:text-emerald-600">IT Project Reports</a>
-            </div>
-          </div>
-
-          <div class="pt-2">
-            <a href="/#pattern" class="block font-bold text-emerald-600 dark:text-emerald-400">View Paper Pattern (Q1 to Q8) →</a>
-          </div>
-        </div>
-
-      </div>
-    </header>
-
-    <main class="flex-1 overflow-x-hidden">
+    <main class="flex-grow">
       <slot />
     </main>
 
-    <!-- Footer -->
-    <footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 text-slate-600 dark:text-slate-400 text-xs mt-20 transition-colors overflow-x-hidden">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-        
-        <div class="space-y-3 lg:col-span-2">
-          <div class="font-bold text-slate-900 dark:text-slate-100 text-sm font-mono flex items-center gap-2">
-            <span class="h-2.5 w-2.5 rounded-full bg-emerald-500"></span>
-            HSC IT EXAM 2027 PORTAL (SUBJECT CODE 97)
-          </div>
-          <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed max-w-md">
-            The dedicated academic preparation portal for Maharashtra State Board Class 11 & 12 (Science & Commerce) and ICSE Computer Applications (VIII–X). Providing <strong>12th information technology notes</strong>, <strong>Balbharati textbook solutions</strong>, complete <strong>HSC IT practicals (SOP) code</strong>, specimen journals, and an authentic <strong>80-mark online exam demo</strong> replicating the official board interface.
-          </p>
+    <!-- Edge-Docked Vertical "Choose Your Stream" Widget -->
+    <aside 
+      aria-label="Stream Selection Tab"
+      class="fixed left-0 top-1/2 -translate-y-1/2 z-50 hidden items-center lg:flex"
+    >
+      <!-- Vertical Tab Trigger Button -->
+      <button 
+        id="vertical-stream-trigger"
+        type="button"
+        class="bg-emerald-600 hover:bg-emerald-500 text-white font-mono text-[11px] font-bold tracking-wider uppercase px-2 py-4 rounded-r-xl shadow-2xl transition-all duration-200 border-y border-r border-emerald-400/40 flex flex-col items-center gap-2 group"
+        title="Click to Choose Stream"
+      >
+        <span class="h-2 w-2 rounded-full bg-white group-hover:scale-125 transition-transform"></span>
+        <span style="writing-mode: vertical-rl; transform: rotate(180deg);" class="whitespace-nowrap select-none">
+          Choose your stream
+        </span>
+      </button>
+
+      <!-- Expandable Flyout Card -->
+      <div 
+        id="stream-flyout-drawer"
+        class="hidden ml-2 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 p-4 shadow-2xl backdrop-blur-md w-56 space-y-3"
+      >
+        <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
+          <span class="text-[10px] font-mono font-bold uppercase text-slate-400">Select Stream</span>
+          <span id="current-stream-pill" class="text-[10px] font-mono font-bold text-emerald-600 bg-emerald-50 dark:bg-emerald-950 px-2 py-0.5 rounded">
+            Sci (97)
+          </span>
         </div>
 
-        <div>
-          <h4 class="font-bold text-slate-900 dark:text-slate-100 text-xs uppercase tracking-wider mb-3">Academic Streams</h4>
-          <ul class="space-y-2 text-[11px]">
-            <li><a href="/#syllabus" class="hover:text-emerald-600 dark:hover:text-emerald-400">Class 12 IT Science (Code 97)</a></li>
-            <li><a href="/#syllabus" class="hover:text-emerald-600 dark:hover:text-emerald-400">Class 12 IT Commerce (Code 99)</a></li>
-            <li><span class="text-slate-400">Class 11 Science & Commerce</span></li>
-            <li><span class="text-slate-400">ICSE Class 10 Java (BlueJ)</span></li>
-            <li><span class="text-slate-400">ICSE Class 9 & 8 Computer Apps</span></li>
-          </ul>
-        </div>
+        <div class="space-y-2">
+          <button 
+            id="stream-opt-science"
+            type="button" 
+            class="w-full flex items-center justify-between p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200 hover:border-emerald-500 transition text-left"
+          >
+            <div>
+              <p class="font-bold">Science Stream</p>
+              <p class="text-[10px] text-slate-400 font-mono">Subject Code 97 (PHP)</p>
+            </div>
+            <span class="opt-check text-emerald-600 font-bold hidden">✓</span>
+          </button>
 
-        <div>
-          <h4 class="font-bold text-slate-900 dark:text-slate-100 text-xs uppercase tracking-wider mb-3">Exam Practice</h4>
-          <ul class="space-y-2 text-[11px]">
-            <li><a href="/simulator" class="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline">HSC IT Mock Exam (80 Marks Demo)</a></li>
-            <li><a href="/simulator" class="hover:text-emerald-600 dark:hover:text-emerald-400">HSC IT Online Exam Practice Science</a></li>
-            <li><a href="/simulator" class="hover:text-emerald-600 dark:hover:text-emerald-400">HSC IT Online Exam Practice Commerce</a></li>
-            <li><a href="/#pattern" class="hover:text-emerald-600 dark:hover:text-emerald-400">HSC IT Exam Paper Pattern (Q1 to Q8)</a></li>
-          </ul>
+          <button 
+            id="stream-opt-commerce"
+            type="button" 
+            class="w-full flex items-center justify-between p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200 hover:border-emerald-500 transition text-left"
+          >
+            <div>
+              <p class="font-bold">Commerce Stream</p>
+              <p class="text-[10px] text-slate-400 font-mono">Subject Code 99 (RDBMS)</p>
+            </div>
+            <span class="opt-check text-emerald-600 font-bold hidden">✓</span>
+          </button>
         </div>
-
-        <div>
-          <h4 class="font-bold text-slate-900 dark:text-slate-100 text-xs uppercase tracking-wider mb-3">Study Material & Downloads</h4>
-          <ul class="space-y-2 text-[11px]">
-            <li>
-              <a 
-                href="https://ebooks.ebalbharati.in/pdfs/1203010499.pdf" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                class="hover:text-emerald-600 dark:hover:text-emerald-400 font-medium flex items-center justify-between group"
-              >
-                <span>12th IT Textbook PDF Science</span>
-                <span class="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 font-bold">PDF ↗</span>
-              </a>
-            </li>
-            <li>
-              <a 
-                href="https://ebooks.ebalbharati.in/pdfs/1203010499.pdf" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                class="hover:text-emerald-600 dark:hover:text-emerald-400 font-medium flex items-center justify-between group"
-              >
-                <span>12th IT Textbook PDF Commerce</span>
-                <span class="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 font-bold">PDF ↗</span>
-              </a>
-            </li>
-            <li>
-              <a href="/downloads/journal" class="hover:text-emerald-600 dark:hover:text-emerald-400">
-                Class 12 IT Journal Specimen (PDF)
-              </a>
-            </li>
-            <li>
-              <a href="/downloads/projects" class="hover:text-emerald-600 dark:hover:text-emerald-400">
-                Class 12 IT Project Reports
-              </a>
-            </li>
-          </ul>
-        </div>
-
       </div>
+    </aside>
 
-      <div class="border-t border-slate-200 dark:border-slate-800/80 px-4 sm:px-6 py-4">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between text-[11px] text-slate-500 gap-2">
-          <p>© 2026–2027 HSC IT EXAM 2027 PORTAL. Strictly tailored for Maharashtra State Board 12th Information Technology.</p>
-          <p>
-            <a 
-              href="https://www.linkedin.com/in/imran-shaikh-webdeveloper/" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              class="font-medium text-emerald-600 dark:text-emerald-400 hover:underline transition inline-flex items-center gap-1"
-            >
-              Developed by IT Expert
-              <span>↗</span>
-            </a>
-          </p>
+    <!-- Global Footer with /mcqs/ Links -->
+    <footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 py-10 px-4 sm:px-6 text-xs text-slate-500 dark:text-slate-400">
+      <div class="max-w-7xl mx-auto space-y-6">
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
+          <div>
+            <p class="font-mono font-bold text-slate-900 dark:text-white uppercase mb-2">Chapter MCQs</p>
+            <ul class="space-y-1.5">
+              {mcqTopics.slice(0, 3).map((t) => (
+                <li><a href={`/mcqs/${t.slug}`} class="hover:text-emerald-600 dark:hover:text-emerald-400">{t.name}</a></li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p class="font-mono font-bold text-slate-900 dark:text-white uppercase mb-2">More MCQs</p>
+            <ul class="space-y-1.5">
+              {mcqTopics.slice(3).map((t) => (
+                <li><a href={`/mcqs/${t.slug}`} class="hover:text-emerald-600 dark:hover:text-emerald-400">{t.name}</a></li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p class="font-mono font-bold text-slate-900 dark:text-white uppercase mb-2">Exam Simulator</p>
+            <ul class="space-y-1.5">
+              <li><a href="/simulator" class="hover:text-emerald-600 dark:hover:text-emerald-400">80-Mark Mock Test</a></li>
+              <li><a href="/#pattern" class="hover:text-emerald-600 dark:hover:text-emerald-400">Q1–Q8 Board Pattern</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="font-mono font-bold text-slate-900 dark:text-white uppercase mb-2">Practicals & Slips</p>
+            <ul class="space-y-1.5">
+              <li><a href="/practicals" class="hover:text-emerald-600 dark:hover:text-emerald-400">Board Practicals Solutions</a></li>
+              <li><a href="/q8-vault" class="hover:text-emerald-600 dark:hover:text-emerald-400">Q8 Code Solutions</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p>© 2026–2027 HSC IT Portal. Maharashtra State Board (MSBSHSE) Class 12 Preparation.</p>
+          <p class="font-mono text-[11px]">Science Code 97 • Commerce Code 99</p>
         </div>
       </div>
     </footer>
 
-    <!-- Interactive Client Script -->
-    <script>
-      // 1. Theme Toggle
-      const toggle = document.getElementById('theme-toggle');
-      toggle?.addEventListener('click', () => {
-        const isDark = document.documentElement.classList.toggle('dark');
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      });
+    <!-- Layout & Vertical Stream Widget Scripts -->
+    <script is:inline>
+      function initLayoutNav() {
+        // Vertical Trigger & Flyout Drawer Logic
+        const trigger = document.getElementById('vertical-stream-trigger');
+        const drawer = document.getElementById('stream-flyout-drawer');
+        const sciBtn = document.getElementById('stream-opt-science');
+        const commBtn = document.getElementById('stream-opt-commerce');
+        const pill = document.getElementById('current-stream-pill');
+        const mobileStream = document.getElementById('mobile-stream-select');
+        const activeStream = localStorage.getItem('selected_stream') || 'science';
 
-      // 2. Mobile Drawer Controls
-      const mobileBtn = document.getElementById('mobile-menu-btn');
-      const mobileDrawer = document.getElementById('mobile-menu-drawer');
-      const hamburgerIcon = document.getElementById('hamburger-icon');
-      const closeIcon = document.getElementById('close-icon');
-
-      mobileBtn?.addEventListener('click', () => {
-        const isOpen = mobileDrawer?.classList.toggle('hidden');
-        if (isOpen) {
-          hamburgerIcon?.classList.remove('hidden');
-          closeIcon?.classList.add('hidden');
-        } else {
-          hamburgerIcon?.classList.add('hidden');
-          closeIcon?.classList.remove('hidden');
+        if (mobileStream) {
+          mobileStream.value = activeStream;
+          mobileStream.onchange = () => {
+            const stream = mobileStream.value;
+            if (stream !== 'science' && stream !== 'commerce') return;
+            localStorage.setItem('selected_stream', stream);
+            window.dispatchEvent(new CustomEvent('streamChange', { detail: { stream } }));
+          };
         }
-      });
 
-      mobileDrawer?.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          mobileDrawer.classList.add('hidden');
-          hamburgerIcon?.classList.remove('hidden');
-          closeIcon?.classList.add('hidden');
+        if (!trigger || !drawer || !sciBtn || !commBtn) return;
+
+        // Toggle Drawer on vertical button click
+        trigger.onclick = (e) => {
+          e.stopPropagation();
+          drawer.classList.toggle('hidden');
+        };
+
+        // Close drawer if clicking outside
+        document.addEventListener('click', (e) => {
+          if (!drawer.contains(e.target) && !trigger.contains(e.target)) {
+            drawer.classList.add('hidden');
+          }
         });
-      });
 
-      // 3. Stream Switcher Handler (Desktop + Mobile)
-      const btnSci = document.getElementById('btn-stream-sci');
-      const btnComm = document.getElementById('btn-stream-comm');
-      const mBtnSci = document.getElementById('m-btn-stream-sci');
-      const mBtnComm = document.getElementById('m-btn-stream-comm');
+        function updateUI(stream) {
+          const sciCheck = sciBtn.querySelector('.opt-check');
+          const commCheck = commBtn.querySelector('.opt-check');
+          if (mobileStream) mobileStream.value = stream;
 
-      const greenClasses = ['bg-emerald-600', 'text-white', 'shadow-md', 'shadow-emerald-600/30'];
-      const inactiveDesktop = ['text-slate-600', 'dark:text-slate-400', 'hover:text-slate-900', 'dark:hover:text-white'];
-      const inactiveMobile = ['text-slate-700', 'dark:text-slate-300'];
+          if (stream === 'commerce') {
+            if (pill) pill.textContent = 'Comm (99)';
+            commBtn.classList.add('border-emerald-500', 'bg-emerald-50', 'dark:bg-emerald-950/40');
+            commBtn.classList.remove('border-slate-200', 'dark:border-slate-800');
+            commCheck?.classList.remove('hidden');
 
-      function applyStreamUI(stream) {
-        localStorage.setItem('selected_stream', stream);
+            sciBtn.classList.remove('border-emerald-500', 'bg-emerald-50', 'dark:bg-emerald-950/40');
+            sciBtn.classList.add('border-slate-200', 'dark:border-slate-800');
+            sciCheck?.classList.add('hidden');
+          } else {
+            if (pill) pill.textContent = 'Sci (97)';
+            sciBtn.classList.add('border-emerald-500', 'bg-emerald-50', 'dark:bg-emerald-950/40');
+            sciBtn.classList.remove('border-slate-200', 'dark:border-slate-800');
+            sciCheck?.classList.remove('hidden');
 
-        if (stream === 'commerce') {
-          // Desktop Switcher
-          btnComm?.classList.remove(...inactiveDesktop);
-          btnComm?.classList.add(...greenClasses);
-
-          btnSci?.classList.remove(...greenClasses);
-          btnSci?.classList.add(...inactiveDesktop);
-
-          // Mobile Switcher
-          mBtnComm?.classList.remove(...inactiveMobile);
-          mBtnComm?.classList.add(...greenClasses);
-
-          mBtnSci?.classList.remove(...greenClasses);
-          mBtnSci?.classList.add(...inactiveMobile);
-        } else {
-          // Desktop Switcher
-          btnSci?.classList.remove(...inactiveDesktop);
-          btnSci?.classList.add(...greenClasses);
-
-          btnComm?.classList.remove(...greenClasses);
-          btnComm?.classList.add(...inactiveDesktop);
-
-          // Mobile Switcher
-          mBtnSci?.classList.remove(...inactiveMobile);
-          mBtnSci?.classList.add(...greenClasses);
-
-          mBtnComm?.classList.remove(...greenClasses);
-          mBtnComm?.classList.add(...inactiveMobile);
+            commBtn.classList.remove('border-emerald-500', 'bg-emerald-50', 'dark:bg-emerald-950/40');
+            commBtn.classList.add('border-slate-200', 'dark:border-slate-800');
+            commCheck?.classList.add('hidden');
+          }
         }
 
-        window.dispatchEvent(new CustomEvent('streamChange', { detail: { stream } }));
+        updateUI(activeStream);
+
+        sciBtn.onclick = () => {
+          localStorage.setItem('selected_stream', 'science');
+          updateUI('science');
+          window.dispatchEvent(new CustomEvent('streamChange', { detail: { stream: 'science' } }));
+          drawer.classList.add('hidden');
+        };
+
+        commBtn.onclick = () => {
+          localStorage.setItem('selected_stream', 'commerce');
+          updateUI('commerce');
+          window.dispatchEvent(new CustomEvent('streamChange', { detail: { stream: 'commerce' } }));
+          drawer.classList.add('hidden');
+        };
       }
 
-      btnSci?.addEventListener('click', () => applyStreamUI('science'));
-      btnComm?.addEventListener('click', () => applyStreamUI('commerce'));
-      mBtnSci?.addEventListener('click', () => applyStreamUI('science'));
-      mBtnComm?.addEventListener('click', () => applyStreamUI('commerce'));
-
-      // Restore choice on boot
-      const initialStream = localStorage.getItem('selected_stream') || 'science';
-      applyStreamUI(initialStream);
+      initLayoutNav();
+      document.addEventListener('astro:after-swap', initLayoutNav);
     </script>
-  </body>
+  
+</body>
 </html>

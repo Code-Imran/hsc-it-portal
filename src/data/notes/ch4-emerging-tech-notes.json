@@ -1,0 +1,63 @@
+[
+  {
+    "id": "sn-ch4-01",
+    "chapter": 4,
+    "chapterTitle": "Emerging Technologies",
+    "stream": "both",
+    "title": "Explain Cloud Computing Service Models (IaaS, PaaS, SaaS)",
+    "marks": 2,
+    "examTags": ["Board March 2024", "High Frequency", "Balbharati Exercise"],
+    "summaryPoint": "The three core functional layers of cloud service provisioning based on management responsibilities.",
+    "keyPoints": [
+      "IaaS (Infrastructure as a Service): Delivers virtualized computer hardware, storage disks, and networking infrastructure (e.g. Amazon EC2, Google Compute Engine).",
+      "PaaS (Platform as a Service): Supplies runtime environments, operating systems, and developer toolchains for deploying applications without server management (e.g. AWS Elastic Beanstalk).",
+      "SaaS (Software as a Service): Delivers end-user software applications hosted in the cloud and accessed through web browsers (e.g. Google Workspace, Microsoft 365)."
+    ]
+  },
+  {
+    "id": "sn-ch4-02",
+    "chapter": 4,
+    "chapterTitle": "Emerging Technologies",
+    "stream": "both",
+    "title": "Explain Cloud Deployment Models (Public, Private, Hybrid, Community)",
+    "marks": 2,
+    "examTags": ["Board July 2024", "Balbharati Exercise"],
+    "summaryPoint": "Defines where cloud infrastructure is located, access boundaries, and organizational ownership.",
+    "keyPoints": [
+      "Public Cloud: Multi-tenant computing infrastructure owned by third-party providers accessible to the general public over the internet.",
+      "Private Cloud: Dedicated cloud infrastructure maintained exclusively for a single enterprise organization.",
+      "Hybrid Cloud: An integrated infrastructure bridging public and private clouds, enabling dynamic data portability.",
+      "Community Cloud: Cloud shared between organizations having common regulatory requirements, missions, or security protocols."
+    ]
+  },
+  {
+    "id": "sn-ch4-03",
+    "chapter": 4,
+    "chapterTitle": "Emerging Technologies",
+    "stream": "both",
+    "title": "Explain Core Components of Internet of Things (IoT) Architecture",
+    "marks": 2,
+    "examTags": ["Board March 2023", "High Frequency"],
+    "summaryPoint": "Network of interconnected physical items exchanging sensor data across communication networks.",
+    "keyPoints": [
+      "Sensors & Actuators: Sensors collect physical environmental variables (temperature, motion, light), while actuators carry out physical physical operations based on sensor triggers.",
+      "Connectivity: Communication pathways (Wi-Fi, Bluetooth, Zigbee, Cellular) routing sensory telemetry to centralized gateways.",
+      "Data Processing: Cloud analytics software transforming sensory telemetries into actionable monitoring insights."
+    ]
+  },
+  {
+    "id": "sn-ch4-04",
+    "chapter": 4,
+    "chapterTitle": "Emerging Technologies",
+    "stream": "both",
+    "title": "Explain Key Advantages and Features of 5G Cellular Technology",
+    "marks": 2,
+    "examTags": ["High Frequency", "Viva Key"],
+    "summaryPoint": "Fifth-generation telecommunication wireless standard bringing lower latency and greater bandwidth.",
+    "keyPoints": [
+      "Ultra-High Throughput: Data transmission rates up to 10 to 20 Gbps, which is significantly faster than 4G LTE networks.",
+      "Ultra-Low Latency: Latency drops to under 1 millisecond, supporting real-time applications such as autonomous vehicles and remote surgery.",
+      "Massive Device Connectivity: Supports connecting millions of concurrent IoT devices per square kilometer without network congestion."
+    ]
+  }
+]

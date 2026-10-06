@@ -1,0 +1,164 @@
+---
+// src/pages/notes/index.astro
+export const prerender = true;
+import PortalLayout from "../../layouts/PortalLayout.astro";
+
+const pageTitle = "HSC IT Short Notes (Q7 Model Answers) | Maharashtra Board Class 12";
+const pageDescription = "Maharashtra State Board Class 12 Information Technology Question 7 Answer in Brief model short notes, repeated exam questions, and 2-mark evaluation answers.";
+const pageKeywords = "HSC IT short notes, Class 12 IT Q7 brief answers, Balbharati IT notes, Science Code 97 notes, Commerce Code 99 notes";
+
+const scienceChapters = [
+  { no: "Chapter 1", slug: "web-designing", title: "Advanced Web Designing", marks: "20 - 25 Marks", topics: "Image Maps, CSS3 Flexbox, HTML5 Semantic Elements, Multimedia.", tag: "Science & Commerce" },
+  { no: "Chapter 2", slug: "digital-marketing-seo", title: "Digital Marketing & SEO", marks: "10 - 12 Marks", topics: "On-Page vs Off-Page, White Hat vs Black Hat, PageRank, Meta Tags.", tag: "Science & Commerce" },
+  { no: "Chapter 3", slug: "advanced-javascript", title: "Advanced JavaScript", marks: "15 - 20 Marks", topics: "Client-Side Form Validation, Event Handlers, String & Math Objects.", tag: "Science & Commerce" },
+  { no: "Chapter 4", slug: "emerging-technologies", title: "Emerging Technologies", marks: "8 - 10 Marks", topics: "Cloud Service Models (IaaS/PaaS/SaaS), Deployment Types, IoT, 5G.", tag: "Science & Commerce" },
+  { no: "Chapter 5", slug: "server-side-scripting-php", title: "Server-Side Scripting (PHP)", marks: "12 - 15 Marks", topics: "$_GET vs$_POST, Indexed vs Associative Arrays, Functions.", tag: "Science Exclusive" },
+  { no: "Chapter 6", slug: "ecommerce-egovernance", title: "E-Commerce & E-Governance", marks: "8 - 10 Marks", topics: "B2B/B2C/C2C Models, EDI, SSL & SET Security, E-Governance.", tag: "Science & Commerce" },
+];
+
+const commerceChapters = [
+  { no: "Chapter 1", slug: "web-designing", title: "Advanced Web Designing", marks: "20 - 25 Marks", topics: "Image Maps, CSS3 Flexbox, HTML5 Semantic Elements, Multimedia.", tag: "Science & Commerce" },
+  { no: "Chapter 2", slug: "digital-marketing-seo", title: "Digital Marketing & SEO", marks: "10 - 12 Marks", topics: "On-Page vs Off-Page, White Hat vs Black Hat, PageRank, Meta Tags.", tag: "Science & Commerce" },
+  { no: "Chapter 3", slug: "advanced-javascript", title: "Advanced JavaScript", marks: "15 - 20 Marks", topics: "Client-Side Form Validation, Event Handlers, String & Math Objects.", tag: "Science & Commerce" },
+  { no: "Chapter 4", slug: "emerging-technologies", title: "Emerging Technologies", marks: "8 - 10 Marks", topics: "Cloud Service Models (IaaS/PaaS/SaaS), Deployment Types, IoT, 5G.", tag: "Science & Commerce" },
+  { no: "Chapter 5", slug: "database-concepts-rdbms", title: "Database Concepts (RDBMS)", marks: "15 - 18 Marks", topics: "Primary vs Foreign Keys, DDL vs DML Commands, Tuples & Attributes.", tag: "Commerce Exclusive" },
+  { no: "Chapter 6", slug: "ecommerce-egovernance", title: "E-Commerce & E-Governance", marks: "8 - 10 Marks", topics: "B2B/B2C/C2C Models, EDI, SSL & SET Security, E-Governance.", tag: "Science & Commerce" },
+];
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Maharashtra HSC IT Q7 Short Notes & Revision Hub",
+  "description": pageDescription,
+  "provider": { "@type": "Organization", "name": "HSC IT Portal" }
+};
+---
+
+<PortalLayout 
+  title={pageTitle} 
+  description={pageDescription} 
+  keywords={pageKeywords}
+  schemaData={pageSchema}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-14 space-y-12">
+    
+    <div class="text-center max-w-3xl mx-auto space-y-3">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950 border border-emerald-300 dark:border-emerald-800 text-emerald-800 dark:text-emerald-300 text-xs font-mono font-bold uppercase">
+        <span>📘 Board Question 7 Revision • 10 Marks Total</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+        Class 12 IT Short Notes & Brief Answers
+      </h1>
+      <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400">
+        Chapter-wise model answers for Q7 (Answer in Brief — Any 5 out of 8, 2 Marks each) structured specifically for Maharashtra State Board evaluators.
+      </p>
+    </div>
+
+    <!-- Science Stream Cards -->
+    <div id="notes-grid-science" class="space-y-6">
+      <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
+        <div>
+          <h2 class="text-xl font-bold text-slate-900 dark:text-white">Science Stream Units (Code 97)</h2>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Chapters 1 to 6 (Includes PHP Server-Side Scripting)</p>
+        </div>
+        <span class="text-xs font-mono font-bold px-2.5 py-1 rounded bg-emerald-100 dark:bg-emerald-900 text-emerald-800 dark:text-emerald-200 border border-emerald-300 dark:border-emerald-700">
+          6 Modules
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {scienceChapters.map((ch) => (
+          <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 flex flex-col justify-between shadow-sm hover:shadow-md hover:border-emerald-500 transition">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="font-mono text-xs font-bold px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800">
+                  {ch.no}
+                </span>
+                <span class="font-mono text-[11px] text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded border border-slate-200 dark:border-slate-700">
+                  {ch.marks}
+                </span>
+              </div>
+              <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 leading-snug">
+                {ch.title}
+              </h3>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+                {ch.topics}
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs">
+              <span class="text-slate-400 font-mono text-[11px]">{ch.tag}</span>
+              <a href={`/notes/${ch.slug}`} class="text-emerald-600 dark:text-emerald-400 font-bold hover:underline">
+                Read Q7 Notes →
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Commerce Stream Cards -->
+    <div id="notes-grid-commerce" class="hidden space-y-6">
+      <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
+        <div>
+          <h2 class="text-xl font-bold text-slate-900 dark:text-white">Commerce Stream Units (Code 99)</h2>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Chapters 1 to 6 (Includes Database Concepts RDBMS)</p>
+        </div>
+        <span class="text-xs font-mono font-bold px-2.5 py-1 rounded bg-emerald-100 dark:bg-emerald-900 text-emerald-800 dark:text-emerald-200 border border-emerald-300 dark:border-emerald-700">
+          6 Modules
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {commerceChapters.map((ch) => (
+          <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 flex flex-col justify-between shadow-sm hover:shadow-md hover:border-emerald-500 transition">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="font-mono text-xs font-bold px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800">
+                  {ch.no}
+                </span>
+                <span class="font-mono text-[11px] text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded border border-slate-200 dark:border-slate-700">
+                  {ch.marks}
+                </span>
+              </div>
+              <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 leading-snug">
+                {ch.title}
+              </h3>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+                {ch.topics}
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs">
+              <span class="text-slate-400 font-mono text-[11px]">{ch.tag}</span>
+              <a href={`/notes/${ch.slug}`} class="text-emerald-600 dark:text-emerald-400 font-bold hover:underline">
+                Read Q7 Notes →
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+  </div>
+
+  <script is:inline>
+    function updateNotesStream(stream) {
+      const sciGrid = document.getElementById('notes-grid-science');
+      const commGrid = document.getElementById('notes-grid-commerce');
+
+      if (stream === 'commerce') {
+        sciGrid?.classList.add('hidden');
+        commGrid?.classList.remove('hidden');
+      } else {
+        commGrid?.classList.add('hidden');
+        sciGrid?.classList.remove('hidden');
+      }
+    }
+
+    window.addEventListener('streamChange', (e) => {
+      updateNotesStream(e.detail.stream);
+    });
+
+    const activeStream = localStorage.getItem('selected_stream') || 'science';
+    updateNotesStream(activeStream);
+  </script>
+</PortalLayout>

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "sn-ch5-01",
+    "chapter": 5,
+    "chapterTitle": "Server-Side Scripting (PHP)",
+    "stream": "science",
+    "title": "Differentiate between $_GET and $_POST Methods in PHP",
+    "marks": 2,
+    "examTags": ["Board March 2024", "High Frequency", "Balbharati Exercise"],
+    "summaryPoint": "Two primary PHP superglobal request arrays used for collecting submitted form data.",
+    "keyPoints": [
+      "$_GET passes form field values visible as query parameters in the browser address bar, has a character limit, and should not be used for sensitive credentials.",
+      "$_POST bundles form data securely inside the HTTP request payload body without exposing values in the URL.",
+      "$_GET allows search URLs to be bookmarked, while $_POST is used for sensitive submissions such as passwords and monetary transactions."
+    ]
+  },
+  {
+    "id": "sn-ch5-02",
+    "chapter": 5,
+    "chapterTitle": "Server-Side Scripting (PHP)",
+    "stream": "science",
+    "title": "Differentiate between Indexed Arrays and Associative Arrays in PHP",
+    "marks": 2,
+    "examTags": ["Board July 2024", "Balbharati Exercise"],
+    "summaryPoint": "Indexed arrays use numeric indices starting from 0, whereas associative arrays use named string keys.",
+    "keyPoints": [
+      "Indexed Arrays assign sequential numeric indexes automatically or manually starting at index 0 (e.g. $fruits = array('Apple', 'Banana')).",
+      "Associative Arrays utilize named string identifiers as indices associated with specific values (e.g. $age = array('Peter' => 35)).",
+      "Indexed array items are accessed via numerical indexes ($arr[0]), while associative arrays are accessed via string keys ($arr['key'])."
+    ]
+  },
+  {
+    "id": "sn-ch5-03",
+    "chapter": 5,
+    "chapterTitle": "Server-Side Scripting (PHP)",
+    "stream": "science",
+    "title": "Explain Rules for Variable Declaration and Data Types in PHP",
+    "marks": 2,
+    "examTags": ["Board March 2023", "High Frequency"],
+    "summaryPoint": "Variables in PHP are loosely typed identifiers prefixed with the dollar ($) sign.",
+    "keyPoints": [
+      "A variable name must begin with the $ sign, followed immediately by a letter or an underscore, and cannot start with a number.",
+      "Variable names are case-sensitive ($var and $VAR are treated as distinct storage containers).",
+      "PHP automatically associates a data type based on the assigned value (Integer, Float, String, Boolean, Array, Object, NULL)."
+    ]
+  },
+  {
+    "id": "sn-ch5-04",
+    "chapter": 5,
+    "chapterTitle": "Server-Side Scripting (PHP)",
+    "stream": "science",
+    "title": "Explain User-Defined Functions in PHP with Syntax",
+    "marks": 2,
+    "examTags": ["High Frequency", "Viva Key"],
+    "summaryPoint": "Reusable subroutines defined using the function keyword that execute upon invocation.",
+    "keyPoints": [
+      "A function is defined using the keyword function followed by the function name, parentheses, and a code block: function functionName($param) { ... }.",
+      "Functions can receive input arguments by value or reference and return values to the caller using the return statement.",
+      "Functions promote modularity, eliminate redundant code, and run only when explicitly called."
+    ]
+  }
+]

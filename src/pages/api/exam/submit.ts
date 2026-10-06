@@ -72,12 +72,17 @@ export const POST: APIRoute = async ({ request }) => {
 
   let totalMarks = 0;
   let scoredMarks = 0;
+  let attemptedQuestions = 0;
   const review = questionList.map(({ sectionKey, question }) => {
     const marks = sectionKey === 'q4' ? 2 : sectionKey === 'q5' ? 3 : 1;
     const answer = body.submissions[question.id];
-    const isCorrect = answer !== undefined && isCorrectAnswer(sectionKey, question.ans, answer);
-    totalMarks += marks;
-    if (isCorrect) scoredMarks += marks;
+    const attempted = answer !== undefined;
+    const isCorrect = attempted && isCorrectAnswer(sectionKey, question.ans, answer);
+    if (attempted) {
+      attemptedQuestions++;
+      totalMarks += marks;
+      if (isCorrect) scoredMarks += marks;
+    }
     return { id: question.id, isCorrect, awardedMarks: isCorrect ? marks : 0 };
   });
 
@@ -85,7 +90,8 @@ export const POST: APIRoute = async ({ request }) => {
     success: true,
     scoredMarks,
     totalMarks,
-    percentage: ((scoredMarks / totalMarks) * 100).toFixed(1),
+    attemptedQuestions,
+    percentage: (totalMarks === 0 ? 0 : (scoredMarks / totalMarks) * 100).toFixed(1),
     review
   });
 };

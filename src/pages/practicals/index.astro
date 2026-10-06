@@ -1,0 +1,379 @@
+﻿---
+export const prerender = true;
+import PortalLayout from "../../layouts/PortalLayout.astro";
+
+const pageTitle = "HSC IT Practicals (SOP Solutions) | Maharashtra Board Class 12";
+const pageDescription = "Complete solved Skill Oriented Practical (SOP) codes, slip solutions, and viva questions for Maharashtra State Board Std 12 Information Technology (Science & Commerce).";
+const pageKeywords = "HSC IT practicals, Std 12 IT SOP solutions, Advanced Web Designing SOP, JavaScript form validation practical, PHP SOP slips, LibreOffice Base SOP, Class 12 IT journal solutions, HSC IT practical marks distribution 2027";
+
+// --- SCIENCE PRACTICALS (CODE 97) ---
+const scienceSOPs = [
+  {
+    sop: "SOP 1",
+    category: "Advanced Web Designing",
+    title: "Creation of Website using HTML5 and CSS",
+    description: "Design a 2-page responsive website with HTML5 semantic tags (<header>, <nav>, <section>, <footer>), external CSS, and CSS3 styling.",
+    tech: "HTML5 + CSS3",
+    slug: "science-sop-1"
+  },
+  {
+    sop: "SOP 2",
+    category: "Advanced Web Designing",
+    title: "Creation of Webpage using Audio, Video & Image Map",
+    description: "Embed audio controls, video players with autoplay/muted attributes, and clickable client-side image maps using <map> and <area> tags.",
+    tech: "Audio/Video + Maps",
+    slug: "science-sop-2"
+  },
+  {
+    sop: "SOP 3",
+    category: "Advanced JavaScript",
+    title: "Form Validation using JavaScript",
+    description: "Validate user input (Name, Age, Email, Mobile number) using client-side JavaScript regex, event listeners, and alert/focus states.",
+    tech: "JavaScript DOM",
+    slug: "science-sop-3"
+  },
+  {
+    sop: "SOP 4",
+    category: "Advanced JavaScript",
+    title: "Mathematical Computations & String Manipulation",
+    description: "Calculate square roots, absolute values, string lengths, and conversions using JavaScript built-in Math and String objects.",
+    tech: "Math & String Objects",
+    slug: "science-sop-4"
+  },
+  {
+    sop: "SOP 5",
+    category: "Server-Side Scripting (PHP)",
+    title: "PHP Form Processing using POST & GET",
+    description: "Capture user input from an HTML form, sanitize input parameters, and display formatted output dynamically using $_POST.",
+    tech: "PHP POST/GET",
+    slug: "science-sop-5"
+  },
+  {
+    sop: "SOP 6",
+    category: "Server-Side Scripting (PHP)",
+    title: "PHP Arrays & User-Defined Functions",
+    description: "Sort associative arrays, calculate averages, and write reusable user functions with argument passing and return statements.",
+    tech: "PHP Arrays & Functions",
+    slug: "science-sop-6"
+  }
+];
+
+// --- COMMERCE PRACTICALS (CODE 99) ---
+const commerceSOPs = [
+  {
+    sop: "SOP 1",
+    category: "Advanced Web Designing",
+    title: "Creation of Commercial Business Website",
+    description: "Develop a multi-page commercial portal with CSS3 grid/flexbox layouts, registration forms, and product catalogues.",
+    tech: "HTML5 + CSS3",
+    slug: "commerce-sop-1"
+  },
+  {
+    sop: "SOP 2",
+    category: "Advanced Web Designing",
+    title: "Webpage with Client-Side Image Map & Media",
+    description: "Implement polygonal and circular client-side image map coordinates with linked product pages and promotional audio embeds.",
+    tech: "HTML5 + Image Maps",
+    slug: "commerce-sop-2"
+  },
+  {
+    sop: "SOP 3",
+    category: "Advanced JavaScript",
+    title: "Commercial Billing & Form Validation",
+    description: "Calculate gross amounts, GST percentages, and net totals dynamically with event handling and input type checks.",
+    tech: "JavaScript Calculations",
+    slug: "commerce-sop-3"
+  },
+  {
+    sop: "SOP 4",
+    category: "Advanced JavaScript",
+    title: "String Methods & Input Data Filtering",
+    description: "Extract substrings, format customer usernames, and check string character bounds using JavaScript functions.",
+    tech: "JavaScript String API",
+    slug: "commerce-sop-4"
+  },
+  {
+    sop: "SOP 5",
+    category: "Database Concepts (RDBMS)",
+    title: "Creation of Tables & Primary Keys in LibreOffice Base",
+    description: "Define field names, data types, primary key constraints, and enter record rows for student/employee databases.",
+    tech: "LibreOffice Base / RDBMS",
+    slug: "commerce-sop-5"
+  },
+  {
+    sop: "SOP 6",
+    category: "Database Concepts (RDBMS)",
+    title: "Designing Queries & Reports using SQL",
+    description: "Write SQL SELECT queries with WHERE filters, sorting orders (ORDER BY), and generate printable tabular reports.",
+    tech: "SQL Queries & Reports",
+    slug: "commerce-sop-6"
+  }
+];
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Maharashtra HSC Std 12 IT Practical Solutions (SOP)",
+  "description": pageDescription,
+  "provider": { "@type": "Organization", "name": "HSC IT Portal" }
+};
+---
+
+<PortalLayout 
+  title={pageTitle} 
+  description={pageDescription} 
+  keywords={pageKeywords}
+  schemaData={pageSchema}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-14 space-y-10 sm:space-y-12">
+    
+    <!-- Top Header -->
+    <div class="text-center max-w-3xl mx-auto space-y-3">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950 border border-emerald-300 dark:border-emerald-800 text-emerald-800 dark:text-emerald-300 text-xs font-mono font-bold uppercase">
+        <span>🧪 Lab Practical Handbook • 20 Marks Total Weightage</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+        Class 12 IT Skill Oriented Practicals (SOP)
+      </h1>
+      <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400">
+        Official Maharashtra Board SOP specimen codes, journal slips, and viva voce question sets.
+      </p>
+    </div>
+
+    <!-- HSC IT PRACTICAL EXAM INFO 2027 BANNER (PLACED AT TOP) -->
+    <section 
+      id="exam-structure" 
+      class="rounded-3xl border border-emerald-600 bg-slate-900 text-white p-6 sm:p-10 shadow-xl space-y-6"
+      style="background: linear-gradient(135deg, #022c22 0%, #0f172a 50%, #020617 100%);"
+    >
+      <!-- Header Info -->
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-700 pb-6">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-900 border border-emerald-500 text-emerald-300 font-mono text-xs font-bold uppercase tracking-wider mb-2">
+            <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+            Official Board Guidelines
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
+            HSC IT PRACTICAL EXAM INFO 2027
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-300 mt-1">
+            Internal Evaluation Scheme conducted at College Examination Centers across Maharashtra.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <div class="px-5 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-center">
+            <p class="text-[10px] font-mono text-slate-400 uppercase font-bold">Total Marks</p>
+            <p class="text-2xl font-black text-emerald-400">20</p>
+          </div>
+          <div class="px-5 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-center">
+            <p class="text-[10px] font-mono text-slate-400 uppercase font-bold">Duration</p>
+            <p class="text-2xl font-black text-white">1 Hr</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Two Column Blueprint: 15 Marks Lab Test + 5 Marks Certified Journal -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        
+        <!-- Box 1: 15 Marks Lab Execution -->
+        <div class="rounded-2xl bg-slate-800/80 border border-slate-700 p-5 sm:p-6 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-extrabold text-base text-emerald-300">
+              💻 College Lab Practical Exam
+            </h3>
+            <span class="font-mono text-xs font-bold px-2.5 py-1 rounded bg-emerald-950 border border-emerald-500 text-emerald-300">
+              15 Marks
+            </span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Every candidate is allotted an individual lab computer and a printed question slip containing practical problems.
+          </p>
+
+          <div class="space-y-2.5 pt-1">
+            <div class="flex items-center justify-between text-xs p-3 rounded-xl bg-slate-900 border border-slate-700">
+              <div>
+                <p class="font-bold text-white text-sm">Handwritten Code / Solution Steps</p>
+                <p class="text-[11px] text-slate-400 mt-0.5">Written on the official board practical answer sheet</p>
+              </div>
+              <span class="font-mono font-bold text-emerald-400 text-sm whitespace-nowrap pl-2">5 Marks</span>
+            </div>
+
+            <div class="flex items-center justify-between text-xs p-3 rounded-xl bg-slate-900 border border-slate-700">
+              <div>
+                <p class="font-bold text-white text-sm">Correct Typing & Syntax on Computer</p>
+                <p class="text-[11px] text-slate-400 mt-0.5">Typing program into editor with proper tags / commands</p>
+              </div>
+              <span class="font-mono font-bold text-emerald-400 text-sm whitespace-nowrap pl-2">5 Marks</span>
+            </div>
+
+            <div class="flex items-center justify-between text-xs p-3 rounded-xl bg-slate-900 border border-slate-700">
+              <div>
+                <p class="font-bold text-white text-sm">Execution & Output Verification</p>
+                <p class="text-[11px] text-slate-400 mt-0.5">Rendering form/browser output & examiner verification</p>
+              </div>
+              <span class="font-mono font-bold text-emerald-400 text-sm whitespace-nowrap pl-2">3 Marks</span>
+            </div>
+
+            <div class="flex items-center justify-between text-xs p-3 rounded-xl bg-slate-900 border border-slate-700">
+              <div>
+                <p class="font-bold text-white text-sm">Practical Printout Submission</p>
+                <p class="text-[11px] text-slate-400 mt-0.5">Printout with Candidate Board Seat Number embedded</p>
+              </div>
+              <span class="font-mono font-bold text-emerald-400 text-sm whitespace-nowrap pl-2">2 Marks</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Box 2: 5 Marks Certified Journal / Project -->
+        <div class="rounded-2xl bg-slate-800/80 border border-slate-700 p-5 sm:p-6 space-y-4 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between">
+              <h3 class="font-extrabold text-base text-teal-300">
+                📖 Certified Journal & Viva
+              </h3>
+              <span class="font-mono text-xs font-bold px-2.5 py-1 rounded bg-teal-950 border border-teal-500 text-teal-300">
+                5 Marks
+              </span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed mt-2">
+              Mandatory lab record book carrying sign-offs from the junior college subject teacher and external examiner.
+            </p>
+
+            <div class="mt-4 p-4 rounded-xl bg-slate-900 border border-teal-700/60 space-y-2">
+              <div class="flex items-center justify-between text-xs">
+                <span class="font-bold text-white text-sm">Certified IT Journal / Handbook</span>
+                <span class="font-mono font-bold text-teal-300 text-sm">5 Marks</span>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Requires neat handwriting, completed program printouts, correct flowchart diagrams, and the principal/teacher certificate stamp.
+              </p>
+            </div>
+          </div>
+
+          <!-- Total Evaluation Sum Callout -->
+          <div class="p-4 rounded-xl bg-emerald-950/80 border border-emerald-500 flex items-center justify-between mt-4">
+            <div>
+              <p class="text-xs font-bold text-white">Final Practical Total</p>
+              <p class="text-[11px] text-emerald-300">15 Marks Lab + 5 Marks Journal</p>
+            </div>
+            <span class="font-mono text-xl font-extrabold text-emerald-400">20 / 20</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SOP CARDS SECTION (PLACED BELOW BANNER) -->
+    
+    <!-- Science Practicals Grid -->
+    <div id="sop-grid-science" class="space-y-6 pt-4">
+      <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
+        <div>
+          <h2 class="text-xl font-bold text-slate-900 dark:text-white">Science Stream Practicals (Subject Code 97)</h2>
+          <p class="text-xs text-slate-500 dark:text-slate-400">HTML5, CSS3, JavaScript & PHP Server-Side Scripting</p>
+        </div>
+        <span class="text-xs font-mono font-bold px-2.5 py-1 rounded bg-emerald-100 dark:bg-emerald-900 text-emerald-800 dark:text-emerald-200 border border-emerald-300 dark:border-emerald-700">
+          6 Solved SOPs
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {scienceSOPs.map((sop) => (
+          <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 flex flex-col justify-between shadow-sm hover:shadow-md hover:border-emerald-500 transition">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="font-mono text-xs font-bold px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800">
+                  {sop.sop}
+                </span>
+                <span class="font-mono text-[11px] text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded border border-slate-200 dark:border-slate-700">
+                  {sop.tech}
+                </span>
+              </div>
+              <p class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-1">{sop.category}</p>
+              <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 leading-snug">
+                {sop.title}
+              </h3>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+                {sop.description}
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs">
+              <span class="text-slate-400 font-mono text-[11px]">Lab Journal Specimen</span>
+              <a href="/q8-vault" class="text-emerald-600 dark:text-emerald-400 font-bold hover:underline">
+                View Code Slip →
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Commerce Practicals Grid -->
+    <div id="sop-grid-commerce" class="hidden space-y-6 pt-4">
+      <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
+        <div>
+          <h2 class="text-xl font-bold text-slate-900 dark:text-white">Commerce Stream Practicals (Subject Code 99)</h2>
+          <p class="text-xs text-slate-500 dark:text-slate-400">HTML5, CSS3, JavaScript & Database (LibreOffice Base)</p>
+        </div>
+        <span class="text-xs font-mono font-bold px-2.5 py-1 rounded bg-emerald-100 dark:bg-emerald-900 text-emerald-800 dark:text-emerald-200 border border-emerald-300 dark:border-emerald-700">
+          6 Solved SOPs
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {commerceSOPs.map((sop) => (
+          <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 flex flex-col justify-between shadow-sm hover:shadow-md hover:border-emerald-500 transition">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="font-mono text-xs font-bold px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800">
+                  {sop.sop}
+                </span>
+                <span class="font-mono text-[11px] text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded border border-slate-200 dark:border-slate-700">
+                  {sop.tech}
+                </span>
+              </div>
+              <p class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-1">{sop.category}</p>
+              <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 leading-snug">
+                {sop.title}
+              </h3>
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+                {sop.description}
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs">
+              <span class="text-slate-400 font-mono text-[11px]">Lab Journal Specimen</span>
+              <a href="/q8-vault" class="text-emerald-600 dark:text-emerald-400 font-bold hover:underline">
+                View Code Slip →
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Stream Switcher Sync Script -->
+  <script is:inline>
+    function updateSOPStream(stream) {
+      const sciGrid = document.getElementById('sop-grid-science');
+      const commGrid = document.getElementById('sop-grid-commerce');
+
+      if (stream === 'commerce') {
+        sciGrid?.classList.add('hidden');
+        commGrid?.classList.remove('hidden');
+      } else {
+        commGrid?.classList.add('hidden');
+        sciGrid?.classList.remove('hidden');
+      }
+    }
+
+    window.addEventListener('streamChange', (e) => {
+      updateSOPStream(e.detail.stream);
+    });
+
+    const activeStream = localStorage.getItem('selected_stream') || 'science';
+    updateSOPStream(activeStream);
+  </script>
+</PortalLayout>

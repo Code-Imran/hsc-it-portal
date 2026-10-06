@@ -1,0 +1,447 @@
+﻿---
+export const prerender = true;
+import PortalLayout from "../../layouts/PortalLayout.astro";
+
+const chapterNo = "Chapter 1";
+const topicName = "Advanced Web Designing";
+const stream = "Science & Commerce (Codes 97 & 99)";
+const pageHeading = "MCQs on Advanced Web Designing (Chapter 1)";
+const description = "Practice Class 12 IT HTML5 form controls, CSS3 styling, Flexbox properties, Audio/Video tags, and Image map MCQs.";
+const seoTitle = "MCQs on Advanced Web Designing (Chapter 1) | Class 12 HSC IT Notes & Solutions";
+const seoDesc = "Free online practice MCQs on Advanced Web Designing (Chapter 1) for Maharashtra State Board HSC IT. Instant answer verification for single and multi-correct board pattern questions.";
+const seoKeywords = "MCQs on Advanced Web Designing (Chapter 1), HSC IT Chapter 1 MCQs, Advanced Web Designing MCQs Class 12, Maharashtra Board IT online test";
+import rawQuestions from "../../data/questions/tps-ch1-web-designing.json";
+
+const questions = rawQuestions
+  .filter(q => q && Array.isArray(q.options) && q.options.length > 0)
+  .map(q => {
+    const ansArray = Array.isArray(q.answer) ? q.answer : [q.answer];
+    return {
+      ...q,
+      expectedAnswers: ansArray.map(ans => {
+        if (typeof ans === "number" && ans >= 0 && ans < q.options.length) {
+          return String(q.options[ans]);
+        }
+        return String(ans);
+      })
+    };
+  });
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@type": "Quiz",
+  "name": pageHeading + " Online Test",
+  "description": seoDesc,
+  "educationalLevel": "Higher Secondary Certificate (Class 12 - MSBSHSE)",
+  "about": {
+    "@type": "Thing",
+    "name": topicName
+  }
+};
+---
+
+<PortalLayout 
+  title={seoTitle} 
+  description={seoDesc}
+  keywords={seoKeywords}
+  schemaData={pageSchema}
+>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 py-10">
+    
+    <!-- Top Breadcrumb & Header -->
+    <div class="mb-6 border-b border-slate-200 dark:border-slate-800 pb-5">
+      <div class="flex items-center gap-2 text-xs font-mono text-emerald-600 dark:text-emerald-400 font-bold mb-2">
+        <a href="/" class="hover:underline">Home</a>
+        <span>/</span>
+        <a href="/mcqs" class="hover:underline">MCQs</a>
+        <span>/</span>
+        <span class="text-slate-500 dark:text-slate-400">{chapterNo}</span>
+      </div>
+
+      <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+        {pageHeading}
+      </h1>
+
+      <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2">
+        {description}
+      </p>
+
+      <div class="flex flex-wrap items-center gap-3 mt-4 text-xs font-mono">
+        <span class="bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-500/20 px-2.5 py-1 rounded-md font-bold">
+          {stream}
+        </span>
+        <span class="text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-700 font-medium">
+          Total MCQs: {questions.length}
+        </span>
+      </div>
+    </div>
+
+    <!-- Active Single Question Viewer -->
+    <div id="quiz-runner-container" class="space-y-6">
+      
+      <!-- Progress Bar & Indicator -->
+      <div class="flex items-center justify-between text-xs font-mono font-bold text-slate-500 dark:text-slate-400 mb-2">
+        <span id="current-question-tracker">Question 1 of {questions.length}</span>
+        <span id="current-type-tracker" class="text-emerald-600 dark:text-emerald-400"></span>
+      </div>
+      <div class="w-full bg-slate-200 dark:bg-slate-800 h-1.5 rounded-full overflow-hidden mb-6">
+        <div id="quiz-progress-bar" class="bg-emerald-600 h-full w-[25%] transition-all duration-300"></div>
+      </div>
+
+      <!-- Question Cards (Only one active at a time) -->
+                  <!-- Filter Pills: HSC Board Question Types -->
+      <div class="sticky top-0 z-20 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md py-3 mb-6 border-b border-slate-200 dark:border-slate-800 -mx-4 px-4 sm:mx-0 sm:px-0">
+        <div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5" id="quiz-filter-bar">
+          <button type="button" data-filter="all" class="quiz-filter-chip active-filter px-3 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-emerald-600 text-white shadow-sm transition">
+            All Questions ({questions.length})
+          </button>
+          {questions.filter(q => q.type === 'mcq_single').length > 0 && (
+            <button type="button" data-filter="mcq_single" class="quiz-filter-chip px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition">
+              Single Choice ({questions.filter(q => q.type === 'mcq_single').length})
+            </button>
+          )}
+          {questions.filter(q => q.type === 'mcq_two').length > 0 && (
+            <button type="button" data-filter="mcq_two" class="quiz-filter-chip px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition">
+              2 Correct ({questions.filter(q => q.type === 'mcq_two').length})
+            </button>
+          )}
+          {questions.filter(q => q.type === 'mcq_three').length > 0 && (
+            <button type="button" data-filter="mcq_three" class="quiz-filter-chip px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition">
+              3 Correct ({questions.filter(q => q.type === 'mcq_three').length})
+            </button>
+          )}
+          {questions.filter(q => q.type === 'true_false').length > 0 && (
+            <button type="button" data-filter="true_false" class="quiz-filter-chip px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition">
+              True / False ({questions.filter(q => q.type === 'true_false').length})
+            </button>
+          )}
+        </div>
+      </div>
+      {questions.map((item, index) => {
+        const expectedAnswers = item.expectedAnswers;
+        const isMulti = expectedAnswers.length > 1;
+
+        return (
+          <div 
+            class={"p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm question-step " + (index === 0 ? "" : "hidden")}
+            data-index={index}
+            data-multi={isMulti ? "true" : "false"} data-type={item.type}
+            data-expected={JSON.stringify(item.expectedAnswers)}
+          >
+            <div class="flex items-center justify-between gap-3 mb-4">
+              <span class="question-number font-mono text-xs font-bold px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+                Q{index + 1}
+              </span>
+              <span class="text-[11px] font-mono text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/30 px-2.5 py-1 rounded border border-emerald-200 dark:border-emerald-800/40">
+                {isMulti ? "Select " + expectedAnswers.length + " correct options" : "Select 1 option"}
+              </span>
+            </div>
+
+            <p class="text-base sm:text-lg font-semibold text-slate-900 dark:text-white leading-relaxed mb-6 select-none">
+              {item.question}
+            </p>
+
+            <!-- Options (Single or Multi Clickable) -->
+            <div class="space-y-3 options-group">
+              {item.options.map((opt) => (
+                <button 
+                  type="button"
+                  class="w-full text-left p-4 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-emerald-500 dark:hover:border-emerald-500 text-xs sm:text-sm text-slate-700 dark:text-slate-200 font-medium transition flex items-center justify-between option-btn select-none"
+                  data-value={opt}
+                >
+                  <span class="pr-3">{opt}</span>
+                  <span class="selection-check font-mono text-xs font-bold text-emerald-600 hidden">✓ Selected</span>
+                </button>
+              ))}
+            </div>
+          </div>
+        );
+      })}
+
+      <!-- Interactive Stepper Controls -->
+      <div class="flex items-center justify-between pt-4">
+        <span class="text-xs text-slate-400 font-mono">Attempt before proceeding</span>
+        <button 
+          id="btn-next-action" 
+          type="button" 
+          class="px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm transition shadow-md shadow-emerald-600/20 flex items-center gap-2"
+        >
+          <span>Next Question</span>
+          <span>→</span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Final Scorecard Summary (Revealed after Submit) -->
+    <div id="quiz-summary-card" class="hidden p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm space-y-6">
+      <div class="text-center space-y-2 border-b border-slate-100 dark:border-slate-800 pb-6">
+        <span class="text-xs font-mono font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Test Completed</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">Performance Summary</h2>
+        <p class="text-xs text-slate-500 dark:text-slate-400">Your score for {pageHeading}</p>
+        <p id="summary-personalized-message" class="text-sm font-semibold text-emerald-700 dark:text-emerald-300" aria-live="polite"></p>
+        <p id="share-quiz-feedback" class="text-xs text-slate-500 dark:text-slate-400" aria-live="polite"></p>
+      </div>
+
+      <!-- Score Figures -->
+      <div class="grid grid-cols-2 gap-4 text-center">
+        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+          <p class="text-xs text-slate-500 font-mono uppercase">Score Obtained</p>
+          <p id="summary-score-value" class="text-2xl sm:text-3xl font-extrabold text-emerald-600 dark:text-emerald-400 mt-1">0 / {questions.length}</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+          <p class="text-xs text-slate-500 font-mono uppercase">Accuracy</p>
+          <p id="summary-percentage-value" class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">0%</p>
+        </div>
+      </div>
+
+      <!-- Incorrect Attempts Tracker (Answers are NOT shown) -->
+      <div id="incorrect-tracker-box" class="p-4 rounded-xl border border-rose-200 dark:border-rose-950/60 bg-rose-50/60 dark:bg-rose-950/20 space-y-2">
+        <p class="text-xs font-mono font-bold text-rose-800 dark:text-rose-400 uppercase">Incorrect Questions:</p>
+        <p id="incorrect-question-list" class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed"></p>
+        <p class="text-[11px] text-slate-500 dark:text-slate-400 italic pt-1">
+          Note: Correct solutions are not shown to preserve our databse integrity. Please revise your textbook exercises carefully for these chapters and re-attempt.
+        </p>
+      </div>
+
+      <!-- Bottom Re-Attempt Action -->
+      <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-slate-100 dark:border-slate-800">
+        <button 
+          id="btn-retry-test" 
+          type="button" 
+          class="w-full sm:w-auto px-5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold text-slate-700 dark:text-slate-300 transition"
+        >
+          ↻ Re-Attempt Test
+        </button>
+        <button id="share-quiz-result" type="button" class="w-full sm:w-auto px-5 py-2.5 rounded-xl border border-emerald-300 dark:border-emerald-700 text-xs font-bold text-emerald-700 dark:text-emerald-300 hover:bg-emerald-50 dark:hover:bg-emerald-950/30 transition">Share Result</button>
+        <a 
+          href="/mcqs" 
+          class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold text-center transition shadow-sm"
+        >
+          All Chapter MCQs →
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Stepper & Protected Scoring Script -->
+  <script is:inline>
+    function initProtectedQuiz() {
+        const allSteps = Array.from(document.querySelectorAll('.question-step'));
+        for (let index = allSteps.length - 1; index > 0; index--) {
+          const swapIndex = Math.floor(Math.random() * (index + 1));
+          [allSteps[index], allSteps[swapIndex]] = [allSteps[swapIndex], allSteps[index]];
+        }
+        allSteps.forEach((step, index) => {
+          const number = step.querySelector('.question-number');
+          if (number) number.textContent = `Q${index + 1}`;
+        });
+        let activeSteps = [...allSteps];
+        let currentFilter = 'all';
+      let totalQuestions = activeSteps.length;
+      let currentIndex = 0;
+      const userAnswers = {};
+
+      const nextBtn = document.getElementById('btn-next-action');
+      const progressBar = document.getElementById('quiz-progress-bar');
+      const questionTracker = document.getElementById('current-question-tracker');
+      const runnerContainer = document.getElementById('quiz-runner-container');
+      const summaryCard = document.getElementById('quiz-summary-card');
+      const retryBtn = document.getElementById('btn-retry-test');
+
+              // Filter pills event handling
+        const filterChips = document.querySelectorAll('.quiz-filter-chip');
+        filterChips.forEach(chip => {
+          chip.addEventListener('click', () => {
+            currentFilter = chip.dataset.filter;
+
+            // Highlight active chip
+            filterChips.forEach(c => {
+              c.className = "quiz-filter-chip px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition";
+            });
+            chip.className = "quiz-filter-chip active-filter px-3 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-emerald-600 text-white shadow-sm transition";
+
+            // Filter active question set
+            if (currentFilter === 'all') {
+              activeSteps = [...allSteps];
+            } else {
+              activeSteps = allSteps.filter(s => s.dataset.type === currentFilter);
+            }
+
+            totalQuestions = activeSteps.length;
+            currentIndex = 0;
+            updateStepView();
+          });
+        });
+
+        function updateStepView() {
+        allSteps.forEach((step, idx) => {
+          if (activeSteps[currentIndex] === step) {
+            step.classList.remove('hidden');
+          } else {
+            step.classList.add('hidden');
+          }
+        });
+
+        // Update indicators
+        if (questionTracker) {
+          questionTracker.textContent = "Question " + (currentIndex + 1) + " of " + totalQuestions;
+        }
+        if (progressBar) {
+          progressBar.style.width = (((currentIndex + 1) / totalQuestions) * 100) + "%";
+        }
+
+        // Change button label on the final question
+        if (nextBtn) {
+          if (currentIndex === totalQuestions - 1) {
+            nextBtn.innerHTML = "<span>Submit Test</span> <span>✓</span>";
+            nextBtn.className = "px-6 py-3 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-xs sm:text-sm transition shadow-md shadow-emerald-700/30 flex items-center gap-2";
+          } else {
+            nextBtn.innerHTML = "<span>Next Question</span> <span>→</span>";
+            nextBtn.className = "px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm transition shadow-md shadow-emerald-600/20 flex items-center gap-2";
+          }
+        }
+      }
+
+      // Handle Option Selection
+      allSteps.forEach((step, qIdx) => {
+        const isMulti = step.getAttribute('data-multi') === 'true';
+        const expected = JSON.parse(step.getAttribute('data-expected') || '[]');
+        userAnswers[qIdx] = [];
+
+        const btns = step.querySelectorAll('.option-btn');
+        btns.forEach((btn) => {
+          btn.onclick = () => {
+            const val = btn.getAttribute('data-value');
+            const check = btn.querySelector('.selection-check');
+
+            if (!isMulti) {
+              // Single Choice: deselect others
+              btns.forEach(b => {
+                b.classList.remove('border-emerald-500', 'bg-emerald-50', 'dark:bg-emerald-950/30', 'text-emerald-900', 'dark:text-emerald-300');
+                const c = b.querySelector('.selection-check');
+                if (c) c.classList.add('hidden');
+              });
+
+              btn.classList.add('border-emerald-500', 'bg-emerald-50', 'dark:bg-emerald-950/30', 'text-emerald-900', 'dark:text-emerald-300');
+              if (check) check.classList.remove('hidden');
+              userAnswers[qIdx] = [val];
+            } else {
+              // Multi Choice: toggle current
+              const existsIndex = userAnswers[qIdx].indexOf(val);
+              if (existsIndex > -1) {
+                userAnswers[qIdx].splice(existsIndex, 1);
+                btn.classList.remove('border-emerald-500', 'bg-emerald-50', 'dark:bg-emerald-950/30', 'text-emerald-900', 'dark:text-emerald-300');
+                if (check) check.classList.add('hidden');
+              } else {
+                if (userAnswers[qIdx].length < expected.length) {
+                  userAnswers[qIdx].push(val);
+                  btn.classList.add('border-emerald-500', 'bg-emerald-50', 'dark:bg-emerald-950/30', 'text-emerald-900', 'dark:text-emerald-300');
+                  if (check) check.classList.remove('hidden');
+                }
+              }
+            }
+          };
+        });
+      });
+
+      // Next / Submit Button Action
+      if (nextBtn) {
+        nextBtn.onclick = () => {
+            const totalQuestions = activeSteps.length;
+            if (totalQuestions === 0) return;
+            if (currentIndex < totalQuestions - 1) {
+            currentIndex++;
+            updateStepView();
+          } else {
+            // Evaluate Score & Show Protected Results
+            evaluateAndShowSummary();
+          }
+        };
+      }
+
+      function evaluateAndShowSummary() {
+        let score = 0;
+        const incorrectQuestions = [];
+        const attemptedSteps = activeSteps.filter(step => {
+          const questionIndex = allSteps.indexOf(step);
+          return (userAnswers[questionIndex] || []).length > 0;
+        });
+        const attemptedCount = attemptedSteps.length;
+        attemptedSteps.forEach(step => {
+          const questionIndex = allSteps.indexOf(step);
+          const expected = JSON.parse(step.getAttribute('data-expected') || '[]');
+          const selected = userAnswers[questionIndex] || [];
+          const isCorrect = expected.length === selected.length && expected.every(val => selected.includes(val));
+          if (isCorrect) score++;
+          else incorrectQuestions.push("Q" + (questionIndex + 1));
+        });
+
+        if (runnerContainer) runnerContainer.classList.add('hidden');
+        if (summaryCard) summaryCard.classList.remove('hidden');
+        const scoreVal = document.getElementById('summary-score-value');
+        const pctVal = document.getElementById('summary-percentage-value');
+        const incList = document.getElementById('incorrect-question-list');
+        const incBox = document.getElementById('incorrect-tracker-box');
+        const personalizedMessage = document.getElementById('summary-personalized-message');
+        const percentage = attemptedCount ? Math.round((score / attemptedCount) * 100) : 0;
+
+        if (scoreVal) scoreVal.textContent = score + " / " + attemptedCount;
+        if (pctVal) pctVal.textContent = percentage + "%";
+        const renderPersonalizedMessage = (name) => {
+          if (personalizedMessage) personalizedMessage.textContent = attemptedCount
+            ? `${name}, you got ${score} out of ${attemptedCount} questions you answered (${percentage}%).`
+            : `${name}, no questions were answered this time. Try another round when you are ready.`;
+        };
+        renderPersonalizedMessage("Student");
+        fetch("/api/auth/profile", { headers: { Accept: "application/json" }, cache: "no-store" })
+          .then(response => response.ok ? response.json() : Promise.reject(new Error("Profile lookup failed.")))
+          .then(({ profile }) => { if (profile?.name) renderPersonalizedMessage(profile.name); })
+          .catch(error => console.error("Could not personalize quiz result:", error));
+        document.dispatchEvent(new CustomEvent("portal:quiz-completed", { detail: { path: location.pathname } }));
+
+        if (attemptedCount === 0) {
+          if (incBox) {
+            incBox.className = "p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/40 text-center";
+            incBox.textContent = "No answers were submitted, so this round has no score.";
+          }
+        } else if (incorrectQuestions.length > 0) {
+          if (incBox) incBox.classList.remove('hidden');
+          if (incList) incList.textContent = "You missed: " + incorrectQuestions.join(", ") + ". Review those textbook sections and practice again.";
+        } else if (incBox) {
+          incBox.className = "p-4 rounded-xl border border-emerald-200 dark:border-emerald-900 bg-emerald-50/60 dark:bg-emerald-950/20 text-center";
+          incBox.innerHTML = "<p class='text-xs font-bold text-emerald-800 dark:text-emerald-300'>All answered questions were correct!</p>";
+        }
+      }
+
+      // Retry Action
+      const shareButton = document.getElementById("share-quiz-result");
+      if (shareButton) shareButton.onclick = async () => {
+        const scoreText = document.getElementById("summary-score-value")?.textContent || "";
+        const shareData = { title: "HSC IT Practice Result", text: `I scored ${scoreText} on the HSC IT Portal. Try a practice test:`, url: location.href };
+        try {
+          if (navigator.share) await navigator.share(shareData);
+          else {
+            await navigator.clipboard.writeText(`${shareData.text} ${shareData.url}`);
+            document.getElementById("share-quiz-feedback").textContent = "Result link copied. Share it with a friend!";
+          }
+        } catch (error) {
+          if (error instanceof Error && error.name === "AbortError") return;
+          document.getElementById("share-quiz-feedback").textContent = "Sharing is unavailable in this browser.";
+        }
+      };
+
+      if (retryBtn) {
+        retryBtn.onclick = () => {
+          location.reload();
+        };
+      }
+
+      updateStepView();
+    }
+
+    initProtectedQuiz();
+    document.addEventListener('astro:after-swap', initProtectedQuiz);
+  </script>
+</PortalLayout>

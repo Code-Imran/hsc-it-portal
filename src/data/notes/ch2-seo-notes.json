@@ -1,0 +1,62 @@
+[
+  {
+    "id": "sn-ch2-01",
+    "chapter": 2,
+    "chapterTitle": "Digital Marketing & SEO",
+    "stream": "both",
+    "title": "Differentiate between On-Page SEO and Off-Page SEO",
+    "marks": 2,
+    "examTags": ["Board March 2024", "High Frequency", "Balbharati Exercise"],
+    "summaryPoint": "On-Page SEO involves optimizing elements directly on the website, while Off-Page SEO focuses on external authority and incoming signals.",
+    "keyPoints": [
+      "On-Page SEO includes activities carried out directly on web pages, such as optimizing title tags, meta descriptions, image ALT text, heading tags (H1-H6), and clean page URLs.",
+      "Off-Page SEO includes activities carried out outside website boundaries, such as acquiring high-quality backlinks, social media marketing, and directory submissions.",
+      "On-Page SEO improves content indexing and readability, while Off-Page SEO increases search engine domain trust and page ranking."
+    ]
+  },
+  {
+    "id": "sn-ch2-02",
+    "chapter": 2,
+    "chapterTitle": "Digital Marketing & SEO",
+    "stream": "both",
+    "title": "Differentiate between White Hat SEO and Black Hat SEO",
+    "marks": 2,
+    "examTags": ["Board July 2024", "Balbharati Exercise"],
+    "summaryPoint": "White Hat SEO adheres strictly to search engine policies, whereas Black Hat SEO attempts manipulation and risks search engine penalties.",
+    "keyPoints": [
+      "White Hat SEO strictly conforms to search engine guidelines, focuses on relevant human audience content, and builds sustainable long-term rankings.",
+      "Black Hat SEO uses deceptive techniques such as keyword stuffing, doorway pages, and hidden text/links to deceive search crawler bots.",
+      "Engaging in Black Hat practices leads to search penalty de-indexing or permanent domain bans from search results."
+    ]
+  },
+  {
+    "id": "sn-ch2-03",
+    "chapter": 2,
+    "chapterTitle": "Digital Marketing & SEO",
+    "stream": "both",
+    "title": "Explain Page Rank and Search Engine Spiders",
+    "marks": 2,
+    "examTags": ["Board March 2023", "High Frequency"],
+    "summaryPoint": "Spiders discover and catalog web content, whereas PageRank calculates the relative importance and authority of indexed pages.",
+    "keyPoints": [
+      "Search Engine Spiders (also called web crawlers or bots) automatically browse websites by following links across the internet to discover, fetch, and catalog page content.",
+      "PageRank is an algorithm developed by Google that evaluates incoming hyperlink quality and quantity to determine a page's authority score.",
+      "Pages linked from high-authority domains pass link equity, directly improving their search result placement."
+    ]
+  },
+  {
+    "id": "sn-ch2-04",
+    "chapter": 2,
+    "chapterTitle": "Digital Marketing & SEO",
+    "stream": "both",
+    "title": "Explain the Importance of Meta Tags in Search Optimization",
+    "marks": 2,
+    "examTags": ["High Frequency", "Viva Key"],
+    "summaryPoint": "Head metadata elements supplying essential machine-readable summaries directly to search engine crawlers.",
+    "keyPoints": [
+      "<meta name=\"description\"> provides a concise snippet of webpage contents displayed below the link on search engine result pages (SERPs).",
+      "<meta name=\"keywords\"> contains relevant search keywords associated with the page topic.",
+      "<meta name=\"robots\"> instructs web spiders whether to crawl and index the page (index, noindex) and follow its links (follow, nofollow)."
+    ]
+  }
+]

@@ -1,0 +1,1279 @@
+﻿[
+    {
+        "id":  1,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "JavaScript is a(n) ____________ language.",
+        "options":  [
+                        "Compiled",
+                        "Interpreted",
+                        "Both a and b",
+                        "None of the above"
+                    ],
+        "answer":  1,
+        "explanation":  "JavaScript code is executed directly line-by-line by an interpreter without prior compilation."
+    },
+    {
+        "id":  2,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "Select the correct method name of the String object:",
+        "options":  [
+                        "charAt()",
+                        "characterAt()",
+                        "valueAt()",
+                        "lengthAt()"
+                    ],
+        "answer":  0,
+        "explanation":  "charAt() returns the character at a specified index in a string."
+    },
+    {
+        "id":  3,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "The ____________ method of the window object displays a message box with OK and Cancel buttons.",
+        "options":  [
+                        "confirm()",
+                        "alert()",
+                        "both a and b",
+                        "None of these"
+                    ],
+        "answer":  0,
+        "explanation":  "confirm() displays a modal dialog with OK and Cancel options."
+    },
+    {
+        "id":  4,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "Variables in JavaScript can be declared using the ____________ keyword.",
+        "options":  [
+                        "var",
+                        "dim",
+                        "variable",
+                        "declare"
+                    ],
+        "answer":  0,
+        "explanation":  "var (along with let and const) is used to declare variables in JavaScript."
+    },
+    {
+        "id":  5,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "Trace the output of following JavaScript code: var str=\u0027Information Technology\u0027; document.write(str.lastIndexOf(\u0027o\u0027));",
+        "options":  [
+                        "18",
+                        "19",
+                        "20",
+                        "21"
+                    ],
+        "answer":  1,
+        "explanation":  "The last occurrence of \u0027o\u0027 in \u0027Information Technology\u0027 is at zero-based index 19."
+    },
+    {
+        "id":  6,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "A ____________ is a set of instructions used to produce various kinds of outputs.",
+        "options":  [
+                        "Design",
+                        "Software",
+                        "Program",
+                        "Hardware"
+                    ],
+        "answer":  2,
+        "explanation":  "A program is an organized set of instructions executed by a computer."
+    },
+    {
+        "id":  7,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "Programs written in the JavaScript language are called ____________.",
+        "options":  [
+                        "Website",
+                        "Scripts",
+                        "Web server",
+                        "Software"
+                    ],
+        "answer":  1,
+        "explanation":  "JavaScript programs embedded into web browsers are referred to as scripts."
+    },
+    {
+        "id":  8,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "JavaScript is known as the universal ____________ scripting language.",
+        "options":  [
+                        "Word",
+                        "Powerpoint",
+                        "Tally",
+                        "Client side"
+                    ],
+        "answer":  3,
+        "explanation":  "JavaScript is universally supported by web browsers as the client-side scripting standard."
+    },
+    {
+        "id":  9,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "In ____________ scripting, the script resides on the client computer.",
+        "options":  [
+                        "Client Side",
+                        "Server Side",
+                        "My Side",
+                        "Website"
+                    ],
+        "answer":  0,
+        "explanation":  "Client-side scripts run directly in the user\u0027s web browser."
+    },
+    {
+        "id":  10,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "In ____________ scripting, the script resides on the web server.",
+        "options":  [
+                        "Client side",
+                        "My side",
+                        "Server Side",
+                        "Website"
+                    ],
+        "answer":  2,
+        "explanation":  "Server-side scripts execute remotely on web servers before output is transmitted."
+    },
+    {
+        "id":  11,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "____________ scripts are used primarily for input validation without wasting server time.",
+        "options":  [
+                        "Client Side",
+                        "Server Side",
+                        "Website",
+                        "Web Browser"
+                    ],
+        "answer":  0,
+        "explanation":  "Client-side scripting enables instant browser-based form validation."
+    },
+    {
+        "id":  12,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "____________ is a JavaScript-based open-source frontend web framework developed for single-page applications.",
+        "options":  [
+                        "Vue JS",
+                        "Response",
+                        "Angular JS",
+                        "React"
+                    ],
+        "answer":  2,
+        "explanation":  "AngularJS is an open-source frontend web framework suited for SPAs."
+    },
+    {
+        "id":  13,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "____________ is a JavaScript library for building user interfaces for single-page applications and mobile applications.",
+        "options":  [
+                        "Angular JS",
+                        "Vue JS",
+                        "Respond",
+                        "React"
+                    ],
+        "answer":  3,
+        "explanation":  "React is a JavaScript library dedicated to building reactive component UIs."
+    },
+    {
+        "id":  14,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "JavaScript has a built-in multiway decision statement known as ____________.",
+        "options":  [
+                        "Condition",
+                        "Switch",
+                        "Break",
+                        "Continue"
+                    ],
+        "answer":  1,
+        "explanation":  "The switch statement evaluates an expression against multiple potential case matches."
+    },
+    {
+        "id":  15,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "The ____________ loop combines initialization, condition, and loop iteration into a single statement.",
+        "options":  [
+                        "for",
+                        "Break",
+                        "Switch",
+                        "Continue"
+                    ],
+        "answer":  0,
+        "explanation":  "for(init; condition; iteration) encapsulates loop mechanics in one concise line."
+    },
+    {
+        "id":  16,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "The ____________ statement is used to jump out of a loop immediately.",
+        "options":  [
+                        "Switch",
+                        "Continue",
+                        "Break",
+                        "React"
+                    ],
+        "answer":  2,
+        "explanation":  "The break statement breaks the enclosing loop cycle immediately."
+    },
+    {
+        "id":  17,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "When it is necessary to skip the statement block and take control to the beginning for the next iteration, the ____________ statement is used.",
+        "options":  [
+                        "Break",
+                        "Continue",
+                        "React",
+                        "Response"
+                    ],
+        "answer":  1,
+        "explanation":  "The continue statement skips the remaining loop body and proceeds to the next iteration."
+    },
+    {
+        "id":  18,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "The ____________ keyword is used to instantiate a new object in JavaScript.",
+        "options":  [
+                        "Next",
+                        "Wend",
+                        "Loop",
+                        "new"
+                    ],
+        "answer":  3,
+        "explanation":  "The new operator creates instances of user-defined or built-in object types."
+    },
+    {
+        "id":  19,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "DOM stands for ____________.",
+        "options":  [
+                        "Document Object Model",
+                        "Document One Model",
+                        "Design One Model",
+                        "Document Object Manager"
+                    ],
+        "answer":  0,
+        "explanation":  "DOM stands for Document Object Model."
+    },
+    {
+        "id":  20,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "The ____________ property of the DOM document object returns the \u003chead\u003e element.",
+        "options":  [
+                        "head",
+                        "body",
+                        "title",
+                        "link"
+                    ],
+        "answer":  0,
+        "explanation":  "document.head returns the head node of the current HTML document."
+    },
+    {
+        "id":  21,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "The ____________ property of the DOM document object sets or returns the title of the document.",
+        "options":  [
+                        "head",
+                        "body",
+                        "source",
+                        "title"
+                    ],
+        "answer":  3,
+        "explanation":  "document.title accesses or mutates the document\u0027s title tag string."
+    },
+    {
+        "id":  22,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "The ____________ method of the DOM document object writes HTML expressions or JavaScript code to a document.",
+        "options":  [
+                        "write()",
+                        "read()",
+                        "close()",
+                        "readOnly()"
+                    ],
+        "answer":  0,
+        "explanation":  "document.write() writes raw text or HTML directly to an open document stream."
+    },
+    {
+        "id":  23,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "The ____________ method of the DOM document object is identical to write(), but adds a newline character after each statement.",
+        "options":  [
+                        "close()",
+                        "writeln()",
+                        "read()",
+                        "readOnly()"
+                    ],
+        "answer":  1,
+        "explanation":  "writeln() appends a newline character to the written stream."
+    },
+    {
+        "id":  24,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "The ____________ property is useful for getting an HTML element and changing its content dynamically.",
+        "options":  [
+                        "write",
+                        "URL",
+                        "innerHTML",
+                        "writeln"
+                    ],
+        "answer":  2,
+        "explanation":  "element.innerHTML gets or modifies HTML content nested inside an element."
+    },
+    {
+        "id":  25,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "The ____________ object is the parent object of all other objects in the browser hierarchy.",
+        "options":  [
+                        "window",
+                        "math",
+                        "string",
+                        "number"
+                    ],
+        "answer":  0,
+        "explanation":  "The window object represents the global browser execution context."
+    },
+    {
+        "id":  26,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "The ____________ property of the window object returns a boolean value indicating whether the window has been closed or not.",
+        "options":  [
+                        "closed",
+                        "status",
+                        "document",
+                        "name"
+                    ],
+        "answer":  0,
+        "explanation":  "window.closed returns true if the referenced window has closed."
+    },
+    {
+        "id":  27,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "The ____________ method of the window object displays a dialog box to get text input from the user.",
+        "options":  [
+                        "alert()",
+                        "open()",
+                        "confirm()",
+                        "prompt()"
+                    ],
+        "answer":  3,
+        "explanation":  "prompt() prompts the user with an input dialog and returns the text entered."
+    },
+    {
+        "id":  28,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "The ____________ method of the window object closes the current browser window.",
+        "options":  [
+                        "open()",
+                        "close()",
+                        "blur()",
+                        "alert()"
+                    ],
+        "answer":  1,
+        "explanation":  "window.close() closes the current or referenced window instance."
+    },
+    {
+        "id":  29,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "The ____________ method of the window object removes focus from the current window.",
+        "options":  [
+                        "open()",
+                        "close()",
+                        "prompt()",
+                        "blur()"
+                    ],
+        "answer":  3,
+        "explanation":  "blur() removes focus from the element or window."
+    },
+    {
+        "id":  30,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "The ____________ method of the window object sets focus to the current window.",
+        "options":  [
+                        "focus()",
+                        "open()",
+                        "blur()",
+                        "close()"
+                    ],
+        "answer":  0,
+        "explanation":  "focus() brings the target window or input element into active focus."
+    },
+    {
+        "id":  31,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "The ____________ event occurs when an element loses its focus.",
+        "options":  [
+                        "onchange",
+                        "onblur",
+                        "onfocus",
+                        "onload"
+                    ],
+        "answer":  1,
+        "explanation":  "onblur triggers when a user leaves or shifts focus away from an element."
+    },
+    {
+        "id":  32,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "The ____________ event occurs when an element receives focus.",
+        "options":  [
+                        "onload",
+                        "onblur",
+                        "onfocus",
+                        "onchange"
+                    ],
+        "answer":  2,
+        "explanation":  "onfocus executes when an element becomes active."
+    },
+    {
+        "id":  33,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "The ____________ event occurs when a user changes the content of an element or selects a dropdown value.",
+        "options":  [
+                        "onblur",
+                        "onfocus",
+                        "onload",
+                        "onchange"
+                    ],
+        "answer":  3,
+        "explanation":  "onchange triggers upon value commit changes in inputs or select options."
+    },
+    {
+        "id":  34,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "The ____________ event occurs when a user clicks the form submit button.",
+        "options":  [
+                        "onblur",
+                        "onchange",
+                        "onfocus",
+                        "onsubmit"
+                    ],
+        "answer":  3,
+        "explanation":  "onsubmit triggers before form submission."
+    },
+    {
+        "id":  35,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "The ____________ property of the Number object returns the largest minimum representable value.",
+        "options":  [
+                        "MAX_VALUE",
+                        "NaN",
+                        "MIN_VALUE",
+                        "Fixed"
+                    ],
+        "answer":  2,
+        "explanation":  "Number.MIN_VALUE returns the smallest positive representable number in JavaScript."
+    },
+    {
+        "id":  36,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "The ____________ property of the Number object represents a \u0027Not-a-Number\u0027 value.",
+        "options":  [
+                        "NaN",
+                        "Value",
+                        "Fixed",
+                        "Index"
+                    ],
+        "answer":  0,
+        "explanation":  "NaN indicates unrepresentable or invalid mathematical results."
+    },
+    {
+        "id":  37,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "The ____________ method of the Number object converts a given string into a floating-point number.",
+        "options":  [
+                        "parseFloat()",
+                        "parseInt()",
+                        "isFixed()",
+                        "NaN"
+                    ],
+        "answer":  0,
+        "explanation":  "parseFloat() parses string arguments and returns floating-point numbers."
+    },
+    {
+        "id":  38,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "The ____________ method of the String object removes whitespace from both sides of a string.",
+        "options":  [
+                        "trim()",
+                        "substr()",
+                        "indexOf()",
+                        "substring()"
+                    ],
+        "answer":  0,
+        "explanation":  "trim() strips leading and trailing whitespace from string primitives."
+    },
+    {
+        "id":  39,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "The ____________ method of the String object converts a string to lowercase characters.",
+        "options":  [
+                        "toUpperCase()",
+                        "substr()",
+                        "trim()",
+                        "toLowerCase()"
+                    ],
+        "answer":  3,
+        "explanation":  "toLowerCase() converts all alphabet characters to lowercase."
+    },
+    {
+        "id":  40,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "The ____________ method of the Math object returns the next integer greater than or equal to a given number.",
+        "options":  [
+                        "abs()",
+                        "cbrt()",
+                        "ceil()",
+                        "floor()"
+                    ],
+        "answer":  2,
+        "explanation":  "Math.ceil() rounds a numerical float up to the next integer."
+    },
+    {
+        "id":  41,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "The ____________ method of the Math object returns the next integer less than or equal to a given number.",
+        "options":  [
+                        "abs()",
+                        "floor()",
+                        "min()",
+                        "max()"
+                    ],
+        "answer":  1,
+        "explanation":  "Math.floor() rounds a numerical float down to the closest lower integer."
+    },
+    {
+        "id":  42,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "The ____________ method of the Date object returns the four-digit year.",
+        "options":  [
+                        "getDate()",
+                        "setSeconds()",
+                        "getFullYear()",
+                        "setDate()"
+                    ],
+        "answer":  2,
+        "explanation":  "getFullYear() returns the 4-digit calendar year (e.g., 2026)."
+    },
+    {
+        "id":  43,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "The index of the first element in a JavaScript array is always ____________.",
+        "options":  [
+                        "One",
+                        "Two",
+                        "Three",
+                        "Zero"
+                    ],
+        "answer":  3,
+        "explanation":  "JavaScript arrays are zero-indexed, starting with index 0."
+    },
+    {
+        "id":  44,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "The ____________ method of the Array object removes the last element from an array and returns that element.",
+        "options":  [
+                        "pop()",
+                        "push()",
+                        "find()",
+                        "reverse()"
+                    ],
+        "answer":  0,
+        "explanation":  "pop() removes the final element and decrements array length."
+    },
+    {
+        "id":  45,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "The ____________ method of the Array object adds new elements to the end of an array and returns the new length.",
+        "options":  [
+                        "pop()",
+                        "push()",
+                        "sort()",
+                        "find()"
+                    ],
+        "answer":  1,
+        "explanation":  "push() appends items to the end of an array."
+    },
+    {
+        "id":  46,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_two",
+        "question":  "Select TWO valid methods of the Date object:",
+        "options":  [
+                        "setTime()",
+                        "getValidTime()",
+                        "getTime()",
+                        "setValidTime()"
+                    ],
+        "answer":  [
+                       0,
+                       2
+                   ],
+        "explanation":  "setTime() and getTime() are built-in methods of the JavaScript Date object."
+    },
+    {
+        "id":  47,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_two",
+        "question":  "Select TWO valid properties of the DOM document object:",
+        "options":  [
+                        "URL",
+                        "title",
+                        "name",
+                        "status"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "URL and title belong to document; status and name belong to window."
+    },
+    {
+        "id":  48,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_two",
+        "question":  "Select TWO event handlers used with text/form input objects in JavaScript:",
+        "options":  [
+                        "onblur",
+                        "onMove",
+                        "onfocus",
+                        "onAction"
+                    ],
+        "answer":  [
+                       0,
+                       2
+                   ],
+        "explanation":  "onblur and onfocus manage active element focus changes."
+    },
+    {
+        "id":  49,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_two",
+        "question":  "Select the TWO fundamental types of scripting environments:",
+        "options":  [
+                        "Server side",
+                        "My side",
+                        "Browser side",
+                        "Client side"
+                    ],
+        "answer":  [
+                       0,
+                       3
+                   ],
+        "explanation":  "Web scripting is categorized into Client-side and Server-side architectures."
+    },
+    {
+        "id":  50,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_two",
+        "question":  "Select TWO looping control structures available in JavaScript:",
+        "options":  [
+                        "for",
+                        "while",
+                        "for...next",
+                        "while...wend"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "for and while are standard JavaScript looping statements."
+    },
+    {
+        "id":  51,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_two",
+        "question":  "Select TWO categories of objects supported in JavaScript:",
+        "options":  [
+                        "Variables",
+                        "built-in objects",
+                        "User defined objects",
+                        "loops"
+                    ],
+        "answer":  [
+                       1,
+                       2
+                   ],
+        "explanation":  "JavaScript supports native built-in objects as well as custom user-defined objects."
+    },
+    {
+        "id":  52,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_two",
+        "question":  "Select TWO built-in objects available in JavaScript:",
+        "options":  [
+                        "Math",
+                        "Time",
+                        "Array",
+                        "Month"
+                    ],
+        "answer":  [
+                       0,
+                       2
+                   ],
+        "explanation":  "Math and Array are built-in global objects. JavaScript has Date, not Time or Month."
+    },
+    {
+        "id":  53,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_two",
+        "question":  "Select TWO valid methods of the DOM document object:",
+        "options":  [
+                        "body",
+                        "write()",
+                        "URL",
+                        "writeln()"
+                    ],
+        "answer":  [
+                       1,
+                       3
+                   ],
+        "explanation":  "write() and writeln() are methods; body and URL are properties."
+    },
+    {
+        "id":  54,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_two",
+        "question":  "Select TWO valid properties of the window object:",
+        "options":  [
+                        "name",
+                        "location",
+                        "alert()",
+                        "confirm()"
+                    ],
+        "answer":  [
+                       0,
+                       1
+                   ],
+        "explanation":  "name and location are properties; alert() and confirm() are methods."
+    },
+    {
+        "id":  55,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_two",
+        "question":  "Select TWO valid methods of the window object:",
+        "options":  [
+                        "open()",
+                        "status",
+                        "closed",
+                        "close()"
+                    ],
+        "answer":  [
+                       0,
+                       3
+                   ],
+        "explanation":  "open() and close() are window methods."
+    },
+    {
+        "id":  56,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_two",
+        "question":  "The confirm() method of the window object displays a confirmation box with which TWO buttons?",
+        "options":  [
+                        "GO",
+                        "OK",
+                        "Cancel",
+                        "Click"
+                    ],
+        "answer":  [
+                       1,
+                       2
+                   ],
+        "explanation":  "The browser confirm() dialog renders standard OK and Cancel buttons."
+    },
+    {
+        "id":  57,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_two",
+        "question":  "Select TWO valid event handlers in JavaScript:",
+        "options":  [
+                        "onsubmit",
+                        "write()",
+                        "onchange",
+                        "writeln()"
+                    ],
+        "answer":  [
+                       0,
+                       2
+                   ],
+        "explanation":  "onsubmit and onchange are event handlers; write/writeln are document methods."
+    },
+    {
+        "id":  58,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_two",
+        "question":  "Select TWO valid methods of the Math object:",
+        "options":  [
+                        "substr()",
+                        "abs()",
+                        "trim()",
+                        "random()"
+                    ],
+        "answer":  [
+                       1,
+                       3
+                   ],
+        "explanation":  "Math.abs() and Math.random() are Math methods; substr and trim belong to String."
+    },
+    {
+        "id":  59,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_two",
+        "question":  "Select TWO properties of the Array object in JavaScript:",
+        "options":  [
+                        "index",
+                        "isFixed",
+                        "concat",
+                        "length"
+                    ],
+        "answer":  [
+                       0,
+                       3
+                   ],
+        "explanation":  "index and length are array properties; concat is an array method."
+    },
+    {
+        "id":  60,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_two",
+        "question":  "Select TWO methods of the Array object:",
+        "options":  [
+                        "index",
+                        "length",
+                        "forEach()",
+                        "isArray()"
+                    ],
+        "answer":  [
+                       2,
+                       3
+                   ],
+        "explanation":  "forEach() and Array.isArray() are Array methods."
+    },
+    {
+        "id":  61,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_three",
+        "question":  "Select THREE valid methods of the window object:",
+        "options":  [
+                        "write()",
+                        "alert()",
+                        "writeln()",
+                        "close()",
+                        "open()",
+                        "charAt()"
+                    ],
+        "answer":  [
+                       1,
+                       3,
+                       4
+                   ],
+        "explanation":  "alert(), close(), and open() are window methods. write/writeln belong to document, and charAt to String."
+    },
+    {
+        "id":  62,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_three",
+        "question":  "Select THREE recognized features of JavaScript:",
+        "options":  [
+                        "supports event based facilities",
+                        "is platform dependent language",
+                        "case insensitive scripting language",
+                        "provides inbuilt objects",
+                        "can handle date and time effectively",
+                        "requires special software to run"
+                    ],
+        "answer":  [
+                       0,
+                       3,
+                       4
+                   ],
+        "explanation":  "JavaScript supports event-driven architecture, built-in global objects, and native Date manipulation."
+    },
+    {
+        "id":  63,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_three",
+        "question":  "Select THREE built-in objects available in JavaScript:",
+        "options":  [
+                        "Time",
+                        "Date",
+                        "Inheritance",
+                        "Array",
+                        "Number",
+                        "function"
+                    ],
+        "answer":  [
+                       1,
+                       3,
+                       4
+                   ],
+        "explanation":  "Date, Array, and Number are standard built-in JavaScript object constructors."
+    },
+    {
+        "id":  64,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_three",
+        "question":  "Select THREE popular JavaScript frontend frameworks or libraries:",
+        "options":  [
+                        "HTML",
+                        "Angular JS",
+                        "Network Frame",
+                        "Vue JS",
+                        "React",
+                        "Switch Case"
+                    ],
+        "answer":  [
+                       1,
+                       3,
+                       4
+                   ],
+        "explanation":  "AngularJS, Vue.js, and React are modern JavaScript frontend web frameworks/libraries."
+    },
+    {
+        "id":  65,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_three",
+        "question":  "Select THREE properties of the DOM document object:",
+        "options":  [
+                        "write",
+                        "writeln",
+                        "title",
+                        "URL",
+                        "writeln()",
+                        "head"
+                    ],
+        "answer":  [
+                       2,
+                       3,
+                       5
+                   ],
+        "explanation":  "title, URL, and head are properties of the document object."
+    },
+    {
+        "id":  66,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_three",
+        "question":  "Select THREE valid properties of the Number object:",
+        "options":  [
+                        "length",
+                        "onblur",
+                        "onfocus",
+                        "MIN_VALUE",
+                        "MAX_VALUE",
+                        "NaN"
+                    ],
+        "answer":  [
+                       3,
+                       4,
+                       5
+                   ],
+        "explanation":  "Number.MIN_VALUE, Number.MAX_VALUE, and Number.NaN are standard properties."
+    },
+    {
+        "id":  67,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_three",
+        "question":  "Select THREE valid methods of the Number object:",
+        "options":  [
+                        "NaN",
+                        "parseFloat()",
+                        "isFixed()",
+                        "length",
+                        "index",
+                        "isInteger()"
+                    ],
+        "answer":  [
+                       1,
+                       2,
+                       5
+                   ],
+        "explanation":  "parseFloat(), isFixed(), and Number.isInteger() are Number methods."
+    },
+    {
+        "id":  68,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_three",
+        "question":  "Select THREE valid methods of the String object:",
+        "options":  [
+                        "substr()",
+                        "length",
+                        "toLowerCase()",
+                        "abs",
+                        "indexOf()",
+                        "ceil"
+                    ],
+        "answer":  [
+                       0,
+                       2,
+                       4
+                   ],
+        "explanation":  "substr(), toLowerCase(), and indexOf() are String methods; length is a property."
+    },
+    {
+        "id":  69,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_three",
+        "question":  "Select THREE valid methods of the Math object:",
+        "options":  [
+                        "sqrt()",
+                        "substr()",
+                        "indexOf()",
+                        "random()",
+                        "close()",
+                        "floor()"
+                    ],
+        "answer":  [
+                       0,
+                       3,
+                       5
+                   ],
+        "explanation":  "Math.sqrt(), Math.random(), and Math.floor() are built-in Math methods."
+    },
+    {
+        "id":  70,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_three",
+        "question":  "Select THREE valid methods of the Date object:",
+        "options":  [
+                        "trim()",
+                        "getDay()",
+                        "getHours()",
+                        "indexOf()",
+                        "getTime()",
+                        "charAt()"
+                    ],
+        "answer":  [
+                       1,
+                       2,
+                       4
+                   ],
+        "explanation":  "getDay(), getHours(), and getTime() extract values from Date instances."
+    },
+    {
+        "id":  71,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_three",
+        "question":  "Select THREE valid methods of the Array object:",
+        "options":  [
+                        "sort()",
+                        "indexOf()",
+                        "isFixed()",
+                        "forEach()",
+                        "isInteger()",
+                        "parseInt()"
+                    ],
+        "answer":  [
+                       0,
+                       1,
+                       3
+                   ],
+        "explanation":  "sort(), indexOf(), and forEach() are Array methods."
+    },
+    {
+        "id":  72,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "What is the output of the following JavaScript statement?\nMath.floor(7.9);",
+        "options":  [
+                        "7",
+                        "8",
+                        "7.9",
+                        "Error"
+                    ],
+        "answer":  0,
+        "explanation":  "Math.floor() rounds a number downwards to the nearest integer."
+    },
+    {
+        "id":  73,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "What is the output of the following JavaScript statement?\nMath.ceil(4.2);",
+        "options":  [
+                        "4",
+                        "5",
+                        "4.2",
+                        "4.0"
+                    ],
+        "answer":  1,
+        "explanation":  "Math.ceil() rounds a number upwards to the nearest integer."
+    },
+    {
+        "id":  74,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "What will be the output of the following code snippet?\nvar s = \u0027JavaScript\u0027;\ndocument.write(s.charAt(4));",
+        "options":  [
+                        "a",
+                        "S",
+                        "v",
+                        "c"
+                    ],
+        "answer":  1,
+        "explanation":  "Index 4 corresponds to uppercase \u0027S\u0027 (0:J, 1:a, 2:v, 3:a, 4:S)."
+    },
+    {
+        "id":  75,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "What will be the output of the following code snippet?\nvar str = \u0027Maharashtra Board\u0027;\ndocument.write(str.indexOf(\u0027a\u0027));",
+        "options":  [
+                        "0",
+                        "1",
+                        "3",
+                        "2"
+                    ],
+        "answer":  1,
+        "explanation":  "indexOf() returns the first occurrence index of the character, which is 1."
+    },
+    {
+        "id":  76,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "What will be the output of the following code snippet?\nvar a = [\u0027HTML\u0027, \u0027CSS\u0027, \u0027JS\u0027];\na.push(\u0027PHP\u0027);\ndocument.write(a.length);",
+        "options":  [
+                        "3",
+                        "4",
+                        "5",
+                        "undefined"
+                    ],
+        "answer":  1,
+        "explanation":  "push() appends an element, increasing array length from 3 to 4."
+    },
+    {
+        "id":  77,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "What will be the output of the following code snippet?\nvar fruits = [\u0027Apple\u0027, \u0027Mango\u0027, \u0027Banana\u0027];\nfruits.pop();\ndocument.write(fruits.length);",
+        "options":  [
+                        "2",
+                        "3",
+                        "1",
+                        "0"
+                    ],
+        "answer":  0,
+        "explanation":  "pop() removes the last element (\u0027Banana\u0027), leaving 2 items."
+    },
+    {
+        "id":  78,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "What does the following statement return in JavaScript?\nisNaN(\u0027100\u0027);",
+        "options":  [
+                        "true",
+                        "false",
+                        "NaN",
+                        "Error"
+                    ],
+        "answer":  1,
+        "explanation":  "\u0027100\u0027 can be parsed as a numeric value, so isNaN(\u0027100\u0027) returns false."
+    },
+    {
+        "id":  79,
+        "chapter":  "Advanced JavaScript",
+        "type":  "mcq_single",
+        "question":  "What will be printed by the following code snippet?\nvar txt = \u0027  Hello HSC  \u0027;\ndocument.write(txt.trim().length);",
+        "options":  [
+                        "13",
+                        "9",
+                        "11",
+                        "7"
+                    ],
+        "answer":  1,
+        "explanation":  "trim() removes outer whitespace, leaving \u0027Hello HSC\u0027 which has 9 characters."
+    },
+    {
+        "id":  501,
+        "answer":  0,
+        "explanation":  "JavaScript executes directly inside the user\u0027s web browser.",
+        "type":  "true_false",
+        "options":  [
+                        "True",
+                        "False"
+                    ],
+        "chapter":  "Advanced JavaScript",
+        "question":  "JavaScript is a client-side scripting language."
+    },
+    {
+        "id":  502,
+        "answer":  0,
+        "explanation":  "Clicking Cancel or pressing Escape on prompt() returns null.",
+        "type":  "true_false",
+        "options":  [
+                        "True",
+                        "False"
+                    ],
+        "chapter":  "Advanced JavaScript",
+        "question":  "The prompt() dialog box returns null if the user clicks the Cancel button."
+    },
+    {
+        "id":  503,
+        "answer":  1,
+        "explanation":  "Identifiers in JavaScript must start with a letter, an underscore (_), or a dollar sign ($).",
+        "type":  "true_false",
+        "options":  [
+                        "True",
+                        "False"
+                    ],
+        "chapter":  "Advanced JavaScript",
+        "question":  "Variable names in JavaScript can begin with a number."
+    },
+    {
+        "id":  504,
+        "answer":  1,
+        "explanation":  "Math.ceil() rounds up; Math.floor() rounds down.",
+        "type":  "true_false",
+        "options":  [
+                        "True",
+                        "False"
+                    ],
+        "chapter":  "Advanced JavaScript",
+        "question":  "The Math.ceil() function rounds a number downwards to the nearest integer."
+    },
+    {
+        "id":  505,
+        "answer":  0,
+        "explanation":  "String length is accessed as str.length without parentheses.",
+        "type":  "true_false",
+        "options":  [
+                        "True",
+                        "False"
+                    ],
+        "chapter":  "Advanced JavaScript",
+        "question":  "In JavaScript, string length is a property, not a method."
+    }
+]

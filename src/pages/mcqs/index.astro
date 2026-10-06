@@ -1,0 +1,64 @@
+---
+export const prerender = true;
+import PortalLayout from "../../layouts/PortalLayout.astro";
+
+const pageTitle = "Chapter-Wise IT MCQs | Maharashtra HSC Board Class 12";
+const pageDescription = "Practice topic-wise MCQs for Maharashtra Board Std 12th Information Technology (Science Code 97 & Commerce Code 99) with instant answer keys.";
+const pageKeywords = "HSC IT MCQs, Class 12 IT MCQs, Advanced Web Designing MCQs, SEO MCQs, Advanced JavaScript MCQs, Maharashtra Board IT test";
+
+const chapters = [
+  { no: "Chapter 1", slug: "web-designing", title: "Advanced Web Designing", marks: "20 - 25 Marks", topics: "HTML5 Form controls, CSS3 styling, Flexbox layout, Audio/Video tags.", tag: "Science & Commerce" },
+  { no: "Chapter 2", slug: "digital-marketing-seo", title: "Digital Marketing & SEO", marks: "10 - 12 Marks", topics: "On-Page SEO, Off-Page SEO, Page Rank, Audit Tools, Meta tags.", tag: "Science & Commerce" },
+  { no: "Chapter 3", slug: "advanced-javascript", title: "Advanced JavaScript", marks: "15 - 20 Marks", topics: "Event handling (onsubmit, onchange), DOM manipulation, Form validation.", tag: "Science & Commerce" },
+  { no: "Chapter 4", slug: "emerging-technologies", title: "Emerging Technologies", marks: "8 - 10 Marks", topics: "IoT architecture, Cloud Computing models (IaaS, PaaS, SaaS), AI, 5G.", tag: "Science & Commerce" },
+  { no: "Chapter 5", slug: "server-side-scripting-php", title: "Server-Side Scripting (PHP)", marks: "12 - 15 Marks", topics: "PHP syntax, form processing via POST/GET, Associative arrays, User functions.", tag: "Science Code 97" },
+  { no: "Chapter 5", slug: "database-concepts-rdbms", title: "Database Concepts (RDBMS)", marks: "15 - 18 Marks", topics: "Relational tables, Primary & Foreign keys, SQL queries (SELECT, INSERT, UPDATE).", tag: "Commerce Code 99" },
+  { no: "Chapter 6", slug: "ecommerce-egovernance", title: "E-Commerce & E-Governance", marks: "8 - 10 Marks", topics: "E-Commerce models (B2B, B2C, C2C), Payment gateways, Security, EDI, E-Governance.", tag: "Science & Commerce" },
+];
+---
+
+<PortalLayout title={pageTitle} description={pageDescription} keywords={pageKeywords}>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+    <div class="mb-10 text-center max-w-2xl mx-auto">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/20 text-emerald-800 dark:text-emerald-300 text-xs font-mono font-bold uppercase mb-3">
+        <span>⚡ Chapter-Wise MCQ Bank</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+        Class 12 IT Chapter MCQs
+      </h1>
+      <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-2">
+        Select any chapter below to test your knowledge with instant evaluation, correct answers, and exam hints.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {chapters.map((ch) => (
+        <a 
+          href={"/mcqs/" + ch.slug}
+          class="group rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 flex flex-col justify-between shadow-sm hover:shadow-md hover:border-emerald-500/40 transition duration-150"
+        >
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-mono font-bold text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-200 dark:border-emerald-500/20">
+                {ch.no}
+              </span>
+              <span class="text-xs font-mono text-slate-500 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded">
+                {ch.marks}
+              </span>
+            </div>
+            <h2 class="text-base font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition">
+              {"MCQs on " + ch.title + " (" + ch.no + ")"}
+            </h2>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+              {ch.topics}
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-bold text-emerald-600 dark:text-emerald-400">
+            <span class="text-[11px] font-normal text-slate-400">{ch.tag}</span>
+            <span class="group-hover:translate-x-1 transition-transform">Start Test →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</PortalLayout>

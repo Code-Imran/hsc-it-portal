@@ -1,0 +1,76 @@
+---
+import PortalAuthModal from './PortalAuthModal.astro';
+
+const desktopLink = 'whitespace-nowrap px-3 py-3 text-sm font-semibold text-slate-700 transition hover:text-emerald-700 dark:text-slate-200 dark:hover:text-emerald-400';
+const mobileLink = 'shrink-0 px-3 py-3 text-sm font-semibold text-slate-700 transition hover:text-emerald-700 dark:text-slate-200 dark:hover:text-emerald-400';
+---
+
+<header class="sticky top-0 z-40 w-full border-b border-slate-200 bg-white/95 backdrop-blur-md dark:border-slate-800 dark:bg-slate-900/95">
+  <div class="mx-auto flex h-14 max-w-7xl items-center justify-between gap-3 px-4 sm:h-16 sm:px-6">
+    <a href="/" class="flex shrink-0 items-center gap-2 text-sm font-extrabold tracking-tight text-slate-900 transition hover:opacity-90 dark:text-white sm:text-lg" aria-label="HSC IT Portal home">
+      <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-600 font-mono text-sm font-bold text-white shadow-md shadow-emerald-600/20">IT</span>
+      <span>HSC IT <span class="text-emerald-600 dark:text-emerald-400">PORTAL</span></span>
+    </a>
+
+    <div class="flex shrink-0 items-center gap-2 sm:gap-4">
+      <button id="portal-auth-trigger" type="button" aria-label="Open student profile" class="rounded-lg px-2 py-2 text-xs font-bold text-slate-700 transition hover:bg-slate-100 hover:text-emerald-700 dark:text-slate-200 dark:hover:bg-slate-800 dark:hover:text-emerald-400 sm:px-3 sm:text-sm">
+        <span id="portal-user-greeting">Hi Username</span>
+      </button>
+      <span aria-hidden="true" class="hidden h-5 w-px bg-slate-200 dark:bg-slate-700 lg:block"></span>
+      <p class="hidden whitespace-nowrap text-xs font-medium text-slate-500 dark:text-slate-400 lg:block">
+        Time: <time id="portal-online-time">00:00:00</time>
+      </p>
+    </div>
+  </div>
+
+  <nav aria-label="Main navigation" class="border-t border-slate-100 dark:border-slate-800">
+    <div class="mx-auto max-w-7xl overflow-x-auto whitespace-nowrap [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+      <div class="flex min-w-max items-center justify-start px-2 sm:px-4 lg:justify-center lg:px-6">
+        <a href="/" class={`hidden lg:inline-flex ${desktopLink}`} aria-label="Home">Home</a>
+        <a href="/mcqs" class={mobileLink}>All MCQs</a>
+        <a href="/notes" class={mobileLink}>Short Notes</a>
+        <a href="/q8-vault" class={mobileLink}>Q8 Coding</a>
+        <a href="/#pattern" class={`hidden lg:inline-flex ${desktopLink}`}>Paper Pattern</a>
+        <a href="/practicals" class={mobileLink}>Practicals</a>
+        <a href="/simulator" class={mobileLink}>Exam Demo</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<PortalAuthModal />
+
+<script is:inline>
+  (() => {
+    const greeting = document.getElementById('portal-user-greeting');
+    const onlineTime = document.getElementById('portal-online-time');
+    if (!onlineTime) return;
+
+    const storageKey = 'hsc_portal_online_since';
+    let startedAt = Number(sessionStorage.getItem(storageKey));
+    if (!Number.isFinite(startedAt) || startedAt <= 0 || startedAt > Date.now()) {
+      startedAt = Date.now();
+      sessionStorage.setItem(storageKey, String(startedAt));
+    }
+
+    const renderTime = () => {
+      const elapsed = Math.floor((Date.now() - startedAt) / 1000);
+      const hours = String(Math.floor(elapsed / 3600)).padStart(2, '0');
+      const minutes = String(Math.floor((elapsed % 3600) / 60)).padStart(2, '0');
+      const seconds = String(elapsed % 60).padStart(2, '0');
+      onlineTime.textContent = `${hours}:${minutes}:${seconds}`;
+    };
+    renderTime();
+    window.setInterval(renderTime, 1000);
+
+    fetch('/api/auth/profile', { headers: { Accept: 'application/json' }, cache: 'no-store' })
+      .then((response) => {
+        if (!response.ok) throw new Error('Profile lookup failed.');
+        return response.json();
+      })
+      .then(({ profile }) => {
+        if (profile?.name && greeting) greeting.textContent = `Hi ${profile.name}`;
+      })
+      .catch((error) => console.error('Student profile lookup failed:', error));
+  })();
+</script>

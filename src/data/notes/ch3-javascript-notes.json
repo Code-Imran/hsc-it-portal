@@ -1,0 +1,65 @@
+[
+  {
+    "id": "sn-ch3-01",
+    "chapter": 3,
+    "chapterTitle": "Advanced JavaScript",
+    "stream": "both",
+    "title": "Explain Client-Side Form Validation using JavaScript",
+    "marks": 2,
+    "examTags": ["Board March 2024", "High Frequency", "Balbharati Exercise"],
+    "summaryPoint": "Validating user input within the client browser before submitting data across the network to the server.",
+    "keyPoints": [
+      "Client-side validation verifies that required fields are filled, numbers fall within expected ranges, and email addresses or contact numbers match expected formatting.",
+      "It provides immediate user error feedback, prevents unnecessary HTTP requests, and significantly reduces server processing overhead.",
+      "Validation functions are commonly hooked using the form element's onsubmit event listener returning true or false."
+    ]
+  },
+  {
+    "id": "sn-ch3-02",
+    "chapter": 3,
+    "chapterTitle": "Advanced JavaScript",
+    "stream": "both",
+    "title": "Explain Event Handling and Common Event Types in JavaScript",
+    "marks": 2,
+    "examTags": ["Board July 2024", "Balbharati Exercise"],
+    "summaryPoint": "Events are browser or user interactions handled dynamically by invoking associated JavaScript functions.",
+    "keyPoints": [
+      "onsubmit: Triggered when a user clicks the submit button to post form data.",
+      "onblur: Triggered when an input control or form element loses input focus.",
+      "onchange: Triggered when the value of a text box, select dropdown, or checkbox has been altered by the user.",
+      "onload: Triggered immediately when the browser finishes loading the full web page document."
+    ]
+  },
+  {
+    "id": "sn-ch3-03",
+    "chapter": 3,
+    "chapterTitle": "Advanced JavaScript",
+    "stream": "both",
+    "title": "Explain the Built-in String Object and Its Common Methods",
+    "marks": 2,
+    "examTags": ["Board March 2023", "High Frequency"],
+    "summaryPoint": "JavaScript built-in wrapper object providing methods for text manipulation and inspection.",
+    "keyPoints": [
+      "length: Read-only property returning the total number of characters present in a string.",
+      "toUpperCase() & toLowerCase(): Converts all string characters into uppercase or lowercase letters.",
+      "charAt(index): Returns the single character positioned at the specified numerical index position.",
+      "substring(start, end): Extracts and returns characters between two specified index limits."
+    ]
+  },
+  {
+    "id": "sn-ch3-04",
+    "chapter": 3,
+    "chapterTitle": "Advanced JavaScript",
+    "stream": "both",
+    "title": "Explain the Built-in Math Object and Its Key Methods",
+    "marks": 2,
+    "examTags": ["High Frequency", "Viva Key"],
+    "summaryPoint": "Static utility object containing mathematical constants and computational numerical functions.",
+    "keyPoints": [
+      "The Math object is static; its methods are called directly without creating an object instance (e.g. Math.methodName()).",
+      "Math.sqrt(x): Computes and returns the square root of a specified positive number.",
+      "Math.floor(x): Rounds a floating-point number downward to its nearest integer.",
+      "Math.round(x): Rounds a numerical value to its closest integer based on standard rounding rules."
+    ]
+  }
+]
