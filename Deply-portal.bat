@@ -50,7 +50,7 @@ echo.
 echo ============================================
 echo Push Complete! 
 echo Cloudflare will auto-deploy your changes shortly at:
-echo https://it-portal.imranshaikh.workers.dev
+echo https://hsc-it-portal.imranshaikh.workers.dev/
 echo ============================================
 echo.
 pause

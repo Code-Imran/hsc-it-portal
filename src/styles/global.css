@@ -1,21 +1,54 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 @layer base {
   html {
     color-scheme: light;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
+
   html.dark {
     color-scheme: dark;
   }
+  
   body {
     background-color: #f8fafc;
     color: #0f172a;
+    font-size: 0.95rem;
+    line-height: 1.7;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
+  
   .dark body {
     background-color: #020617;
-    color: #f8fafc;
+    color: #f1f5f9;
+  }
+
+  /* Consistent Heading Hierarchy */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.025em;
+    color: #020617;
+    font-weight: 700;
+  }
+  
+  .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+    color: #ffffff;
+  }
+
+  /* Standardized Monospace */
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* Clean, consistent emphasis without breaking UI components */
+  strong, b {
+    font-weight: 700;
+    color: inherit;
   }
 }

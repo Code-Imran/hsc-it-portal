@@ -1,0 +1,429 @@
+---
+export const prerender = true;
+import PortalLayout from "../../layouts/PortalLayout.astro";
+
+import ch1Web from "../../data/questions/tps-ch1-web-designing.json";
+import ch2Seo from "../../data/questions/tps-ch2-seo.json";
+import ch4Tech from "../../data/questions/tps-ch4-emerging-tech.json";
+import ch5Php from "../../data/questions/tps-ch5-php.json";
+import ch6Ecomm from "../../data/questions/tps-ch6-ecommerce.json";
+import commCh2Marketing from "../../data/questions/tps-comm-ch2-digital-marketing.json";
+import commCh3Acct from "../../data/questions/tps-comm-ch3-accounting-gst.json";
+import commCh5Db from "../../data/questions/tps-comm-ch5-libreoffice-base.json";
+
+const allSources = [
+  ch1Web,
+  ch2Seo,
+  ch4Tech,
+  ch5Php,
+  ch6Ecomm,
+  commCh2Marketing,
+  commCh3Acct,
+  commCh5Db
+];
+
+export async function getStaticPaths() {
+  const weightages = [
+    "fill-in-the-blanks",
+    "true-false",
+    "one-correct",
+    "two-correct",
+    "three-correct",
+    "short-notes",
+    "match-pairs"
+  ];
+
+  return weightages.map((slug) => ({
+    params: { slug },
+  }));
+}
+
+const { slug } = Astro.params;
+
+const weightageConfig: Record<string, { title: string; desc: string; targetType: string }> = {
+  "fill-in-the-blanks": { 
+    title: "Q.1 Fill in the Blanks (10 Marks)", 
+    desc: "Practice key terminology and fill-in-the-blanks questions across all HSC IT chapters.",
+    targetType: "fill_blank"
+  },
+  "true-false": { 
+    title: "Q.2 True or False (10 Marks)", 
+    desc: "Test your conceptual clarity with True or False statements across all IT chapters.",
+    targetType: "true_false"
+  },
+  "one-correct": { 
+    title: "Q.3 1 Correct Answer (10 Marks)", 
+    desc: "Standard single-choice multiple-choice questions for board exam mastery.",
+    targetType: "mcq_single"
+  },
+  "two-correct": { 
+    title: "Q.4 2 Correct Answers (10 Marks)", 
+    desc: "Advanced multiple-choice questions requiring two correct selections.",
+    targetType: "mcq_two"
+  },
+  "three-correct": { 
+    title: "Q.5 3 Correct Answers (10 Marks)", 
+    desc: "Rigorous multiple-choice questions requiring three correct selections.",
+    targetType: "mcq_three"
+  },
+  "short-notes": { 
+    title: "Q.6 Short Notes", 
+    desc: "Important descriptive and short-note questions with board-pattern answers.",
+    targetType: "notes"
+  },
+  "match-pairs": { 
+    title: "Q.7 Match Pairs", 
+    desc: "Match the following pairs correctly to test definitions, tags, and attributes.",
+    targetType: "match"
+  }
+};
+
+const currentConfig = weightageConfig[slug];
+if (!currentConfig) {
+  return Astro.redirect('/404');
+}
+
+let rawItems = allSources.flatMap(source => 
+  source.filter(q => q && q.type === currentConfig.targetType)
+);
+
+let questions = [];
+if (currentConfig.targetType === "match") {
+  const matchGroups = rawItems.filter(q => Array.isArray(q.pairs) && q.pairs.length > 0);
+  
+  questions = matchGroups.flatMap(group => {
+    const groupOptions = group.pairs.map(p => p.right);
+    return group.pairs.map(pair => ({
+      question: `${group.question || "Match the following:"} <br/><span class='text-emerald-600 dark:text-emerald-400 font-mono'>Item: ${pair.left}</span>`,
+      options: groupOptions,
+      expectedAnswers: [pair.right],
+      type: "match"
+    }));
+  });
+} else {
+  questions = rawItems
+    .filter(q => q && Array.isArray(q.options) && q.options.length > 0)
+    .map(q => {
+      const ansArray = Array.isArray(q.answer) ? q.answer : [q.answer];
+      return {
+        ...q,
+        expectedAnswers: ansArray.map(ans => {
+          if (typeof ans === "number" && ans >= 0 && ans < q.options.length) {
+            return String(q.options[ans]);
+          }
+          return String(ans);
+        })
+      };
+    });
+}
+
+if (questions.length === 0) {
+  questions = ch1Web.slice(0, 10).map(q => ({
+    ...q,
+    expectedAnswers: [String(q.options[0])]
+  }));
+}
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@type": "Quiz",
+  "name": currentConfig.title + " Online Test",
+  "description": currentConfig.desc,
+  "educationalLevel": "Higher Secondary Certificate (Class 12 - MSBSHSE)"
+};
+---
+
+<PortalLayout 
+  title={`${currentConfig.title} | HSC IT Portal`} 
+  description={currentConfig.desc}
+  schemaData={pageSchema}
+>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 py-10">
+    
+    <div class="mb-6 border-b border-slate-200 dark:border-slate-800 pb-5">
+      <div class="flex items-center gap-2 text-xs font-mono text-emerald-600 dark:text-emerald-400 font-bold mb-2">
+        <a href="/" class="hover:underline">Home</a>
+        <span>/</span>
+        <a href="/mcqs" class="hover:underline">MCQs</a>
+        <span>/</span>
+        <span class="text-slate-500 dark:text-slate-400">Weightage Practice</span>
+      </div>
+
+      <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+        {currentConfig.title}
+      </h1>
+
+      <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2">
+        {currentConfig.desc}
+      </p>
+
+      <div class="flex flex-wrap items-center gap-3 mt-4 text-xs font-mono">
+        <span class="bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-500/20 px-2.5 py-1 rounded-md font-bold">
+          Board Pattern Section
+        </span>
+        <span class="text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded-md border border-slate-200 dark:border-slate-700 font-medium">
+          Total Questions: {questions.length}
+        </span>
+      </div>
+    </div>
+
+    {questions.length === 0 ? (
+      <div class="p-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-center space-y-3">
+        <p class="text-sm font-semibold text-slate-700 dark:text-slate-300">No questions currently loaded for this weightage category.</p>
+        <div class="pt-4">
+          <a href="/mcqs" class="px-4 py-2 rounded-xl bg-emerald-600 text-white text-xs font-bold">Return to MCQs</a>
+        </div>
+      </div>
+    ) : (
+      <div id="quiz-runner-container" class="space-y-6">
+        
+        <div class="flex items-center justify-between text-xs font-mono font-bold text-slate-500 dark:text-slate-400 mb-2">
+          <span id="current-question-tracker">Question 1 of {questions.length}</span>
+          <span id="current-type-tracker" class="text-emerald-600 dark:text-emerald-400"></span>
+        </div>
+        <div class="w-full bg-slate-200 dark:bg-slate-800 h-1.5 rounded-full overflow-hidden mb-6">
+          <div id="quiz-progress-bar" class="bg-emerald-600 h-full w-[25%] transition-all duration-300"></div>
+        </div>
+
+        {questions.map((item, index) => {
+          const expectedAnswers = item.expectedAnswers;
+          const isMulti = expectedAnswers.length > 1;
+
+          return (
+            <div 
+              class={"p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm question-step " + (index === 0 ? "" : "hidden")}
+              data-index={index}
+              data-multi={isMulti ? "true" : "false"} 
+              data-type={item.type}
+              data-expected={JSON.stringify(item.expectedAnswers)}
+            >
+              <div class="flex items-center justify-between gap-3 mb-4">
+                <span class="question-number font-mono text-xs font-bold px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+                  Q{index + 1}
+                </span>
+                <span class="text-[11px] font-mono text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/30 px-2.5 py-1 rounded border border-emerald-200 dark:border-emerald-800/40">
+                  Select matching option
+                </span>
+              </div>
+
+              <div class="text-base sm:text-lg font-semibold text-slate-900 dark:text-white leading-relaxed mb-6 select-none" set:html={item.question} />
+
+              <div class="space-y-3 options-group">
+                {item.options.map((opt) => (
+                  <button 
+                    type="button"
+                    class="w-full text-left p-4 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-emerald-500 dark:hover:border-emerald-500 text-xs sm:text-sm text-slate-700 dark:text-slate-200 font-medium transition flex items-center justify-between option-btn select-none"
+                    data-value={opt}
+                  >
+                    <span class="pr-3">{opt}</span>
+                    <span class="selection-check font-mono text-xs font-bold text-emerald-600 hidden">✓ Selected</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          );
+        })}
+
+        <div class="flex items-center justify-between pt-4">
+          <span class="text-xs text-slate-400 font-mono">Attempt before proceeding</span>
+          <button 
+            id="btn-next-action" 
+            type="button" 
+            class="px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm transition shadow-md shadow-emerald-600/20 flex items-center gap-2"
+          >
+            <span>Next Question</span>
+            <span>→</span>
+          </button>
+        </div>
+
+      </div>
+    )}
+
+    <div id="quiz-summary-card" class="hidden p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm space-y-6">
+      <div class="text-center space-y-2 border-b border-slate-100 dark:border-slate-800 pb-6">
+        <span class="text-xs font-mono font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Test Completed</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">Performance Summary</h2>
+        <p class="text-xs text-slate-500 dark:text-slate-400">Your score for {currentConfig.title}</p>
+        <p id="summary-personalized-message" class="text-sm font-semibold text-emerald-700 dark:text-emerald-300" aria-live="polite"></p>
+        <p id="share-quiz-feedback" class="text-xs text-slate-500 dark:text-slate-400" aria-live="polite"></p>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4 text-center">
+        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+          <p class="text-xs text-slate-500 font-mono uppercase">Score Obtained</p>
+          <p id="summary-score-value" class="text-2xl sm:text-3xl font-extrabold text-emerald-600 dark:text-emerald-400 mt-1">0 / {questions.length}</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+          <p class="text-xs text-slate-500 font-mono uppercase">Accuracy</p>
+          <p id="summary-percentage-value" class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">0%</p>
+        </div>
+      </div>
+
+      <div id="incorrect-tracker-box" class="p-4 rounded-xl border border-rose-200 dark:border-rose-950/60 bg-rose-50/60 dark:bg-rose-950/20 space-y-2">
+        <p class="text-xs font-mono font-bold text-rose-800 dark:text-rose-400 uppercase">Incorrect Questions:</p>
+        <p id="incorrect-question-list" class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed"></p>
+      </div>
+
+      <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-slate-100 dark:border-slate-800">
+        <button id="btn-retry-test" type="button" class="w-full sm:w-auto px-5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold text-slate-700 dark:text-slate-300 transition">
+          ↻ Re-Attempt Test
+        </button>
+        <button id="share-quiz-result" type="button" class="w-full sm:w-auto px-5 py-2.5 rounded-xl border border-emerald-300 dark:border-emerald-700 text-xs font-bold text-emerald-700 dark:text-emerald-300 hover:bg-emerald-50 dark:hover:bg-emerald-950/30 transition">Share Result</button>
+        <a href="/mcqs" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold text-center transition shadow-sm">
+          All Chapter MCQs →
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <script is:inline>
+    function initProtectedQuiz() {
+      const allSteps = Array.from(document.querySelectorAll('.question-step'));
+      if (allSteps.length === 0) return;
+      let activeSteps = [...allSteps];
+      let totalQuestions = activeSteps.length;
+      let currentIndex = 0;
+      const userAnswers = {};
+
+      const nextBtn = document.getElementById('btn-next-action');
+      const progressBar = document.getElementById('quiz-progress-bar');
+      const questionTracker = document.getElementById('current-question-tracker');
+      const runnerContainer = document.getElementById('quiz-runner-container');
+      const summaryCard = document.getElementById('quiz-summary-card');
+      const retryBtn = document.getElementById('btn-retry-test');
+
+      function updateStepView() {
+        allSteps.forEach((step) => {
+          if (activeSteps[currentIndex] === step) {
+            step.classList.remove('hidden');
+          } else {
+            step.classList.add('hidden');
+          }
+        });
+
+        if (questionTracker) {
+          questionTracker.textContent = "Question " + (currentIndex + 1) + " of " + totalQuestions;
+        }
+        if (progressBar) {
+          progressBar.style.width = (((currentIndex + 1) / totalQuestions) * 100) + "%";
+        }
+
+        if (nextBtn) {
+          if (currentIndex === totalQuestions - 1) {
+            nextBtn.innerHTML = "<span>Submit Test</span> <span>✓</span>";
+            nextBtn.className = "px-6 py-3 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-xs sm:text-sm transition shadow-md shadow-emerald-700/30 flex items-center gap-2";
+          } else {
+            nextBtn.innerHTML = "<span>Next Question</span> <span>→</span>";
+            nextBtn.className = "px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm transition shadow-md shadow-emerald-600/20 flex items-center gap-2";
+          }
+        }
+      }
+
+      allSteps.forEach((step, qIdx) => {
+        const isMulti = step.getAttribute('data-multi') === 'true';
+        const expected = JSON.parse(step.getAttribute('data-expected') || '[]');
+        userAnswers[qIdx] = [];
+
+        const btns = step.querySelectorAll('.option-btn');
+        btns.forEach((btn) => {
+          btn.onclick = () => {
+            const val = btn.getAttribute('data-value');
+            const check = btn.querySelector('.selection-check');
+
+            if (!isMulti) {
+              btns.forEach(b => {
+                b.classList.remove('border-emerald-500', 'bg-emerald-50', 'dark:bg-emerald-950/30', 'text-emerald-900', 'dark:text-emerald-300');
+                const c = b.querySelector('.selection-check');
+                if (c) c.classList.add('hidden');
+              });
+
+              btn.classList.add('border-emerald-500', 'bg-emerald-50', 'dark:bg-emerald-950/30', 'text-emerald-900', 'dark:text-emerald-300');
+              if (check) check.classList.remove('hidden');
+              userAnswers[qIdx] = [val];
+            } else {
+              const existsIndex = userAnswers[qIdx].indexOf(val);
+              if (existsIndex > -1) {
+                userAnswers[qIdx].splice(existsIndex, 1);
+                btn.classList.remove('border-emerald-500', 'bg-emerald-50', 'dark:bg-emerald-950/30', 'text-emerald-900', 'dark:text-emerald-300');
+                if (check) check.classList.add('hidden');
+              } else {
+                if (userAnswers[qIdx].length < expected.length) {
+                  userAnswers[qIdx].push(val);
+                  btn.classList.add('border-emerald-500', 'bg-emerald-50', 'dark:bg-emerald-950/30', 'text-emerald-900', 'dark:text-emerald-300');
+                  if (check) check.classList.remove('hidden');
+                }
+              }
+            }
+          };
+        });
+      });
+
+      if (nextBtn) {
+        nextBtn.onclick = () => {
+          if (totalQuestions === 0) return;
+          if (currentIndex < totalQuestions - 1) {
+            currentIndex++;
+            updateStepView();
+          } else {
+            evaluateAndShowSummary();
+          }
+        };
+      }
+
+      function evaluateAndShowSummary() {
+        let score = 0;
+        const incorrectQuestions = [];
+        const attemptedSteps = activeSteps.filter(step => {
+          const questionIndex = allSteps.indexOf(step);
+          return (userAnswers[questionIndex] || []).length > 0;
+        });
+        const attemptedCount = attemptedSteps.length;
+        
+        attemptedSteps.forEach(step => {
+          const questionIndex = allSteps.indexOf(step);
+          const expected = JSON.parse(step.getAttribute('data-expected') || '[]');
+          const selected = userAnswers[questionIndex] || [];
+          const isCorrect = expected.length === selected.length && expected.every(val => selected.includes(val));
+          if (isCorrect) score++;
+          else incorrectQuestions.push("Q" + (questionIndex + 1));
+        });
+
+        if (runnerContainer) runnerContainer.classList.add('hidden');
+        if (summaryCard) summaryCard.classList.remove('hidden');
+        
+        const scoreVal = document.getElementById('summary-score-value');
+        const pctVal = document.getElementById('summary-percentage-value');
+        const incList = document.getElementById('incorrect-question-list');
+        const incBox = document.getElementById('incorrect-tracker-box');
+        const personalizedMessage = document.getElementById('summary-personalized-message');
+        const percentage = attemptedCount ? Math.round((score / attemptedCount) * 100) : 0;
+
+        if (scoreVal) scoreVal.textContent = score + " / " + attemptedCount;
+        if (pctVal) pctVal.textContent = percentage + "%";
+        
+        if (personalizedMessage) {
+          personalizedMessage.textContent = attemptedCount
+            ? `You got ${score} out of ${attemptedCount} questions you answered (${percentage}%).`
+            : `No questions were answered this time.`;
+        }
+
+        if (incorrectQuestions.length > 0 && incList) {
+          incList.textContent = "You missed: " + incorrectQuestions.join(", ") + ".";
+        } else if (incBox) {
+          incBox.className = "p-4 rounded-xl border border-emerald-200 dark:border-emerald-900 bg-emerald-50/60 dark:bg-emerald-950/20 text-center";
+          incBox.innerHTML = "<p class='text-xs font-bold text-emerald-800 dark:text-emerald-300'>All answered questions were correct!</p>";
+        }
+      }
+
+      if (retryBtn) {
+        retryBtn.onclick = () => location.reload();
+      }
+
+      updateStepView();
+    }
+
+    initProtectedQuiz();
+    document.addEventListener('astro:after-swap', initProtectedQuiz);
+  </script>
+</PortalLayout>
