@@ -1,0 +1,210 @@
+---
+export const prerender = true;
+import PortalLayout from '../layouts/PortalLayout.astro';
+
+const pageTitle = "Contact IT Experts | HSC IT Portal";
+const pageDescription = "Order Most Likely Exam Questions with Solutions for Online IT Exam 2026-27 and connect with IT experts for board practical and academic guidance.";
+---
+
+<PortalLayout title={pageTitle} description={pageDescription}>
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-14 space-y-10">
+    
+    <!-- Hero / Header Banner -->
+    <section class="rounded-3xl border border-emerald-400/30 bg-gradient-to-r from-[#009b67] via-[#01806f] to-[#046171] p-6 sm:p-10 shadow-xl text-white space-y-3">
+      <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white drop-shadow-sm">
+        CONTACT IT EXPERTS
+      </h1>
+      <p class="text-sm sm:text-base text-emerald-50 max-w-2xl leading-relaxed">
+        Order your <strong>"MOST LIKELY EXAM QUESTIONS WITH SOLUTIONS for ONLINE IT EXAM 2026-27"</strong>, fill in the form, we typically get back to you within 24 to 48 hours.
+      </p>
+    </section>
+
+    <!-- Form & Info Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- Academic Inquiries Side Card -->
+      <aside class="space-y-4 md:col-span-1">
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-sm space-y-5">
+          <div class="flex items-center gap-2.5 text-teal-600 dark:text-teal-400 font-extrabold text-base sm:text-lg">
+            <span class="text-xl">📚</span>
+            <h3>Academic Inquiries</h3>
+          </div>
+          
+          <div class="space-y-4 text-sm text-slate-700 dark:text-slate-300 leading-relaxed font-normal">
+            <p>
+              1. We aim at providing dedicated support to Maharashtra State Board Information Technology subject, any questions, coding or resource material you wish to share with us please fill in the form. We will publish it with answer solution.
+            </p>
+            <p>
+              2. We offer academic assistance to students who could not attend college regularly due to unavoidable reasons, for students appearing as external / working class students, please fill the form for guidance for practical exam or any other assistance required.
+            </p>
+            <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-start gap-2.5">
+              <span class="text-xl select-none shrink-0 mt-0.5">🏛️</span>
+              <p>
+                <strong class="font-bold text-slate-900 dark:text-white">For Colleges & Institutes:</strong> If you require expert IT faculty, guest lecturer kindly get in touch for collaboration.
+              </p>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Contact Form Box -->
+      <section class="md:col-span-2 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 sm:p-8 shadow-sm">
+        <form id="form" class="space-y-5" novalidate>
+          <input type="hidden" name="access_key" value="770665cb-0493-4d50-9ffd-aa3b07d86a84" />
+          <input type="hidden" name="subject" value="New Submission from HSC IT Portal" />
+          <input type="hidden" name="from_name" value="HSC IT Portal Contact Form" />
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
+
+          <div>
+            <label for="name" class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5">
+              Your Name
+            </label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              required 
+              placeholder="e.g. Rahul Sharma"
+              class="w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/60 px-4 py-2.5 text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500 transition"
+            />
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="email" class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5">
+                Email Address
+              </label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required 
+                placeholder="you@example.com"
+                class="w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/60 px-4 py-2.5 text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500 transition"
+              />
+            </div>
+
+            <div>
+              <label for="mobile" class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5">
+                Contact Number
+              </label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 text-xs font-mono font-bold text-slate-400">
+                  +91
+                </span>
+                <input 
+                  type="tel" 
+                  id="mobile" 
+                  name="mobile" 
+                  required 
+                  maxlength="10"
+                  pattern="^[6-9][0-9]{9}$"
+                  placeholder="9876543210"
+                  class="w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/60 pl-12 pr-4 py-2.5 text-sm font-mono text-slate-900 dark:text-white placeholder-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500 transition"
+                />
+              </div>
+              <p id="mobile-error" class="hidden text-[11px] text-rose-500 mt-1 font-medium">
+                Please enter a valid 10-digit mobile number starting with 6, 7, 8, or 9.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <label for="message" class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5">
+              Message
+            </label>
+            <textarea 
+              id="message" 
+              name="message" 
+              rows="4" 
+              required 
+              placeholder="Write your query, suggestion, or exam paper doubt..."
+              class="w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/60 px-4 py-2.5 text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500 transition resize-y"
+            ></textarea>
+          </div>
+
+          <button 
+            type="submit" 
+            id="submit-btn"
+            class="w-full rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 px-5 py-3 text-sm font-bold text-white shadow-md shadow-emerald-600/20 transition hover:shadow-lg focus:outline-none"
+          >
+            Submit Form
+          </button>
+
+          <div id="result" class="hidden text-center text-xs font-semibold p-3 rounded-xl"></div>
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+  <script is:inline>
+    const form = document.getElementById("form");
+    const mobileInput = document.getElementById("mobile");
+    const mobileError = document.getElementById("mobile-error");
+    const result = document.getElementById("result");
+    const submitBtn = document.getElementById("submit-btn");
+
+    if (mobileInput) {
+      mobileInput.addEventListener("input", (e) => {
+        let clean = e.target.value.replace(/\D/g, "");
+        if (clean.length > 10) clean = clean.slice(0, 10);
+        e.target.value = clean;
+
+        if (clean.length > 0 && !/^[6-9]/.test(clean)) {
+          mobileError.classList.remove("hidden");
+        } else {
+          mobileError.classList.add("hidden");
+        }
+      });
+    }
+
+    if (form && result) {
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const phoneVal = mobileInput ? mobileInput.value.trim() : "";
+        const phoneRegex = /^[6-9]\d{9}$/;
+
+        if (!phoneRegex.test(phoneVal)) {
+          if (mobileError) mobileError.classList.remove("hidden");
+          mobileInput.focus();
+          return;
+        } else {
+          if (mobileError) mobileError.classList.add("hidden");
+        }
+
+        if (submitBtn) {
+          submitBtn.setAttribute("disabled", "true");
+        }
+        result.className = "text-center text-xs font-semibold p-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300";
+        result.classList.remove("hidden");
+        result.innerHTML = "Sending...";
+
+        try {
+          const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: new FormData(form),
+          });
+
+          const data = await response.json();
+          if (data.success) {
+            result.className = "text-center text-xs font-semibold p-3 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800";
+            result.innerHTML = "Form Submitted Successfully";
+            form.reset();
+          } else {
+            result.className = "text-center text-xs font-semibold p-3 rounded-xl bg-rose-100 dark:bg-rose-950 text-rose-800 dark:text-rose-300 border border-rose-300 dark:border-rose-800";
+            result.innerHTML = data.message || "Submission failed. Please try again.";
+          }
+        } catch (error) {
+          result.className = "text-center text-xs font-semibold p-3 rounded-xl bg-rose-100 dark:bg-rose-950 text-rose-800 dark:text-rose-300 border border-rose-300 dark:border-rose-800";
+          result.innerHTML = "Network error. Please try again later.";
+        } finally {
+          if (submitBtn) {
+            submitBtn.removeAttribute("disabled");
+          }
+        }
+      });
+    }
+  </script>
+</PortalLayout>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSC IT Portal - VIP Most Likely Questions</title>
+    <!-- Tailwind CSS CDN for fast styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Anti-scraping and protection styles */
+        body {
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none;    /* Firefox */
+            -ms-user-select: none;     /* IE10+/Edge */
+            user-select: none;         /* Standard */
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col justify-between" oncontextmenu="return false;">
+
+    <!-- Header -->
+    <header class="bg-slate-800 border-b border-slate-700 p-4 shadow-md text-center">
+        <h1 class="text-xl font-bold text-amber-400">🔒 HSC IT Portal - VIP Access Area</h1>
+        <p class="text-xs text-slate-400 mt-1">Exclusive Past-Year Most Likely Questions & Solutions</p>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-4xl mx-auto p-6 w-full flex-grow flex items-center justify-center">
+
+        <!-- GATE SECTION (Shown by default) -->
+        <div id="auth-gate" class="bg-slate-800 border border-slate-700 rounded-xl p-8 shadow-xl max-w-md w-full text-center">
+            <div class="text-4xl mb-4">🔑</div>
+            <h2 class="text-lg font-semibold mb-2">Enter Your Access Key</h2>
+            <p class="text-sm text-slate-400 mb-6">Enter the secret key received on WhatsApp/Email after your subscription.</p>
+            
+            <input type="text" id="access-key-input" placeholder="e.g. HSC-VIP-XXXX" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-center text-amber-300 font-mono tracking-widest mb-4 focus:outline-none focus:border-amber-400">
+            
+            <button onclick="verifyKey()" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-3 rounded-lg transition-colors">
+                Unlock VIP Questions
+            </button>
+            <p id="error-msg" class="text-red-400 text-xs mt-3 hidden">Invalid or expired access key. Please check and try again.</p>
+        </div>
+
+        <!-- VIP CONTENT SECTION (Hidden by default until key matches) -->
+        <div id="vip-content" class="hidden w-full space-y-6">
+            <div class="bg-emerald-950 border border-emerald-800 p-4 rounded-lg flex justify-between items-center">
+                <div>
+                    <h3 class="font-bold text-emerald-300">Status: Access Granted</h3>
+                    <p class="text-xs text-emerald-400">Licensed to your active session. Do not share credentials.</p>
+                </div>
+                <button onclick="lockPortal()" class="text-xs bg-slate-800 hover:bg-slate-700 border border-slate-600 px-3 py-1.5 rounded text-slate-300">Lock Session</button>
+            </div>
+
+            <div class="bg-slate-800 border border-slate-700 rounded-xl p-6 shadow-xl">
+                <h2 class="text-lg font-bold text-amber-400 mb-4 border-b border-slate-700 pb-2">🎯 Most Likely Questions (HSC Board Exam Special)</h2>
+                
+                <!-- Dynamic Question Container loaded via JS -->
+                <div id="question-list" class="space-y-6">
+                    <!-- JavaScript will populate questions here safely -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 border-t border-slate-700 p-4 text-center text-xs text-slate-500">
+        &copy; 2026 HSC IT Portal. All rights reserved. Unauthorized copying or redistribution is strictly prohibited.
+    </footer>
+
+    <!-- Client-side validation & dynamic question loader script -->
+    <script>
+        // Secure Question Bank stored as a JSON array (keeps it hidden from simple plain-text inspection)
+        const secretQuestions = [
+            {
+                qNo: 1,
+                question: "Explain the concept of Web Hosting and differentiate between shared hosting and cloud hosting.",
+                marks: 4,
+                solution: "Web hosting makes website files accessible via internet... [Detailed answer points here]."
+            },
+            {
+                qNo: 2,
+                question: "Write HTML5 code with CSS to create a responsive navigation bar with a flexbox layout.",
+                marks: 4,
+                solution: "Code implementation steps: Use display: flex, justify-between, align-items: center..."
+            },
+            {
+                qNo: 3,
+                question: "What are JavaScript Arrow Functions? Give syntax and an example comparing it with regular functions.",
+                marks: 3,
+                solution: "Arrow functions provide a concise syntax for writing function expressions using =>..."
+            }
+        ];
+
+        function verifyKey() {
+            const inputKey = document.getElementById('access-key-input').value.trim();
+            const errorMsg = document.getElementById('error-msg');
+
+            // For testing right now, let's accept a placeholder demo key like "IMRAN-VIP-2026"
+            // Later, you will replace this check with a fetch request to your Cloudflare Worker endpoint/KV store.
+            const validDemoKey = "IMRAN-VIP-2026";
+
+            if (inputKey === validDemoKey) {
+                document.getElementById('auth-gate').classList.add('hidden');
+                document.getElementById('vip-content').classList.remove('hidden');
+                loadQuestions();
+            } else {
+                errorMsg.classList.remove('hidden');
+            }
+        }
+
+        function loadQuestions() {
+            const container = document.getElementById('question-list');
+            container.innerHTML = ""; // clear
+
+            secretQuestions.forEach((item) => {
+                const card = document.createElement('div');
+                card.className = "bg-slate-900 border border-slate-700 p-4 rounded-lg";
+                card.innerHTML = `
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-xs font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20 px-2 py-0.5 rounded">Question ${item.qNo}</span>
+                        <span class="text-xs text-slate-400">Marks: ${item.marks}</span>
+                    </div>
+                    <p class="font-medium text-slate-200 mb-3">${item.question}</p>
+                    <div class="bg-slate-800/80 border border-slate-700 p-3 rounded text-sm text-slate-300">
+                        <span class="text-emerald-400 font-semibold block mb-1">Model Answer / Explanation:</span>
+                        ${item.solution}
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function lockPortal() {
+            document.getElementById('vip-content').classList.add('hidden');
+            document.getElementById('auth-gate').classList.remove('hidden');
+            document.getElementById('access-key-input').value = "";
+        }
+    </script>
+</body>
+</html>

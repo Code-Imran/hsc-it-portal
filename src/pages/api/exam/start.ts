@@ -18,9 +18,11 @@ function startExam(stream: unknown, sessionId: unknown) {
   }
 
   const exam = getExamData(stream, sessionId);
+  
+  // Securely strip answers for live student sessions
   const sections = exam.sections.map((section) => ({
     ...section,
-    items: section.items.map(({ ans: _answer, ...question }) => question)
+    items: section.items.map(({ ans: _answer, server_only: _so, ...question }) => question)
   }));
 
   return jsonResponse({ success: true, streamTitle: exam.streamTitle, sections });

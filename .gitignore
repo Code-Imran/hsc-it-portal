@@ -1,8 +1,7 @@
-
-node_modules/
-.astro/
+﻿node_modules/
 dist/
+build/
 .env
 .env.*
-!.env.example
-.dev.vars
+*.log
+.vscode/

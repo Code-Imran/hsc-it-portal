@@ -1,5 +1,4 @@
 import { defineConfig } from 'astro/config';
-import cloudflare from '@astrojs/cloudflare';
 import tailwindcss from '@tailwindcss/vite';
 import { loadEnv } from 'vite';
 import { fileURLToPath } from 'node:url';
@@ -12,23 +11,32 @@ if (isDev) {
 }
 
 export default defineConfig({
-  output: isDev ? 'static' : 'server',
-  adapter: isDev ? undefined : cloudflare(),
+  // 1. Point Astro to your new GitHub Pages root domain
+  site: 'https://examexperts.github.io',
+  
+  // 2. Force static HTML output (Required for GitHub Pages)
+  output: 'static',
+
+  // Note: The @astrojs/cloudflare adapter has been removed because 
+  // GitHub Pages only hosts static files and cannot run worker environments.
+
   session: {
-    ...(isDev ? { driver: { entrypoint: 'unstorage/drivers/memory' } } : {}),
+    // Defaulting to memory storage so the static build process doesn't break
+    driver: { entrypoint: 'unstorage/drivers/memory' },
     ttl: 60 * 60 * 24 * 14,
     cookie: { name: 'hsc-portal-session', path: '/', secure: !isDev, sameSite: 'lax', maxAge: 60 * 60 * 24 * 14 },
   },
+  
   vite: {
     plugins: [tailwindcss()],
     resolve: {
-      alias: isDev
-        ? {
-            'cloudflare:workers': fileURLToPath(
-              new URL('./src/lib/auth/runtime-env.dev.ts', import.meta.url),
-            ),
-          }
-        : undefined,
+      // Applied the dev alias globally so Astro doesn't crash trying to find 
+      // actual Cloudflare Worker modules during the static GitHub build
+      alias: {
+        'cloudflare:workers': fileURLToPath(
+          new URL('./src/lib/auth/runtime-env.dev.ts', import.meta.url),
+        ),
+      }
     },
   },
 });

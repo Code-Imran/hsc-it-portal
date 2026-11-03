@@ -6,13 +6,12 @@ const pageTitle = "HSC IT Practicals (SOP Solutions) | Maharashtra Board Class 1
 const pageDescription = "Complete solved Skill Oriented Practical (SOP) codes, slip solutions, and viva questions for Maharashtra State Board Std 12 Information Technology (Science & Commerce).";
 const pageKeywords = "HSC IT practicals, Std 12 IT SOP solutions, Advanced Web Designing SOP, JavaScript form validation practical, PHP SOP slips, LibreOffice Base SOP, Class 12 IT journal solutions, HSC IT practical marks distribution 2027";
 
-// --- SCIENCE PRACTICALS (CODE 97) ---
 const scienceSOPs = [
   {
     sop: "SOP 1",
     category: "Advanced Web Designing",
     title: "Creation of Website using HTML5 and CSS",
-    description: "Design a 2-page responsive website with HTML5 semantic tags (<header>, <nav>, <section>, <footer>), external CSS, and CSS3 styling.",
+    description: "Design a 2-page responsive website with HTML5 semantic elements (header, nav, section, footer), external CSS, and CSS3 styling.",
     tech: "HTML5 + CSS3",
     slug: "science-sop-1"
   },
@@ -20,7 +19,7 @@ const scienceSOPs = [
     sop: "SOP 2",
     category: "Advanced Web Designing",
     title: "Creation of Webpage using Audio, Video & Image Map",
-    description: "Embed audio controls, video players with autoplay/muted attributes, and clickable client-side image maps using <map> and <area> tags.",
+    description: "Embed audio controls, video players with autoplay/muted attributes, and clickable client-side image maps using map and area elements.",
     tech: "Audio/Video + Maps",
     slug: "science-sop-2"
   },
@@ -58,7 +57,6 @@ const scienceSOPs = [
   }
 ];
 
-// --- COMMERCE PRACTICALS (CODE 99) ---
 const commerceSOPs = [
   {
     sop: "SOP 1",
@@ -127,7 +125,6 @@ const pageSchema = {
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-14 space-y-10 sm:space-y-12">
     
-    <!-- Top Header -->
     <div class="text-center max-w-3xl mx-auto space-y-3">
       <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950 border border-emerald-300 dark:border-emerald-800 text-emerald-800 dark:text-emerald-300 text-xs font-mono font-bold uppercase">
         <span>🧪 Lab Practical Handbook • 20 Marks Total Weightage</span>
@@ -140,133 +137,121 @@ const pageSchema = {
       </p>
     </div>
 
-    <!-- HSC IT PRACTICAL EXAM INFO 2027 BANNER (PLACED AT TOP) -->
     <section 
       id="exam-structure" 
-      class="rounded-3xl border border-emerald-600 bg-slate-900 text-white p-6 sm:p-10 shadow-xl space-y-6"
-      style="background: linear-gradient(135deg, #022c22 0%, #0f172a 50%, #020617 100%);"
+      class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 sm:p-10 shadow-sm space-y-6"
     >
-      <!-- Header Info -->
-      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-700 pb-6">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-100 dark:border-slate-800 pb-6">
         <div>
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-900 border border-emerald-500 text-emerald-300 font-mono text-xs font-bold uppercase tracking-wider mb-2">
-            <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950 border border-emerald-300 dark:border-emerald-800 text-emerald-800 dark:text-emerald-300 font-mono text-xs font-bold uppercase tracking-wider mb-2">
+            <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
             Official Board Guidelines
           </div>
-          <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
-            HSC IT PRACTICAL EXAM INFO 2027
+          <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+            HSC IT PRACTICAL EXAM  2027 : MARKS DISTRIBUTION
           </h2>
-          <p class="text-xs sm:text-sm text-slate-300 mt-1">
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
             Internal Evaluation Scheme conducted at College Examination Centers across Maharashtra.
           </p>
         </div>
 
         <div class="flex items-center gap-3">
-          <div class="px-5 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-center">
-            <p class="text-[10px] font-mono text-slate-400 uppercase font-bold">Total Marks</p>
-            <p class="text-2xl font-black text-emerald-400">20</p>
+          <div class="px-5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/80 text-center">
+            <p class="text-[10px] font-mono text-slate-500 dark:text-slate-400 uppercase font-bold">Total Marks</p>
+            <p class="text-2xl font-black text-emerald-600 dark:text-emerald-400">20</p>
           </div>
-          <div class="px-5 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-center">
-            <p class="text-[10px] font-mono text-slate-400 uppercase font-bold">Duration</p>
-            <p class="text-2xl font-black text-white">1 Hr</p>
+          <div class="px-5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/80 text-center">
+            <p class="text-[10px] font-mono text-slate-500 dark:text-slate-400 uppercase font-bold">Duration</p>
+            <p class="text-2xl font-black text-slate-900 dark:text-white">1 Hr</p>
           </div>
         </div>
       </div>
 
-      <!-- Two Column Blueprint: 15 Marks Lab Test + 5 Marks Certified Journal -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        
-        <!-- Box 1: 15 Marks Lab Execution -->
-        <div class="rounded-2xl bg-slate-800/80 border border-slate-700 p-5 sm:p-6 space-y-4">
+        <div class="rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/80 p-5 sm:p-6 space-y-4">
           <div class="flex items-center justify-between">
-            <h3 class="font-extrabold text-base text-emerald-300">
+            <h3 class="font-extrabold text-base text-slate-900 dark:text-white">
               💻 College Lab Practical Exam
             </h3>
-            <span class="font-mono text-xs font-bold px-2.5 py-1 rounded bg-emerald-950 border border-emerald-500 text-emerald-300">
+            <span class="font-mono text-xs font-bold px-2.5 py-1 rounded bg-emerald-100 dark:bg-emerald-950 border border-emerald-300 dark:border-emerald-800 text-emerald-800 dark:text-emerald-300">
               15 Marks
             </span>
           </div>
-          <p class="text-xs text-slate-300 leading-relaxed">
+          <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
             Every candidate is allotted an individual lab computer and a printed question slip containing practical problems.
           </p>
 
           <div class="space-y-2.5 pt-1">
-            <div class="flex items-center justify-between text-xs p-3 rounded-xl bg-slate-900 border border-slate-700">
+            <div class="flex items-center justify-between text-xs p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700/80">
               <div>
-                <p class="font-bold text-white text-sm">Handwritten Code / Solution Steps</p>
-                <p class="text-[11px] text-slate-400 mt-0.5">Written on the official board practical answer sheet</p>
+                <p class="font-bold text-slate-900 dark:text-white text-sm">Handwritten Code / Solution Steps</p>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Written on the official board practical answer sheet</p>
               </div>
-              <span class="font-mono font-bold text-emerald-400 text-sm whitespace-nowrap pl-2">5 Marks</span>
+              <span class="font-mono font-bold text-emerald-600 dark:text-emerald-400 text-sm whitespace-nowrap pl-2">5 Marks</span>
             </div>
 
-            <div class="flex items-center justify-between text-xs p-3 rounded-xl bg-slate-900 border border-slate-700">
+            <div class="flex items-center justify-between text-xs p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700/80">
               <div>
-                <p class="font-bold text-white text-sm">Correct Typing & Syntax on Computer</p>
-                <p class="text-[11px] text-slate-400 mt-0.5">Typing program into editor with proper tags / commands</p>
+                <p class="font-bold text-slate-900 dark:text-white text-sm">Correct Typing & Syntax on Computer</p>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Typing program into editor with proper tags / commands</p>
               </div>
-              <span class="font-mono font-bold text-emerald-400 text-sm whitespace-nowrap pl-2">5 Marks</span>
+              <span class="font-mono font-bold text-emerald-600 dark:text-emerald-400 text-sm whitespace-nowrap pl-2">5 Marks</span>
             </div>
 
-            <div class="flex items-center justify-between text-xs p-3 rounded-xl bg-slate-900 border border-slate-700">
+            <div class="flex items-center justify-between text-xs p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700/80">
               <div>
-                <p class="font-bold text-white text-sm">Execution & Output Verification</p>
-                <p class="text-[11px] text-slate-400 mt-0.5">Rendering form/browser output & examiner verification</p>
+                <p class="font-bold text-slate-900 dark:text-white text-sm">Execution & Output Verification</p>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Rendering form/browser output & examiner verification</p>
               </div>
-              <span class="font-mono font-bold text-emerald-400 text-sm whitespace-nowrap pl-2">3 Marks</span>
+              <span class="font-mono font-bold text-emerald-600 dark:text-emerald-400 text-sm whitespace-nowrap pl-2">3 Marks</span>
             </div>
 
-            <div class="flex items-center justify-between text-xs p-3 rounded-xl bg-slate-900 border border-slate-700">
+            <div class="flex items-center justify-between text-xs p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700/80">
               <div>
-                <p class="font-bold text-white text-sm">Practical Printout Submission</p>
-                <p class="text-[11px] text-slate-400 mt-0.5">Printout with Candidate Board Seat Number embedded</p>
+                <p class="font-bold text-slate-900 dark:text-white text-sm">Practical Printout Submission</p>
+                <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Printout with Candidate Board Seat Number embedded</p>
               </div>
-              <span class="font-mono font-bold text-emerald-400 text-sm whitespace-nowrap pl-2">2 Marks</span>
+              <span class="font-mono font-bold text-emerald-600 dark:text-emerald-400 text-sm whitespace-nowrap pl-2">2 Marks</span>
             </div>
           </div>
         </div>
 
-        <!-- Box 2: 5 Marks Certified Journal / Project -->
-        <div class="rounded-2xl bg-slate-800/80 border border-slate-700 p-5 sm:p-6 space-y-4 flex flex-col justify-between">
+        <div class="rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/80 p-5 sm:p-6 space-y-4 flex flex-col justify-between">
           <div>
             <div class="flex items-center justify-between">
-              <h3 class="font-extrabold text-base text-teal-300">
+              <h3 class="font-extrabold text-base text-slate-900 dark:text-white">
                 📖 Certified Journal & Viva
               </h3>
-              <span class="font-mono text-xs font-bold px-2.5 py-1 rounded bg-teal-950 border border-teal-500 text-teal-300">
+              <span class="font-mono text-xs font-bold px-2.5 py-1 rounded bg-teal-100 dark:bg-teal-950 border border-teal-300 dark:border-teal-800 text-teal-800 dark:text-teal-300">
                 5 Marks
               </span>
             </div>
-            <p class="text-xs text-slate-300 leading-relaxed mt-2">
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mt-2">
               Mandatory lab record book carrying sign-offs from the junior college subject teacher and external examiner.
             </p>
 
-            <div class="mt-4 p-4 rounded-xl bg-slate-900 border border-teal-700/60 space-y-2">
+            <div class="mt-4 p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700/80 space-y-2">
               <div class="flex items-center justify-between text-xs">
-                <span class="font-bold text-white text-sm">Certified IT Journal / Handbook</span>
-                <span class="font-mono font-bold text-teal-300 text-sm">5 Marks</span>
+                <span class="font-bold text-slate-900 dark:text-white text-sm">Certified IT Journal / Handbook</span>
+                <span class="font-mono font-bold text-teal-600 dark:text-teal-300 text-sm">5 Marks</span>
               </div>
-              <p class="text-xs text-slate-300 leading-relaxed">
+              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                 Requires neat handwriting, completed program printouts, correct flowchart diagrams, and the principal/teacher certificate stamp.
               </p>
             </div>
           </div>
 
-          <!-- Total Evaluation Sum Callout -->
-          <div class="p-4 rounded-xl bg-emerald-950/80 border border-emerald-500 flex items-center justify-between mt-4">
+          <div class="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-300 dark:border-emerald-800 flex items-center justify-between mt-4">
             <div>
-              <p class="text-xs font-bold text-white">Final Practical Total</p>
-              <p class="text-[11px] text-emerald-300">15 Marks Lab + 5 Marks Journal</p>
+              <p class="text-xs font-bold text-slate-900 dark:text-white">Final Practical Total</p>
+              <p class="text-[11px] text-emerald-700 dark:text-emerald-300">15 Marks Lab + 5 Marks Journal</p>
             </div>
-            <span class="font-mono text-xl font-extrabold text-emerald-400">20 / 20</span>
+            <span class="font-mono text-xl font-extrabold text-emerald-600 dark:text-emerald-400">20 / 20</span>
           </div>
         </div>
-
       </div>
     </section>
 
-    <!-- SOP CARDS SECTION (PLACED BELOW BANNER) -->
-    
-    <!-- Science Practicals Grid -->
     <div id="sop-grid-science" class="space-y-6 pt-4">
       <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
         <div>
@@ -309,7 +294,6 @@ const pageSchema = {
       </div>
     </div>
 
-    <!-- Commerce Practicals Grid -->
     <div id="sop-grid-commerce" class="hidden space-y-6 pt-4">
       <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
         <div>
@@ -354,23 +338,22 @@ const pageSchema = {
 
   </div>
 
-  <!-- Stream Switcher Sync Script -->
   <script is:inline>
     function updateSOPStream(stream) {
       const sciGrid = document.getElementById('sop-grid-science');
       const commGrid = document.getElementById('sop-grid-commerce');
 
       if (stream === 'commerce') {
-        sciGrid?.classList.add('hidden');
-        commGrid?.classList.remove('hidden');
+        if (sciGrid) sciGrid.classList.add('hidden');
+        if (commGrid) commGrid.classList.remove('hidden');
       } else {
-        commGrid?.classList.add('hidden');
-        sciGrid?.classList.remove('hidden');
+        if (commGrid) commGrid.classList.add('hidden');
+        if (sciGrid) sciGrid.classList.remove('hidden');
       }
     }
 
     window.addEventListener('streamChange', (e) => {
-      updateSOPStream(e.detail.stream);
+      updateSOPStream(e.detail?.stream);
     });
 
     const activeStream = localStorage.getItem('selected_stream') || 'science';

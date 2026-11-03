@@ -1,4 +1,4 @@
-﻿---
+---
 import PortalLayout from "../layouts/PortalLayout.astro";
 
 // --- SEO CONFIGURATION ---
@@ -24,7 +24,7 @@ const pageSchema = {
 
 // --- SCIENCE SYLLABUS (CODE 97) ---
 const scienceChapters = [
-  { no: "Chapter 1", slug: "web-designing", title: "Advanced Web Designing", marks: "20 - 25 Marks", topics: "HTML5 Form controls, CSS3 styling, Flexbox layout, Audio/Video tags, Client-side Image maps (<map>, <area>).", tag: "Theory + SOP" },
+  { no: "Chapter 1", slug: "web-designing", title: "Advanced Web Designing", marks: "20 - 25 Marks", topics: "HTML5 Form controls, CSS3 styling, Flexbox layout, Audio/Video tags, Client-side Image maps (map and area tags).", tag: "Theory + SOP" },
   { no: "Chapter 2", slug: "digital-marketing-seo", title: "Digital Marketing & SEO", marks: "10 - 12 Marks", topics: "On-Page SEO, Off-Page SEO, Page Rank, Audit Tools, Meta tags, White Hat vs Black Hat strategies.", tag: "Theory Only" },
   { no: "Chapter 3", slug: "advanced-javascript", title: "Advanced JavaScript", marks: "15 - 20 Marks", topics: "Event handling (onsubmit, onchange), DOM manipulation, Form validation, Built-in String/Math/Date objects.", tag: "Theory + SOP" },
   { no: "Chapter 4", slug: "emerging-technologies", title: "Emerging Technologies", marks: "8 - 10 Marks", topics: "IoT architecture, Cloud Computing models (IaaS, PaaS, SaaS), Artificial Intelligence, 5G wireless networks.", tag: "Theory Only" },
@@ -60,6 +60,10 @@ const boardPattern = [
   keywords={pageKeywords}
   schemaData={pageSchema}
 >
+  <!-- Load pdfmake and vfs_fonts via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js" is:inline></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js" is:inline></script>
+
   <!-- Hero Section -->
   <section class="border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 py-12 sm:py-16 md:py-20 px-4 sm:px-6 transition-colors">
     <div class="max-w-4xl mx-auto text-center space-y-5 sm:space-y-6">
@@ -73,16 +77,15 @@ const boardPattern = [
       <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 dark:text-white tracking-tight leading-tight mb-4">INFORMATION TECHNOLOGY PORTAL BY SUBJECT EXPERTS</h1>
 
       <p class="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
-        Your complete toolkit for Maharashtra Board Class 12: solved <strong>Balbharati chapter exercises</strong>, topic-wise <strong>IT MCQs</strong>, and ready-to-use <strong>Board Practicals & journal specimens</strong>. Experience the official test format through our live <strong>80-mark computerized online mock exam</strong>.
+        <strong>Your complete toolkit for Maharashtra Board Class 12:  From chapter wise MCQs to Most Likely Questions, 80 Marks Question Generator with Answer Keys, SOP Codes for Final Board Practicals.</strong>.
       </p>
 
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-        <a href="/simulator" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm transition shadow-lg shadow-emerald-600/30 flex items-center justify-center gap-2">
+      <!-- Hero CTA  -->	
+	  <p class="text-sm sm:text-base md:text-lg text-slate-900 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed"><strong>Overcome online Exam fear with our exam software! Try our live 80-mark Computerized Online Mock Exam </strong></p>
+      <div class="flex items-center justify-center pt-2">
+        <a href="/simulator" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm transition shadow-lg shadow-emerald-600/30 flex items-center justify-center gap-2 cursor-pointer">
           Start Online Mock Exam (80 Marks)
           <span>→</span>
-        </a>
-        <a href="#pattern" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-semibold text-sm transition border border-slate-200 dark:border-slate-700 text-center">
-          View Paper Pattern (Q1–Q8)
         </a>
       </div>
     </div>
@@ -114,8 +117,49 @@ const boardPattern = [
     </div>
   </section>
 
+  <!-- QUESTION BANK BANNER -->
+  <section class="w-full border-y-2 border-emerald-500/50 dark:border-emerald-500/40 bg-white dark:bg-slate-900/90 py-10 sm:py-14 mt-12 sm:mt-16 transition-colors shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col items-center text-center gap-6 max-w-4xl mx-auto">
+        <div class="space-y-3 max-w-3xl">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/20 text-emerald-800 dark:text-emerald-300 text-xs font-mono font-bold tracking-tight">
+            <span> Unlimited Question Paper Bank at your finger tip</span>
+          </div>
+
+          <h2 class="text-2xl sm:text-3xl font-black tracking-tight text-slate-900 dark:text-white leading-tight">
+             ⚡Generate Mock Question Paper Set with answer keys in seconds!!
+          </h2>
+
+          <div class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed space-y-1">
+            <p> Prepare smarter for the Maharashtra HSC Class 12 IT computerized online board exam.</p>
+            <p> Instantly generate randomized, full-length 80-mark practice papers across all 8 standard sections.</p>
+            <p> Validate your answers against step-by-step model keys and Balbharati marking criteria.</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 w-full sm:w-auto pt-2 mx-auto">
+          <button 
+            id="generate-board-pdf-btn"
+            class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white font-bold text-sm transition shadow-lg shadow-cyan-600/20 flex items-center justify-center gap-2 cursor-pointer active:scale-95"
+          >
+            <span>Download Board Paperset (PDF)</span>
+            <span>📄</span>
+          </button>
+          <button 
+            id="generate-answer-key-btn"
+            disabled
+            class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-slate-700 text-white font-bold text-sm transition shadow-lg shadow-slate-700/20 flex items-center justify-center gap-2 opacity-40 cursor-not-allowed active:scale-95"
+          >
+            <span>Download Answer Keys (PDF)</span>
+            <span>🔑</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- COLORFUL LAUNCHPAD CARD: MCQs -->
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-12 sm:pt-16">
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-12 sm:pt-14">
     <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-700 p-6 sm:p-10 text-white shadow-xl">
       <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-white/10 rounded-full blur-2xl pointer-events-none"></div>
       
@@ -310,34 +354,35 @@ const boardPattern = [
         </table>
       </div>
 
-    <!-- Short Notes Callout Banner (Q7 Focus) -->
-    <div class="my-8 p-5 rounded-2xl bg-gradient-to-r from-emerald-950 via-slate-900 to-slate-950 text-white flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border border-emerald-800/50 shadow-md">
-      <div class="space-y-1.5">
-        <div class="flex items-center gap-2">
-          <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
-            NEW: Q7 SECTION (8 MARKS)
-          </span>
-          <span class="text-xs text-slate-400">• Answer 2 of 4 (4 Marks Each)</span>
+      <!-- Short Notes Callout Banner (Q7 Focus) -->
+      <div class="my-8 p-5 rounded-2xl bg-gradient-to-r from-emerald-950 via-slate-900 to-slate-950 text-white flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border border-emerald-800/50 shadow-md">
+        <div class="space-y-1.5">
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+              NEW: Q7 SECTION (8 MARKS)
+            </span>
+            <span class="text-xs text-slate-400">• Answer 2 of 4 (4 Marks Each)</span>
+          </div>
+          <h3 class="text-base sm:text-lg font-bold">HSC IT Model Short Notes</h3>
+          <p class="text-xs text-slate-300 max-w-xl">
+            Point-by-point scoring answers tailored for board moderators across Web Designing, SEO, PHP, and E-Commerce.
+          </p>
         </div>
-        <h3 class="text-base sm:text-lg font-bold">HSC IT Model Short Notes</h3>
-        <p class="text-xs text-slate-300 max-w-xl">
-          Point-by-point scoring answers tailored for board moderators across Web Designing, SEO, PHP, and E-Commerce.
-        </p>
+        <a 
+          href="/short-notes" 
+          class="shrink-0 px-4 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs sm:text-sm transition flex items-center gap-1.5 active:scale-95 shadow-lg shadow-emerald-500/20"
+        >
+          <span>Explore Short Notes</span>
+          <span>→</span>
+        </a>
       </div>
-      <a 
-        href="/short-notes" 
-        class="shrink-0 px-4 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs sm:text-sm transition flex items-center gap-1.5 active:scale-95 shadow-lg shadow-emerald-500/20"
-      >
-        <span>Explore Short Notes</span>
-        <span>→</span>
-      </a>
-    </div>
 
     </div>
   </section>
 
-  <!-- Client-side Stream Filtering Script -->
+  <!-- Client-side Stream Filtering & PDF Generation Script -->
   <script is:inline>
+    /* SECTION: STREAM_SWITCHING_LOGIC */
     function updateHomepageStream(stream) {
       const heroLabel = document.getElementById('hero-stream-label');
       const sopTag = document.getElementById('metric-sop-tag');
@@ -378,5 +423,182 @@ const boardPattern = [
 
     const currentStream = localStorage.getItem('selected_stream') || 'science';
     updateHomepageStream(currentStream);
+
+    // Global variables to track the active session and paper
+    let activeExamSessionId = null;
+
+    function initPdfGenerators() {
+      const btnPaper = document.getElementById('generate-board-pdf-btn');
+      const btnKey = document.getElementById('generate-answer-key-btn');
+
+      if (btnPaper) {
+        btnPaper.addEventListener('click', async () => {
+          if (typeof pdfMake === 'undefined') {
+            alert('PDF generator library is still loading from CDN. Please try again in a moment.');
+            return;
+          }
+
+          try {
+            const activeStream = localStorage.getItem('selected_stream') || 'science';
+            // Generate a unique session ID so the answer-key endpoint can pull the exact same random paper seed
+            activeExamSessionId = 'pdf-sess-' + Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+
+            const response = await fetch("/api/exam/start", {
+              method: "POST",
+              headers: { "Content-Type": "application/json", Accept: "application/json" },
+              body: JSON.stringify({ stream: activeStream, sessionId: activeExamSessionId })
+            });
+
+            const payload = await response.json();
+            if (!payload.success || !Array.isArray(payload.sections)) {
+              throw new Error("Could not load exam sections from API.");
+            }
+
+            let docContent = [
+              { text: "MAHARASHTRA STATE BOARD - PRACTICE EXAMINATION", style: "mainHeader" },
+              { text: `Class XII - Information Technology (${activeStream.toUpperCase()})`, style: "subHeader" },
+              { text: "Maximum Marks: 80 | Time: 3 Hours\n", style: "subHeader" },
+              { canvas: [{ type: 'line', x1: 0, y1: 0, x2: 515, y2: 0, lineWidth: 1 }] },
+              { text: "\n" }
+            ];
+
+            payload.sections.forEach(sec => {
+              let subText = sec.isChoice 
+                ? `[Attempt any ${sec.required || 5} out of ${sec.items.length} | Marks: ${sec.marks}]`
+                : `[Marks: ${sec.marks}]`;
+
+              docContent.push({
+                text: `${sec.label}  ${subText}`,
+                style: "sectionHeader"
+              });
+
+              if (sec.isChoice) {
+                docContent.push({
+                  text: `Attempt any ${sec.required || 5} of the following questions:`,
+                  style: "instructionText"
+                });
+              }
+
+              sec.items.forEach((q, idx) => {
+                const qText = q.question || q.q || q.title || "Question text unavailable";
+                docContent.push({ text: `${idx + 1}. ${qText}`, style: "questionText" });
+
+                const optionsList = q.options || q.opts || [];
+                if (Array.isArray(optionsList) && optionsList.length > 0) {
+                  optionsList.forEach((opt, oIdx) => {
+                    let label = String.fromCharCode(97 + oIdx);
+                    docContent.push({ text: `     (${label}) ${opt}`, style: "optionText" });
+                  });
+                }
+
+                docContent.push({ text: "", margin: [0, 3] });
+              });
+
+              docContent.push({ text: "\n" });
+            });
+
+            const docDefinition = {
+              content: docContent,
+              styles: {
+                mainHeader: { fontSize: 16, bold: true, alignment: 'center', color: '#1f2937' },
+                subHeader: { fontSize: 11, italics: true, alignment: 'center', color: '#4b5563', margin: [0, 2, 0, 8] },
+                sectionHeader: { fontSize: 11, bold: true, color: '#111827', fillColor: '#f3f4f6', margin: [0, 8, 0, 4] },
+                instructionText: { fontSize: 9, italics: true, color: '#6b7280', margin: [0, 0, 0, 4] },
+                questionText: { fontSize: 10, bold: false, color: '#1f2937', margin: [0, 4, 0, 2] },
+                optionText: { fontSize: 9, color: '#374151', margin: [12, 1, 0, 1] }
+              },
+              defaultStyle: { font: 'Roboto' }
+            };
+
+            pdfMake.createPdf(docDefinition).download(`HSC_IT_Board_Paper_${Date.now()}.pdf`);
+
+            // Unlock Answer Key Button and return to original active red state
+            if (btnKey) {
+              btnKey.removeAttribute('disabled');
+              btnKey.classList.remove('opacity-40', 'cursor-not-allowed', 'bg-slate-700');
+              btnKey.classList.add('bg-rose-600', 'hover:bg-rose-500', 'shadow-rose-600/30', 'cursor-pointer');
+            }
+          } catch (err) {
+            console.error("PDF generation error:", err);
+            alert("Could not generate the board paper PDF. Please ensure the exam server is running.");
+          }
+        });
+      }
+
+      if (btnKey) {
+        btnKey.addEventListener('click', async () => {
+          if (!activeExamSessionId) return;
+
+          try {
+            const activeStream = localStorage.getItem('selected_stream') || 'science';
+            const response = await fetch("/api/exam/answer-key", {
+              method: "POST",
+              headers: { "Content-Type": "application/json", Accept: "application/json" },
+              body: JSON.stringify({ stream: activeStream, sessionId: activeExamSessionId })
+            });
+
+            const payload = await response.json();
+            if (!payload.success || !Array.isArray(payload.sections)) {
+              throw new Error("Could not load answer key.");
+            }
+
+            let keyContent = [
+              { text: "MAHARASHTRA STATE BOARD - MODEL ANSWER KEY", style: "mainHeader" },
+              { text: "Class XII - Information Technology (Official Solution Key)", style: "subHeader" },
+              { text: "\n", style: "subHeader" },
+              { canvas: [{ type: 'line', x1: 0, y1: 0, x2: 515, y2: 0, lineWidth: 1 }] },
+              { text: "\n" }
+            ];
+
+            payload.sections.forEach(sec => {
+              keyContent.push({
+                text: `${sec.label} — Model Answers`,
+                style: "sectionHeader"
+              });
+
+              sec.items.forEach((q, idx) => {
+                const qText = q.question || q.q || q.title || "Question text unavailable";
+                keyContent.push({ text: `${idx + 1}. ${qText}`, style: "questionText" });
+
+                const ansDisplay = q.resolvedAnswer || "Refer to marking scheme.";
+                keyContent.push({ text: `Correct Answer: ${ansDisplay}`, style: "answerText" });
+                
+                if (q.resolvedExplanation) {
+                  keyContent.push({ text: `Explanation: ${q.resolvedExplanation}`, style: "explanationText" });
+                }
+
+                keyContent.push({ text: "", margin: [0, 4] });
+              });
+
+              keyContent.push({ text: "\n" });
+            });
+
+            const keyDefinition = {
+              content: keyContent,
+              styles: {
+                mainHeader: { fontSize: 16, bold: true, alignment: 'center', color: '#0f766e' },
+                subHeader: { fontSize: 11, italics: true, alignment: 'center', color: '#4b5563', margin: [0, 2, 0, 8] },
+                sectionHeader: { fontSize: 11, bold: true, color: '#111827', fillColor: '#ccfbf1', margin: [0, 8, 0, 4] },
+                questionText: { fontSize: 10, bold: true, color: '#1f2937', margin: [0, 4, 0, 1] },
+                answerText: { fontSize: 9, bold: true, color: '#047857', margin: [10, 1, 0, 1] },
+                explanationText: { fontSize: 9, italics: true, color: '#374151', margin: [10, 1, 0, 1] }
+              },
+              defaultStyle: { font: 'Roboto' }
+            };
+
+            pdfMake.createPdf(keyDefinition).download(`HSC_IT_Answer_Key_${Date.now()}.pdf`);
+          } catch (err) {
+            console.error("Answer key generation error:", err);
+            alert("Could not generate the answer key PDF.");
+          }
+        });
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initPdfGenerators);
+    } else {
+      initPdfGenerators();
+    }
   </script>
 </PortalLayout>

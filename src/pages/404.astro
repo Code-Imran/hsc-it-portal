@@ -1,23 +1,72 @@
-﻿---
+---
 import PortalLayout from "../layouts/PortalLayout.astro";
 ---
 
-<PortalLayout title="404 — Page Under Preparation">
-  <section class="max-w-3xl mx-auto px-6 py-20 text-center">
+<PortalLayout title="404 — README / System Exception | HSC IT Portal">
+  <section class="max-w-3xl mx-auto px-6 py-16 text-center">
+    
     <!-- Notice Badge -->
-    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/20 text-emerald-800 dark:text-emerald-300 text-xs font-mono font-bold tracking-tight mb-6">
-      <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
-      Maharashtra Board IT (Code 97)
+    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/20 text-emerald-800 dark:text-emerald-300 text-xs font-mono font-bold tracking-tight mb-6 shadow-sm">
+      <span class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+      Maharashtra Board IT (Code 97) • README Diagnostics
     </div>
 
-    <!-- Big Simple Status -->
-    <h1 class="text-7xl sm:text-8xl font-extrabold text-slate-900 dark:text-white tracking-tight font-mono mb-4">
-      404
-    </h1>
+    <!-- Hacker README Markdown Container -->
+    <div class="mb-8 rounded-2xl border border-emerald-500/30 bg-slate-950 text-slate-200 p-6 text-left shadow-2xl font-mono text-xs sm:text-sm overflow-hidden relative">
+      
+      <!-- Terminal / Editor Header Bar -->
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-emerald-500/20 text-xs text-emerald-500/70">
+        <div class="flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-red-500/80 inline-block"></span>
+          <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80 inline-block"></span>
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80 inline-block"></span>
+          <span class="ml-2 font-bold tracking-wider text-slate-300">~/hsc-it-portal/README.md</span>
+        </div>
+        <span class="text-xs uppercase tracking-widest bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/30 text-emerald-400 font-bold">STATUS: 404</span>
+      </div>
 
-    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-3">
+      <!-- Hacker README Content Style -->
+      <div class="space-y-4 leading-relaxed">
+        
+        <!-- Heading -->
+        <div class="text-emerald-400 font-bold text-base sm:text-lg border-b border-slate-800 pb-2">
+          # 💀 ERROR_404: Resource Not Found
+        </div>
+
+        <!-- Blockquote description -->
+        <div class="pl-3 border-l-2 border-emerald-500/50 text-slate-400 text-xs italic">
+          > "The requested file descriptor or routing path could not be resolved in the main index."
+        </div>
+
+        <!-- Markdown Checklist / Diagnostics -->
+        <div class="space-y-1.5 text-xs">
+          <p class="text-slate-300 font-semibold">## System Diagnostics:</p>
+          <div class="flex items-center gap-2 text-slate-400">
+            <span class="text-emerald-400">[x]</span> <span>Request received: <code class="text-slate-300 bg-slate-900 px-1 py-0.5 rounded">window.location.href</code></span>
+          </div>
+          <div class="flex items-center gap-2 text-slate-400">
+            <span class="text-red-400">[ ]</span> <span>Database index lookup: <strong class="text-red-400">NULL_POINTER</strong></span>
+          </div>
+          <div class="flex items-center gap-2 text-slate-400">
+            <span class="text-amber-400">[!]</span> <span>Compilation status: <strong class="text-amber-300">Under development (March 2027)</strong></span>
+          </div>
+        </div>
+
+        <!-- Stack Trace Callout Box -->
+        <div class="p-3 bg-emerald-950/30 border border-emerald-500/20 rounded-xl text-xs text-emerald-300 font-mono space-y-1">
+          <p class="font-bold text-emerald-400 uppercase tracking-wider flex items-center gap-1.5">
+            <span>⚡</span> Stack Trace:
+          </p>
+          <p class="text-slate-300">Chapter not found in index tables or currently being drafted for the March 2027 board exam revision.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Big Status & Description -->
+    <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-3">
       Page Not Found or Under Preparation
-    </h2>
+    </h1>
 
     <p class="text-base text-slate-600 dark:text-slate-400 max-w-lg mx-auto leading-relaxed mb-10">
       The study resource or topic you are looking for has either moved or is currently being compiled for the upcoming <strong>March 2027</strong> board exam syllabus.
@@ -26,7 +75,8 @@ import PortalLayout from "../layouts/PortalLayout.astro";
     <!-- Clear, Direct Action Cards -->
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left mb-10">
       
-      <a href="/" class="p-5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:border-emerald-500 transition group flex flex-col justify-between">
+      <!-- Card 1 -->
+      <a href="/" class="p-5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:border-emerald-500 hover:shadow-md transition group flex flex-col justify-between">
         <div>
           <span class="text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400">Home</span>
           <h3 class="font-bold text-slate-900 dark:text-white text-sm mt-1 group-hover:text-emerald-600 transition">
@@ -34,10 +84,11 @@ import PortalLayout from "../layouts/PortalLayout.astro";
           </h3>
           <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Review chapter-wise marks and theory units.</p>
         </div>
-        <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 mt-4 inline-block">Go to Home →</span>
+        <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 mt-4 inline-block group-hover:translate-x-1 transition-transform">Go to Home &rarr;</span>
       </a>
 
-      <a href="/simulator" class="p-5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:border-emerald-500 transition group flex flex-col justify-between">
+      <!-- Card 2 -->
+      <a href="/simulator" class="p-5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:border-emerald-500 hover:shadow-md transition group flex flex-col justify-between">
         <div>
           <span class="text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400">Practice</span>
           <h3 class="font-bold text-slate-900 dark:text-white text-sm mt-1 group-hover:text-emerald-600 transition">
@@ -45,10 +96,11 @@ import PortalLayout from "../layouts/PortalLayout.astro";
           </h3>
           <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Practice the official 80-mark computerized test.</p>
         </div>
-        <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 mt-4 inline-block">Launch Exam →</span>
+        <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 mt-4 inline-block group-hover:translate-x-1 transition-transform">Launch Exam &rarr;</span>
       </a>
 
-      <a href="https://ebooks.ebalbharati.in/pdfs/1203010499.pdf" target="_blank" rel="noopener noreferrer" class="p-5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:border-emerald-500 transition group flex flex-col justify-between">
+      <!-- Card 3 -->
+      <a href="https://ebooks.ebalbharati.in/pdfs/1203010499.pdf" target="_blank" rel="noopener noreferrer" class="p-5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:border-emerald-500 hover:shadow-md transition group flex flex-col justify-between">
         <div>
           <span class="text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400">Balbharati</span>
           <h3 class="font-bold text-slate-900 dark:text-white text-sm mt-1 group-hover:text-emerald-600 transition">
@@ -56,14 +108,14 @@ import PortalLayout from "../layouts/PortalLayout.astro";
           </h3>
           <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Download official state board textbook PDF.</p>
         </div>
-        <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 mt-4 inline-block">Open PDF ↗</span>
+        <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 mt-4 inline-block group-hover:translate-x-1 transition-transform">Open PDF &#8599;</span>
       </a>
 
     </div>
 
     <!-- Quick Help Text -->
     <p class="text-xs text-slate-500 dark:text-slate-400">
-      Need a specific Board Practicals or past question paper? Check the main menu navigation above.
+      Need a specific Board Practical or past question paper? Check the main menu navigation above.
     </p>
   </section>
 </PortalLayout>

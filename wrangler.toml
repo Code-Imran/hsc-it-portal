@@ -1,0 +1,6 @@
+name = "hsc-it-portal"
+compatibility_date = "2024-03-20"
+
+[[kv_namespaces]]
+binding = "RATE_LIMIT_KV"
+id = "061502be03b74a0aad895b1ed9a36f4e"
