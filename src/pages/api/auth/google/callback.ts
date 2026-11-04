@@ -57,7 +57,17 @@ export const GET: APIRoute = async ({ request, session }) => {
   }
 
   if (!tokenResponse.ok) {
-    console.error('Google OAuth token exchange failed with status', tokenResponse.status);
+    let providerError = 'unknown';
+    try {
+      const body = (await tokenResponse.json()) as { error?: unknown };
+      if (typeof body.error === 'string') providerError = body.error;
+    } catch (error) {
+      console.error('Google OAuth error response was not valid JSON:', error);
+    }
+    console.error('Google OAuth token exchange failed:', {
+      status: tokenResponse.status,
+      providerError,
+    });
     return redirectWithError(origin, 'google_exchange_failed', returnTo);
   }
 

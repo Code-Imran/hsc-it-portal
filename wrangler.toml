@@ -1,6 +1,9 @@
 name = "hsc-it-portal"
-compatibility_date = "2026-03-01"
+compatibility_date = "2026-11-03"
 
-[[kv_namespaces]]
-binding = "RATE_LIMIT_KV"
-id = "061502be03b74a0aad895b1ed9a36f4e"
+[assets]
+directory = "./dist/client"
+binding = "ASSETS"
+
+[observability]
+enabled = true

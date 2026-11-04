@@ -16,7 +16,7 @@ export const GET: APIRoute = async ({ request, session, redirect }) => {
   const clientSecret = env.GOOGLE_CLIENT_SECRET?.trim();
   const origin = new URL(request.url).origin;
   const returnTo = safeReturnPath(new URL(request.url).searchParams.get('returnTo'), origin);
-  if (!clientId || !clientSecret) {
+  if (!clientId || !/^\d+-[\w-]+\.apps\.googleusercontent\.com$/.test(clientId) || !clientSecret) {
     const destination = new URL(returnTo, origin);
     destination.searchParams.set('auth_error', 'not_configured');
     return Response.redirect(destination, 303);

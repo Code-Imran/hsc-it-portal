@@ -112,22 +112,22 @@ Use this section as a concise starting point for future maintenance; confirm cur
 
 ### Stack and local workflow
 
-- Astro 7 with Tailwind CSS v4; deploy target is the Cloudflare Worker at `https://it-portal.imranshaikh.workers.dev`.
+- Astro 7 with Tailwind CSS v4; deploy target is the Cloudflare Worker at `https://hsc-it-portal.imranshaikh.workers.dev`. Keep the portal and login on this Worker origin; GitHub Pages cannot run the server APIs or share its session cookies.
 - `npm run dev` starts the local server (normally `http://localhost:4321`). The dev server intentionally uses static output without the Cloudflare adapter to avoid the Windows/Miniflare issue; API routes that need runtime behavior must set `export const prerender = false`.
 - `npm run build` runs the Cloudflare server build. Check the build output and smoke-test relevant routes after changing shared layout or APIs.
 - Local OAuth settings belong in ignored `.env.local` (see `.env.example`); production values belong in Wrangler secrets. Never put client secrets in source, frontend variables, chat, or committed files.
 
 ### Authentication
 
-- `src/components/PortalAuthModal.astro` and `src/pages/api/auth/*` implement portal identity separately from the simulator's seat-number login.
-- Google sign-in uses OAuth authorization code + PKCE, one-time state in the server session, verified Google userinfo, and does not persist access tokens or ask for Google passwords. Production Astro sessions use Cloudflare KV; local dev uses an in-memory session driver.
+- `src/components/PortalAuthModal.astro` and `src/pages/api/auth/*` implement Google OAuth and optional guest profiles separately from the simulator's seat-number login.
+- Google sign-in uses authorization code + PKCE, one-time state in the server session, verified Google userinfo, and does not persist access tokens or ask for Google passwords. Production Astro sessions use Cloudflare KV; local dev uses an in-memory session driver.
 - “Continue without Google” creates a session-only, unverified student profile. It is not password authentication and must not grant protected access by itself.
-- Required server variables: `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`. For the Google OAuth Web client, register `http://localhost:4321/api/auth/google/callback` and each production origin used to start sign-in, such as `https://it-portal.imranshaikh.workers.dev/api/auth/google/callback`. Add `https://<your-custom-domain>/api/auth/google/callback` too if sign-in starts on the custom domain; the `workers.dev` callback remains valid when that host continues to be used. Set production values as Cloudflare Worker secrets with `npx wrangler secret put GOOGLE_CLIENT_ID --name it-portal` and `npx wrangler secret put GOOGLE_CLIENT_SECRET --name it-portal`.
+- For Google OAuth, register `https://hsc-it-portal.imranshaikh.workers.dev/api/auth/google/callback` as an Authorized redirect URI and set `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET` as secrets on the `hsc-it-portal` Worker. Use `npx wrangler secret put GOOGLE_CLIENT_ID --name hsc-it-portal` and `npx wrangler secret put GOOGLE_CLIENT_SECRET --name hsc-it-portal`.
 
 ### Navigation and current URL map
 
 - `src/components/PortalNavigation.astro` is the reusable responsive header; `src/layouts/PortalLayout.astro` supplies page content and the legacy desktop Science/Commerce stream switcher.
-- Current header design: brand + “Hi Username” profile action, desktop online-time display, then a horizontal link row: Home (desktop only), All MCQs, Short Notes, Q8 Coding, Paper Pattern (desktop only), Practicals, Exam Demo. The username is populated from `/api/auth/profile`; the elapsed-time display is tab-session-only.
+- Current header design: brand + student profile action, desktop online-time display, then a horizontal link row: Home (desktop only), All MCQs, Short Notes, Q8 Coding, Paper Pattern (desktop only), Practicals, Exam Demo. The profile name is populated from `/api/auth/profile`; the elapsed-time display is tab-session-only.
 - Current links: `/mcqs`, `/notes`, `/q8-vault`, `/#pattern`, `/practicals`, `/simulator`. `/practice` redirects to `/mcqs`; `/mock-exam` redirects to `/simulator`.
 - `/downloads` is a download hub. The verified Std 12 textbook PDF URL is `https://ebooks.ebalbharati.in/pdfs/1203010499.pdf`; use the official catalog `https://ebooks.ebalbharati.in/` for other streams/standards instead of guessing direct PDF URLs. External links open with `target="_blank"` and `rel="noopener noreferrer"`.
 - The shared layout historically had a mobile bottom dock, a promotional overlay, and hamburger navigation; those were removed when the header was simplified. Check with the user before restoring any of those elements if the desired design is unclear.
@@ -136,26 +136,23 @@ Use this section as a concise starting point for future maintenance; confirm cur
 
 - `src/pages/simulator.astro` uses the bank assembler in `src/data/questions/index.js`; do not substitute `src/data/questions.json`, which is a separate placeholder bank.
 - The paper must be reproducible from the same `sessionId` at both `POST /api/exam/start` and `POST /api/exam/submit`, so server-side grading matches the displayed paper. The GET/start response must not disclose answer keys; numeric MCQ answer indexes and T/F values are normalized before paper option shuffling.
-- Keep the session-aware browser recovery flow and student identity/auth system distinct. Browser storage anti-tamper protections are practice-only, not secure proctoring.
+- Keep the session-aware browser recovery flow and student identity/auth system distinct from the simulator seat-number login. Browser storage anti-tamper protections are practice-only, not secure proctoring.
 
 ### Recent practice features (October 2026)
 
 - The objective mock-exam paper is randomized from a session ID and remains reproducible for grading. Its pattern is 10 fill-in-the-blanks, 10 true/false, 10 single-correct MCQs, 5 two-correct MCQs, 2 three-correct MCQs, and one four-pair match group.
 - The seven chapter MCQ quizzes shuffle question order on page load. Quiz and objective mock-exam results count only answered questions/marks, show a personalized score message, and provide a share/copy-link action.
-- A completed assessment increments a per-assessment counter in browser `localStorage`; later attempts hide guest registration and require Google sign-in. This is a UX-only restriction, not tamper-proof: clearing browser storage or switching devices resets it.
+- A completed assessment increments a per-assessment counter in browser `localStorage`; later attempts require Google sign-in. This is a UX-only restriction, not tamper-proof.
 - Targeted verification was run for Science and Commerce paper patterns/randomization and empty, 1-mark, and 2-mark grading; all changed inline scripts were syntax-checked. These changes were not built or deployed in that work session.
 
-### Deferred task: bare-bones student sign-in log (no email, IP, or location)
+### Deferred task: bare-bones student sign-in log (no email notifications)
 
-When asked to implement this later, keep it simple and do not add an admin dashboard or email notifications:
+When asked to implement this later, keep it simple and do not add an admin dashboard:
 
-1. Create a Cloudflare D1 database and bind it to the `it-portal` Worker (for example, binding name `STUDENT_DB`); add a SQL migration for a minimal student sign-in table.
-2. On successful Google OAuth callback, record the verified Google subject, name, email, and timestamp. On guest registration, record the submitted name, college/school, city, optional email, and timestamp; clearly treat these as user-entered, unverified details. Decide an idempotent policy for repeat sign-ins (prefer one record per identity with a last-seen timestamp, not a new row on every visit).
-3. Do not collect or store request IP addresses, precise or approximate location, or OAuth tokens. Never expose student rows through a public API or frontend route.
-4. The owner can browse/query/export records through Cloudflare's D1 dashboard/console. No historical data can be backfilled: existing profiles are session-only and are not currently retained in a central database.
-5. Update the privacy notice/profile copy to disclose what fields are stored, why, and for how long. Verify locally with a D1 test binding/migration and a production configuration check before deploying. Keep D1 credentials/bindings in Cloudflare configuration; do not commit secrets.
-
-Cloudflare D1 offers a Free plan; confirm current quotas and account limits during setup. A bare-bones implementation was previously estimated at roughly 1–2 hours once Cloudflare access is ready. Creating the database/binding and deploying are external setup steps; ask the owner to perform or authorize them as needed.
+1. Create a Cloudflare D1 database and bind it to the `hsc-it-portal` Worker; add a SQL migration for a minimal student sign-in table.
+2. On successful Google sign-in, record the verified Google subject, name, email, and timestamp. On guest registration, record submitted name, school/college, city, optional email, and timestamp; clearly treat these as user-entered and unverified details.
+3. Do not collect or store request IP addresses, location, or OAuth tokens. Never expose student rows through a public API or frontend route.
+4. Update the privacy notice to disclose stored fields, purpose, and retention. Verify locally with a D1 test binding before deploying.
 
 ### Safe editing in this checkout
 
