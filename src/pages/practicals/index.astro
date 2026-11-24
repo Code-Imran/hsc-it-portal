@@ -1,111 +1,27 @@
 ﻿---
 export const prerender = true;
 import PortalLayout from "../../layouts/PortalLayout.astro";
+import SopCard from "../../components/SopCard.astro";
 
 const pageTitle = "HSC IT Practicals (SOP Solutions) | Maharashtra Board Class 12";
 const pageDescription = "Complete solved Skill Oriented Practical (SOP) codes, slip solutions, and viva questions for Maharashtra State Board Std 12 Information Technology (Science & Commerce).";
 const pageKeywords = "HSC IT practicals, Std 12 IT SOP solutions, Advanced Web Designing SOP, JavaScript form validation practical, PHP SOP slips, LibreOffice Base SOP, Class 12 IT journal solutions, HSC IT practical marks distribution 2027";
 
-const scienceSOPs = [
-  {
-    sop: "SOP 1",
-    category: "Advanced Web Designing",
-    title: "Creation of Website using HTML5 and CSS",
-    description: "Design a 2-page responsive website with HTML5 semantic elements (header, nav, section, footer), external CSS, and CSS3 styling.",
-    tech: "HTML5 + CSS3",
-    slug: "science-sop-1"
-  },
-  {
-    sop: "SOP 2",
-    category: "Advanced Web Designing",
-    title: "Creation of Webpage using Audio, Video & Image Map",
-    description: "Embed audio controls, video players with autoplay/muted attributes, and clickable client-side image maps using map and area elements.",
-    tech: "Audio/Video + Maps",
-    slug: "science-sop-2"
-  },
-  {
-    sop: "SOP 3",
-    category: "Advanced JavaScript",
-    title: "Form Validation using JavaScript",
-    description: "Validate user input (Name, Age, Email, Mobile number) using client-side JavaScript regex, event listeners, and alert/focus states.",
-    tech: "JavaScript DOM",
-    slug: "science-sop-3"
-  },
-  {
-    sop: "SOP 4",
-    category: "Advanced JavaScript",
-    title: "Mathematical Computations & String Manipulation",
-    description: "Calculate square roots, absolute values, string lengths, and conversions using JavaScript built-in Math and String objects.",
-    tech: "Math & String Objects",
-    slug: "science-sop-4"
-  },
-  {
-    sop: "SOP 5",
-    category: "Server-Side Scripting (PHP)",
-    title: "PHP Form Processing using POST & GET",
-    description: "Capture user input from an HTML form, sanitize input parameters, and display formatted output dynamically using $_POST.",
-    tech: "PHP POST/GET",
-    slug: "science-sop-5"
-  },
-  {
-    sop: "SOP 6",
-    category: "Server-Side Scripting (PHP)",
-    title: "PHP Arrays & User-Defined Functions",
-    description: "Sort associative arrays, calculate averages, and write reusable user functions with argument passing and return statements.",
-    tech: "PHP Arrays & Functions",
-    slug: "science-sop-6"
-  }
+const groupASOPs = [
+  { sop: "SOP 1", category: "Advanced Web Designing", title: "Creation of Website using HTML5", description: "Two-page website with meta tags, a centred heading, physical tags, an image with alt text, navigation links and an HTML5 feedback form.", tech: "HTML5 + CSS", href: "/practicals/group-a#sop-1" },
+  { sop: "SOP 2", category: "Advanced Web Designing", title: "Tourist Places Layout", description: "Layout with a header, city list and tourist places, using an inline style for the top section and an internal stylesheet for the sides.", tech: "HTML + CSS Layout", href: "/practicals/group-a#sop-2" },
+  { sop: "SOP 3", category: "Advanced Web Designing", title: "Traveller Booking Pages", description: "Interlinked pages: a form with an image submit button and a details page with an unordered list, styled with an external stylesheet.", tech: "External CSS", href: "/practicals/group-a#sop-3" },
+  { sop: "SOP 4", category: "Advanced Web Designing", title: "News Page Layout", description: "Webpage layout built with nav, header, article, aside and footer tags and CSS.", tech: "HTML5 Semantic Tags", href: "/practicals/group-a#sop-4" },
+  { sop: "SOP 5", category: "Advanced Web Designing", title: "Use of Audio on Web Pages using HTML5", description: "Single audio file with controls, autoplay and loop, plus multiple source formats (mp3, ogg, wav) with a fallback message.", tech: "HTML5 Audio", href: "/practicals/group-a#sop-5" },
+  { sop: "SOP 6", category: "Advanced Web Designing", title: "Use of Video on Web Pages using HTML5", description: "Single video (150 × 150) and multiple source formats (mp4, webm, ogg, 100 × 100) with controls, autoplay and a fallback message.", tech: "HTML5 Video", href: "/practicals/group-a#sop-6" },
 ];
 
-const commerceSOPs = [
-  {
-    sop: "SOP 1",
-    category: "Advanced Web Designing",
-    title: "Creation of Commercial Business Website",
-    description: "Develop a multi-page commercial portal with CSS3 grid/flexbox layouts, registration forms, and product catalogues.",
-    tech: "HTML5 + CSS3",
-    slug: "commerce-sop-1"
-  },
-  {
-    sop: "SOP 2",
-    category: "Advanced Web Designing",
-    title: "Webpage with Client-Side Image Map & Media",
-    description: "Implement polygonal and circular client-side image map coordinates with linked product pages and promotional audio embeds.",
-    tech: "HTML5 + Image Maps",
-    slug: "commerce-sop-2"
-  },
-  {
-    sop: "SOP 3",
-    category: "Advanced JavaScript",
-    title: "Commercial Billing & Form Validation",
-    description: "Calculate gross amounts, GST percentages, and net totals dynamically with event handling and input type checks.",
-    tech: "JavaScript Calculations",
-    slug: "commerce-sop-3"
-  },
-  {
-    sop: "SOP 4",
-    category: "Advanced JavaScript",
-    title: "String Methods & Input Data Filtering",
-    description: "Extract substrings, format customer usernames, and check string character bounds using JavaScript functions.",
-    tech: "JavaScript String API",
-    slug: "commerce-sop-4"
-  },
-  {
-    sop: "SOP 5",
-    category: "Database Concepts (RDBMS)",
-    title: "Creation of Tables & Primary Keys in LibreOffice Base",
-    description: "Define field names, data types, primary key constraints, and enter record rows for student/employee databases.",
-    tech: "LibreOffice Base / RDBMS",
-    slug: "commerce-sop-5"
-  },
-  {
-    sop: "SOP 6",
-    category: "Database Concepts (RDBMS)",
-    title: "Designing Queries & Reports using SQL",
-    description: "Write SQL SELECT queries with WHERE filters, sorting orders (ORDER BY), and generate printable tabular reports.",
-    tech: "SQL Queries & Reports",
-    slug: "commerce-sop-6"
-  }
+// Group B (Science): codes live on the Q8 vault page for now.
+const scienceGroupB = [
+  { sop: "SOP B1", category: "Advanced JavaScript", title: "Form Validation using JavaScript", description: "Validate user input (Name, Age, Email, Mobile number) using client-side JavaScript regex, event listeners, and alert/focus states.", tech: "JavaScript DOM", href: "/q8-vault" },
+  { sop: "SOP B2", category: "Advanced JavaScript", title: "Mathematical Computations & String Manipulation", description: "Calculate square roots, absolute values, string lengths, and conversions using JavaScript built-in Math and String objects.", tech: "Math & String Objects", href: "/q8-vault" },
+  { sop: "SOP B3", category: "Server-Side Scripting (PHP)", title: "PHP Form Processing using POST & GET", description: "Capture user input from an HTML form, sanitize input parameters, and display formatted output dynamically using $_POST.", tech: "PHP POST/GET", href: "/q8-vault" },
+  { sop: "SOP B4", category: "Server-Side Scripting (PHP)", title: "PHP Arrays & User-Defined Functions", description: "Sort associative arrays, calculate averages, and write reusable user functions with argument passing and return statements.", tech: "PHP Arrays & Functions", href: "/q8-vault" },
 ];
 
 const pageSchema = {
@@ -252,87 +168,48 @@ const pageSchema = {
       </div>
     </section>
 
-    <div id="sop-grid-science" class="space-y-6 pt-4">
+    <div id="sop-grid-groupa" class="space-y-6 pt-4">
       <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
         <div>
-          <h2 class="text-xl font-bold text-slate-900 dark:text-white">Science Stream Practicals (Subject Code 97)</h2>
-          <p class="text-xs text-slate-500 dark:text-slate-400">HTML5, CSS3, JavaScript & PHP Server-Side Scripting</p>
+          <h2 class="text-xl font-bold text-slate-900 dark:text-white">Group A: HTML5 & CSS Practicals (Science & Commerce)</h2>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Advanced Web Designing: common to both streams</p>
         </div>
         <span class="text-xs font-mono font-bold px-2.5 py-1 rounded bg-emerald-100 dark:bg-emerald-900 text-emerald-800 dark:text-emerald-200 border border-emerald-300 dark:border-emerald-700">
           6 Solved SOPs
         </span>
       </div>
-
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {scienceSOPs.map((sop) => (
-          <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 flex flex-col justify-between shadow-sm hover:shadow-md hover:border-emerald-500 transition">
-            <div>
-              <div class="flex items-center justify-between gap-2 mb-3">
-                <span class="font-mono text-xs font-bold px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800">
-                  {sop.sop}
-                </span>
-                <span class="font-mono text-[11px] text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded border border-slate-200 dark:border-slate-700">
-                  {sop.tech}
-                </span>
-              </div>
-              <p class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-1">{sop.category}</p>
-              <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 leading-snug">
-                {sop.title}
-              </h3>
-              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
-                {sop.description}
-              </p>
-            </div>
-            <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs">
-              <span class="text-slate-400 font-mono text-[11px]">Lab Journal Specimen</span>
-              <a href="/q8-vault" class="text-emerald-600 dark:text-emerald-400 font-bold hover:underline">
-                View Code Slip →
-              </a>
-            </div>
-          </div>
-        ))}
+        {groupASOPs.map((s) => <SopCard {...s} />)}
+      </div>
+    </div>
+
+    <div id="sop-grid-science" class="space-y-6 pt-4">
+      <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
+        <div>
+          <h2 class="text-xl font-bold text-slate-900 dark:text-white">Group B: Science Stream (Subject Code 97)</h2>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Advanced JavaScript & PHP Server-Side Scripting</p>
+        </div>
+        <span class="text-xs font-mono font-bold px-2.5 py-1 rounded bg-emerald-100 dark:bg-emerald-900 text-emerald-800 dark:text-emerald-200 border border-emerald-300 dark:border-emerald-700">
+          4 Solved SOPs
+        </span>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {scienceGroupB.map((s) => <SopCard {...s} />)}
       </div>
     </div>
 
     <div id="sop-grid-commerce" class="hidden space-y-6 pt-4">
       <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
         <div>
-          <h2 class="text-xl font-bold text-slate-900 dark:text-white">Commerce Stream Practicals (Subject Code 99)</h2>
-          <p class="text-xs text-slate-500 dark:text-slate-400">HTML5, CSS3, JavaScript & Database (LibreOffice Base)</p>
+          <h2 class="text-xl font-bold text-slate-900 dark:text-white">Group B: Commerce Stream (Subject Code 99)</h2>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Tally practicals</p>
         </div>
-        <span class="text-xs font-mono font-bold px-2.5 py-1 rounded bg-emerald-100 dark:bg-emerald-900 text-emerald-800 dark:text-emerald-200 border border-emerald-300 dark:border-emerald-700">
-          6 Solved SOPs
+        <span class="text-xs font-mono font-bold px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+          Coming soon
         </span>
       </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {commerceSOPs.map((sop) => (
-          <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 flex flex-col justify-between shadow-sm hover:shadow-md hover:border-emerald-500 transition">
-            <div>
-              <div class="flex items-center justify-between gap-2 mb-3">
-                <span class="font-mono text-xs font-bold px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800">
-                  {sop.sop}
-                </span>
-                <span class="font-mono text-[11px] text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded border border-slate-200 dark:border-slate-700">
-                  {sop.tech}
-                </span>
-              </div>
-              <p class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-1">{sop.category}</p>
-              <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 leading-snug">
-                {sop.title}
-              </h3>
-              <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
-                {sop.description}
-              </p>
-            </div>
-            <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs">
-              <span class="text-slate-400 font-mono text-[11px]">Lab Journal Specimen</span>
-              <a href="/q8-vault" class="text-emerald-600 dark:text-emerald-400 font-bold hover:underline">
-                View Code Slip →
-              </a>
-            </div>
-          </div>
-        ))}
+      <div class="rounded-2xl border border-dashed border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 text-sm text-slate-600 dark:text-slate-400">
+        Tally SOP solutions for the Commerce stream will be added here soon. Group A above applies to you as well.
       </div>
     </div>
 

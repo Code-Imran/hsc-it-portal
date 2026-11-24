@@ -1,0 +1,458 @@
+---
+// src/pages/practicals/group-a.astro
+// Group A (Science + Commerce) HTML5 & CSS SOPs.
+// Uses PortalLayout (site header + footer) like the other pages.
+// Styling: Tailwind v4 utilities + dark: variants (your global.css uses the .dark class on <html>).
+export const prerender = true;
+import PortalLayout from '../../layouts/PortalLayout.astro';
+
+const sops = [
+  {
+    id: 'sop-1', kind: 'SOP 1 · HTML5 + CSS', title: 'Creation of Website using HTML5',
+    question: [
+      'Create a 2-page website (index.html and page2.html / form.html) using any 4 CSS properties. Every page must contain proper Meta information and a well-designed layout.',
+      '1) Index page: a centred heading (highest among other text), a paragraph introducing the theme, at least 3 physical style tags, one image with alternate text, and proper navigational links.',
+      '2) Second page: a feedback / enrolment form with HTML5 features, a text element, an email address field and a submit button.',
+    ],
+    files: [
+      { name: 'index.html', code: `<!DOCTYPE html>
+<html>
+<head>
+<title>Sunrise College Profile</title>
+<meta charset="UTF-8">
+<meta name="author" content="Sunrise Junior College">
+<meta name="description" content="Profile of Sunrise Junior College">
+<meta name="keywords" content="college, profile, HSC, education">
+<style>
+body { background-color: lightyellow; font-family: Verdana; }
+h1 { text-align: center; color: darkblue; }
+</style>
+</head>
+<body>
+<h1>Sunrise Junior College</h1>
+
+<p>
+Welcome to <b>Sunrise Junior College</b>. We offer <i>Science</i>,
+<u>Commerce</u> and Arts streams with well-equipped laboratories,
+a library and a sports ground.
+</p>
+
+<img src="college.jpg" alt="Front view of Sunrise Junior College" width="300" height="200">
+
+<p>
+<a href="index.html">Home</a> |
+<a href="page2.html">Feedback Form</a>
+</p>
+</body>
+</html>` },
+      { name: 'page2.html', code: `<!DOCTYPE html>
+<html>
+<head>
+<title>Feedback Form</title>
+<meta charset="UTF-8">
+<meta name="author" content="Sunrise Junior College">
+<meta name="description" content="Feedback form of Sunrise Junior College">
+<meta name="keywords" content="feedback, form, college">
+<style>
+body { background-color: lightyellow; font-family: Verdana; }
+h1 { text-align: center; color: darkblue; }
+</style>
+</head>
+<body>
+<h1>Feedback Form</h1>
+
+<form action="#" method="post">
+Name: <input type="text" name="name" placeholder="Enter your name" required>
+<br><br>
+Email: <input type="email" name="email" placeholder="Enter your email address" required>
+<br><br>
+Feedback:<br>
+<textarea name="feedback" rows="4" cols="40" placeholder="Write your feedback here"></textarea>
+<br><br>
+<input type="submit" value="Submit">
+</form>
+
+<p><a href="index.html">Back to Home</a></p>
+</body>
+</html>` },
+    ],
+  },
+  {
+    id: 'sop-2', kind: 'SOP 2 · HTML + CSS layout', title: 'Tourist Places Layout',
+    question: [
+      'Design the given layout: the top section shows the heading ‘Tourist places’ in the header; the left section lists cities; the right-hand side shows tourist places in any one of the cities.',
+      'Use an inline style in the top section for the background colour of the text ‘Tourist places’. Use an internal stylesheet for the left and right sections with background colours and font styles.',
+    ],
+    files: [
+      { name: 'tourist.html', code: `<!DOCTYPE html>
+<html>
+<head>
+<title>Tourist Places</title>
+<style>
+#wrap { width: 500px; border: 2px solid darkblue; }
+#left { float: left; width: 200px; height: 150px; background-color: lightyellow;
+        font-family: Verdana; font-size: 16px; }
+#right { float: left; width: 296px; height: 150px; background-color: pink;
+        font-family: Arial; font-size: 16px; }
+</style>
+</head>
+<body>
+<div id="wrap">
+
+<div style="background-color: lightblue; text-align: center; height: 70px;">
+<h1 style="color: deeppink;">Tourist places</h1>
+</div>
+
+<div id="left">
+<b>City</b>
+<ol>
+<li>Pune</li>
+<li>Bangalore</li>
+<li>Hyderabad</li>
+<li>Delhi</li>
+</ol>
+</div>
+
+<div id="right">
+Tourist places in Pune
+<ul>
+<li>Shaniwarwada</li>
+<li>Kelkar Museum</li>
+<li>Sinhgad fort</li>
+</ul>
+</div>
+
+</div>
+</body>
+</html>` },
+    ],
+  },
+  {
+    id: 'sop-3', kind: 'SOP 3 · HTML + external CSS', title: 'Traveller Booking Pages (interlinked)',
+    question: [
+      'The first page accepts the name of the traveller, date of travel and telephone number, with a submit button as an image.',
+      'The second page displays name of transporter, time, seat no and destination one below the other as an unordered list (Air Asia, B39, Delhi). Both pages must be interlinked. Create an external stylesheet with relevant tags.',
+    ],
+    files: [
+      { name: 'travel.html', code: `<!DOCTYPE html>
+<html>
+<head>
+<title>Traveller Details</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<h1>Traveller Details</h1>
+
+<form action="details.html" method="post">
+Name of Traveller: <input type="text" name="tname" required>
+<br><br>
+Date of Travel: <input type="date" name="tdate" required>
+<br><br>
+Telephone No: <input type="tel" name="phone" pattern="[0-9]{10}" required>
+<br><br>
+<input type="image" src="submit.png" alt="Submit" width="80" height="35">
+</form>
+
+<p><a href="details.html">View Travel Details</a></p>
+</body>
+</html>` },
+      { name: 'details.html', code: `<!DOCTYPE html>
+<html>
+<head>
+<title>Travel Details</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<h1>Travel Details</h1>
+
+<ul>
+<li>Name of Transporter - Air Asia</li>
+<li>Time - 10:30 AM</li>
+<li>Seat No - B39</li>
+<li>Destination - Delhi</li>
+</ul>
+
+<p><a href="travel.html">Back to Traveller Form</a></p>
+</body>
+</html>` },
+      { name: 'style.css', code: `body { background-color: lightcyan; font-family: Verdana; }
+h1 { text-align: center; color: darkgreen; }
+ul { color: navy; font-size: 18px; }
+a { color: red; }` },
+    ],
+  },
+  {
+    id: 'sop-4', kind: 'SOP 4 · HTML5 semantic tags + CSS', title: 'News Page Layout',
+    question: [
+      'Create a webpage as per the given layout using <nav>, <header>, <footer>, <aside> and <article> with CSS: a “News” header with Home / Archives / About links, Local News and National News articles on the left, a “Be a news reporter” aside on the right, and a footer.',
+    ],
+    files: [
+      { name: 'news.html', code: `<!DOCTYPE html>
+<html>
+<head>
+<title>News</title>
+<style>
+body { font-family: Arial; margin: 10px; }
+header { background-color: lightgray; padding: 5px 10px; }
+nav a { margin-right: 15px; font-weight: bold; }
+#main { overflow: hidden; }
+#articles { float: left; width: 68%; }
+article { background-color: #f2f2f2; border: 1px solid gray; padding: 8px; margin-bottom: 10px; }
+article h3 { background-color: gray; color: white; margin: 0 0 8px 0; padding: 4px; }
+aside { float: right; width: 28%; background-color: lightsteelblue; padding: 8px; }
+footer { background-color: navy; color: white; text-align: center; padding: 6px; clear: both; }
+</style>
+</head>
+<body>
+
+<header>
+<h1>News</h1>
+<nav>
+<a href="#">Home</a>
+<a href="#">Archives</a>
+<a href="#">About</a>
+</nav>
+</header>
+
+<div id="main">
+<div id="articles">
+<article>
+<h3>Local News</h3>
+<p><b>Fire fighters rescue man from building</b><br>This is the story of local news 1.</p>
+<p><b>New Library to be built</b><br>This is the story of local news 2.</p>
+</article>
+
+<article>
+<h3>National News</h3>
+<p><b>Snow storm is making travel difficult</b><br>This is the story of national news 1.</p>
+<p><b>Thousands are without power</b><br>This is the story of national news 2.</p>
+</article>
+</div>
+
+<aside>
+<h3>Be a news reporter</h3>
+<p>If you have news happening in your area, send it to us.</p>
+</aside>
+</div>
+
+<footer>Footer Information</footer>
+
+</body>
+</html>` },
+    ],
+  },
+  {
+    id: 'sop-5', kind: 'SOP 5 · HTML5 Audio', title: 'Use of Audio on Web Pages using HTML5',
+    question: [
+      'a) Create audio.html to set an audio file in a web page with controls. It must play as soon as the page loads and start over again every time it completes.',
+      'b) Create audio1.html with multiple source formats for the same audio file, playing automatically with controls. Show a message when the audio is not supported. Include the list of sound file formats (wav, mp3, ogg).',
+    ],
+    files: [
+      { name: 'audio.html', code: `<!DOCTYPE html>
+<html>
+<head>
+<title>Single Audio with controls</title>
+</head>
+
+<body>
+<h1 align="center">Audio with controls</h1>
+
+<audio controls autoplay loop>
+<source src="Kalimba.mp3" type="audio/mpeg">
+</audio>
+
+</body>
+</html>` },
+      { name: 'audio1.html', code: `<!DOCTYPE html>
+<html>
+<head>
+<title>Multiple Audio Files with controls</title>
+</head>
+
+<body>
+
+<h1 align="center">Multiple Audio Files with controls</h1>
+<h2>The text between the audio tags will only be displayed in browsers that do not support the audio element.</h2>
+<h3>List of sound files formats</h3>
+<ol>
+<li>mp3 - audio/mpeg</li>
+<li>ogg - audio/ogg</li>
+<li>wav - audio/wav</li>
+</ol>
+
+<audio controls autoplay>
+<source src="sound_test.wav" type="audio/wav">
+<source src="sound_test.mp3" type="audio/mpeg">
+<source src="sound_test.ogg" type="audio/ogg">
+Your browser does not support the audio element.
+</audio>
+
+</body>
+</html>` },
+    ],
+    note: 'Exam tip: keep the audio file in the same folder as the HTML file. If the sound does not start by itself in Chrome or Edge, the browser is blocking autoplay; press play on the controls.',
+  },
+  {
+    id: 'sop-6', kind: 'SOP 6 · HTML5 Video', title: 'Use of Video on Web Pages using HTML5',
+    question: [
+      'a) Create video.html to display a video file on a web page that plays automatically with controls. The video area must be 150 × 150 pixels.',
+      'b) Create video1.html with multiple source formats for the same video, playing automatically with controls, video area 100 × 100 pixels. Show a message when the video is not supported and include the list of video formats (WebM, MP4, OGG).',
+    ],
+    files: [
+      { name: 'video.html', code: `<!DOCTYPE html>
+<html>
+<head>
+<title>Single Video File on Web Page with controls</title>
+</head>
+
+<body>
+
+<h1 align="center">Single Video File on Web Page with controls</h1>
+
+<video controls autoplay loop width="150" height="150">
+<source src="shuttle.mp4" type="video/mp4">
+</video>
+
+</body>
+</html>` },
+      { name: 'video1.html', code: `<!DOCTYPE html>
+<html>
+<head>
+<title>Multiple Video File on Web Page with controls</title>
+</head>
+
+<body>
+
+<h1 align="center">Multiple Video File on Web Page with controls</h1>
+
+<h2>
+The text between the video tags will only be displayed in browsers
+that do not support the video element.
+</h2>
+
+<h3>List of video files formats</h3>
+<ol>
+<li>mp4 - video/mp4</li>
+<li>ogg - video/ogg</li>
+<li>WebM - video/webm</li>
+</ol>
+
+<video controls autoplay width="100" height="100">
+<source src="video.mp4" type="video/mp4">
+<source src="video.webm" type="video/webm">
+<source src="video.ogg" type="video/ogg">
+Your browser does not support the video element.
+</video>
+
+</body>
+</html>` },
+    ],
+    note: 'Exam tip: modern browsers usually block autoplay with sound, so add muted to the video tag if it does not start by itself.',
+  },
+];
+---
+
+<PortalLayout
+  title="HSC IT Group A Practicals: HTML5 & CSS SOP 1–6 | Maharashtra Board Class 12"
+  description="Solved HTML5 and CSS SOP codes with copy buttons for HSC Class 12 IT (Science & Commerce): website, layout, forms, semantic tags, audio and video."
+>
+  <!-- Sticky SOP index. top-16 assumes a 4rem site header: change if yours differs -->
+  <nav
+    aria-label="SOP index"
+    class="sticky top-16 z-20 flex items-center gap-2 overflow-x-auto border-b border-slate-200 bg-white/95 px-4 py-2.5 backdrop-blur dark:border-slate-800 dark:bg-slate-900/95"
+  >
+    <strong class="whitespace-nowrap text-sm text-slate-500 dark:text-slate-400">Jump to:</strong>
+    {sops.map((s, i) => (
+      <a
+        href={`#${s.id}`}
+        class="whitespace-nowrap rounded-full border border-slate-200 px-3.5 py-1 text-sm text-slate-700 no-underline transition hover:border-emerald-500 hover:text-emerald-600 dark:border-slate-700 dark:text-slate-300 dark:hover:border-emerald-400 dark:hover:text-emerald-400"
+      >
+        SOP {i + 1}
+      </a>
+    ))}
+  </nav>
+
+  <main id="top" class="mx-auto max-w-4xl px-4 pb-16 pt-6">
+    <header>
+      <span class="mb-2 inline-block rounded-md bg-emerald-600 px-2.5 py-0.5 text-xs font-semibold text-white">
+        Group A · Science &amp; Commerce
+      </span>
+      <h1 class="mb-1.5 text-2xl font-extrabold leading-tight sm:text-4xl">HTML5 &amp; CSS Practicals (SOP 1–6)</h1>
+      <p class="text-slate-600 dark:text-slate-400">
+        Specimen codes for the common Advanced Web Designing SOPs. Save each file with the exact
+        name shown, keep all files of a SOP in one folder, then open the first page in the browser.
+      </p>
+    </header>
+
+    {sops.map((s) => (
+      <section
+        id={s.id}
+        class="mt-6 scroll-mt-32 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900"
+      >
+        <div class="text-xs font-semibold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">{s.kind}</div>
+        <h2 class="mb-3 mt-1 text-xl">{s.title}</h2>
+
+        <div class="mb-4 space-y-1.5 rounded-md border-l-4 border-emerald-500 bg-slate-50 px-3.5 py-2.5 text-[0.9rem] text-slate-700 dark:bg-slate-800/60 dark:text-slate-300">
+          {s.question.map((p) => <p>{p}</p>)}
+        </div>
+
+        {s.files.map((f) => (
+          <div class="ga-file my-3.5 overflow-hidden rounded-xl border border-slate-200 dark:border-slate-700">
+            <div class="flex items-center justify-between bg-slate-800 py-1.5 pl-3.5 pr-2 text-slate-200">
+              <span class="font-mono text-[13px] font-semibold">{f.name}</span>
+              <button
+                type="button"
+                data-copy
+                class="cursor-pointer rounded-md bg-emerald-600 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-emerald-500"
+              >
+                Copy code
+              </button>
+            </div>
+            <pre class="m-0 overflow-x-auto bg-slate-950 p-3.5 text-[13px] leading-relaxed text-slate-200 [tab-size:2]"><code>{f.code}</code></pre>
+          </div>
+        ))}
+
+        {s.note && (
+          <p class="mt-2.5 rounded-lg border border-dashed border-slate-300 px-3 py-2 text-sm text-slate-600 dark:border-slate-700 dark:text-slate-400">
+            {s.note}
+          </p>
+        )}
+
+        <a href="#top" class="mt-2 inline-block text-sm text-emerald-600 no-underline hover:underline dark:text-emerald-400">
+          ↑ Back to index
+        </a>
+      </section>
+    ))}
+
+    <div class="mt-8 rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900">
+      <h3 class="mb-2 text-lg">Group B practicals</h3>
+      <p>
+        Science (JavaScript &amp; PHP) SOPs are on the
+        <a href="/q8-vault" class="text-emerald-600 underline dark:text-emerald-400">Q8 Coding Vault</a>.
+        Commerce (Tally) SOPs are coming soon.
+      </p>
+    </div>
+  </main>
+</PortalLayout>
+
+<script>
+  // Copy-code buttons (bundled by Astro, runs in the browser)
+  document.querySelectorAll<HTMLButtonElement>('[data-copy]').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      const code = btn.closest('.ga-file')?.querySelector('code')?.textContent ?? '';
+      try {
+        await navigator.clipboard.writeText(code);
+      } catch {
+        const t = document.createElement('textarea');
+        t.value = code; t.style.position = 'fixed'; t.style.opacity = '0';
+        document.body.appendChild(t); t.select(); document.execCommand('copy'); t.remove();
+      }
+      btn.textContent = 'Copied ✓';
+      btn.classList.replace('bg-emerald-600', 'bg-teal-700');
+      setTimeout(() => {
+        btn.textContent = 'Copy code';
+        btn.classList.replace('bg-teal-700', 'bg-emerald-600');
+      }, 1800);
+    });
+  });
+</script>
